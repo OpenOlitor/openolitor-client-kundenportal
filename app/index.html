@@ -1,0 +1,143 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <title>OpenOlitor</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(app) styles/vendor.css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/font-awsome/css/font-awesome.css" />
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+  <link rel="stylesheet" href="bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
+  <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
+  <link rel="stylesheet" href="bower_components/angular-color-picker/angularjs-color-picker.css" />
+  <link rel="stylesheet" href="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.css" />
+  <!-- endbower -->
+  <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <!-- endbuild -->
+
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body class="white openolitor" ng-app="openolitor-kundenportal" ng-controller="OpenOlitorRootController">
+  <!-- top navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div>
+        <a class="navbar-brand" ng-href="#/"> <img http-src="{{logoUrl}}" height="32" width="32" /></a>
+        <p class="navbar-text"><span translate>OpenOlitor Mitgliederportal für</span> <span>{{projekt.bezeichnung}}</span></p>
+        <ul class="nav navbar-nav pull-right">
+          <li class="active lang-chooser" ng-hide="activeLang() === 'de'"><a role="button" ng-click="changeLang('de')" title="Deutsch"><span>DE</span></a></li>
+          <li class="active lang-chooser" ng-hide="activeLang() === 'fr'"><a role="button" ng-click="changeLang('fr')" title="Français"><span>FR</span></a></li>
+          <li class="active lang-chooser" ng-hide="activeLang() === 'en'"><a role="button" ng-click="changeLang('en')" title="English"><span>EN</span></a></li>
+          <li class="dropdown" ng-show="loggedIn">
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.vorname}} {{user.name}} <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" translate>Einstellungen</a></li>
+              <li role="separator" class="divider"></li>
+              <li ng-if="env !== 'test'"><a href="#/passwd" translate>Passwort wechseln</a></li>
+              <li><a href="#/logout" translate>Abmelden</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="!connected && showConnectionErrorMessage" class="connected-alert alert alert-danger" role="alert" translate>Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder.</div>
+
+  <div class="master-content content">
+    <!--[if lt IE 9]>
+          <p class="browsehappy" translate>Sie nutzen einen <strong>alten</strong> Browser. Bitte <a href="http://browsehappy.com/">installieren</a> Sie einen aktuelle Brwoser. So stellen Sie sicher, dass dies Webseite wie beabsichtigt funktioniert.</p>
+      <![endif]-->
+    <div ng-view="" ng-cloak class="container-fluid"></div>
+  </div>
+
+  <footer>
+    <a href="http://www.openolitor.ch" target="_blank">www.openolitor.ch</a> Build: UI #{{buildNr}} WS: #{{serverInfo.buildNr}} Env: {{env}}
+    <span ng-class="[{disconnected:!connected, connected:connected}]"><i class="fa fa-wifi" ng-attr-title="{{messagingSocketClosedReason}}"></i></span>
+  </footer>
+
+
+  <!-- build:js(.) scripts/oldieshim.js -->
+  <!--[if lt IE 9]>
+    <script src="vendor/es5-shim/es5-shim.js"></script>
+    <script src="vendor/json3/lib/json3.min.js"></script>
+    <![endif]-->
+  <!-- endbuild -->
+
+  <!-- build:js(app) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-base64/angular-base64.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+  <script src="bower_components/angular-bootstrap-switch/dist/angular-bootstrap-switch.js"></script>
+  <script src="bower_components/angular-cookie/angular-cookie.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+  <script src="bower_components/angular-loader/angular-loader.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+  <script src="bower_components/json3/lib/json3.js"></script>
+  <script src="bower_components/ng-table/dist/ng-table.js"></script>
+  <script src="bower_components/ng-table-export/ng-table-export.js"></script>
+  <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
+  <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+  <script src="bower_components/tinycolor/tinycolor.js"></script>
+  <script src="bower_components/angular-color-picker/angularjs-color-picker.js"></script>
+  <script src="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.js"></script>
+  <script src="bower_components/moment/min/moment-with-locales.min.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
+  <script src="bower_components/blob-polyfill/Blob.js"></script>
+  <script src="bower_components/file-saver.js/FileSaver.js"></script>
+  <script src="bower_components/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
+  <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
+  <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
+  <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+  <script src="bower_components/lodash/lodash.js"></script>
+  <script src="bower_components/ng-password-strength/dist/scripts/ng-password-strength.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-sortable-view/src/angular-sortable-view.js"></script>
+  <script src="bower_components/openolitor-core/dist/scripts/openolitor-core.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- language specific angular file -->
+  <script src="https://code.angularjs.org/1.4.9/i18n/angular-locale_de-ch.js"></script>
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/root.js"></script>
+
+  <script src="scripts/abos/list/aboslist.model.js"></script>
+  <script src="scripts/abos/list/aboslist.controller.js"></script>
+  <script src="scripts/abos/list/aboslist.directive.js"></script>
+
+  <script src="scripts/dashboard/dashboard.controller.js"></script>
+
+  <script src="scripts/rechnungen/list/rechnungenlist.model.js"></script>
+
+  <script src="scripts/projekt/projekt.model.js"></script>
+  <script src="scripts/projekt/projekt.service.js"></script>
+
+  <script src="scripts/i18n/translations.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

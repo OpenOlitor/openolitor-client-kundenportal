@@ -1,0 +1,17 @@
+node_modules
+dist
+mandanten
+.tmp
+.sass-cache
+app/bower_components
+i18n/*.mo
+test-results.xml
+test/coverage/
+*.swp
+.DS_Store
+.metadata
+.idea
+.project
+npm-debug.log
+manifest_wwwtest.openolitor.ch.yml
+manifest_soliterre.openolitor.ch.yml
