@@ -32,6 +32,7 @@ angular
     'ngFileUpload',
     'ngLodash',
     'angular-sortable-view',
+    'angular.css.injector',
     'openolitor-core'
   ])
   .constant('API_URL', '@@API_URL')

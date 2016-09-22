@@ -6,11 +6,11 @@ angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
-    'ENV',
+    'ENV', 'cssInjector',
     'ooAuthService', 'API_URL',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
-      $timeout, BUILD_NR, ENV, ooAuthService, API_URL) {
+      $timeout, BUILD_NR, ENV, cssInjector, ooAuthService, API_URL) {
       angular.element($window).bind('resize', function() {
         checkSize();
       });
@@ -86,6 +86,8 @@ angular.module('openolitor-kundenportal')
         unwatchLoggedIn();
         unwatchStaticServerInfo();
       });
+
+      cssInjector.add(API_URL + 'ressource/style/kundenportal');
 
     }
   ]);
