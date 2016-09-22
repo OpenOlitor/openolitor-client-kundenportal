@@ -1,8 +1,8 @@
 body {
   font-family: 'Droid Sans', sans-serif;;
 
-  background-image: url('/images/background.jpg');
-  background-color: rgba(255,255,255,0.6);
+  /*kundenportal: no bg image background-image: url('/images/background.jpg'); */
+  background-color: rgb(175, 100, 22) !important;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-attachment: fixed;
@@ -20,6 +20,10 @@ h1, h2, h3 {
 h3 .small {
   margin-top: 9px;
   margin-right: 5px;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 //ng validator
@@ -58,7 +62,7 @@ input.ng-invalid {
 }
 
 .content-box {
-  background: rgba(255,255,255,0.6);
+  /*kundenportal: no bg background: rgba(255,255,255,0.6); */
 }
 
 .panel {
@@ -367,6 +371,14 @@ input.ng-invalid {
 
 .navbar-brand {
   margin-left: 25px !important;
+}
+
+.navbar-brand .small{
+  font-size: 70%;
+}
+
+.navbar-brand.logo {
+  padding-top: 8px;
 }
 
 .container.panel {
