@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row" ng-show="!entries">
+          <div class="col-md-4 col-sm-12" >
+            <span translate>Es liegen noch keine Rechnungen vor.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
+              <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
+                <td>
+                  <span role="button" ng-if="rechnung.fileStoreId">
+                    <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                  </span>
+                  <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
+                    <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
+                    <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                  </span>
+                </td>
+                <td data-title="'Rechnungsdatum'|translate">
+                  {{rechnung.rechnungsDatum | date}}
+                </td>
+                <td data-title="'Fällig am'|translate">
+                  {{rechnung.faelligkeitsDatum | date}}
+                </td>
+                <td data-title="'Titel'|translate">
+                  {{rechnung.titel}}
+                </td>
+                <td data-title="'Betrag'|translate">
+                  {{rechnung.waehrung}} {{rechnung.betrag | ooCHF}}
+                </td>
+                <td data-title="'Abo'|translate">
+                  <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
+                </td>
+                <td data-title="'ESR-Nr.'|translate">
+                  {{rechnung.esrNummer}}
+                </td>
+                <td data-title="'Status'|translate">
+                  <i class="fa" ng-class="statusClass(rechnung)" ng-attr-title="{{rechnung.status}}"></i>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
