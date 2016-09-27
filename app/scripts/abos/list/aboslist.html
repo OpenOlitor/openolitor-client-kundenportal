@@ -5,19 +5,52 @@
         <h3 class="panel-title"><span class="navbar-brand"><span class="small">{{abo.id}}</span> {{abo.abotypName}}</span></h3>
       </div>
       <div class="panel-body">
-        {{abo.vertriebBeschrieb}}
+        <div class="row" ng-if="abo.depotName">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Depot:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+             {{abo.depotName}}
+          </div>
+        </div>
+        <div class="row" ng-if="abo.tourName">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Tour:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+             {{abo.tourName}}
+          </div>
+        </div>
+        <div class="row" ng-if="abo.vertrieb.liefertag">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Liefertag:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+             {{abo.vertrieb.liefertag | translate}}
+          </div>
+        </div>
+        <div class="row" ng-if="abo.abotyp.lieferrhythmus">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Lieferrhythmus:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+             {{abo.abotyp.lieferrhythmus | translate}}
+          </div>
+        </div>
+        <div class="row" ng-if="abo.abotyp.preis">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Preis:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+              {{projekt.waehrung | translate}} {{abo.abotyp.preis | ooCHF}} / {{abo.abotyp.preiseinheit | translate}}
+          </div>
+        </div>
+        <hr />
         <oo-abo-abwesenheiten abo="abo"></oo-abo-abwesenheiten>
       </div>
     </div>
   </div>
   <div class="col-md-6">
-    <div class="panel panel-default">
-      <div class="panel-heading clearfix">
-        <h3 class="panel-title"><span class="navbar-brand" translate>Der letzte Korb</span></h3>
-      </div>
-      <div class="panel-body">
-        <oo-korbinhalt abo="abo"></oo-korbinhalt>
-      </div>
-    </div>
+    <oo-abo-korbinhalt abo="abo"></oo-abo-korbinhalt>
   </div>
 </div>

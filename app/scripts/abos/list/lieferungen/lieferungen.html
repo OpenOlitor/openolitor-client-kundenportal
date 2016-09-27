@@ -1,0 +1,82 @@
+<div class="panel panel-default">
+  <div class="panel-heading clearfix">
+    <h3 class="panel-title"><span class="navbar-brand" translate>Der letzte Korb <span ng-show="lieferungen">vom {{lieferungen[0].datum | date}}</span></span></h3>
+  </div>
+  <div class="panel-body">
+    <div class="row form-group">
+      <div class="col-md-12">
+        <div ng-show="!lieferungen" translate>Es wurden noch keine Körbe dieses Typs geplant oder geliefert.</div>
+        <table ng-show="lieferungen" ng-table="lieferungen[0].lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
+          <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
+            <td data-title="'Produkt'|translate">
+              {{korbprodukt.produktBeschrieb}}
+            </td>
+            <td data-title="'Menge'|translate">
+              {{korbprodukt.menge}}
+            </td>
+            <td data-title="'Einheit'|translate">
+              {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
+            </td>
+            <td data-title="'Preis'|translate" ng-if="projekt.preiseSichtbar">
+              <span ng-show="korbprodukt.menge">
+                {{calculatePreis(korbprodukt)| ooCHF}}
+              </span>
+              <span ng-hide="korbprodukt.menge" class="base-preis">
+                {{korbprodukt.preisEinheit | ooCHF}}
+              </span>
+            </td>
+            <td data-title="'Produzent'|translate">
+              {{korbprodukt.produzentKurzzeichen}}
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="panel-heading clearfix" ng-show="lieferungen" id="archivTitle">
+    <span role="button" data-toggle="collapse" data-parent="#archivTitle" data-target="#archiv" aria-expanded="true" aria-controls="archiv">
+      <h3 class="panel-title"><span class="navbar-brand" translate>Die früheren Körbe</span></h3>
+    </span>
+  </div>
+  <div class="panel-body panel-collapse collapse" ng-show="lieferungen" id="archiv">
+    <div class="panel-group" role="tablist" aria-multiselectable="true">
+      <div ng-repeat="lieferung in lieferungen" ng-if="$index > 0" class="panel panel-default">
+        <div class="panel-heading" role="tab" id="heading{{lieferung.id}}">
+          <h4 class="panel-title">
+            <span role="button" data-toggle="collapse" data-parent="#archiv" data-target="#collapse{{lieferung.id}}" aria-expanded="true" aria-controls="collapse{{lieferung.id}}">
+              Korb vom {{lieferung.datum | date}}
+            </span>
+          </h4>
+        </div>
+        <div id="collapse{{lieferung.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{lieferung.id}}">
+          <div class="panel-body">
+            <table ng-show="lieferungen" ng-table="lieferung.lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
+              <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
+                <td data-title="'Produkt'|translate">
+                  {{korbprodukt.produktBeschrieb}}
+                </td>
+                <td data-title="'Menge'|translate">
+                  {{korbprodukt.menge}}
+                </td>
+                <td data-title="'Einheit'|translate">
+                  {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
+                </td>
+                <td data-title="'Preis'|translate" ng-if="projekt.preiseSichtbar">
+                  <span ng-show="korbprodukt.menge">
+                    {{calculatePreis(korbprodukt)| ooCHF}}
+                  </span>
+                  <span ng-hide="korbprodukt.menge" class="base-preis">
+                    {{korbprodukt.preisEinheit | ooCHF}}
+                  </span>
+                </td>
+                <td data-title="'Produzent'|translate">
+                  {{korbprodukt.produzentKurzzeichen}}
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
