@@ -5,7 +5,23 @@
         <h3 class="panel-title"><span class="navbar-brand"><span class="small">{{abo.id}}</span> {{abo.abotypName}}</span></h3>
       </div>
       <div class="panel-body">
-        {{abo.vertriebBeschrieb}}
+        <div class="row" ng-if="abo.depotName">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Depot:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+             {{abo.depotName}}
+          </div>
+        </div>
+        <div class="row" ng-if="abo.tourName">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Tour:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+             {{abo.tourName}}
+          </div>
+        </div>
+        <hr />
         <oo-abo-abwesenheiten abo="abo"></oo-abo-abwesenheiten>
       </div>
     </div>
@@ -16,7 +32,7 @@
         <h3 class="panel-title"><span class="navbar-brand" translate>Der letzte Korb</span></h3>
       </div>
       <div class="panel-body">
-        <oo-korbinhalt abo="abo"></oo-korbinhalt>
+        <oo-abo-korbinhalt abo="abo"></oo-abo-korbinhalt>
       </div>
     </div>
   </div>
