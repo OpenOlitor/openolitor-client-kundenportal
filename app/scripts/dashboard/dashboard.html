@@ -11,8 +11,13 @@
           </div>
           <oo-abos-list></oo-abos-list>
           <div class="row">
+            <script type="text/ng-template" id="rechnungInfoTooltipTemplate.html">
+              <span translate>Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden.</span>
+            </script>
             <div class="col-md-12">
-              <h2 translate>Deine Rechnungen</h2>
+              <h2><span translate>Deine Rechnungen </span>
+              <i class="fa fa-info-circle ng-scope" uib-tooltip-template="'rechnungInfoTooltipTemplate.html'"></i>
+              </h2>
             </div>
           </div>
           <oo-rechnungen-list></oo-rechnungen-list>
