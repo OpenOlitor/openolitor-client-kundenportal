@@ -10,8 +10,10 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
       },
       transclude: true,
       templateUrl: 'scripts/abos/list/abwesenheiten/abwesenheiten.html',
-      controller: function($scope, NgTableParams, AbwesenheitenListModel,
-        msgBus, lodash) {
+      controller: function($scope, $rootScope, NgTableParams, AbwesenheitenListModel,
+        msgBus, lodash, GeschaeftsjahrUtil) {
+        $scope.projekt = $rootScope.projekt;
+
         $scope.showAllAbwesenheiten = false;
         $scope.deletingAbwesenheit = {};
         $scope.template = {
@@ -94,11 +96,19 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
           });
         }
 
+        $scope.getCurrentlyMatchingGJItem = GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten);
+        $scope.isInCurrentOrLaterGJ = GeschaeftsjahrUtil.isInCurrentOrLaterGJ;
+
         msgBus.onMsg('EntityCreated', $scope, function(event, msg) {
           if (msg.entity === 'Abwesenheit') {
             $scope.template.creating = $scope.template.creating - 1;
             msg.data.kundeId = $scope.abo.kundeId;
             $scope.abwesenheiten.push(new AbwesenheitenListModel(msg.data));
+            GeschaeftsjahrUtil.setOnMatchingGJItem(
+              $scope.abo.anzahlAbwesenheiten,
+              GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, msg.data.datum).value + 1,
+              msg.data.date
+            );
 
             $scope.$apply();
           }
@@ -116,6 +126,11 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
                 if (index > -1) {
                   $scope.abwesenheiten.splice(index, 1);
                 }
+                GeschaeftsjahrUtil.setOnMatchingGJItem(
+                  $scope.abo.anzahlAbwesenheiten,
+                  GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, msg.data.datum).value - 1,
+                  msg.data.date
+                );
               }
             });
 
