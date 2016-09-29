@@ -96,7 +96,7 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
           });
         }
 
-        $scope.getCurrentlyMatchingGJItem = GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten);
+        $scope.getCurrentlyMatchingGJItem = GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, $scope.projekt);
         $scope.isInCurrentOrLaterGJ = GeschaeftsjahrUtil.isInCurrentOrLaterGJ;
 
         msgBus.onMsg('EntityCreated', $scope, function(event, msg) {
