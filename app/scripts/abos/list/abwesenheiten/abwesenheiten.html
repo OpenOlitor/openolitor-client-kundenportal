@@ -1,7 +1,7 @@
 <div>
   <div class="row form-group">
     <div class="col-md-12">
-      <h4 translate>Abwesenheiten <small>({{abo.anzahlAbwesenheiten | lastElement:'value'}}
+      <h4 translate>Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}
       <span nf-if="abo.abotyp.anzahlAbwesenheiten > 0"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small></h4>
     </div>
   </div>
@@ -28,11 +28,11 @@
           <td data-title="'Datum'|translate">
             {{abw.datum|date:"EEE, dd.MM.yyyy"}}
           </td>
-          <td data-title="'Bemerkung'|translate">
+          <!--td data-title="'Bemerkung'|translate">
             <i ng-if="abw.bemerkung" class="fa fa-info-circle" aria-hidden="true" uib-tooltip="{{abw.bemerkung}}" tooltip-popup-close-delay="500"></i>
-          </td>
+          </td-->
           <td header="'headerSwitch.html'">
-            <span class="pull-right">
+            <span class="pull-right" ng-show="isInCurrentOrLaterGJ(projekt, abw.datum)">
                 <a href="" ng-hide="deletingAbwesenheit(abw)" ng-click="deleteAbwesenheit(abw)" ng-if="isLieferungOpen(abw)"><i class="glyphicon glyphicon-remove"></i></a>
                 <i ng-show="deletingAbwesenheit(abw)" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
               </span>
