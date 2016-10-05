@@ -39,6 +39,7 @@ angular
   .constant('API_WS_URL', '@@API_WS_URL')
   .constant('BUILD_NR', '@@BUILD_NR')
   .constant('ENV', '@@ENV')
+  .constant('VERSION', '@@VERSION')
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
