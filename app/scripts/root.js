@@ -6,11 +6,11 @@ angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
-    'ENV', 'cssInjector',
+    'ENV', 'VERSION', 'cssInjector',
     'ooAuthService', 'API_URL',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
-      $timeout, BUILD_NR, ENV, cssInjector, ooAuthService, API_URL) {
+      $timeout, BUILD_NR, ENV, VERSION, cssInjector, ooAuthService, API_URL) {
       angular.element($window).bind('resize', function() {
         checkSize();
       });
@@ -49,6 +49,7 @@ angular.module('openolitor-kundenportal')
 
       $scope.buildNr = BUILD_NR;
       $scope.env = ENV;
+      $scope.version = VERSION;
 
       msgBus.onMsg('WebSocketClosed', $rootScope, function(event, msg) {
         $scope.connected = false;
