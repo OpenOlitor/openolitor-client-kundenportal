@@ -72,6 +72,6 @@ angular
         templateUrl: 'scripts/dashboard/dashboard.html',
         controller: 'DashboardController',
         name: 'Dashboard',
-        access: userRoles.Kunde
+        access: [userRoles.Administrator, userRoles.Kunde]
       });
   });
