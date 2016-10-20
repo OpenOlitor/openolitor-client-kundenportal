@@ -40,6 +40,8 @@ angular
   .constant('BUILD_NR', '@@BUILD_NR')
   .constant('ENV', '@@ENV')
   .constant('VERSION', '@@VERSION')
+  .constant('AIRBREAK_API_KEY', '@@AIRBREAK_API_KEY')
+  .constant('AIRBREAK_URL', '@@AIRBREAK_URL')
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
@@ -62,6 +64,32 @@ angular
         };
       }
     ]);
+  }])
+  .factory('errbitErrorInterceptor', function($q, ENV, VERSION, AIRBREAK_API_KEY, AIRBREAK_URL) {
+    return {
+      responseError: function (rejection) {
+        /*jshint -W117 */
+        var airbrake = new airbrakeJs.Client({
+          projectId: 1,
+          host: AIRBREAK_URL,
+          projectKey: AIRBREAK_API_KEY});
+        /*jshint +W117 */
+        airbrake.addFilter(function (notice) {
+          notice.context.environment = ENV;
+          notice.context.version = VERSION;
+          return notice;
+        });
+        var message = 'Error: ';
+        if(!angular.isUndefined(rejection.config) && !angular.isUndefined(rejection.config.url)) {
+          message += rejection.config.url;
+        }
+        airbrake.notify(message);
+        return $q.reject(rejection);
+      }
+    };
+  })
+  .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.interceptors.push('errbitErrorInterceptor');
   }])
   .config(function($routeProvider) {
     $routeProvider
