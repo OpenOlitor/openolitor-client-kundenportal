@@ -41,8 +41,8 @@
     <div class="container">
       <div>
         <a class="navbar-brand logo" ng-href="#/"> <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32" width="32" /></a>
-        <p class="navbar-text"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
-        <ul class="nav navbar-nav pull-right">
+        <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
+        <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
             <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{activeLang()}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -75,7 +75,16 @@
   </div>
 
   <footer>
-  <a href="http://www.openolitor.ch" target="_blank">www.openolitor.ch</a> Build: UI v{{version}} #{{buildNr}} WS: {{serverInfo.version}} #{{serverInfo.buildNr}} Env: {{env}}
+    <script type="text/ng-template" id="versionInfo.html">
+      <span><b translate>Version:</b></span><br />
+      <span><b>UI</b> v{{version}} | #{{buildNr}}</span><br />
+      <span><b>WS</b> {{serverInfo.version}} | #{{serverInfo.buildNr}} </span><br />
+      <span><b>ENV</b> {{env}}</span>
+    </script>
+    <a href="http://www.openolitor.org" target="_blank">www.openolitor.org</a>
+    <span class="pre-info">
+      <span class="glyphicon glyphicon-info-sign" uib-tooltip-template="'versionInfo.html'" tooltip-popup-close-delay="3000" tooltip-placement="top"></span>
+    </span>
     <span ng-class="[{disconnected:!connected, connected:connected}]"><i class="fa fa-wifi" ng-attr-title="{{messagingSocketClosedReason}}"></i></span>
   </footer>
 
