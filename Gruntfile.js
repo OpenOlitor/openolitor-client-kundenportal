@@ -19,6 +19,15 @@ module.exports = function(grunt) {
     'test': {
       'm1': 'https://test.openolitor.ch/m1/'
     },
+    'int1': {
+      'm1': 'https://int.openolitor.ch/int1/'
+    },
+    'int2': {
+      'm1': 'https://int.openolitor.ch/int2/'
+    },
+    'int3': {
+      'm1': 'https://int.openolitor.ch/int3/'
+    },
     'prod-soliterre': {
       'm1': 'https://prod.openolitor.ch/soliterre/'
     },
@@ -38,7 +47,10 @@ module.exports = function(grunt) {
       'http://localhost:9003/m1/ws', //replace @@API_WS_URL with value
     'BUILD_NR': grunt.option('buildnr') || 'dev',
     'ENV': env,
-    'VERSION': grunt.file.readJSON('package.json').version
+    'VERSION': grunt.file.readJSON('package.json').version,
+
+    'AIRBREAK_API_KEY': '48f4d0be704fafd7ed7b4fdf2d2119d9',
+    'AIRBREAK_URL': 'https://errbit.tegonal.com/'
   };
 
   var mandantenConfig = {
