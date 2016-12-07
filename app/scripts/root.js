@@ -56,7 +56,7 @@ angular.module('openolitor-kundenportal')
         $scope.messagingSocketClosedReason = msg.reason;
         $timeout(function() {
           $scope.showConnectionErrorMessage = true;
-        }, 10000);
+        }, 30000);
         $scope.$apply();
       });
 
