@@ -56,7 +56,7 @@ angular.module('openolitor-kundenportal')
         $scope.messagingSocketClosedReason = msg.reason;
         $timeout(function() {
           $scope.showConnectionErrorMessage = true;
-        }, 10000);
+        }, 30000);
         $scope.$apply();
       });
 
@@ -79,7 +79,7 @@ angular.module('openolitor-kundenportal')
         return gettextCatalog.getCurrentLanguage();
       };
 
-      if ($scope.activeLang() !== 'de' || $scope.activeLang() !== 'fr') {
+      if (angular.isUndefined($scope.activeLang() || ($scope.activeLang() !== 'de' && $scope.activeLang().indexOf('fr') === -1))) {
         $scope.changeLang('de');
       }
 
