@@ -4,16 +4,77 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: app/index.html:47
+#: app/index.html:62
 msgid "Abmelden"
 msgstr ""
 
-#: app/index.html:55
+#: app/scripts/rechnungen/list/rechnungenlist.html:36
+#: app/scripts/rechnungen/list/rechnungenlist.html:72
+msgid "Abo"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+msgid "Abwesenheit erfassen"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
+msgid ""
+"Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}\n"
+"      <span nf-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:33
+#: app/scripts/rechnungen/list/rechnungenlist.html:69
+msgid "Betrag"
+msgstr ""
+
+#: app/index.html:70
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
+msgstr ""
+
+#: app/scripts/dashboard/dashboard.html:32
+msgid "Das Modul „Arbeitseinsätze“ wird in Kürze zur Verfügung stehen."
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/rechnungen/list/rechnungenlist.html:60
+msgid "Datum"
+msgstr ""
+
+#: app/scripts/dashboard/dashboard.html:9
+msgid "Deine Abos"
+msgstr ""
+
+#: app/scripts/dashboard/dashboard.html:26
+msgid "Deine Arbeitseinsätze"
+msgstr ""
+
+#: app/scripts/dashboard/dashboard.html:18
+msgid "Deine Rechnungen"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:10
+msgid "Depot:"
+msgstr ""
+
+#: app/scripts/dashboard/dashboard.html:15
+msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:3
+msgid "Der letzte Korb <span ng-show=\"lieferungen\">vom {{lieferungen[0].datum | date}}</span>"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:44
+msgid "Die früheren Körbe"
 msgstr ""
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:39
+msgid "ESR-Nr."
 msgstr ""
 
 #: app/messages.html:2
@@ -29,10 +90,15 @@ msgid "Eingabe zu kurz"
 msgstr ""
 
 #: app/messages.html:4
-msgid "Eingage zu lang"
+msgid "Eingabe zu lang"
 msgstr ""
 
-#: app/index.html:44
+#: app/scripts/abos/list/lieferungen/lieferungen.html:23
+#: app/scripts/abos/list/lieferungen/lieferungen.html:72
+msgid "Einheit"
+msgstr ""
+
+#: app/index.html:59
 msgid "Einstellungen"
 msgstr ""
 
@@ -40,14 +106,92 @@ msgstr ""
 msgid "Error 404"
 msgstr ""
 
+#: app/scripts/rechnungen/list/rechnungenlist.html:7
+msgid "Es liegen noch keine Rechnungen vor."
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:8
+msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
+msgstr ""
+
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
 msgstr ""
 
-#: app/index.html:36
-msgid "OpenOlitor Mitgliederportal für"
+#: app/scripts/rechnungen/list/rechnungenlist.html:63
+msgid "Fällig"
 msgstr ""
 
-#: app/index.html:46
+#: app/scripts/rechnungen/list/rechnungenlist.html:27
+msgid "Fällig am"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:34
+msgid "Lieferrhythmus:"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:26
+msgid "Liefertag:"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:20
+#: app/scripts/abos/list/lieferungen/lieferungen.html:69
+msgid "Menge"
+msgstr ""
+
+#: app/index.html:45
+msgid "OpenOlitor Mitgliederportal:"
+msgstr ""
+
+#: app/index.html:61
 msgid "Passwort wechseln"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:26
+#: app/scripts/abos/list/lieferungen/lieferungen.html:75
+msgid "Preis"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:42
+msgid "Preis:"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:17
+#: app/scripts/abos/list/lieferungen/lieferungen.html:66
+msgid "Produkt"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:34
+#: app/scripts/abos/list/lieferungen/lieferungen.html:83
+msgid "Produzent"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:24
+msgid "Rechnungsdatum"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:42
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
+msgid "Status"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:30
+#: app/scripts/rechnungen/list/rechnungenlist.html:66
+msgid "Titel"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:18
+msgid "Tour:"
+msgstr ""
+
+#: app/index.html:81
+msgid "Version:"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+msgid "alle"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:21
+msgid "pendente"
 msgstr ""
