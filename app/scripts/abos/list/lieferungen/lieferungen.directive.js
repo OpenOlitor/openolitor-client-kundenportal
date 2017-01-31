@@ -13,6 +13,7 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
       controller: function($scope,  $rootScope, NgTableParams, LieferungenListModel, LIEFEREINHEIT) {
         $scope.lieferungen = undefined;
         $scope.projekt = $rootScope.projekt;
+        $scope.maxKoerbe = 6;
 
         $scope.liefereinheiten = LIEFEREINHEIT;
 
@@ -57,6 +58,10 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
         $scope.calculatePreis = function(korbprodukt) {
           korbprodukt.preis = (korbprodukt.preisEinheit * korbprodukt.menge);
           return korbprodukt.preis;
+        };
+
+        $scope.showMore = function() {
+          $scope.maxKoerbe = $scope.maxKoerbe + 5;
         };
 
       }
