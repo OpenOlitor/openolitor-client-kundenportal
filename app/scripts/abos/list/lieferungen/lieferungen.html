@@ -46,7 +46,7 @@
   </div>
   <div class="panel-body panel-collapse collapse" ng-show="lieferungen && lieferungen.length > 1" id="archiv">
     <div class="panel-group" role="tablist" aria-multiselectable="true">
-      <div ng-repeat="lieferung in lieferungen" ng-if="$index > 0" class="panel panel-default">
+      <div ng-repeat="lieferung in lieferungen|limitTo:maxKoerbe" ng-if="$index > 0" class="panel panel-default">
         <div class="panel-heading" role="tab" id="heading{{lieferung.id}}">
           <h4 class="panel-title">
             <span role="button" data-toggle="collapse" data-parent="#archiv" data-target="#collapse{{lieferung.id}}" aria-expanded="true" aria-controls="collapse{{lieferung.id}}">
@@ -86,6 +86,15 @@
               </tr>
             </table>
           </div>
+        </div>
+      </div>
+      <div ng-if="lieferungen.length >= maxKoerbe" class="panel panel-default">
+        <div class="panel-heading" role="tab" ng-click="showMore()">
+          <h4 class="panel-title">
+            <span role="button" data-toggle="collapse" data-parent="#archiv" data-target="#collapse{{lieferung.id}}" aria-expanded="true" aria-controls="collapse{{lieferung.id}}">
+              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <span translate>Weitere Körbe anzeigen...</span>
+            </span>
+          </h4>
         </div>
       </div>
     </div>
