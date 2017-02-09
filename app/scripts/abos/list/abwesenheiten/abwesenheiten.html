@@ -32,7 +32,7 @@
             <i ng-if="abw.bemerkung" class="fa fa-info-circle" aria-hidden="true" uib-tooltip="{{abw.bemerkung}}" tooltip-popup-close-delay="500"></i>
           </td-->
           <td header="'headerSwitch.html'">
-            <span class="pull-right" ng-show="isInCurrentOrLaterGJ(projekt, abw.datum)">
+            <span class="pull-right">
                 <a href="" ng-hide="deletingAbwesenheit(abw)" ng-click="deleteAbwesenheit(abw)" ng-if="isLieferungOpen(abw)"><i class="glyphicon glyphicon-remove"></i></a>
                 <i ng-show="deletingAbwesenheit(abw)" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
               </span>
