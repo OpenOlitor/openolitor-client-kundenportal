@@ -9,7 +9,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="removePagerRow.html">
+            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
               <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
                 <td>
                   <span role="button" ng-if="rechnung.fileStoreId">
@@ -45,7 +45,7 @@
               </tr>
             </table>
 
-            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="removePagerRow.html">
+            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
               <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
                 <td>
                   <span role="button" ng-if="rechnung.fileStoreId">
