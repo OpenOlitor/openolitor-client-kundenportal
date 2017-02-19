@@ -12,7 +12,7 @@
           </div>
         </div>
 
-        <table ng-show="lieferungen" ng-table="lieferungen[0].lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
+        <table ng-show="lieferungen" ng-table="lieferungen[0].lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
           <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
             <td data-title="'Produkt'|translate">
               {{korbprodukt.produktBeschrieb}}
@@ -61,7 +61,7 @@
                 {{lieferung.lieferplanungBemerkungen}}
               </div>
             </div>
-            <table ng-show="lieferungen" ng-table="lieferung.lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
+            <table ng-show="lieferungen" ng-table="lieferung.lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
               <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
                 <td data-title="'Produkt'|translate">
                   {{korbprodukt.produktBeschrieb}}
