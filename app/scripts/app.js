@@ -101,6 +101,42 @@ angular
       }
     };
   })
+  .filter('dateRange', function(moment) {
+    function isMidnight(mom) {
+      // The moment at midnight
+      var mmtMidnight = mom.clone().startOf('day');
+
+      // Difference in minutes == 0 => midnight
+      return mom.diff(mmtMidnight, 'minutes') === 0;
+    }
+
+    return function(items, from, to, attribute) {
+      if(!angular.isUndefined(items) && items.length > 0) {
+        var toPlusOne = to;
+        var momTo = moment(to);
+        if(isMidnight(momTo)) {
+          toPlusOne = momTo.add(1, 'days');
+        }
+        var result = [];
+        for (var i=0; i<items.length; i++){
+          var itemDate = items[i][attribute];
+          if(!angular.isUndefined(attribute)) {
+            itemDate = items[i][attribute];
+          }
+          if(angular.isUndefined(to) && angular.isUndefined(from)) {
+            result.push(items[i]);
+          } else if(angular.isUndefined(to) && itemDate >= from) {
+            result.push(items[i]);
+          } else if(angular.isUndefined(from) && itemDate <= toPlusOne) {
+            result.push(items[i]);
+          } else if (itemDate >= from && itemDate <= toPlusOne)  {
+            result.push(items[i]);
+          }
+        }
+        return result;
+      }
+    };
+  })
   .config(['$httpProvider', function($httpProvider) {
     $httpProvider.interceptors.push('loggedOutInterceptor');
     $httpProvider.interceptors.push('errbitErrorInterceptor');

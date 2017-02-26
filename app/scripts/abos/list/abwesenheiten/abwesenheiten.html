@@ -44,11 +44,11 @@
   </div>
   <div class="row">
     <div class="col-md-4 col-sm-6 form-group">
-      <div class="dropdown">
+      <div class="dropdown" ng-if="abo.aktiv">
         <div uib-dropdown class="btn-group" role="group" ng-show="abo.lieferdaten.length > 0">
           <a uib-dropdown-toggle role="button" ng-href="" class="btn btn-sm btn-success"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <span translate>Abwesenheit erfassen</span></a>
           <ul uib-dropdown-menu role="menu" class="dropdown-form">
-            <li role="menuitem" ng-repeat="lieferdat in abo.lieferdaten | notIn:'id':abwesenheitsDaten()"><a href="" ng-click="addAbwesenheit(lieferdat)">{{lieferdat.datum | date: 'EEE, dd.MM.yyyy'}}</a></li>
+            <li role="menuitem" ng-repeat="lieferdat in abo.lieferdaten | notIn:'id':abwesenheitsDaten() | dateRange:abo.start:abo.ende:'datum'"><a href="" ng-click="addAbwesenheit(lieferdat)">{{lieferdat.datum | date: 'EEE, dd.MM.yyyy'}}</a></li>
           </ul>
         </div>
       </div>
