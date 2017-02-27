@@ -62,7 +62,7 @@ msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert
 msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:3
-msgid "Der letzte Korb <span ng-show=\"lieferungen\">vom {{lieferungen[0].datum | date}}</span>"
+msgid "Der letzte Korb <span ng-show=\"lieferungen\">vom {{getLastLieferung().datum | date}}</span>"
 msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:44
@@ -124,6 +124,10 @@ msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:27
 msgid "Fällig am"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:50
+msgid "Laufzeit:"
 msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:34
@@ -188,8 +192,20 @@ msgstr ""
 msgid "Version:"
 msgstr ""
 
+#: app/scripts/abos/list/aboslist.html:53
+msgid "Von"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:95
+msgid "Weitere Körbe anzeigen..."
+msgstr ""
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
 msgid "alle"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:53
+msgid "bis"
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:21

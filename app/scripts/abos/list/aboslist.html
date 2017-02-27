@@ -1,4 +1,4 @@
-<div ng-repeat="abo in entries" class="row">
+<div ng-repeat="abo in entries | orderBy:'-id'" class="row">
   <div class="col-md-6" id="abo{{abo.id}}">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
@@ -45,6 +45,15 @@
               {{projekt.waehrung | translate}} {{abo.abotyp.preis | ooCHF}} / {{abo.abotyp.preiseinheit | translate}}
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Laufzeit:</span>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <span translate>Von </span> {{abo.start | date:'dd.MM.yyyy'}} <span translate ng-if="abo.ende">bis </span> {{abo.ende | date:'dd.MM.yyyy'}}
+          </div>
+        </div>
+
         <hr />
         <oo-abo-abwesenheiten abo="abo"></oo-abo-abwesenheiten>
       </div>

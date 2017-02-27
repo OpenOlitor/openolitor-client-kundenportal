@@ -10,15 +10,24 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
       },
       transclude: true,
       templateUrl: 'scripts/abos/list/lieferungen/lieferungen.html',
-      controller: function($scope,  $rootScope, NgTableParams, LieferungenListModel, LIEFEREINHEIT) {
+      controller: function($scope,  $rootScope, NgTableParams, LieferungenListModel, $filter, LIEFEREINHEIT) {
         $scope.lieferungen = undefined;
         $scope.projekt = $rootScope.projekt;
         $scope.maxKoerbe = 6;
+        $scope.rand = Math.floor((Math.random() * 100) + 1);
 
         $scope.liefereinheiten = LIEFEREINHEIT;
 
         $scope.showLoading = function() {
           return $scope.loading || $scope.template.creating > 0;
+        };
+
+        $scope.getLastLieferung = function() {
+          var filtered = $filter('dateRange')($scope.lieferungen, $scope.abo.start, $scope.abo.ende, 'datum');
+          if(filtered !== undefined && filtered.length > 0) {
+            return filtered[0];
+          }
+          return {};
         };
 
         var createLieferungenTableParams = function() {
