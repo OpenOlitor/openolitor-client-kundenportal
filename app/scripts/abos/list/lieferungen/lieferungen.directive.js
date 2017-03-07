@@ -14,6 +14,7 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
         $scope.lieferungen = undefined;
         $scope.projekt = $rootScope.projekt;
         $scope.maxKoerbe = 6;
+        $scope.today = new Date();
         $scope.rand = Math.floor((Math.random() * 100) + 1);
 
         $scope.liefereinheiten = LIEFEREINHEIT;
