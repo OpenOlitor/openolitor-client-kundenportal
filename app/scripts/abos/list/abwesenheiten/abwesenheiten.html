@@ -44,7 +44,7 @@
   </div>
   <div class="row">
     <div class="col-md-4 col-sm-6 form-group">
-      <div class="dropdown" ng-if="abo.aktiv">
+      <div class="dropdown" ng-if="isAboRunning(abo)">
         <div uib-dropdown class="btn-group" role="group" ng-show="abo.lieferdaten.length > 0">
           <a uib-dropdown-toggle role="button" ng-href="" class="btn btn-sm btn-success"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <span translate>Abwesenheit erfassen</span></a>
           <ul uib-dropdown-menu role="menu" class="dropdown-form">
