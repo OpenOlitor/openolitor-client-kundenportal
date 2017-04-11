@@ -31,13 +31,11 @@ angular.module('openolitor-kundenportal')
         $scope.loggedIn = ooAuthService.isUserLoggedIn(user);
         $scope.user = user;
 
-        if($scope.loggedIn) {
-          ProjektService.resolveProjekt().then(function(projekt) {
-            $scope.projekt = projekt;
-            $rootScope.projekt = projekt;
-            $rootScope.logoUrl = API_URL + 'kundenportal/projekt/' + projekt.id + '/logo';
-          });
-        }
+        ProjektService.resolveProjekt().then(function(projekt) {
+          $scope.projekt = projekt;
+          $rootScope.projekt = projekt;
+          $rootScope.logoUrl = API_URL + 'kundenportal/projekt/' + projekt.id + '/logo';
+        });
       });
 
       var unwatchStaticServerInfo = $scope.$watch(ServerService.getStaticServerInfo,

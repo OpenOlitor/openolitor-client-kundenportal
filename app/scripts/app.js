@@ -42,6 +42,15 @@ angular
   .constant('VERSION', '@@VERSION')
   .constant('AIRBREAK_API_KEY', '@@AIRBREAK_API_KEY')
   .constant('AIRBREAK_URL', '@@AIRBREAK_URL')
+  .constant('LIEFEREINHEIT', {
+    STUECK: addExtendedEnumValue('Stueck', gettext('Stück'), gettext('St.')),
+    BUND: addExtendedEnumValue('Bund', gettext('Bund'), gettext('Bu.')),
+    GRAMM: addExtendedEnumValue('Gramm', gettext('Gramm'), gettext('gr')),
+    KILOGRAMM: addExtendedEnumValue('Kilogramm', gettext('Kilogramm'),
+      gettext('kg')),
+    LITER: addExtendedEnumValue('Liter', gettext('Liter'), gettext('l')),
+    PORTION: addExtendedEnumValue('Portion', gettext('Portion'), gettext('Por.'))
+  })
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
@@ -151,5 +160,11 @@ angular
         controller: 'DashboardController',
         name: 'Dashboard',
         access: [userRoles.Administrator, userRoles.Kunde]
+      })
+      .when('/open/lastlieferplanungen', {
+        templateUrl: 'scripts/open/lastlieferplanungen.html',
+        controller: 'LastLieferplanungenController',
+        name: 'LastLieferplanungen',
+        access: [userRoles.Guest, userRoles.Administrator, userRoles.Kunde]
       });
   });
