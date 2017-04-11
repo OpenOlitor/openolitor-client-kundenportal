@@ -78,6 +78,16 @@ angular.module('openolitor-kundenportal')
         return '';
       };
 
+
+      $scope.getKontoNr = function(rechnung) {
+        if(angular.isUndefined(rechnung.esrNummer)) {
+          return '';
+        } else {
+          var nr = rechnung.esrNummer.split('+')[0];
+          return nr + ' NNN' + nr.substr(0, 2) + '-' + nr.substr(2, -1) + '-' +  nr.substr(-1, 1);
+        }
+      };
+
       $scope.gotoAbo = function(aboId) {
         $location.hash('abo' + aboId);
         $anchorScroll();
