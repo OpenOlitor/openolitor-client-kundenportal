@@ -1,0 +1,81 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row" ng-show="!entries">
+          <div class="col-md-12 col-sm-12" >
+            <span translate>Es wurden noch keine Lieferplanungen abgeschlossen.</span>
+          </div>
+        </div>
+        <div ng-repeat="planung in entries | orderBy:'produktBeschrieb' | limitTo:shownEntries">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row form-group">
+                <h3 class="nonboxed-title">
+                  <div class="col-md-5">
+                    <ul class="nav navbar-nav">
+                      <li class="navbar-brand"><span translate>Lieferung</span> #{{planung.id}}: <span translate>Inhalt der Körbe</span></li>
+                    </ul>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 korb" ng-repeat="abotypLieferung in planung.lieferungen | orderBy: 'abotypBeschrieb'">
+              <div class="panel panel-default panel-lieferplanung" oo-drop-target="true" on-drop="dropProdukt(dragEl, dropEl, type)">
+                <div class="panel-heading clearfix" ng-style="{'background-color':abotypLieferung.abotyp.farbCode}">
+                  <h3 class="panel-title lieferplanung-title">
+                    <span class="navbar-brand" data-toggle="collapse" data-target="#abotypLieferung_{{abotypLieferung.id}}" aria-expanded="true">
+                      {{abotypLieferung.abotypBeschrieb}}
+                    </span>
+                    <span class="pull-right">
+                      <span class="navbar-brand">{{abotypLieferung.datum | date}}</span>
+                    </span>
+                  </h3>
+                </div>
+                <div class="panel-body collapse in" id="abotypLieferung_{{abotypLieferung.id}}">
+                  <table class="table table-striped table-small table-lieferplanung" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
+                    <tr ng-repeat="korbprodukt in abotypLieferung.lieferpositionen | orderBy:'produktBeschrieb'" ng-class="{error: isInvalid(korbprodukt)}">
+                      <td>
+                        {{korbprodukt.produktBeschrieb}}
+                      </td>
+                      <td >
+                        {{korbprodukt.menge}}&nbsp;{{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}</div>
+                      </td>
+                      <td ng-if="projekt.preiseSichtbar">
+                        <span ng-show="korbprodukt.menge">
+                          {{calculatePreis(korbprodukt)| ooCHF}}&nbsp;{{projekt.waehrung}}
+                        </span>
+                        <span ng-hide="korbprodukt.menge" class="base-preis">
+                          {{korbprodukt.preisEinheit | ooCHF}}&nbsp;{{projekt.waehrung}}
+                        </span>
+                      </td>
+                      <td >
+                        {{korbprodukt.produzentKurzzeichen}}
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div ng-show="shownEntries < entries.length">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row form-group">
+                <h3 class="nonboxed-title">
+                  <div class="col-md-5" ng-click="showMore()">
+                    <ul class="nav navbar-nav" role="button">
+                      <li class="navbar-brand"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <span translate>Weitere Lieferungen anzeigen...</span></li>
+                    </ul>
+                  </div>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
