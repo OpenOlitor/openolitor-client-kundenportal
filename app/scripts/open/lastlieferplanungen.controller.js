@@ -16,6 +16,9 @@ angular.module('openolitor-kundenportal')
       });
 
       $scope.calculatePreis = function(korbprodukt) {
+        if(angular.isUndefined) {
+          return '';
+        }
         korbprodukt.preis = (korbprodukt.preisEinheit * korbprodukt.menge);
         return korbprodukt.preis;
       };
