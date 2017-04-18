@@ -34,7 +34,7 @@ angular.module('openolitor-kundenportal')
         ProjektService.resolveProjekt().then(function(projekt) {
           $scope.projekt = projekt;
           $rootScope.projekt = projekt;
-          $rootScope.logoUrl = API_URL + 'kundenportal/projekt/' + projekt.id + '/logo';
+          $rootScope.logoUrl = API_URL + 'open/projekt/' + projekt.id + '/logo';
         });
       });
 
