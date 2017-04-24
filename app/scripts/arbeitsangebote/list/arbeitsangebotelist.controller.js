@@ -4,8 +4,8 @@
  */
 angular.module('openolitor-kundenportal')
   .controller('ArbeitsangeboteListController', ['$scope', 'NgTableParams', 'ArbeitsangeboteListModel', '$uibModal',
-    '$log', 'alertService', 'gettext',
-    function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext) {
+    '$log', 'alertService', 'gettext', '$http',
+    function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext, $http) {
       $scope.arbeitsangebotTableParams = undefined;
 
       $scope.entries = [];
@@ -71,14 +71,14 @@ angular.module('openolitor-kundenportal')
         });
 
         modalInstance.result.then(function(data) {
-          $http.post(API_URL + 'kunden/' + $scope.abo.kundeId +
-            '/abos/' + $scope.abo.id + '/aktionen/guthabenanpassen',
+          $http.post(API_URL + 'kundenportal/arbeitsangebote/' + $scope.arbeitsangebot.id +
+            '/participate/',
             data).then(function() {
             alertService.addAlert('info', gettext(
-              'Guthaben wurde erfolgreich angepasst'));
+              'Erfolgreich in Arbeitsangebot eingeschrieben'));
           }, function(error) {
             alertService.addAlert('error', gettext(
-                'Guthaben konnte nicht angepasst werden: ') +
+                'Das Einschreiben war nicht erfolgreich: ') +
               error.status + ':' + error.statusText);
           });
         }, function() {
