@@ -86,7 +86,7 @@ angular
           notice.context.version = VERSION;
           return notice;
         });
-        var message = 'Error: ';
+        var message = gettext('Error: ');
         if(!angular.isUndefined(rejection.config) && !angular.isUndefined(rejection.config.url)) {
           message += rejection.config.url;
         }

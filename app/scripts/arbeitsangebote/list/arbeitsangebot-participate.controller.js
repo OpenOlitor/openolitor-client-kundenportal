@@ -2,7 +2,7 @@
 
 /**
  */
-angular.module('openolitor-admin')
+angular.module('openolitor-kundenportal')
   .controller('ArbeitsangebotParticipateController', ['$scope', '$uibModalInstance',
     '$log', 'arbeitsangebot',
 
