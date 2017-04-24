@@ -3,9 +3,9 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .controller('ArbeitsangeboteListController', ['$scope', 'NgTableParams', 'ArbeitsangeboteListModel',
-    'FileUtil', '$location', '$anchorScroll',
-    function($scope, NgTableParams, ArbeitsangeboteListModel, FileUtil, $location, $anchorScroll) {
+  .controller('ArbeitsangeboteListController', ['$scope', 'NgTableParams', 'ArbeitsangeboteListModel', '$uibModal',
+    '$log', 'alertService', 'gettext',
+    function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext) {
       $scope.arbeitsangebotTableParams = undefined;
 
       $scope.entries = [];
@@ -59,7 +59,31 @@ angular.module('openolitor-kundenportal')
       };
 
       $scope.participate = function(arbeitsangebot) {
-        
+        var modalInstance = $uibModal.open({
+          animation: true,
+          templateUrl: 'scripts/arbeitsangebote/list/arbeitsangebot-participate.html',
+          controller: 'ArbeitsangebotParticipateController',
+          resolve: {
+            arbeitsangebot: function() {
+              return arbeitsangebot;
+            }
+          }
+        });
+
+        modalInstance.result.then(function(data) {
+          $http.post(API_URL + 'kunden/' + $scope.abo.kundeId +
+            '/abos/' + $scope.abo.id + '/aktionen/guthabenanpassen',
+            data).then(function() {
+            alertService.addAlert('info', gettext(
+              'Guthaben wurde erfolgreich angepasst'));
+          }, function(error) {
+            alertService.addAlert('error', gettext(
+                'Guthaben konnte nicht angepasst werden: ') +
+              error.status + ':' + error.statusText);
+          });
+        }, function() {
+          $log.info('Modal dismissed at: ' + new Date());
+        });
       };
     }
   ]);
