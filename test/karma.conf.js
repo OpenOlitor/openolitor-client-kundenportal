@@ -7,7 +7,7 @@ module.exports = function(config) {
 
     files: [
       'app/bower_components/es5-shim/es5-shim.js',
-      'app/bower_components/jquery/dist/jquery.js',
+      'app/bower_components/jquery/jquery.js',
       'app/bower_components/angular/angular.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/angular-animate/angular-animate.js',
