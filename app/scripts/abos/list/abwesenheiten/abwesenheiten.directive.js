@@ -11,7 +11,7 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
       transclude: true,
       templateUrl: 'scripts/abos/list/abwesenheiten/abwesenheiten.html',
       controller: function($scope, $rootScope, NgTableParams, AbwesenheitenListModel,
-        msgBus, lodash, GeschaeftsjahrUtil) {
+        msgBus, lodash, GeschaeftsjahrUtil, moment) {
         $scope.projekt = $rootScope.projekt;
 
         $scope.showAllAbwesenheiten = false;
@@ -75,6 +75,10 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
               return l.id === abw.lieferungId;
             });
           return lieferung && lieferung.length === 1 && !lieferung[0].lieferplaningId;
+        };
+
+        $scope.isAboRunning = function(abo) {
+          return angular.isUndefined(abo.ende) || moment(abo.ende).isAfter(moment());
         };
 
         if (!$scope.abwesenheitenTableParams) {

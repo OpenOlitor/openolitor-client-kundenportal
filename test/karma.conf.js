@@ -49,6 +49,7 @@ module.exports = function(config) {
       'app/bower_components/airbrake-js/dist/client.js',
       'app/bower_components/angular-loading-bar/build/loading-bar.js',
       'app/bower_components/openolitor-core/dist/scripts/openolitor-core.js',
+      'app/bower_components/angular-loading-bar/build/loading-bar.js',
       'app/scripts/app.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',

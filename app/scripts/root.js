@@ -7,10 +7,11 @@ angular.module('openolitor-kundenportal')
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
     'ENV', 'VERSION', 'cssInjector',
-    'ooAuthService', 'API_URL',
+    'ooAuthService', 'API_URL', '$cookies',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
-      $timeout, BUILD_NR, ENV, VERSION, cssInjector, ooAuthService, API_URL) {
+      $timeout, BUILD_NR, ENV, VERSION, cssInjector, ooAuthService, API_URL,
+      $cookies) {
       angular.element($window).bind('resize', function() {
         checkSize();
       });
@@ -30,13 +31,11 @@ angular.module('openolitor-kundenportal')
         $scope.loggedIn = ooAuthService.isUserLoggedIn(user);
         $scope.user = user;
 
-        if($scope.loggedIn) {
-          ProjektService.resolveProjekt().then(function(projekt) {
-            $scope.projekt = projekt;
-            $rootScope.projekt = projekt;
-            $rootScope.logoUrl = API_URL + 'kundenportal/projekt/' + projekt.id + '/logo';
-          });
-        }
+        ProjektService.resolveProjekt().then(function(projekt) {
+          $scope.projekt = projekt;
+          $rootScope.projekt = projekt;
+          $rootScope.logoUrl = API_URL + 'open/projekt/' + projekt.id + '/logo';
+        });
       });
 
       var unwatchStaticServerInfo = $scope.$watch(ServerService.getStaticServerInfo,
@@ -56,7 +55,7 @@ angular.module('openolitor-kundenportal')
         $scope.messagingSocketClosedReason = msg.reason;
         $timeout(function() {
           $scope.showConnectionErrorMessage = true;
-        }, 10000);
+        }, 30000);
         $scope.$apply();
       });
 
@@ -69,18 +68,45 @@ angular.module('openolitor-kundenportal')
 
       $scope.changeLang = function(lang) {
         if (!angular.isUndefined(lang)) {
-          gettextCatalog.setCurrentLanguage(lang);
-          amMoment.changeLocale(lang);
+
+          msgBus.emitMsg({
+            type: 'ChangeLang',
+            reason: lang
+          });
+          $scope.storeActiveLang(lang);
           $scope.$emit('languageChanged');
         }
       };
+
+      msgBus.onMsg('ChangeLang', $rootScope, function(event, msg) {
+        gettextCatalog.setCurrentLanguage(msg.reason);
+      });
 
       $scope.activeLang = function() {
         return gettextCatalog.getCurrentLanguage();
       };
 
-      if ($scope.activeLang() !== 'de' || $scope.activeLang() !== 'fr') {
-        $scope.changeLang('de');
+      $scope.storedActiveLang = function() {
+        return $cookies.get('activeLang');
+      };
+
+      $scope.storeActiveLang = function(lang) {
+        $cookies.put('activeLang', lang);
+      };
+
+      if (angular.isUndefined($scope.storedActiveLang())) {
+        var lang = $window.navigator.language || $window.navigator.userLanguage;
+        if(lang.indexOf('de-') > 0) {
+          $scope.changeLang('de');
+        } else if(lang.indexOf('fr-') > 0) {
+          $scope.changeLang('fr');
+        } else if(lang.indexOf('en-') > 0) {
+          $scope.changeLang('en');
+        } else {
+          $scope.changeLang('de');
+        }
+      } else {
+        $scope.changeLang($scope.storedActiveLang());
       }
 
       $scope.$on('destroy', function() {

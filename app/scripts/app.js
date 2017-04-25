@@ -49,6 +49,15 @@ angular
   .constant('VERSION', '@@VERSION')
   .constant('AIRBREAK_API_KEY', '@@AIRBREAK_API_KEY')
   .constant('AIRBREAK_URL', '@@AIRBREAK_URL')
+  .constant('LIEFEREINHEIT', {
+    STUECK: addExtendedEnumValue('Stueck', gettext('Stück'), gettext('St.')),
+    BUND: addExtendedEnumValue('Bund', gettext('Bund'), gettext('Bu.')),
+    GRAMM: addExtendedEnumValue('Gramm', gettext('Gramm'), gettext('gr')),
+    KILOGRAMM: addExtendedEnumValue('Kilogramm', gettext('Kilogramm'),
+      gettext('kg')),
+    LITER: addExtendedEnumValue('Liter', gettext('Liter'), gettext('l')),
+    PORTION: addExtendedEnumValue('Portion', gettext('Portion'), gettext('Por.'))
+  })
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
@@ -95,7 +104,57 @@ angular
       }
     };
   })
+  .factory('loggedOutInterceptor', function($q, alertService) {
+    return {
+      responseError: function (rejection) {
+        var status = rejection.status;
+        if (status === 401) {
+            alertService.removeAllAlerts();
+            window.location = '#/logout';
+            return;
+        }
+        return $q.reject(rejection);
+      }
+    };
+  })
+  .filter('dateRange', function(moment) {
+    function isMidnight(mom) {
+      // The moment at midnight
+      var mmtMidnight = mom.clone().startOf('day');
+
+      // Difference in minutes == 0 => midnight
+      return mom.diff(mmtMidnight, 'minutes') === 0;
+    }
+
+    return function(items, from, to, attribute) {
+      if(!angular.isUndefined(items) && items.length > 0) {
+        var toPlusOne = to;
+        var momTo = moment(to);
+        if(isMidnight(momTo)) {
+          toPlusOne = momTo.add(1, 'days');
+        }
+        var result = [];
+        for (var i=0; i<items.length; i++){
+          var itemDate = items[i][attribute];
+          if(!angular.isUndefined(attribute)) {
+            itemDate = items[i][attribute];
+          }
+          if(angular.isUndefined(to) && angular.isUndefined(from)) {
+            result.push(items[i]);
+          } else if(angular.isUndefined(to) && itemDate >= from) {
+            result.push(items[i]);
+          } else if(angular.isUndefined(from) && itemDate <= toPlusOne) {
+            result.push(items[i]);
+          } else if (itemDate >= from && itemDate <= toPlusOne)  {
+            result.push(items[i]);
+          }
+        }
+        return result;
+      }
+    };
+  })
   .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.interceptors.push('loggedOutInterceptor');
     $httpProvider.interceptors.push('errbitErrorInterceptor');
   }])
   .config(function($routeProvider) {
@@ -108,5 +167,11 @@ angular
         controller: 'DashboardController',
         name: 'Dashboard',
         access: [userRoles.Administrator, userRoles.Kunde]
+      })
+      .when('/open/lastlieferplanungen', {
+        templateUrl: 'scripts/open/lastlieferplanungen.html',
+        controller: 'LastLieferplanungenController',
+        name: 'LastLieferplanungen',
+        access: [userRoles.Guest, userRoles.Administrator, userRoles.Kunde]
       });
   });
