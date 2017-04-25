@@ -34,6 +34,7 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+  <link rel="stylesheet" href="@@API_URLressource/style/kundenportal" />
 </head>
 
 <body class="white openolitor kundenportal" ng-controller="OpenOlitorRootController">
@@ -41,7 +42,14 @@
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div>
-        <a class="navbar-brand logo" ng-href="#/"> <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32" width="32" /></a>
+        <a class="navbar-brand logo" ng-href="#/"> 
+          <!-- If the object data url is not found the inner img tag will be rendered. -->
+          <!-- Older browsers will ignore it. -->
+          <object data="@@API_URLopen/projekt/1/logo" type="image/png" height="32" width="32">
+            <!-- First, the default logo is displayed. After the http-src request completes, the logo will be replaced -->
+            <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32" width="32" />
+          </object>
+        </a>
         <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
