@@ -124,6 +124,14 @@ module.exports = function(grunt) {
           dest: '.tmp/concat/scripts'
         }]
       },
+      index: {
+        files: [{
+          expand: true,
+          flatten: true,
+          src: ['<%= openolitor.dist %>/index.html'],
+          dest: '<%= openolitor.dist %>'
+        }]
+      },
       mandant1: {
         options: {
           patterns: [{
@@ -296,29 +304,29 @@ module.exports = function(grunt) {
 
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
-        options: {
-            includePaths: [
-                'app/bower_components'
-            ]
-        },
-        dist: {
-            files: [{
-                expand: true,
-                cwd: '<%= openolitor.app %>/styles',
-                src: ['*.scss'],
-                dest: '.tmp/styles',
-                ext: '.css'
-            }]
-        },
-        server: {
-            files: [{
-                expand: true,
-                cwd: '<%= openolitor.app %>/styles',
-                src: ['*.scss'],
-                dest: '.tmp/styles',
-                ext: '.css'
-            }]
-        }
+      options: {
+        includePaths: [
+          'app/bower_components'
+        ]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= openolitor.app %>/styles',
+          src: ['*.scss'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
+      },
+      server: {
+        files: [{
+          expand: true,
+          cwd: '<%= openolitor.app %>/styles',
+          src: ['*.scss'],
+          dest: '.tmp/styles',
+          ext: '.css'
+        }]
+      }
     },
 
     // Renames files for browser caching purposes
@@ -685,6 +693,7 @@ module.exports = function(grunt) {
     'copy:mandant2',
     'replace:mandant1',
     'replace:mandant2',
+    'replace:index',
     'compress:main',
     'compress:mandanten'
   ]);
