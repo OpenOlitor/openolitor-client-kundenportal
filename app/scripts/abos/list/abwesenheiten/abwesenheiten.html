@@ -1,8 +1,7 @@
 <div>
   <div class="row form-group">
     <div class="col-md-12">
-      <h4 translate>Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}
-      <span nf-if="abo.abotyp.anzahlAbwesenheiten > 0"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small></h4>
+      <h4 translate>Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}<span ng-if="abo.abotyp.anzahlAbwesenheiten > 0"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small></h4>
     </div>
   </div>
   <div class="row form-group">
@@ -21,8 +20,8 @@
             switch-off-text="{{'pendente' | translate}}"
             switch-icon="fa fa-history">
           </span>
-      </script>
-      {{$data}}
+    </script>
+    {{$data}}
       <table ng-table="abwesenheitenTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
         <tr ng-repeat="abw in $data | filter:(showAllAbwesenheiten || '') && {abw: {lieferung : {status: 'Offen'}}} | orderBy:'datum'">
           <td data-title="'Datum'|translate">
