@@ -6,6 +6,24 @@ var userRoles = {
   Kunde: 'Kunde'
 };
 
+function addExtendedEnumValue(id, labelLong, labelShort, value) {
+  return {
+    id: id,
+    label: {
+      long: labelLong,
+      short: labelShort
+    },
+    value: value
+  };
+}
+
+/* This is a pseudo-function in order to enable gettext-extractor to find the translations that need to be done in the constants.
+   As described in https://github.com/rubenv/angular-gettext/issues/67
+*/
+function gettext(string) {
+  return string;
+}
+
 /**
  */
 angular
