@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "1.0.20",
+  "version": "2.0.0-SNAPSHOT",
   "private": false,
   "dependencies": {
     "angular": "~1.5.8",
