@@ -1,6 +1,12 @@
 <div class="panel panel-default">
   <div class="panel-heading clearfix">
-    <h3 class="panel-title"><span class="navbar-brand" translate>Der letzte Korb <span ng-show="lieferungen">vom {{getLastLieferung().datum | date}}</span></span></h3>
+    <h3 class="panel-title">
+      <span class="navbar-brand">
+        <span ng-if="getLastLieferung().datum > today" translate>Der nächste Korb</span>
+        <span ng-if="getLastLieferung().datum <= today" translate>Der aktuelle Korb</span>
+        <span ng-show="lieferungen">vom {{getLastLieferung().datum | date}}</span>
+      </span>
+    </h3>
   </div>
   <div class="panel-body">
     <div class="row form-group">
@@ -91,7 +97,7 @@
       <div ng-show="(lieferungen| dateRange:abo.start:abo.ende:'datum').length >= maxKoerbe" class="panel panel-default">
         <div class="panel-heading" role="tab" ng-click="showMore()">
           <h4 class="panel-title">
-            <span role="button" data-toggle="collapse" data-parent="#archiv" data-target="#collapse{{lieferung.id}}" aria-expanded="true" aria-controls="collapse{{lieferung.id}}">
+            <span role="button">
               <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> <span translate>Weitere Körbe anzeigen...</span>
             </span>
           </h4>

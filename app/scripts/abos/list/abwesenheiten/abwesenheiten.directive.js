@@ -11,7 +11,7 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
       transclude: true,
       templateUrl: 'scripts/abos/list/abwesenheiten/abwesenheiten.html',
       controller: function($scope, $rootScope, NgTableParams, AbwesenheitenListModel,
-        msgBus, lodash, GeschaeftsjahrUtil) {
+        msgBus, lodash, GeschaeftsjahrUtil, moment) {
         $scope.projekt = $rootScope.projekt;
 
         $scope.showAllAbwesenheiten = false;
@@ -77,6 +77,10 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
           return lieferung && lieferung.length === 1 && !lieferung[0].lieferplaningId;
         };
 
+        $scope.isAboRunning = function(abo) {
+          return angular.isUndefined(abo.ende) || moment(abo.ende).isAfter(moment());
+        };
+
         if (!$scope.abwesenheitenTableParams) {
           //use default tableParams
           $scope.abwesenheitenTableParams = new NgTableParams({ // jshint ignore:line
@@ -101,14 +105,16 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
 
         msgBus.onMsg('EntityCreated', $scope, function(event, msg) {
           if (msg.entity === 'Abwesenheit') {
-            $scope.template.creating = $scope.template.creating - 1;
-            msg.data.kundeId = $scope.abo.kundeId;
-            $scope.abwesenheiten.push(new AbwesenheitenListModel(msg.data));
-            GeschaeftsjahrUtil.setOnMatchingGJItem(
-              $scope.abo.anzahlAbwesenheiten,
-              GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, msg.data.datum).value + 1,
-              msg.data.date
-            );
+            if(msg.data.aboId === $scope.abo.id) {
+              $scope.template.creating = $scope.template.creating - 1;
+              msg.data.kundeId = $scope.abo.kundeId;
+              $scope.abwesenheiten.push(new AbwesenheitenListModel(msg.data));
+              GeschaeftsjahrUtil.setOnMatchingGJItem(
+                $scope.abo.anzahlAbwesenheiten,
+                GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, msg.data.datum).value + 1,
+                msg.data.date
+              );
+            }
 
             $scope.$apply();
           }

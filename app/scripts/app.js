@@ -6,6 +6,24 @@ var userRoles = {
   Kunde: 'Kunde'
 };
 
+function addExtendedEnumValue(id, labelLong, labelShort, value) {
+  return {
+    id: id,
+    label: {
+      long: labelLong,
+      short: labelShort
+    },
+    value: value
+  };
+}
+
+/* This is a pseudo-function in order to enable gettext-extractor to find the translations that need to be done in the constants.
+   As described in https://github.com/rubenv/angular-gettext/issues/67
+*/
+function gettext(string) {
+  return string;
+}
+
 /**
  */
 angular
@@ -32,7 +50,6 @@ angular
     'ngFileUpload',
     'ngLodash',
     'angular-sortable-view',
-    'angular.css.injector',
     'openolitor-core'
   ])
   .constant('API_URL', '@@API_URL')
@@ -42,6 +59,15 @@ angular
   .constant('VERSION', '@@VERSION')
   .constant('AIRBREAK_API_KEY', '@@AIRBREAK_API_KEY')
   .constant('AIRBREAK_URL', '@@AIRBREAK_URL')
+  .constant('LIEFEREINHEIT', {
+    STUECK: addExtendedEnumValue('Stueck', gettext('Stück'), gettext('St.')),
+    BUND: addExtendedEnumValue('Bund', gettext('Bund'), gettext('Bu.')),
+    GRAMM: addExtendedEnumValue('Gramm', gettext('Gramm'), gettext('gr')),
+    KILOGRAMM: addExtendedEnumValue('Kilogramm', gettext('Kilogramm'),
+      gettext('kg')),
+    LITER: addExtendedEnumValue('Liter', gettext('Liter'), gettext('l')),
+    PORTION: addExtendedEnumValue('Portion', gettext('Portion'), gettext('Por.'))
+  })
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
@@ -67,20 +93,21 @@ angular
   }])
   .factory('errbitErrorInterceptor', function($q, ENV, VERSION, AIRBREAK_API_KEY, AIRBREAK_URL) {
     return {
-      responseError: function (rejection) {
+      responseError: function(rejection) {
         /*jshint -W117 */
         var airbrake = new airbrakeJs.Client({
           projectId: 1,
           host: AIRBREAK_URL,
-          projectKey: AIRBREAK_API_KEY});
+          projectKey: AIRBREAK_API_KEY
+        });
         /*jshint +W117 */
-        airbrake.addFilter(function (notice) {
+        airbrake.addFilter(function(notice) {
           notice.context.environment = ENV;
           notice.context.version = VERSION;
           return notice;
         });
         var message = 'Error: ';
-        if(!angular.isUndefined(rejection.config) && !angular.isUndefined(rejection.config.url)) {
+        if (!angular.isUndefined(rejection.config) && !angular.isUndefined(rejection.config.url)) {
           message += rejection.config.url;
         }
         airbrake.notify(message);
@@ -90,12 +117,12 @@ angular
   })
   .factory('loggedOutInterceptor', function($q, alertService) {
     return {
-      responseError: function (rejection) {
+      responseError: function(rejection) {
         var status = rejection.status;
         if (status === 401) {
-            alertService.removeAllAlerts();
-            window.location = '#/logout';
-            return;
+          alertService.removeAllAlerts();
+          window.location = '#/logout';
+          return;
         }
         return $q.reject(rejection);
       }
@@ -111,25 +138,25 @@ angular
     }
 
     return function(items, from, to, attribute) {
-      if(!angular.isUndefined(items) && items.length > 0) {
+      if (!angular.isUndefined(items) && items.length > 0) {
         var toPlusOne = to;
         var momTo = moment(to);
-        if(isMidnight(momTo)) {
+        if (isMidnight(momTo)) {
           toPlusOne = momTo.add(1, 'days');
         }
         var result = [];
-        for (var i=0; i<items.length; i++){
+        for (var i = 0; i < items.length; i++) {
           var itemDate = items[i][attribute];
-          if(!angular.isUndefined(attribute)) {
+          if (!angular.isUndefined(attribute)) {
             itemDate = items[i][attribute];
           }
-          if(angular.isUndefined(to) && angular.isUndefined(from)) {
+          if (angular.isUndefined(to) && angular.isUndefined(from)) {
             result.push(items[i]);
-          } else if(angular.isUndefined(to) && itemDate >= from) {
+          } else if (angular.isUndefined(to) && itemDate >= from) {
             result.push(items[i]);
-          } else if(angular.isUndefined(from) && itemDate <= toPlusOne) {
+          } else if (angular.isUndefined(from) && itemDate <= toPlusOne) {
             result.push(items[i]);
-          } else if (itemDate >= from && itemDate <= toPlusOne)  {
+          } else if (itemDate >= from && itemDate <= toPlusOne) {
             result.push(items[i]);
           }
         }
@@ -151,5 +178,11 @@ angular
         controller: 'DashboardController',
         name: 'Dashboard',
         access: [userRoles.Administrator, userRoles.Kunde]
+      })
+      .when('/open/lastlieferplanungen', {
+        templateUrl: 'scripts/open/lastlieferplanungen.html',
+        controller: 'LastLieferplanungenController',
+        name: 'LastLieferplanungen',
+        access: [userRoles.Guest, userRoles.Administrator, userRoles.Kunde]
       });
   });

@@ -6,11 +6,11 @@ angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
-    'ENV', 'VERSION', 'cssInjector',
+    'ENV', 'VERSION',
     'ooAuthService', 'API_URL', '$cookies',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
-      $timeout, BUILD_NR, ENV, VERSION, cssInjector, ooAuthService, API_URL,
+      $timeout, BUILD_NR, ENV, VERSION, ooAuthService, API_URL,
       $cookies) {
       angular.element($window).bind('resize', function() {
         checkSize();
@@ -31,13 +31,11 @@ angular.module('openolitor-kundenportal')
         $scope.loggedIn = ooAuthService.isUserLoggedIn(user);
         $scope.user = user;
 
-        if($scope.loggedIn) {
-          ProjektService.resolveProjekt().then(function(projekt) {
-            $scope.projekt = projekt;
-            $rootScope.projekt = projekt;
-            $rootScope.logoUrl = API_URL + 'kundenportal/projekt/' + projekt.id + '/logo';
-          });
-        }
+        ProjektService.resolveProjekt().then(function(projekt) {
+          $scope.projekt = projekt;
+          $rootScope.projekt = projekt;
+          $rootScope.logoUrl = API_URL + 'open/projekt/' + projekt.id + '/logo';
+        });
       });
 
       var unwatchStaticServerInfo = $scope.$watch(ServerService.getStaticServerInfo,
@@ -115,8 +113,5 @@ angular.module('openolitor-kundenportal')
         unwatchLoggedIn();
         unwatchStaticServerInfo();
       });
-
-      cssInjector.add(API_URL + 'ressource/style/kundenportal');
-
     }
   ]);
