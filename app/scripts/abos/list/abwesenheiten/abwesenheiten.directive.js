@@ -105,14 +105,16 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
 
         msgBus.onMsg('EntityCreated', $scope, function(event, msg) {
           if (msg.entity === 'Abwesenheit') {
-            $scope.template.creating = $scope.template.creating - 1;
-            msg.data.kundeId = $scope.abo.kundeId;
-            $scope.abwesenheiten.push(new AbwesenheitenListModel(msg.data));
-            GeschaeftsjahrUtil.setOnMatchingGJItem(
-              $scope.abo.anzahlAbwesenheiten,
-              GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, msg.data.datum).value + 1,
-              msg.data.date
-            );
+            if(msg.data.aboId === $scope.abo.id) {
+              $scope.template.creating = $scope.template.creating - 1;
+              msg.data.kundeId = $scope.abo.kundeId;
+              $scope.abwesenheiten.push(new AbwesenheitenListModel(msg.data));
+              GeschaeftsjahrUtil.setOnMatchingGJItem(
+                $scope.abo.anzahlAbwesenheiten,
+                GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, msg.data.datum).value + 1,
+                msg.data.date
+              );
+            }
 
             $scope.$apply();
           }

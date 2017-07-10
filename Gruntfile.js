@@ -51,6 +51,9 @@ module.exports = function(grunt) {
     },
     'prod-bioabi': {
       'm1': 'https://prod.openolitor.ch/bioabi/'
+    },
+    'prod-gmuesluzern': {
+      'm1': 'https://prod.openolitor.ch/gmuesluzern/'
     }
   };
   var env = 'dev';
