@@ -168,6 +168,12 @@ angular
     $httpProvider.interceptors.push('loggedOutInterceptor');
     $httpProvider.interceptors.push('errbitErrorInterceptor');
   }])
+  .config(['$locationProvider', function($locationProvider) {
+    $locationProvider.hashPrefix('');
+  }])
+  .config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+  }])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
