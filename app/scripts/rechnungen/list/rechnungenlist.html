@@ -1,85 +1,99 @@
 <div class="row secion-rechnungen-content">
   <div class="col-md-12">
     <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="row" ng-show="!entries">
-          <div class="col-md-4 col-sm-12" >
-            <span translate>Es liegen noch keine Rechnungen vor.</span>
-          </div>
+      <div class="panel-heading clearfix">
+          <h3 class="panel-title">
+            <span class="navbar-brand">
+              <span translate>Konto für Einzahlungen:</span>
+              <span ng-if="kontodaten.iban">{{kontodaten.iban}}</span>
+              <span ng-if="!kontodaten.iban" translate>in Stammdaten nicht definiert</span>
+            </span>
+          </h3>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
-              <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
-                <td>
-                  <span role="button" ng-if="rechnung.fileStoreId">
-                    <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                    <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                  </span>
-                  <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
-                    <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
-                    <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                  </span>
-                </td>
-                <td data-title="'Rechnungsdatum'|translate">
-                  {{rechnung.rechnungsDatum | date}}
-                </td>
-                <td data-title="'Fällig am'|translate">
-                  {{rechnung.faelligkeitsDatum | date}}
-                </td>
-                <td data-title="'Titel'|translate">
-                  {{rechnung.titel}}
-                </td>
-                <td data-title="'Betrag'|translate">
-                  {{rechnung.waehrung}} {{rechnung.betrag | ooCHF}}
-                </td>
-                <td data-title="'Abo'|translate">
-                  <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
-                </td>
-                <td data-title="'ESR-Nr.'|translate" data-class="hidden-sm hidden-xs">
-                  {{rechnung.esrNummer}}
-                </td>
-                <td data-title="'Status'|translate">
-                  <i class="fa" ng-class="statusClass(rechnung)" ng-attr-title="{{rechnung.status}}"></i>
-                </td>
-              </tr>
-            </table>
+        <div class="panel-body">
+          <div class="row" ng-show="!entries">
+            <div class="col-md-4 col-sm-12" >
+              <span translate>Es liegen noch keine Rechnungen vor.</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
+                <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
+                  <td>
+                    <span role="button" ng-if="rechnung.fileStoreId">
+                      <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                      <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                    </span>
+                    <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
+                      <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
+                      <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                    </span>
+                  </td>
+                  <td data-title="'Rechnungsdatum'|translate">
+                    {{rechnung.rechnungsDatum | date}}
+                  </td>
+                  <td data-title="'Fällig am'|translate">
+                    {{rechnung.faelligkeitsDatum | date}}
+                  </td>
+                  <td data-title="'Titel'|translate">
+                    {{rechnung.titel}}
+                  </td>
+                  <td data-title="'Betrag'|translate">
+                    {{rechnung.waehrung}} {{rechnung.betrag | ooCHF}}
+                  </td>
+                  <td data-title="'Abo'|translate">
+                    <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
+                  </td>
+                  <td data-title="'Referenznummer'|translate" data-class="hidden-sm hidden-xs">
+                    {{rechnung.referenzNummer}}
+                  </td>
+                  <td data-title="'Status'|translate">
+                    <i class="fa" ng-class="statusClass(rechnung)" ng-attr-title="{{rechnung.status}}"></i>
+                  </td>
+                  <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
+                  <script type="text/ng-template" id="esrToolTip"><span translate>ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)</span></script>
+                  <td data-title="'ESR-Nr.'|translate">
+                    <a href="#" class="glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}" uib-tooltip-template="'esrToolTip'"></a>
+                  </td>
+                </tr>
+              </table>
 
-            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
-              <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
-                <td>
-                  <span role="button" ng-if="rechnung.fileStoreId">
-                    <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                    <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                  </span>
-                  <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
-                    <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
-                    <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                  </span>
-                </td>
-                <td data-title="'Datum'|translate">
-                  {{rechnung.rechnungsDatum | date}}
-                </td>
-                <td data-title="'Fällig'|translate">
-                  {{rechnung.faelligkeitsDatum | date}}
-                </td>
-                <td data-title="'Titel'|translate">
-                  {{rechnung.titel}}
-                </td>
-                <td data-title="'Betrag'|translate">
-                  {{rechnung.waehrung}} {{rechnung.betrag | ooCHF}}
-                </td>
-                <td data-title="'Abo'|translate">
-                  <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
-                </td>
-                <td data-title="'Status'|translate">
-                  <i class="fa" ng-class="statusClass(rechnung)" ng-attr-title="{{rechnung.status}}"></i>
-                </td>
-              </tr>
-            </table>
+              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
+                <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
+                  <td>
+                    <span role="button" ng-if="rechnung.fileStoreId">
+                      <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                      <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                    </span>
+                    <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
+                      <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
+                      <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                    </span>
+                  </td>
+                  <td data-title="'Datum'|translate">
+                    {{rechnung.rechnungsDatum | date}}
+                  </td>
+                  <td data-title="'Fällig'|translate">
+                    {{rechnung.faelligkeitsDatum | date}}
+                  </td>
+                  <td data-title="'Titel'|translate">
+                    {{rechnung.titel}}
+                  </td>
+                  <td data-title="'Betrag'|translate">
+                    {{rechnung.waehrung}} {{rechnung.betrag | ooCHF}}
+                  </td>
+                  <td data-title="'Abo'|translate">
+                    <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
+                  </td>
+                  <td data-title="'Status'|translate">
+                    <i class="fa" ng-class="statusClass(rechnung)" ng-attr-title="{{rechnung.status}}"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 </div>
