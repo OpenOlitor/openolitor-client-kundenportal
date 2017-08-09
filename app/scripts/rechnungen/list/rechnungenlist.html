@@ -53,8 +53,8 @@
                   </td>
                   <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
                   <script type="text/ng-template" id="esrToolTip"><span translate>ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)</span></script>
-                  <td data-title="'ESR-Nr.'|translate">
-                    <a href="#" class="glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}" uib-tooltip-template="'esrToolTip'"></a>
+                  <td data-title="'ESR-Nr.'|translate" uib-tooltip-template="'esrToolTip'">
+                    <button class="glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
                   </td>
                 </tr>
               </table>
