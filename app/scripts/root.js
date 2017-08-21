@@ -31,11 +31,18 @@ angular.module('openolitor-kundenportal')
         $scope.loggedIn = ooAuthService.isUserLoggedIn(user);
         $scope.user = user;
 
-        ProjektService.resolveProjekt().then(function(projekt) {
+        if($scope.loggedIn){
+            ProjektService.resolveProjekt(false).then(function(projekt) {
+            $scope.projekt = projekt;
+            $rootScope.projekt = projekt;
+            $scope.checkWelcomeMessage();
+          });
+        }else{
+          ProjektService.resolveProjekt(true).then(function(projekt) {
           $scope.projekt = projekt;
           $rootScope.projekt = projekt;
-          $rootScope.logoUrl = API_URL + 'open/projekt/' + projekt.id + '/logo';
-        });
+          });
+        }
       });
 
       var unwatchStaticServerInfo = $scope.$watch(ServerService.getStaticServerInfo,
@@ -108,6 +115,13 @@ angular.module('openolitor-kundenportal')
       } else {
         $scope.changeLang($scope.storedActiveLang());
       }
+
+
+      $scope.checkWelcomeMessage = function(){
+          if ($scope.projekt.welcomeMessage2){
+              $('#welcomeMessageModal').modal('show');
+          }
+      };
 
       $scope.$on('destroy', function() {
         unwatchLoggedIn();
