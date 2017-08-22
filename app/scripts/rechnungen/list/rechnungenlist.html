@@ -54,9 +54,6 @@
                   <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
                   <script type="text/ng-template" id="esrToolTip"><span translate>ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)</span></script>
                   <td data-title="'ESR-Nr.'|translate" uib-tooltip-template="'esrToolTip'">
-<<<<<<< Updated upstream
-                    <button class="glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
-=======
                     <button class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
                   </td>
                 </tr>
@@ -73,7 +70,6 @@
                       <span translate>Abo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
                       <span translate>Anzahl Lieferungen</span>: {{rechnungsPosition.anzahlLieferungen}}
                     </span>
->>>>>>> Stashed changes
                   </td>
                 </tr>
               </table>
