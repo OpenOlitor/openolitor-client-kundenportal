@@ -50,7 +50,8 @@ angular
     'ngFileUpload',
     'ngLodash',
     'angular-sortable-view',
-    'openolitor-core'
+    'openolitor-core',
+    'ngclipboard'
   ])
   .constant('API_URL', '@@API_URL')
   .constant('API_WS_URL', '@@API_WS_URL')
@@ -167,6 +168,12 @@ angular
   .config(['$httpProvider', function($httpProvider) {
     $httpProvider.interceptors.push('loggedOutInterceptor');
     $httpProvider.interceptors.push('errbitErrorInterceptor');
+  }])
+  .config(['$locationProvider', function($locationProvider) {
+    $locationProvider.hashPrefix('');
+  }])
+  .config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
   }])
   .config(function($routeProvider) {
     $routeProvider
