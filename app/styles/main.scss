@@ -339,6 +339,11 @@ input.ng-invalid {
   box-shadow: 4px 4px 10px grey;
 }
 
+.table-striped>tbody>tr.detail-rows {
+  font-size: 90%;
+  background-color: #f3e7d9;
+}
+
 .korb {
   min-height: 30em;
 }

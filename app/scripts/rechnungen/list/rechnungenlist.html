@@ -19,7 +19,11 @@
           <div class="row">
             <div class="col-md-12">
               <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
-                <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
+                <tr ng-repeat-start="rechnung in $data | orderBy:'-rechnungsDatum'">
+                  <td>
+                    <button class="btn btn-xs glyphicon glyphicon-plus" ng-show="!rechnung.detailsVisible" ng-click="displayDetails(rechnung)" />
+                    <button class="btn btn-xs glyphicon glyphicon-minus" ng-show="rechnung.detailsVisible" ng-click="displayDetails(rechnung)" />
+                  </td>
                   <td>
                     <span role="button" ng-if="rechnung.fileStoreId">
                       <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
@@ -42,9 +46,6 @@
                   <td data-title="'Betrag'|translate">
                     {{rechnung.waehrung}} {{rechnung.betrag | ooCHF}}
                   </td>
-                  <td data-title="'Abo'|translate">
-                    <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
-                  </td>
                   <td data-title="'Referenznummer'|translate" data-class="hidden-sm hidden-xs">
                     {{rechnung.referenzNummer}}
                   </td>
@@ -54,13 +55,29 @@
                   <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
                   <script type="text/ng-template" id="esrToolTip"><span translate>ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)</span></script>
                   <td data-title="'ESR-Nr.'|translate" uib-tooltip-template="'esrToolTip'">
-                    <button class="glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
+                    <button class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
                   </td>
                 </tr>
+                <tr ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="detail-rows" ng-repeat="rechnungsPosition in rechnung.rechnungsPositionen | orderBy:'sorting'">
+                  <td ></td>
+                  <td>
+                    <span translate ng-show="rechnung.detailsVisible && !rechnung.rechnungsPositionen">Details werden geladen...</span>
+                    <span ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="glyphicon glyphicon-chevron-right" />
+                  </td>
+                  <td colspan="3"><span ng-show="rechnungsPosition.sorting"># {{rechnungsPosition.sorting}} </span>{{rechnungsPosition.titel}}</td>
+                  <td >{{rechnungsPosition.waehrung}} {{rechnungsPosition.betrag | ooCHF}}</td>
+                  <td colspan="3">
+                    <span ng-show="rechnungsPosition.typ == 'Abo'">
+                      <span translate>Abo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
+                      <span translate>Anzahl Lieferungen</span>: {{rechnungsPosition.anzahlLieferungen}}
+                    </span>
+                  </td>
+                </tr>
+                <tr ng-repeat-end />
               </table>
 
               <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
-                <tr ng-repeat="rechnung in $data | orderBy:'rechnungsDatum'">
+                <tr ng-repeat="rechnung in $data | orderBy:'-rechnungsDatum'">
                   <td>
                     <span role="button" ng-if="rechnung.fileStoreId">
                       <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
