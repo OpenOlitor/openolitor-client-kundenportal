@@ -12,4 +12,4 @@ angular.module('openolitor-kundenportal')
   .factory('KontoDatenModel', function ($resource, API_URL) {
     return $resource(API_URL + 'kundenportal/kontodaten', {
     }, { 'query': { method: 'GET', isArray: false } });
-  })
+  });
