@@ -9,7 +9,7 @@
     </h3>
   </div>
   <div class="panel-body">
-    <div class="row form-group">
+    <div class="row ">
       <div class="col-md-12">
         <div ng-show="!lieferungen" translate>Es wurden noch keine Körbe dieses Typs geplant oder geliefert.</div>
         <div class="panel panel-success" ng-show="lieferungen && getLastLieferung().lieferplanungBemerkungen">
@@ -17,31 +17,27 @@
             {{getLastLieferung().lieferplanungBemerkungen}}
           </div>
         </div>
-
-        <table ng-show="lieferungen" ng-table="getLastLieferung().lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
-          <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
-            <td data-title="'Produkt'|translate">
-              {{korbprodukt.produktBeschrieb}}
-            </td>
-            <td data-title="'Menge'|translate">
-              {{korbprodukt.menge}}
-            </td>
-            <td data-title="'Einheit'|translate">
-              {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
-            </td>
-            <td data-title="'Preis'|translate" ng-if="projekt.preiseSichtbar">
-              <span ng-show="korbprodukt.menge">
-                {{calculatePreis(korbprodukt)| ooCHF}}
-              </span>
-              <span ng-hide="korbprodukt.menge" class="base-preis">
-                {{korbprodukt.preisEinheit | ooCHF}}
-              </span>
-            </td>
-            <td data-title="'Produzent'|translate">
-              {{korbprodukt.produzentKurzzeichen}}
-            </td>
-          </tr>
-        </table>
+        <oo-abo-korbinhalt-produkte lieferpositionen="getLastLieferung().lieferpositionen"></oo-abo-korbinhalt-produkte>
+      </div>
+      <div class="col-md-12">
+        <span ng-repeat="zusatzabo in zusatzabos">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                  <h3 class="panel-title"><span translate>Zusatzabo:</span> {{zusatzabo.abotypName}}</h3>
+                </div>
+                <div class="panel-body zusatzabo-body">
+                  <div class="row ">
+                    <div class="col-md-12">
+                      <oo-abo-korbinhalt-produkte lieferpositionen="getZusatzlieferung(getLastLieferung().datum, zusatzabo).lieferpositionen"></oo-abo-korbinhalt-produkte>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
       </div>
     </div>
   </div>
@@ -62,35 +58,38 @@
         </div>
         <div id="collapse{{lieferung.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{lieferung.id}}">
           <div class="panel-body">
-            <div class="panel panel-success" ng-show="lieferung.lieferplanungBemerkungen">
-              <div class="panel-body">
-                {{lieferung.lieferplanungBemerkungen}}
+            <div class="row">
+              <div class="col-md-12">
+                <div class="panel panel-success" ng-show="lieferung.lieferplanungBemerkungen">
+                  <div class="panel-body">
+                    {{lieferung.lieferplanungBemerkungen}}
+                  </div>
+                </div>
+                <oo-abo-korbinhalt-produkte lieferpositionen="lieferung.lieferpositionen"></oo-abo-korbinhalt-produkte>
               </div>
             </div>
-            <table ng-show="lieferungen" ng-table="lieferung.lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
-              <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
-                <td data-title="'Produkt'|translate">
-                  {{korbprodukt.produktBeschrieb}}
-                </td>
-                <td data-title="'Menge'|translate">
-                  {{korbprodukt.menge}}
-                </td>
-                <td data-title="'Einheit'|translate">
-                  {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
-                </td>
-                <td data-title="'Preis'|translate" ng-if="projekt.preiseSichtbar">
-                  <span ng-show="korbprodukt.menge">
-                    {{calculatePreis(korbprodukt)| ooCHF}}
-                  </span>
-                  <span ng-hide="korbprodukt.menge" class="base-preis">
-                    {{korbprodukt.preisEinheit | ooCHF}}
-                  </span>
-                </td>
-                <td data-title="'Produzent'|translate">
-                  {{korbprodukt.produzentKurzzeichen}}
-                </td>
-              </tr>
-            </table>
+            <div class="row">
+              <div class="col-md-12">
+                <span ng-repeat="zusatzabo in zusatzabos">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="panel panel-default">
+                        <div class="panel-heading clearfix">
+                          <h3 class="panel-title"><span translate>Zusatzabo:</span> {{zusatzabo.abotypName}}</h3>
+                        </div>
+                        <div class="panel-body zusatzabo-body">
+                          <div class="row ">
+                            <div class="col-md-12">
+                              <oo-abo-korbinhalt-produkte lieferpositionen="getZusatzlieferung(lieferung.datum, zusatzabo).lieferpositionen"></oo-abo-korbinhalt-produkte>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

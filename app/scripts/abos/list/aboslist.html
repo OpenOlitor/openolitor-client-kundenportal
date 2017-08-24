@@ -2,7 +2,7 @@
   <div class="col-md-6" id="abo{{abo.id}}">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
-        <h3 class="panel-title"><span class="navbar-brand"><span class="small">{{abo.id}}</span> {{abo.abotypName}}</span></h3>
+        <h3 class="panel-title"><span class="navbar-brand">{{abo.abotypName}} <span class="small">({{abo.id}})</span></span></h3>
       </div>
       <div class="panel-body">
         <div class="row depot" ng-if="abo.depotName">
@@ -53,13 +53,41 @@
             <span translate>Von </span> {{abo.start | date:'dd.MM.yyyy'}} <span translate ng-if="abo.ende">bis </span> {{abo.ende | date:'dd.MM.yyyy'}}
           </div>
         </div>
-
-        <hr />
+        <span ng-repeat="zusatzabo in abo.zusatzabos">
+          <div class="row">
+            <div class="col-md-12" id="abo{{zusatzabo.id}}">
+              <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                  <h3 class="panel-title"><span translate>Zusatzabo:</span>{{zusatzabo.abotypName}} <span class="small">({{zusatzabo.id}})</span></h3>
+                </div>
+                <div class="panel-body zusatzabo-body">
+                  <div class="row preis" ng-if="abo.abotyp.preis">
+                    <div class="col-md-4 col-sm-6" >
+                      <span translate>Preis:</span>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        {{projekt.waehrung | translate}} {{zusatzabo.abotyp.preis | ooCHF}} / {{zusatzabo.abotyp.preiseinheit | translate}}
+                    </div>
+                  </div>
+                  <div class="row laufzeit">
+                    <div class="col-md-4 col-sm-6" >
+                      <span translate>Laufzeit:</span>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <span translate>Von </span> {{zusatzabo.start | date:'dd.MM.yyyy'}} <span translate ng-if="zusatzabo.ende">bis </span> {{zusatzabo.ende | date:'dd.MM.yyyy'}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </span>
+        <hr ng-show="!zusatzabos" />
         <oo-abo-abwesenheiten abo="abo"></oo-abo-abwesenheiten>
       </div>
     </div>
   </div>
   <div class="col-md-6">
-    <oo-abo-korbinhalt abo="abo"></oo-abo-korbinhalt>
+    <oo-abo-korbinhalt abo="abo" zusatzabos="abo.zusatzabos"></oo-abo-korbinhalt>
   </div>
 </div>

@@ -1,0 +1,33 @@
+<table ng-show="lieferpositionen" class="table table-striped">
+  <thead>
+    <tr>
+      <th translate>Produkt</th>
+      <th translate>Menge</th>
+      <th translate>Einheit</th>
+      <th ng-if="projekt.preiseSichtbar" translate>Preis</th>
+      <th translate>Produzent</th>
+    </tr>
+  </thead>
+  <tr ng-repeat="korbprodukt in lieferpositionen | orderBy:'produktBeschrieb'">
+    <td>
+      {{korbprodukt.produktBeschrieb}}
+    </td>
+    <td>
+      {{korbprodukt.menge}}
+    </td>
+    <td>
+      {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
+    </td>
+    <td ng-if="projekt.preiseSichtbar">
+      <span ng-show="korbprodukt.menge">
+        {{calculatePreis(korbprodukt)| ooCHF}}
+      </span>
+      <span ng-hide="korbprodukt.menge" class="base-preis">
+        {{korbprodukt.preisEinheit | ooCHF}}
+      </span>
+    </td>
+    <td>
+      {{korbprodukt.produzentKurzzeichen}}
+    </td>
+  </tr>
+</table>
