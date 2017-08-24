@@ -83,6 +83,16 @@ angular.module('openolitor-kundenportal')
         return '';
       };
 
+      $scope.displayDetails = function(rechnung) {
+        rechnung.detailsVisible = !rechnung.detailsVisible;
+        rechnung.rechnungsPositionen = undefined;
+        if(rechnung.detailsVisible) {
+          RechnungenListModel.get({id: rechnung.id}, function(data) {
+            rechnung.rechnungsPositionen = data.rechnungsPositionen;
+          });
+        }
+      };
+
       $scope.gotoAbo = function(aboId) {
         $location.hash('abo' + aboId);
         $anchorScroll();
