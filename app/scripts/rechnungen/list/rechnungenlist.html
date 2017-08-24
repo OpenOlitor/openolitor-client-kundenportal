@@ -58,13 +58,13 @@
                     <button class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
                   </td>
                 </tr>
-                <tr ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="detail-rows" ng-repeat="rechnungsPosition in rechnung.rechnungsPositionen | orderBy:'sorting'">
+                <tr ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="detail-rows" ng-repeat="rechnungsPosition in rechnung.rechnungsPositionen | orderBy:'sort'">
                   <td ></td>
                   <td>
                     <span translate ng-show="rechnung.detailsVisible && !rechnung.rechnungsPositionen">Details werden geladen...</span>
                     <span ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="glyphicon glyphicon-chevron-right" />
                   </td>
-                  <td colspan="3"><span ng-show="rechnungsPosition.sorting"># {{rechnungsPosition.sorting}} </span>{{rechnungsPosition.titel}}</td>
+                  <td colspan="3"><span ng-show="rechnungsPosition.sort"># {{rechnungsPosition.sort}} </span>{{rechnungsPosition.beschrieb}}</td>
                   <td >{{rechnungsPosition.waehrung}} {{rechnungsPosition.betrag | ooCHF}}</td>
                   <td colspan="3">
                     <span ng-show="rechnungsPosition.typ == 'Abo'">
