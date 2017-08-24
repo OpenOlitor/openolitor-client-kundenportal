@@ -42,7 +42,7 @@
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div>
-        <a class="navbar-brand logo" ng-href="#/"> 
+        <a class="navbar-brand logo" ng-href="#/">
           <!-- If the object data url is not found the inner img tag will be rendered. -->
           <!-- Older browsers will ignore it. -->
           <object data="@@API_URLopen/projekt/1/logo" type="image/png" height="32" width="32">
@@ -96,6 +96,27 @@
     </span>
     <span ng-class="[{disconnected:!connected, connected:connected}]"><i class="fa fa-wifi" ng-attr-title="{{messagingSocketClosedReason}}"></i></span>
   </footer>
+
+
+
+<div class="modal fade" id="welcomeMessageModal">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+                  <h4 class="modal-title" translate>Mitteilung</h4>
+              </div>
+              <div class="modal-body">
+                  <div>{{projekt.welcomeMessage2}}</div>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" translate>Schliessen</button>
+              </div>
+          </div>
+          <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+  </div>
 
 
   <!-- build:js(.) scripts/oldieshim.js -->
