@@ -2,6 +2,7 @@
   "name": "openolitor-kundenportal",
   "version": "1.0.21",
   "private": false,
+  "directory": "app/bower_components",
   "dependencies": {
     "angular": "~1.5.8",
     "angular-animate": "~1.5.8",
