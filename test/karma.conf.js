@@ -38,6 +38,8 @@ module.exports = function(config) {
       'app/bower_components/angular-css-injector/angular-css-injector.js',
       'app/bower_components/openolitor-core/dist/scripts/openolitor-core.js',
       'app/bower_components/angular-loading-bar/build/loading-bar.js',
+      'app/bower_components/clipboard/dist/clipboard.js',
+      'app/bower_components/ngclipboard/dist/ngclipboard.js',
       'app/scripts/app.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
