@@ -17,9 +17,14 @@ h1, h2, h3 {
   letter-spacing: 0.7px;
 }
 
-h3 .small {
+h3.panel-title .small {
   margin-top: 9px;
   margin-right: 5px;
+  color: #afa485;
+}
+
+.zusatzabo-body {
+  font-size: 90%;
 }
 
 .uppercase {
@@ -405,7 +410,7 @@ input.ng-invalid {
   margin-left: 25px !important;
 }
 
-.navbar-brand .small{
+.panel-title .small {
   font-size: 70%;
 }
 

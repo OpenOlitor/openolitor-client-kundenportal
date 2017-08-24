@@ -12,6 +12,12 @@ angular.module('openolitor-kundenportal')
 
       AbosListModel.query(function(data) {
         $scope.entries = data;
+        angular.forEach($scope.entries, function(abo) {
+          abo.zusatzabos = [];
+          AbosListModel.zusatzabos({aboId: abo.id}, function(data) {
+            abo.zusatzabos = data;
+          });
+        });
       });
     }
   ]);
