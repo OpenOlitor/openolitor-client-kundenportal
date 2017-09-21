@@ -55,6 +55,9 @@ module.exports = function(grunt) {
     'prod-gmuesluzern': {
       'm1': 'https://prod.openolitor.ch/gmuesluzern/'
     },
+    'prod-croquterre': {
+      'm1': 'https://prod.openolitor.ch/croquterre/'
+    },
     'test-prod-soliterre': {
       'm1': 'https://testprod.openolitor.ch/soliterre/'
     },
@@ -63,6 +66,9 @@ module.exports = function(grunt) {
     },
     'test-prod-gmuesluzern': {
       'm1': 'https://testprod.openolitor.ch/gmuesluzern/'
+    },
+    'test-prod-croquterre': {
+      'm1': 'https://testprod.openolitor.ch/croquterre/'
     }
   };
   var env = 'dev';
