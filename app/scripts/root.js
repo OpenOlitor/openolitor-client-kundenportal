@@ -7,11 +7,11 @@ angular.module('openolitor-kundenportal')
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
     'ENV', 'VERSION',
-    'ooAuthService', 'API_URL', '$cookies',
+    'ooAuthService', 'API_URL', '$cookies', 'dialogService',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
       $timeout, BUILD_NR, ENV, VERSION, ooAuthService, API_URL,
-      $cookies) {
+      $cookies, dialogService) {
       angular.element($window).bind('resize', function() {
         checkSize();
       });
@@ -31,16 +31,16 @@ angular.module('openolitor-kundenportal')
         $scope.loggedIn = ooAuthService.isUserLoggedIn(user);
         $scope.user = user;
 
-        if($scope.loggedIn){
-            ProjektService.resolveProjekt(false).then(function(projekt) {
+        if ($scope.loggedIn) {
+          ProjektService.resolveProjekt(false).then(function(projekt) {
             $scope.projekt = projekt;
             $rootScope.projekt = projekt;
             $scope.checkWelcomeMessage();
           });
-        }else{
+        } else {
           ProjektService.resolveProjekt(true).then(function(projekt) {
-          $scope.projekt = projekt;
-          $rootScope.projekt = projekt;
+            $scope.projekt = projekt;
+            $rootScope.projekt = projekt;
           });
         }
       });
@@ -103,11 +103,11 @@ angular.module('openolitor-kundenportal')
 
       if (angular.isUndefined($scope.storedActiveLang())) {
         var lang = $window.navigator.language || $window.navigator.userLanguage;
-        if(lang.indexOf('de-') > 0) {
+        if (lang.indexOf('de-') > 0) {
           $scope.changeLang('de');
-        } else if(lang.indexOf('fr-') > 0) {
+        } else if (lang.indexOf('fr-') > 0) {
           $scope.changeLang('fr');
-        } else if(lang.indexOf('en-') > 0) {
+        } else if (lang.indexOf('en-') > 0) {
           $scope.changeLang('en');
         } else {
           $scope.changeLang('de');
@@ -117,10 +117,16 @@ angular.module('openolitor-kundenportal')
       }
 
 
-      $scope.checkWelcomeMessage = function(){
-          if ($scope.projekt.welcomeMessage2){
-              $('#welcomeMessageModal').modal('show');
-          }
+      $scope.checkWelcomeMessage = function() {
+        if ($scope.projekt.welcomeMessage2) {
+          dialogService.displayDialogOkAbort(
+            $scope.projekt.welcomeMessage2,
+            function() {},
+            'Mitteilung',
+            true,
+            'Schliessen'
+          );
+        }
       };
 
       $scope.$on('destroy', function() {
