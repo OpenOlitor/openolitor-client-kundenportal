@@ -29,8 +29,9 @@
   <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
   <!-- endbower -->
   <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
-  <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   <!-- endbuild -->
+
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
@@ -53,6 +54,10 @@
         </a>
         <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <script type="text/ng-template" id="feedbackInfoTooltipTemplate.html"><span translate>Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge.</span></script>
+            <a ng-href="http://openolitor.org/en/feedback/" target="_blank"><i class="fa fa-commenting-o" uib-tooltip-template="'feedbackInfoTooltipTemplate.html'" tooltip-placement="bottom-right" aria-hidden="true"></i></a>
+          </li>
           <li class="dropdown">
             <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{activeLang()}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -72,8 +77,6 @@
             </ul>
           </li>
         </ul>
-        <script type="text/ng-template" id="feedbackInfoTooltipTemplate.html"><span translate>Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge.</span></script>
-        <a class="navbar-text navbar-right" ng-href="http://openolitor.org/en/feedback/"><i class="fa fa-commenting-o" uib-tooltip-template="'feedbackInfoTooltipTemplate.html'" tooltip-placement="bottom"aria-hidden="true"></i></a>
       </div>
     </div>
   </div>
