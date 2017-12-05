@@ -5,7 +5,7 @@
           <h3 class="panel-title">
             <span class="navbar-brand">
               <span translate>Konto für Einzahlungen:</span>
-              <span ng-if="kontodaten.iban">{{kontodaten.iban}}</span>
+              <span ng-if="kontodaten.iban">{{kontodaten.iban | iban:separator}}</span>
               <span ng-if="!kontodaten.iban" translate>in Stammdaten nicht definiert</span>
             </span>
           </h3>

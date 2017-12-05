@@ -50,8 +50,9 @@ angular
     'ngFileUpload',
     'ngLodash',
     'angular-sortable-view',
-    'openolitor-core',
-    'ngclipboard'
+    'ngclipboard',
+    'mm.iban',
+    'openolitor-core'
   ])
   .constant('API_URL', '@@API_URL')
   .constant('API_WS_URL', '@@API_WS_URL')
