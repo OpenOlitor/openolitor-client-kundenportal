@@ -42,6 +42,7 @@ module.exports = function(config) {
       'app/bower_components/angular-loading-bar/build/loading-bar.js',
       'app/bower_components/clipboard/dist/clipboard.js',
       'app/bower_components/ngclipboard/dist/ngclipboard.js',
+      'app/bower_components/ng-iban/dist/ng-iban.js',
       'app/scripts/app.js',
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
