@@ -16,59 +16,29 @@ module.exports = function(grunt) {
       'm1': 'http://localhost:9003/m1/',
       'm2': 'http://localhost:9003/m2/'
     },
-    'test': {
-      'm1': 'https://test.openolitor.ch/m1/'
+    'test-prod-csa1': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa1/'
     },
-    'int1': {
-      'm1': 'https://int.openolitor.ch/int1/'
+    'test-prod-csa2': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa2/'
     },
-    'int2': {
-      'm1': 'https://int.openolitor.ch/int2/'
+    'test-prod-csa3': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa3/'
     },
-    'int3': {
-      'm1': 'https://int.openolitor.ch/int3/'
+    'test-prod-csa4': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa4/'
     },
-    'int4': {
-      'm1': 'https://int.openolitor.ch/int4/'
+    'test-prod-csa5': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa5/'
     },
-    'int5': {
-      'm1': 'https://int.openolitor.ch/int5/'
+    'test-prod-csa6': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa6/'
     },
-    'int6': {
-      'm1': 'https://int.openolitor.ch/int6/'
+    'test-prod-csa7': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa7/'
     },
-    'int7': {
-      'm1': 'https://int.openolitor.ch/int7/'
-    },
-    'int8': {
-      'm1': 'https://int.openolitor.ch/int8/'
-    },
-    'int9': {
-      'm1': 'https://int.openolitor.ch/int9/'
-    },
-    'prod-soliterre': {
-      'm1': 'https://prod.openolitor.ch/soliterre/'
-    },
-    'prod-bioabi': {
-      'm1': 'https://prod.openolitor.ch/bioabi/'
-    },
-    'prod-gmuesluzern': {
-      'm1': 'https://prod.openolitor.ch/gmuesluzern/'
-    },
-    'prod-croquterre': {
-      'm1': 'https://prod.openolitor.ch/croquterre/'
-    },
-    'test-prod-soliterre': {
-      'm1': 'https://testprod.openolitor.ch/soliterre/'
-    },
-    'test-prod-bioabi': {
-      'm1': 'https://testprod.openolitor.ch/bioabi/'
-    },
-    'test-prod-gmuesluzern': {
-      'm1': 'https://testprod.openolitor.ch/gmuesluzern/'
-    },
-    'test-prod-croquterre': {
-      'm1': 'https://testprod.openolitor.ch/croquterre/'
+    'test-prod-csa8': {
+      'm1': 'https://sunu-server-testprod.scapp.io/csa8/'
     }
   };
   var env = 'dev';
