@@ -11,11 +11,11 @@ msgstr ""
 "Last-Translator: al_openolitor <alwin.egger@openolitor.ch>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2017-11-15 05:58-0500\n"
+"PO-Revision-Date: 2018-01-31 14:23-0500\n"
 
 #: app/index.html:76
 msgid "Abmelden"
-msgstr ""
+msgstr "Cerrer sesión"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:103
 msgid "Abo"
@@ -27,15 +27,16 @@ msgstr "Subscripción:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:48
 msgid "Abwesenheit erfassen"
-msgstr ""
+msgstr "Sin registro"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
 msgid "Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}<span ng-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
-msgstr ""
+msgstr "Ausencias <small>({{getCurrentlyMatchingGJItem.value}}\n"
+"      <span nf-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:72
 msgid "Anzahl Lieferungen"
-msgstr ""
+msgstr "Número de entregas"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:100
 #: app/scripts/rechnungen/list/rechnungenlist.html:46
@@ -44,19 +45,19 @@ msgstr "Monto"
 
 #: app/scripts/app.js:65
 msgid "Bu."
-msgstr ""
+msgstr "Manojo"
 
 #: app/scripts/app.js:65
 msgid "Bund"
-msgstr ""
+msgstr "Manojo"
 
 #: app/index.html:84
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
-msgstr ""
+msgstr "El servidor no está disponible actualmente, por favor, intentelo un poco mas tarde."
 
 #: app/scripts/dashboard/dashboard.html:31
 msgid "Das Modul „Arbeitseinsätze“ wird in Kürze zur Verfügung stehen."
-msgstr ""
+msgstr "El modulo \"horas de trabajo\" estará disponible próximamente."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:27
 #: app/scripts/rechnungen/list/rechnungenlist.html:91
@@ -65,15 +66,15 @@ msgstr "Fecha"
 
 #: app/scripts/dashboard/dashboard.html:9
 msgid "Deine Abos"
-msgstr ""
+msgstr "Tus abonos"
 
 #: app/scripts/dashboard/dashboard.html:25
 msgid "Deine Arbeitseinsätze"
-msgstr ""
+msgstr "Tus días y horas de trabajo"
 
 #: app/scripts/dashboard/dashboard.html:17
 msgid "Deine Rechnungen"
-msgstr ""
+msgstr "Tus facturas"
 
 #: app/scripts/abos/list/aboslist.html:10
 msgid "Depot:"
@@ -81,7 +82,7 @@ msgstr "Punto de recogida:"
 
 #: app/scripts/dashboard/dashboard.html:15
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
-msgstr ""
+msgstr "El estado de una factura está actualizada periódicamente por la administración. Por lo tanto, una factura pagada puede aparecer como no pagada."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
@@ -93,7 +94,7 @@ msgstr "La siguiente cesta"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:64
 msgid "Details werden geladen..."
-msgstr ""
+msgstr "Cargando los detalles..."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:50
 msgid "Die früheren Körbe"
@@ -101,7 +102,7 @@ msgstr "Las cestas anteriores"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
-msgstr ""
+msgstr "¡La página solicitada no ha sido encontrada!"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:57
 msgid "ESR-Nr."
@@ -113,19 +114,19 @@ msgstr ""
 
 #: app/messages.html:2
 msgid "Eingabe erforderlich"
-msgstr ""
+msgstr "Campo obligatorio"
 
 #: app/messages.html:6
 msgid "Eingabe stimmt nicht übereint"
-msgstr ""
+msgstr "Las contraseñas no coinciden"
 
 #: app/messages.html:3
 msgid "Eingabe zu kurz"
-msgstr ""
+msgstr "Entrada muy corta"
 
 #: app/messages.html:4
 msgid "Eingabe zu lang"
-msgstr ""
+msgstr "Entrada muy larga"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:29
 #: app/scripts/abos/list/lieferungen/lieferungen.html:78
@@ -134,7 +135,7 @@ msgstr "Unidad"
 
 #: app/index.html:73
 msgid "Einstellungen"
-msgstr ""
+msgstr "Parametros"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
@@ -142,27 +143,27 @@ msgstr "Error 404"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:16
 msgid "Es liegen noch keine Rechnungen vor."
-msgstr ""
+msgstr "Todavía no hay facturas."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
-msgstr ""
+msgstr "Todavía no hay cestas de este tipo que hayan sido programadas o entregadas."
 
 #: app/scripts/open/lastlieferplanungen.html:7
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
-msgstr ""
+msgstr "Ninguna planificación de la distribución ha sido concluida."
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
-msgstr ""
+msgstr "Dirección de correo electrónico incorrecta"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Fällig"
-msgstr ""
+msgstr "A pagar hasta"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:40
 msgid "Fällig am"
-msgstr ""
+msgstr "Fecha límite"
 
 #: app/scripts/app.js:66
 msgid "Gramm"
@@ -170,7 +171,7 @@ msgstr "Gramos"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
-msgstr ""
+msgstr "Contenido de las cestas"
 
 #: app/scripts/app.js:67
 msgid "Kilogramm"
@@ -178,11 +179,11 @@ msgstr "Kilogramos"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:7
 msgid "Konto für Einzahlungen:"
-msgstr ""
+msgstr "Cuenta de pago:"
 
 #: app/scripts/abos/list/aboslist.html:50
 msgid "Laufzeit:"
-msgstr ""
+msgstr "Duración del contrato:"
 
 #: app/scripts/abos/list/aboslist.html:34
 msgid "Lieferrhythmus:"
@@ -190,7 +191,7 @@ msgstr "Ciclo de entrega:"
 
 #: app/scripts/abos/list/aboslist.html:26
 msgid "Liefertag:"
-msgstr ""
+msgstr "Día de entrega:"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Lieferung"
@@ -203,15 +204,15 @@ msgstr "Litro"
 #: app/scripts/abos/list/lieferungen/lieferungen.html:26
 #: app/scripts/abos/list/lieferungen/lieferungen.html:75
 msgid "Menge"
-msgstr ""
+msgstr "Cantidad"
 
 #: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
-msgstr ""
+msgstr "Portal de abonado a OpenOlitor:"
 
 #: app/index.html:75
 msgid "Passwort wechseln"
-msgstr ""
+msgstr "Cambiar la contraseña"
 
 #: app/scripts/app.js:70
 msgid "Por."
@@ -250,12 +251,12 @@ msgstr "Número de referencia"
 
 #: app/scripts/app.js:64
 msgid "St."
-msgstr ""
+msgstr "Unidad"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:106
 #: app/scripts/rechnungen/list/rechnungenlist.html:52
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: app/scripts/app.js:64
 msgid "Stück"
@@ -276,19 +277,19 @@ msgstr "Versión:"
 
 #: app/scripts/abos/list/aboslist.html:53
 msgid "Von"
-msgstr ""
+msgstr "De"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:101
 msgid "Weitere Körbe anzeigen..."
-msgstr ""
+msgstr "Mostrar más cestas..."
 
 #: app/scripts/open/lastlieferplanungen.html:74
 msgid "Weitere Lieferungen anzeigen..."
-msgstr ""
+msgstr "Mostrar más entregas..."
 
 #: app/index.html:58
 msgid "Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge."
-msgstr ""
+msgstr "Estamos más que contentos de que nos envíes tus comentarios, ideas y sugerencias de mejora. ¡Así haremos de OpenOlitor un proyecto que ayude cada vez a más grupos de consumo!"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
 msgid "alle"
@@ -296,7 +297,7 @@ msgstr "todos"
 
 #: app/scripts/abos/list/aboslist.html:53
 msgid "bis"
-msgstr ""
+msgstr "de"
 
 #: app/scripts/app.js:66
 msgid "gr"
@@ -304,7 +305,7 @@ msgstr "gr"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:9
 msgid "in Stammdaten nicht definiert"
-msgstr ""
+msgstr "sin definir en los datos básicos"
 
 #: app/scripts/app.js:68
 msgid "kg"
@@ -320,5 +321,5 @@ msgstr "pendiente"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
-msgstr ""
+msgstr "del"
 
