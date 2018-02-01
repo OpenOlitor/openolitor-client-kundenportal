@@ -4,7 +4,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: app/index.html:76
+#: app/index.html:78
 msgid "Abmelden"
 msgstr ""
 
@@ -33,15 +33,15 @@ msgstr ""
 msgid "Betrag"
 msgstr ""
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:66
 msgid "Bu."
 msgstr ""
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:66
 msgid "Bund"
 msgstr ""
 
-#: app/index.html:84
+#: app/index.html:86
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr ""
 
@@ -123,7 +123,7 @@ msgstr ""
 msgid "Einheit"
 msgstr ""
 
-#: app/index.html:73
+#: app/index.html:75
 msgid "Einstellungen"
 msgstr ""
 
@@ -155,7 +155,7 @@ msgstr ""
 msgid "Fällig am"
 msgstr ""
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:67
 msgid "Gramm"
 msgstr ""
 
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Inhalt der Körbe"
 msgstr ""
 
-#: app/scripts/app.js:67
+#: app/scripts/app.js:68
 msgid "Kilogramm"
 msgstr ""
 
@@ -187,7 +187,7 @@ msgstr ""
 msgid "Lieferung"
 msgstr ""
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:70
 msgid "Liter"
 msgstr ""
 
@@ -200,15 +200,15 @@ msgstr ""
 msgid "OpenOlitor Mitgliederportal:"
 msgstr ""
 
-#: app/index.html:75
+#: app/index.html:77
 msgid "Passwort wechseln"
 msgstr ""
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:71
 msgid "Por."
 msgstr ""
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:71
 msgid "Portion"
 msgstr ""
 
@@ -239,7 +239,7 @@ msgstr ""
 msgid "Referenznummer"
 msgstr ""
 
-#: app/scripts/app.js:64
+#: app/scripts/app.js:65
 msgid "St."
 msgstr ""
 
@@ -248,7 +248,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: app/scripts/app.js:64
+#: app/scripts/app.js:65
 msgid "Stück"
 msgstr ""
 
@@ -261,7 +261,7 @@ msgstr ""
 msgid "Tour:"
 msgstr ""
 
-#: app/index.html:94
+#: app/index.html:96
 msgid "Version:"
 msgstr ""
 
@@ -289,7 +289,7 @@ msgstr ""
 msgid "bis"
 msgstr ""
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:67
 msgid "gr"
 msgstr ""
 
@@ -297,11 +297,11 @@ msgstr ""
 msgid "in Stammdaten nicht definiert"
 msgstr ""
 
-#: app/scripts/app.js:68
+#: app/scripts/app.js:69
 msgid "kg"
 msgstr ""
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:70
 msgid "l"
 msgstr ""
 
