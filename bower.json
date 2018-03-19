@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.0.3-SNAPSHOT",
+  "version": "2.0.4-SNAPSHOT",
   "private": false,
   "dependencies": {
     "jquery": "3.2.1",
@@ -41,7 +41,7 @@
     "angular-sortable-view": "~0.0.15",
     "angular-css-injector": "^1.4.0",
     "airbrake-js": "^0.5.9",
-    "openolitor-core": "2.0.18-SNAPSHOT",
+    "openolitor-core": "2.0.24-SNAPSHOT",
     "ngclipboard": "^1.1.1",
     "ng-iban": "^1.2.0"
   },
