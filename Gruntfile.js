@@ -52,14 +52,17 @@ module.exports = function(grunt) {
     'prod-bioabi': {
       'm1': 'https://prod.openolitor.ch/bioabi/'
     },
-    'prod-nuglar': {
-      'm1': 'https://prod.openolitor.ch/nuglar/'
-    },
     'prod-gmuesluzern': {
       'm1': 'https://prod.openolitor.ch/gmuesluzern/'
     },
     'prod-croquterre': {
       'm1': 'https://prod.openolitor.ch/croquterre/'
+    },
+    'prod-nuglar': {
+      'm1': 'https://prod.openolitor.ch/nuglar/'
+    },
+    'prod-randebandi': {
+      'm1': 'https://prod.openolitor.ch/randebandi/'
     },
     'test-prod-soliterre': {
       'm1': 'https://testprod.openolitor.ch/soliterre/'
@@ -75,6 +78,9 @@ module.exports = function(grunt) {
     },
     'test-prod-nuglar': {
       'm1': 'https://testprod.openolitor.ch/nuglar/'
+    },
+    'test-prod-randebandi': {
+      'm1': 'https://testprod.openolitor.ch/randebandi/'
     }
   };
   var env = 'dev';
