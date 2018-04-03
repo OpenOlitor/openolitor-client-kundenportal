@@ -3,28 +3,36 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .factory('ProjektService', ['$rootScope', 'ProjektModel', 'msgBus', 'ooAuthService', '$q',
-    function($rootScope, ProjektModel, msgBus, ooAuthService, $q) {
+  .factory('ProjektService', ['$rootScope', 'OpenProjektModel', 'ProjektModel', 'msgBus', 'ooAuthService', '$q',
+    function($rootScope, OpenProjektModel, ProjektModel, msgBus, ooAuthService, $q) {
 
       var projekt;
 
-      var loadProjekt = function() {
+      var loadProjekt = function(openProjekt) {
         var deferred = $q.defer();
 
         ooAuthService.resolveUser().then(function() {
-          if (projekt) {
-            deferred.resolve(projekt);
-          } else {
-            ProjektModel.query({}, function(result) {
-              projekt = result;
+            if (projekt) {
               deferred.resolve(projekt);
-            }, function(error) {
-              deferred.reject(error);
-            });
-          }
-        });
-
-        return deferred.promise;
+            } else {
+              if (!openProjekt){
+                ProjektModel.query({}, function(result) {
+                  projekt = result;
+                  deferred.resolve(projekt);
+                }, function(error) {
+                  deferred.reject(error);
+                });
+              }else{
+                OpenProjektModel.query({}, function(result) {
+                  projekt = result;
+                  deferred.resolve(projekt);
+                }, function(error) {
+                  deferred.reject(error);
+                });
+              }
+            }
+          });
+          return deferred.promise;
       };
 
       msgBus.onMsg('EntityCreated', $rootScope, function(event, msg) {

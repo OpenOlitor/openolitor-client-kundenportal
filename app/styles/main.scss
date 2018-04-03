@@ -339,12 +339,17 @@ input.ng-invalid {
   box-shadow: 4px 4px 10px grey;
 }
 
+.table-striped>tbody>tr.detail-rows {
+  font-size: 90%;
+  background-color: #f3e7d9;
+}
+
 .korb {
   min-height: 30em;
 }
 
 .preformat {
-  white-space:pre;
+  white-space:pre-line;
 }
 
 //navbar styles
@@ -610,4 +615,8 @@ footer, .footer {
 }
 tr.error {
   background-color: rgba(255, 0, 0, 0.11) !important;
+}
+
+.white-space-pre{
+    white-space: pre;
 }

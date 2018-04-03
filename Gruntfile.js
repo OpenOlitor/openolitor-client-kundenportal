@@ -51,6 +51,36 @@ module.exports = function(grunt) {
     },
     'prod-bioabi': {
       'm1': 'https://prod.openolitor.ch/bioabi/'
+    },
+    'prod-gmuesluzern': {
+      'm1': 'https://prod.openolitor.ch/gmuesluzern/'
+    },
+    'prod-croquterre': {
+      'm1': 'https://prod.openolitor.ch/croquterre/'
+    },
+    'prod-nuglar': {
+      'm1': 'https://prod.openolitor.ch/nuglar/'
+    },
+    'prod-randebandi': {
+      'm1': 'https://prod.openolitor.ch/randebandi/'
+    },
+    'test-prod-soliterre': {
+      'm1': 'https://testprod.openolitor.ch/soliterre/'
+    },
+    'test-prod-bioabi': {
+      'm1': 'https://testprod.openolitor.ch/bioabi/'
+    },
+    'test-prod-gmuesluzern': {
+      'm1': 'https://testprod.openolitor.ch/gmuesluzern/'
+    },
+    'test-prod-croquterre': {
+      'm1': 'https://testprod.openolitor.ch/croquterre/'
+    },
+    'test-prod-nuglar': {
+      'm1': 'https://testprod.openolitor.ch/nuglar/'
+    },
+    'test-prod-randebandi': {
+      'm1': 'https://testprod.openolitor.ch/randebandi/'
     }
   };
   var env = 'dev';
@@ -434,13 +464,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Replace Google CDN references
-    cdnify: {
-      dist: {
-        html: ['<%= openolitor.dist %>/*.html']
-      }
-    },
-
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -683,7 +706,6 @@ module.exports = function(grunt) {
     'replace:prod',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
     'cssmin',
     'uglify',
     'rev',

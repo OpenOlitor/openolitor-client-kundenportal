@@ -11,41 +11,55 @@ msgstr ""
 "Last-Translator: al_openolitor <alwin.egger@openolitor.ch>\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2017-02-27 17:28-0500\n"
+"PO-Revision-Date: 2017-10-19 08:50-0400\n"
 
-#: app/index.html:61
+#: app/index.html:76
 msgid "Abmelden"
 msgstr "Se déconnecter"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:36
-#: app/scripts/rechnungen/list/rechnungenlist.html:72
+#: app/scripts/rechnungen/list/rechnungenlist.html:103
 msgid "Abo"
 msgstr "Abonnement"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+#: app/scripts/rechnungen/list/rechnungenlist.html:71
+msgid "Abo:"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:48
 msgid "Abwesenheit erfassen"
 msgstr "Saisir des absences"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
-msgid "Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}\n"
-"      <span nf-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
+msgid "Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}<span ng-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:33
-#: app/scripts/rechnungen/list/rechnungenlist.html:69
+#: app/scripts/rechnungen/list/rechnungenlist.html:72
+msgid "Anzahl Lieferungen"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:100
+#: app/scripts/rechnungen/list/rechnungenlist.html:46
 msgid "Betrag"
 msgstr "Montant"
 
-#: app/index.html:69
+#: app/scripts/app.js:65
+msgid "Bu."
+msgstr ""
+
+#: app/scripts/app.js:65
+msgid "Bund"
+msgstr ""
+
+#: app/index.html:84
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "Le backend n'est pas disponible pour le moment, veuillez attendre quelques secondes, s'il vous plaît."
 
-#: app/scripts/dashboard/dashboard.html:32
+#: app/scripts/dashboard/dashboard.html:31
 msgid "Das Modul „Arbeitseinsätze“ wird in Kürze zur Verfügung stehen."
-msgstr "Le module \"journées et heures de travail\" est à disposition prochainement."
+msgstr "Le module \"journées et heures de travail\" sera à disposition prochainement."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
-#: app/scripts/rechnungen/list/rechnungenlist.html:60
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:27
+#: app/scripts/rechnungen/list/rechnungenlist.html:91
 msgid "Datum"
 msgstr "Date"
 
@@ -53,11 +67,11 @@ msgstr "Date"
 msgid "Deine Abos"
 msgstr "Tes abonnements"
 
-#: app/scripts/dashboard/dashboard.html:26
+#: app/scripts/dashboard/dashboard.html:25
 msgid "Deine Arbeitseinsätze"
 msgstr "Tes journées et heures de travail"
 
-#: app/scripts/dashboard/dashboard.html:18
+#: app/scripts/dashboard/dashboard.html:17
 msgid "Deine Rechnungen"
 msgstr "Tes factures"
 
@@ -69,11 +83,19 @@ msgstr "Dépôt:"
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
 msgstr "Le statut d’une facture est mis à jour périodiquement par l’administration. Une facture payée peut apparaître alors comme non payée."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:3
-msgid "Der letzte Korb <span ng-show=\"lieferungen\">vom {{lieferungen[0].datum | date}}</span>"
-msgstr "Le prochain panier (ou le dernier)"
+#: app/scripts/abos/list/lieferungen/lieferungen.html:6
+msgid "Der aktuelle Korb"
+msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:44
+#: app/scripts/abos/list/lieferungen/lieferungen.html:5
+msgid "Der nächste Korb"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:64
+msgid "Details werden geladen..."
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:50
 msgid "Die früheren Körbe"
 msgstr "Les paniers précédents"
 
@@ -81,9 +103,13 @@ msgstr "Les paniers précédents"
 msgid "Diese Seite konnte nicht gefunden werden!"
 msgstr "La page demandée n’a pas été trouvée"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:39
+#: app/scripts/rechnungen/list/rechnungenlist.html:57
 msgid "ESR-Nr."
 msgstr "n° BVR"
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:56
+msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
+msgstr ""
 
 #: app/messages.html:2
 msgid "Eingabe erforderlich"
@@ -101,12 +127,12 @@ msgstr "Entrée trop courte"
 msgid "Eingabe zu lang"
 msgstr "Entrée trop longue"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:23
-#: app/scripts/abos/list/lieferungen/lieferungen.html:72
+#: app/scripts/abos/list/lieferungen/lieferungen.html:29
+#: app/scripts/abos/list/lieferungen/lieferungen.html:78
 msgid "Einheit"
 msgstr "Unité"
 
-#: app/index.html:58
+#: app/index.html:73
 msgid "Einstellungen"
 msgstr "Paramètres"
 
@@ -114,25 +140,49 @@ msgstr "Paramètres"
 msgid "Error 404"
 msgstr "Erreur 404"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:7
+#: app/scripts/rechnungen/list/rechnungenlist.html:16
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr "Aucune facture n'a été créé jusqu'ici."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:8
+#: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr "Aucun panier de ce type d'a été planifié jusqu'ici."
+
+#: app/scripts/open/lastlieferplanungen.html:7
+msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
 msgstr "Adresse courriel non valide"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:63
+#: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Fällig"
 msgstr "A payer jusqu'au"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:27
+#: app/scripts/rechnungen/list/rechnungenlist.html:40
 msgid "Fällig am"
 msgstr "Date d’échéance"
+
+#: app/scripts/app.js:66
+msgid "Gramm"
+msgstr ""
+
+#: app/scripts/open/lastlieferplanungen.html:17
+msgid "Inhalt der Körbe"
+msgstr ""
+
+#: app/scripts/app.js:67
+msgid "Kilogramm"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:7
+msgid "Konto für Einzahlungen:"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:50
+msgid "Laufzeit:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:34
 msgid "Lieferrhythmus:"
@@ -142,21 +192,37 @@ msgstr "Cadence de livraison:"
 msgid "Liefertag:"
 msgstr "Jour de livraison:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:20
-#: app/scripts/abos/list/lieferungen/lieferungen.html:69
-msgid "Menge"
-msgstr "Quantité"
+#: app/scripts/open/lastlieferplanungen.html:17
+msgid "Lieferung"
+msgstr ""
 
-#: app/index.html:44
-msgid "OpenOlitor Mitgliederportal:"
-msgstr "Portail des membres:"
-
-#: app/index.html:60
-msgid "Passwort wechseln"
-msgstr "Changer mot de passe"
+#: app/scripts/app.js:69
+msgid "Liter"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:26
 #: app/scripts/abos/list/lieferungen/lieferungen.html:75
+msgid "Menge"
+msgstr "Quantité"
+
+#: app/index.html:55
+msgid "OpenOlitor Mitgliederportal:"
+msgstr "Portail des membres:"
+
+#: app/index.html:75
+msgid "Passwort wechseln"
+msgstr "Changer mot de passe"
+
+#: app/scripts/app.js:70
+msgid "Por."
+msgstr ""
+
+#: app/scripts/app.js:70
+msgid "Portion"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:32
+#: app/scripts/abos/list/lieferungen/lieferungen.html:81
 msgid "Preis"
 msgstr "Prix"
 
@@ -164,27 +230,39 @@ msgstr "Prix"
 msgid "Preis:"
 msgstr "Prix:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:17
-#: app/scripts/abos/list/lieferungen/lieferungen.html:66
+#: app/scripts/abos/list/lieferungen/lieferungen.html:23
+#: app/scripts/abos/list/lieferungen/lieferungen.html:72
 msgid "Produkt"
 msgstr "Produit"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:34
-#: app/scripts/abos/list/lieferungen/lieferungen.html:83
+#: app/scripts/abos/list/lieferungen/lieferungen.html:40
+#: app/scripts/abos/list/lieferungen/lieferungen.html:89
 msgid "Produzent"
 msgstr "Producteur, productrice"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:24
+#: app/scripts/rechnungen/list/rechnungenlist.html:37
 msgid "Rechnungsdatum"
 msgstr "Date de facturation"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:42
-#: app/scripts/rechnungen/list/rechnungenlist.html:75
+#: app/scripts/rechnungen/list/rechnungenlist.html:49
+msgid "Referenznummer"
+msgstr ""
+
+#: app/scripts/app.js:64
+msgid "St."
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:106
+#: app/scripts/rechnungen/list/rechnungenlist.html:52
 msgid "Status"
 msgstr "Etat"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:30
-#: app/scripts/rechnungen/list/rechnungenlist.html:66
+#: app/scripts/app.js:64
+msgid "Stück"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:43
+#: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Titel"
 msgstr "Titre"
 
@@ -192,15 +270,55 @@ msgstr "Titre"
 msgid "Tour:"
 msgstr "Tour:"
 
-#: app/index.html:80
+#: app/index.html:94
 msgid "Version:"
 msgstr "Version:"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/aboslist.html:53
+msgid "Von"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:101
+msgid "Weitere Körbe anzeigen..."
+msgstr ""
+
+#: app/scripts/open/lastlieferplanungen.html:74
+msgid "Weitere Lieferungen anzeigen..."
+msgstr ""
+
+#: app/index.html:58
+msgid "Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge."
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
 msgid "alle"
 msgstr "tous"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:21
+#: app/scripts/abos/list/aboslist.html:53
+msgid "bis"
+msgstr ""
+
+#: app/scripts/app.js:66
+msgid "gr"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:9
+msgid "in Stammdaten nicht definiert"
+msgstr ""
+
+#: app/scripts/app.js:68
+msgid "kg"
+msgstr ""
+
+#: app/scripts/app.js:69
+msgid "l"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
 msgid "pendente"
 msgstr "en suspens"
+
+#: app/scripts/open/lastlieferplanungen.html:17
+msgid "vom"
+msgstr ""
 

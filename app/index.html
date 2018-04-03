@@ -23,13 +23,15 @@
   <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
   <link rel="stylesheet" href="bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
   <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
-  <link rel="stylesheet" href="bower_components/angular-color-picker/angularjs-color-picker.css" />
+  <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-color-picker/dist/angularjs-color-picker.css" />
   <link rel="stylesheet" href="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.css" />
   <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
   <!-- endbower -->
   <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
-  <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   <!-- endbuild -->
+
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
@@ -42,16 +44,20 @@
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div>
-        <a class="navbar-brand logo" ng-href="#/"> 
+        <a class="navbar-brand logo" ng-href="#/">
           <!-- If the object data url is not found the inner img tag will be rendered. -->
           <!-- Older browsers will ignore it. -->
-          <object data="@@API_URLopen/projekt/1/logo" type="image/png" height="32" width="32">
+          <object data="@@API_URLopen/projekt/1/logo" type="image/png" height="32">
             <!-- First, the default logo is displayed. After the http-src request completes, the logo will be replaced -->
-            <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32" width="32" />
+            <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32"/>
           </object>
         </a>
         <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
         <ul class="nav navbar-nav navbar-right">
+          <li>
+            <script type="text/ng-template" id="feedbackInfoTooltipTemplate.html"><span translate>Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge.</span></script>
+            <a ng-href="http://openolitor.org/en/feedback/" target="_blank"><i class="fa fa-commenting-o" uib-tooltip-template="'feedbackInfoTooltipTemplate.html'" tooltip-placement="bottom-right" aria-hidden="true"></i></a>
+          </li>
           <li class="dropdown">
             <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{activeLang()}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -64,8 +70,8 @@
           <li class="dropdown" ng-show="loggedIn">
             <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.vorname}} {{user.name}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#" translate>Einstellungen</a></li>
-              <li role="separator" class="divider"></li>
+              <!--li><a href="#" translate>Einstellungen</a></li-->
+              <!--li role="separator" class="divider"></li-->
               <li ng-if="env !== 'test'"><a href="#/passwd" translate>Passwort wechseln</a></li>
               <li><a href="#/logout" translate>Abmelden</a></li>
             </ul>
@@ -85,8 +91,7 @@
   </div>
 
   <footer>
-    <script type="text/ng-template" id="versionInfo.html">
-      <span><b translate>Version:</b></span><br />
+    <script type="text/ng-template" id="versionInfo.html"><span><b translate>Version:</b></span><br />
       <span><b>UI</b> v{{version}} | #{{buildNr}}</span><br />
       <span><b>WS</b> {{serverInfo.version}} | #{{serverInfo.buildNr}} </span><br />
       <span><b>ENV</b> {{env}}</span>
@@ -98,7 +103,6 @@
     <span ng-class="[{disconnected:!connected, connected:connected}]"><i class="fa fa-wifi" ng-attr-title="{{messagingSocketClosedReason}}"></i></span>
   </footer>
 
-
   <!-- build:js(.) scripts/oldieshim.js -->
   <!--[if lt IE 9]>
     <script src="vendor/es5-shim/es5-shim.js"></script>
@@ -108,8 +112,7 @@
 
   <!-- build:js(app) scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="bower_components/es5-shim/es5-shim.js"></script>
-  <script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-base64/angular-base64.js"></script>
@@ -126,13 +129,15 @@
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+  <script src="bower_components/es5-shim/es5-shim.js"></script>
   <script src="bower_components/json3/lib/json3.js"></script>
   <script src="bower_components/ng-table/dist/ng-table.js"></script>
   <script src="bower_components/ng-table-export/ng-table-export.js"></script>
+  <script src="bower_components/angular-toArrayFilter/toArrayFilter.js"></script>
   <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
-  <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+  <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
   <script src="bower_components/tinycolor/tinycolor.js"></script>
-  <script src="bower_components/angular-color-picker/angularjs-color-picker.js"></script>
+  <script src="bower_components/angular-color-picker/dist/angularjs-color-picker.js"></script>
   <script src="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.js"></script>
   <script src="bower_components/moment/min/moment-with-locales.min.js"></script>
   <script src="bower_components/angular-moment/angular-moment.js"></script>
@@ -150,6 +155,9 @@
   <script src="bower_components/airbrake-js/dist/client.js"></script>
   <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
   <script src="bower_components/openolitor-core/dist/scripts/openolitor-core.js"></script>
+  <script src="bower_components/clipboard/dist/clipboard.js"></script>
+  <script src="bower_components/ngclipboard/dist/ngclipboard.js"></script>
+  <script src="bower_components/ng-iban/dist/ng-iban.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 

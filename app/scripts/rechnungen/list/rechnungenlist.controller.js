@@ -3,10 +3,11 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .controller('RechnungenListController', ['$scope', 'NgTableParams', 'RechnungenListModel',
+  .controller('RechnungenListController', ['$scope', 'NgTableParams', 'RechnungenListModel', 'KontoDatenModel',
     'FileUtil', '$location', '$anchorScroll',
-    function($scope, NgTableParams, RechnungenListModel, FileUtil, $location, $anchorScroll) {
+    function($scope, NgTableParams, RechnungenListModel, KontoDatenModel, FileUtil, $location, $anchorScroll) {
       $scope.rechungenTableParams = undefined;
+      $scope.kontodaten = undefined;
 
       $scope.entries = [];
       $scope.loading = false;
@@ -17,6 +18,10 @@ angular.module('openolitor-kundenportal')
         if($scope.rechungenTableParams) {
           $scope.rechungenTableParams.reload();
         }
+      });
+
+      KontoDatenModel.query(function(data) {
+        $scope.kontodaten = data;
       });
 
       if (!$scope.rechungenTableParams) {
@@ -76,6 +81,16 @@ angular.module('openolitor-kundenportal')
           }
         }
         return '';
+      };
+
+      $scope.displayDetails = function(rechnung) {
+        rechnung.detailsVisible = !rechnung.detailsVisible;
+        rechnung.rechnungsPositionen = undefined;
+        if(rechnung.detailsVisible) {
+          RechnungenListModel.get({id: rechnung.id}, function(data) {
+            rechnung.rechnungsPositionen = data.rechnungsPositionen;
+          });
+        }
       };
 
       $scope.gotoAbo = function(aboId) {
