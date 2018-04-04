@@ -9,18 +9,24 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <table ng-show="entries" ng-table="arbeitsangeboteTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
-              <tr ng-repeat="arbeitsangebot in $data | orderBy:'zeitVon'">
-                <td data-title="'Titel'|translate">
-                  {{arbeitsangebot.titel}}
+            <table ng-show="entries" ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
+              <tr ng-repeat="arbeitsangebot in $data | orderBy: 'zeitVon'">
+                <td data-title="'Titel'|translate" sortable="'titel'">
+                  <a id="arbeitsangebot{{arbeitsangebot.id}}">{{arbeitsangebot.titel}}</a>
                 </td>
-                <td data-title="'Zeitpunkt'|translate">
-                  {{arbeitsangebot.zeitVon | dateTime}} - {{arbeitsangebot.zeitBis | dateTime}}
+                <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'">
+                  <span ng-if="sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
+                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy'}}<br />
+                    {{arbeitsangebot.zeitVon | date:'@ HH:mm'}}- {{arbeitsangebot.zeitBis | date:'HH:mm'}}
+                  </span>
+                  <span ng-if="!sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
+                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy @ HH:mm'}} - <br />{{arbeitsangebot.zeitBis | date:'dd.MM.yyyy @ HH:mm'}}
+                  </span>
                 </td>
                 <td data-title="'Ort'|translate">
                   {{arbeitsangebot.ort}}
                 </td>
-                <td data-title="'# Pers.'|translate">
+                <td data-title="'#&nbsp;Pers.'|translate" sortable="'anzahlPersonen'">
                   {{arbeitsangebot.anzahlPersonen}} <span ng-if="arbeitsangebot.mehrPersonenOk" translate>+</span>
                 </td>
                 <td data-title="'Kategorien'|translate">

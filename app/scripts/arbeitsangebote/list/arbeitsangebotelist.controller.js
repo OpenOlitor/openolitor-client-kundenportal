@@ -4,8 +4,8 @@
  */
 angular.module('openolitor-kundenportal')
   .controller('ArbeitsangeboteListController', ['$scope', 'NgTableParams', 'ArbeitsangeboteListModel', '$uibModal',
-    '$log', 'alertService', 'gettext', '$http',
-    function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext, $http) {
+    '$log', 'alertService', 'gettext', '$http', 'API_URL',
+    function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext, $http, API_URL) {
       $scope.arbeitsangebotTableParams = undefined;
 
       $scope.entries = [];
@@ -66,12 +66,15 @@ angular.module('openolitor-kundenportal')
           resolve: {
             arbeitsangebot: function() {
               return arbeitsangebot;
+            },
+            arbeitseinsatz: function() {
+              return undefined;
             }
           }
         });
 
         modalInstance.result.then(function(data) {
-          $http.post(API_URL + 'kundenportal/arbeitsangebote/' + $scope.arbeitsangebot.id +
+          $http.post(API_URL + 'kundenportal/arbeitsangebote/' + data.arbeitsangebotId +
             '/participate/',
             data).then(function() {
             alertService.addAlert('info', gettext(
@@ -85,5 +88,9 @@ angular.module('openolitor-kundenportal')
           $log.info('Modal dismissed at: ' + new Date());
         });
       };
+
+      $scope.sameDay = function(date1, date2) {
+        return date1.toDateString() === date2.toDateString();
+      }
     }
   ]);

@@ -4,8 +4,9 @@
  */
 angular.module('openolitor-kundenportal')
   .controller('ArbeitseinsaetzeListController', ['$scope', 'NgTableParams', 'ArbeitseinsaetzeListModel',
-    'FileUtil', '$location', '$anchorScroll',
-    function($scope, NgTableParams, ArbeitseinsaetzeListModel, FileUtil, $location, $anchorScroll) {
+    'FileUtil', '$location', '$anchorScroll', '$uibModal', 'alertService', 'gettext', '$http', 'API_URL',
+    function($scope, NgTableParams, ArbeitseinsaetzeListModel, FileUtil, $location, $anchorScroll, $uibModal,
+      alertService, gettext, $http, API_URL) {
       $scope.arbeitseinsatzTableParams = undefined;
 
       $scope.entries = [];
@@ -62,5 +63,48 @@ angular.module('openolitor-kundenportal')
         $location.hash('abo' + aboId);
         $anchorScroll();
       };
+
+      $scope.sameDay = function(date1, date2) {
+        return date1.toDateString() === date2.toDateString();
+      }
+
+      $scope.highlightAngebot = function(arbeitsangebotId) {
+        $location.hash('arbeitsangebot' + arbeitsangebotId);
+        $anchorScroll();
+      }
+
+      $scope.quit = function(arbeitseinsatz) {
+
+      }
+
+      $scope.edit = function(arbeitseinsatz) {
+        var modalInstance = $uibModal.open({
+          animation: true,
+          templateUrl: 'scripts/arbeitsangebote/list/arbeitsangebot-participate.html',
+          controller: 'ArbeitsangebotParticipateController',
+          resolve: {
+            arbeitsangebot: function() {
+              return undefined;
+            },
+            arbeitseinsatz: function() {
+              return arbeitseinsatz;
+            }
+          }
+        });
+
+        modalInstance.result.then(function(data) {
+          $http.post(API_URL + 'kundenportal/arbeitseinsatz/' + arbeitseinsatz.id,
+            data).then(function() {
+            alertService.addAlert('info', gettext(
+              'Arbeitsangebot erfolgreich verändert.'));
+          }, function(error) {
+            alertService.addAlert('error', gettext(
+                'Arbeitsangebot ändern nicht erfolgreich: ') +
+              error.status + ':' + error.statusText);
+          });
+        }, function() {
+          $log.info('Modal dismissed at: ' + new Date());
+        });
+      }
     }
   ]);
