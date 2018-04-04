@@ -74,7 +74,14 @@ angular.module('openolitor-kundenportal')
       }
 
       $scope.quit = function(arbeitseinsatz) {
-
+        $http.delete(API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id).then(function() {
+          alertService.addAlert('info', gettext(
+            'Arbeitsangebot erfolgreich gelöscht.'));
+        }, function(error) {
+          alertService.addAlert('error', gettext(
+              'Arbeitsangebot löschen nicht erfolgreich: ') +
+            error.status + ':' + error.statusText);
+        });
       }
 
       $scope.edit = function(arbeitseinsatz) {
@@ -93,8 +100,10 @@ angular.module('openolitor-kundenportal')
         });
 
         modalInstance.result.then(function(data) {
-          $http.post(API_URL + 'kundenportal/arbeitseinsatz/' + arbeitseinsatz.id,
-            data).then(function() {
+          arbeitseinsatz.bemerkungen = data.bemerkungen;
+          arbeitseinsatz.anzahlPersonen = data.anzahlPersonen;
+          $http.post(API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
+            arbeitseinsatz).then(function() {
             alertService.addAlert('info', gettext(
               'Arbeitsangebot erfolgreich verändert.'));
           }, function(error) {

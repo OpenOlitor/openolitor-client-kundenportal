@@ -4,8 +4,9 @@
  */
 angular.module('openolitor-kundenportal')
   .controller('ArbeitsangeboteListController', ['$scope', 'NgTableParams', 'ArbeitsangeboteListModel', '$uibModal',
-    '$log', 'alertService', 'gettext', '$http', 'API_URL',
-    function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext, $http, API_URL) {
+    '$log', 'alertService', 'gettext', '$http', 'API_URL', 'ooAuthService',
+    function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext,
+      $http, API_URL, ooAuthService) {
       $scope.arbeitsangebotTableParams = undefined;
 
       $scope.entries = [];
@@ -74,8 +75,8 @@ angular.module('openolitor-kundenportal')
         });
 
         modalInstance.result.then(function(data) {
-          $http.post(API_URL + 'kundenportal/arbeitsangebote/' + data.arbeitsangebotId +
-            '/participate/',
+          data.kundeId = ooAuthService.getUser().kundeId;
+          $http.post(API_URL + 'kundenportal/arbeitsangebote/',
             data).then(function() {
             alertService.addAlert('info', gettext(
               'Erfolgreich in Arbeitsangebot eingeschrieben'));
