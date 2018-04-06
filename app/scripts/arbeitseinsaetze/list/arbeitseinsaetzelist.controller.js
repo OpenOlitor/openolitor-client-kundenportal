@@ -3,10 +3,11 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .controller('ArbeitseinsaetzeListController', ['$scope', 'NgTableParams', 'ArbeitseinsaetzeListModel',
-    'FileUtil', '$location', '$anchorScroll', '$uibModal', 'alertService', 'gettext', '$http', 'API_URL',
-    function($scope, NgTableParams, ArbeitseinsaetzeListModel, FileUtil, $location, $anchorScroll, $uibModal,
-      alertService, gettext, $http, API_URL) {
+  .controller('ArbeitseinsaetzeListController', ['$scope', '$rootScope', 'NgTableParams', 'ArbeitseinsaetzeListModel',
+    'FileUtil', '$location', '$anchorScroll', '$uibModal', 'alertService', 'msgBus', 'gettext', '$http', 'API_URL',
+    'ooAuthService',
+    function($scope, $rootScope, NgTableParams, ArbeitseinsaetzeListModel, FileUtil, $location, $anchorScroll, $uibModal,
+      alertService, msgBus, gettext, $http, API_URL, ooAuthService) {
       $scope.arbeitseinsatzTableParams = undefined;
 
       $scope.entries = [];
@@ -18,6 +19,11 @@ angular.module('openolitor-kundenportal')
         if($scope.arbeitseinsatzTableParams) {
           $scope.arbeitseinsatzTableParams.reload();
         }
+        var msg = {
+            type: 'ArbeitseinsatzListLoaded',
+            list: $scope.entries
+        };
+        msgBus.emitMsg(msg);
       });
 
       if (!$scope.arbeitseinsatzTableParams) {
@@ -105,15 +111,29 @@ angular.module('openolitor-kundenportal')
           $http.post(API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
             arbeitseinsatz).then(function() {
             alertService.addAlert('info', gettext(
-              'Arbeitsangebot erfolgreich verändert.'));
+              'Arbeitseinsatz erfolgreich verändert.'));
           }, function(error) {
             alertService.addAlert('error', gettext(
-                'Arbeitsangebot ändern nicht erfolgreich: ') +
+                'Arbeitseinsatz ändern nicht erfolgreich: ') +
               error.status + ':' + error.statusText);
           });
         }, function() {
           $log.info('Modal dismissed at: ' + new Date());
         });
-      }
+      };
+
+      msgBus.onMsg('EntityCreated', $scope, function(event, msg) {
+        if ((msg.entity) === 'Arbeitseinsatz' && msg.data.personId === ooAuthService.getUser().id) {
+          $scope.entries.push(msg.data);
+          $scope.$apply();
+        }
+      });
+
+      msgBus.onMsg('EntityDeleted', $scope, function(event, msg) {
+        if ((msg.entity) === 'Arbeitseinsatz' && msg.data.personId === ooAuthService.getUser().id) {
+          $scope.entries.splice($scope.entries.indexOf(event.data),1);
+          $scope.$apply();
+        }
+      });
     }
   ]);

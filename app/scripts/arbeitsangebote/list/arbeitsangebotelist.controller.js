@@ -4,9 +4,9 @@
  */
 angular.module('openolitor-kundenportal')
   .controller('ArbeitsangeboteListController', ['$scope', 'NgTableParams', 'ArbeitsangeboteListModel', '$uibModal',
-    '$log', 'alertService', 'gettext', '$http', 'API_URL', 'ooAuthService',
+    '$log', 'alertService', 'gettext', '$http', 'API_URL', 'ooAuthService', 'msgBus',
     function($scope, NgTableParams, ArbeitsangeboteListModel, $uibModal, $log, alertService, gettext,
-      $http, API_URL, ooAuthService) {
+      $http, API_URL, ooAuthService, msgBus) {
       $scope.arbeitsangebotTableParams = undefined;
 
       $scope.entries = [];
@@ -76,7 +76,8 @@ angular.module('openolitor-kundenportal')
 
         modalInstance.result.then(function(data) {
           data.kundeId = ooAuthService.getUser().kundeId;
-          $http.post(API_URL + 'kundenportal/arbeitsangebote/',
+          data.personId = ooAuthService.getUser().id;
+          $http.post(API_URL + 'kundenportal/arbeitsangebote',
             data).then(function() {
             alertService.addAlert('info', gettext(
               'Erfolgreich in Arbeitsangebot eingeschrieben'));
@@ -90,8 +91,62 @@ angular.module('openolitor-kundenportal')
         });
       };
 
+      $scope.isParticipating = function(arbeitsangebot) {
+        return !angular.isUndefined($scope.getArbeitseinsatz(arbeitsangebot));
+      };
+
+      $scope.getArbeitseinsatz = function(arbeitsangebot) {
+        if($scope.arbeitseinsatzList) {
+          var ret = undefined;
+          angular.forEach($scope.arbeitseinsatzList, function(arbeitseinsatz) {
+            if(arbeitseinsatz.arbeitsangebotId === arbeitsangebot.id) {
+              ret = arbeitseinsatz;
+            }
+          });
+          return ret;
+        }
+        return undefined;
+      };
+
+      $scope.edit = function(arbeitsangebot) {
+        var arbeitseinsatz = $scope.getArbeitseinsatz(arbeitsangebot);
+        var modalInstance = $uibModal.open({
+          animation: true,
+          templateUrl: 'scripts/arbeitsangebote/list/arbeitsangebot-participate.html',
+          controller: 'ArbeitsangebotParticipateController',
+          resolve: {
+            arbeitsangebot: function() {
+              return undefined;
+            },
+            arbeitseinsatz: function() {
+              return arbeitseinsatz;
+            }
+          }
+        });
+
+        modalInstance.result.then(function(data) {
+          arbeitseinsatz.bemerkungen = data.bemerkungen;
+          arbeitseinsatz.anzahlPersonen = data.anzahlPersonen;
+          $http.post(API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
+            arbeitseinsatz).then(function() {
+            alertService.addAlert('info', gettext(
+              'Arbeitseinsatz erfolgreich verändert.'));
+          }, function(error) {
+            alertService.addAlert('error', gettext(
+                'Arbeitseinsatz ändern nicht erfolgreich: ') +
+              error.status + ':' + error.statusText);
+          });
+        }, function() {
+          $log.info('Modal dismissed at: ' + new Date());
+        });
+      };
+
       $scope.sameDay = function(date1, date2) {
         return date1.toDateString() === date2.toDateString();
-      }
+      };
+
+      msgBus.onMsg('ArbeitseinsatzListLoaded', $scope, function(event, msg) {
+        $scope.arbeitseinsatzList = msg.list;
+      });
     }
   ]);
