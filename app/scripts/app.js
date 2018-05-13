@@ -52,6 +52,7 @@ angular
     'angular-sortable-view',
     'ngclipboard',
     'mm.iban',
+    'piwik',
     'openolitor-core'
   ])
   .constant('API_URL', '@@API_URL')
