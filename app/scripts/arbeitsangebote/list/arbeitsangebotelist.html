@@ -16,11 +16,11 @@
                 </td>
                 <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'">
                   <span ng-if="sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
-                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy'}}<br />
-                    {{arbeitsangebot.zeitVon | date:'@ HH:mm'}}- {{arbeitsangebot.zeitBis | date:'HH:mm'}}
+                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy'}}
+                    {{arbeitsangebot.zeitVon | date:'@ HH:mm'}} - {{arbeitsangebot.zeitBis | date:'HH:mm'}}
                   </span>
                   <span ng-if="!sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
-                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy @ HH:mm'}} - <br />{{arbeitsangebot.zeitBis | date:'dd.MM.yyyy @ HH:mm'}}
+                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy @ HH:mm'}} - {{arbeitsangebot.zeitBis | date:'dd.MM.yyyy @ HH:mm'}}
                   </span>
                 </td>
                 <td data-title="'Ort'|translate">
