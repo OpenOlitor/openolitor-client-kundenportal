@@ -21,6 +21,14 @@
              {{abo.tourName}}
           </div>
         </div>
+        <div class="row vertrieb" ng-if="abo.vertrieb.beschrieb">
+          <div class="col-md-4 col-sm-6" >
+            <span translate>Vertrieb:</span>
+          </div>
+          <div class="col-md-4 col-sm-6">
+             {{abo.vertrieb.beschrieb| translate}}
+          </div>
+        </div>
         <div class="row liefertag" ng-if="abo.vertrieb.liefertag">
           <div class="col-md-4 col-sm-6" >
             <span translate>Liefertag:</span>
