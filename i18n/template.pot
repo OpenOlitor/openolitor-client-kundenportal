@@ -4,15 +4,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: app/index.html:76
+#: app/index.html:72
 msgid "Abmelden"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:103
+#: app/scripts/rechnungen/list/rechnungenlist.html:106
 msgid "Abo"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:71
+#: app/scripts/rechnungen/list/rechnungenlist.html:74
 msgid "Abo:"
 msgstr ""
 
@@ -21,27 +21,27 @@ msgid "Abwesenheit erfassen"
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
-msgid "Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}<span ng-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
+msgid "Abwesenheiten"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:72
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Anzahl Lieferungen"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:100
+#: app/scripts/rechnungen/list/rechnungenlist.html:103
 #: app/scripts/rechnungen/list/rechnungenlist.html:46
 msgid "Betrag"
 msgstr ""
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:66
 msgid "Bu."
 msgstr ""
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:66
 msgid "Bund"
 msgstr ""
 
-#: app/index.html:84
+#: app/index.html:80
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr ""
 
@@ -50,7 +50,7 @@ msgid "Das Modul „Arbeitseinsätze“ wird in Kürze zur Verfügung stehen."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:27
-#: app/scripts/rechnungen/list/rechnungenlist.html:91
+#: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr ""
 
@@ -82,7 +82,7 @@ msgstr ""
 msgid "Der nächste Korb"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:64
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "Details werden geladen..."
 msgstr ""
 
@@ -94,11 +94,11 @@ msgstr ""
 msgid "Diese Seite konnte nicht gefunden werden!"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:57
+#: app/scripts/rechnungen/list/rechnungenlist.html:60
 msgid "ESR-Nr."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:56
+#: app/scripts/rechnungen/list/rechnungenlist.html:59
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr ""
 
@@ -123,10 +123,6 @@ msgstr ""
 msgid "Einheit"
 msgstr ""
 
-#: app/index.html:73
-msgid "Einstellungen"
-msgstr ""
-
 #: app/scripts/not-found.html:6
 msgid "Error 404"
 msgstr ""
@@ -147,7 +143,7 @@ msgstr ""
 msgid "Fehlerhafte Email Adresse"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:94
+#: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Fällig"
 msgstr ""
 
@@ -155,7 +151,7 @@ msgstr ""
 msgid "Fällig am"
 msgstr ""
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:67
 msgid "Gramm"
 msgstr ""
 
@@ -163,7 +159,7 @@ msgstr ""
 msgid "Inhalt der Körbe"
 msgstr ""
 
-#: app/scripts/app.js:67
+#: app/scripts/app.js:68
 msgid "Kilogramm"
 msgstr ""
 
@@ -171,15 +167,15 @@ msgstr ""
 msgid "Konto für Einzahlungen:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:58
 msgid "Laufzeit:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:42
 msgid "Lieferrhythmus:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:26
+#: app/scripts/abos/list/aboslist.html:34
 msgid "Liefertag:"
 msgstr ""
 
@@ -187,7 +183,7 @@ msgstr ""
 msgid "Lieferung"
 msgstr ""
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:70
 msgid "Liter"
 msgstr ""
 
@@ -200,15 +196,15 @@ msgstr ""
 msgid "OpenOlitor Mitgliederportal:"
 msgstr ""
 
-#: app/index.html:75
+#: app/index.html:71
 msgid "Passwort wechseln"
 msgstr ""
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:71
 msgid "Por."
 msgstr ""
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:71
 msgid "Portion"
 msgstr ""
 
@@ -217,7 +213,7 @@ msgstr ""
 msgid "Preis"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:50
 msgid "Preis:"
 msgstr ""
 
@@ -235,25 +231,29 @@ msgstr ""
 msgid "Rechnungsdatum"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:49
+#: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Referenznummer"
 msgstr ""
 
-#: app/scripts/app.js:64
+#: app/scripts/rechnungen/list/rechnungenlist.html:50
+msgid "Referenznummer in Zwischenablage kopieren"
+msgstr ""
+
+#: app/scripts/app.js:65
 msgid "St."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:106
-#: app/scripts/rechnungen/list/rechnungenlist.html:52
+#: app/scripts/rechnungen/list/rechnungenlist.html:109
+#: app/scripts/rechnungen/list/rechnungenlist.html:55
 msgid "Status"
 msgstr ""
 
-#: app/scripts/app.js:64
+#: app/scripts/app.js:65
 msgid "Stück"
 msgstr ""
 
+#: app/scripts/rechnungen/list/rechnungenlist.html:100
 #: app/scripts/rechnungen/list/rechnungenlist.html:43
-#: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Titel"
 msgstr ""
 
@@ -261,11 +261,15 @@ msgstr ""
 msgid "Tour:"
 msgstr ""
 
-#: app/index.html:94
+#: app/index.html:90
 msgid "Version:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:53
+#: app/scripts/abos/list/aboslist.html:26
+msgid "Vertrieb:"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:61
 msgid "Von"
 msgstr ""
 
@@ -277,19 +281,15 @@ msgstr ""
 msgid "Weitere Lieferungen anzeigen..."
 msgstr ""
 
-#: app/index.html:58
-msgid "Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge."
-msgstr ""
-
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
 msgid "alle"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:53
+#: app/scripts/abos/list/aboslist.html:61
 msgid "bis"
 msgstr ""
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:67
 msgid "gr"
 msgstr ""
 
@@ -297,11 +297,11 @@ msgstr ""
 msgid "in Stammdaten nicht definiert"
 msgstr ""
 
-#: app/scripts/app.js:68
+#: app/scripts/app.js:69
 msgid "kg"
 msgstr ""
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:70
 msgid "l"
 msgstr ""
 
