@@ -14,7 +14,8 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
         msgBus, lodash, GeschaeftsjahrUtil, moment) {
         $scope.projekt = $rootScope.projekt;
 
-        $scope.showAllAbwesenheiten = false;
+        $scope.templateObject= {};
+        $scope.templateObject.showOnlyPending = true;
         $scope.deletingAbwesenheit = {};
         $scope.template = {
           creating: 0
@@ -100,8 +101,22 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
           });
         }
 
+        $scope.filterIfLieferungOpen = function(item){
+            if ($scope.isLieferungOpen(item))
+                return item;
+            else return '';
+        }
+
+        $scope.gettingCurrentAbsences = function(){
+            return $scope.isInCurrentOrLaterGJ?$scope.getCurrentlyMatchingGJItem.value:0;
+        }
+
         $scope.getCurrentlyMatchingGJItem = GeschaeftsjahrUtil.getMatchingGJItem($scope.abo.anzahlAbwesenheiten, $scope.projekt);
-        $scope.isInCurrentOrLaterGJ = GeschaeftsjahrUtil.isInCurrentOrLaterGJ;
+        var dateArray = $scope.getCurrentlyMatchingGJItem.key.split('/');
+        var date = new Date();
+        date.setYear(dateArray[1]);
+        date.setMonth(dateArray[0],1);
+        $scope.isInCurrentOrLaterGJ = GeschaeftsjahrUtil.isInCurrentOrLaterGJ($scope.projekt, date);
 
         msgBus.onMsg('EntityCreated', $scope, function(event, msg) {
           if (msg.entity === 'Abwesenheit') {
