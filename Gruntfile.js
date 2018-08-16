@@ -36,6 +36,9 @@ module.exports = function(grunt) {
       },
       'test-prod-bayreuth': {
         'm1': 'https://sunu-server-testprod.scapp.io/bayreuth/'
+      },
+      'test-prod-peetzerhof': {
+        'm1': 'https://sunu-server-testprod.scapp.io/peetzerhof/'
       }
   };
   var env = 'dev';
