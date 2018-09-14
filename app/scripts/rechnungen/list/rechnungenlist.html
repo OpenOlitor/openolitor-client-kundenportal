@@ -48,7 +48,7 @@
                   </td>
                   <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
                   <script type="text/ng-template" id="refNrToolTip"><span translate>Referenznummer in Zwischenablage kopieren</span></script>
-                  <td data-title="{{'Referenznummer'|translate}}" data-class="hidden-sm hidden-xs">
+                  <td data-title="'Referenznummer'|translate" data-class="hidden-sm hidden-xs">
                     {{rechnung.referenzNummer}}&nbsp;
                     <button uib-tooltip-template="'refNrToolTip'"class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.referenzNummer}}"></button>
                   </td>
