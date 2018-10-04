@@ -11,56 +11,100 @@ msgstr ""
 "Last-Translator: al_openolitor <alwin.egger@openolitor.ch>\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2018-02-06 16:39-0500\n"
+"PO-Revision-Date: 2018-10-04 12:54\n"
 
-#: app/index.html:76
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
+msgid "#&nbsp;Pers."
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "+"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
+msgid "Abbrechen"
+msgstr ""
+
+#: app/index.html:74
 msgid "Abmelden"
 msgstr "Cerrer sesión"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:103
+#: app/scripts/rechnungen/list/rechnungenlist.html:106
 msgid "Abo"
 msgstr "Subscripción"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:71
+#: app/scripts/rechnungen/list/rechnungenlist.html:74
 msgid "Abo:"
 msgstr "Subscripción:"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:48
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
 msgid "Abwesenheit erfassen"
 msgstr "Sin registro"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
-msgid "Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}<span ng-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
-msgstr "Ausencias <small>({{getCurrentlyMatchingGJItem.value}}\n"
-"      <span nf-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
+msgid "Abwesenheiten"
+msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:72
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Anzahl Lieferungen"
 msgstr "Número de entregas"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:100
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:8
+msgid "Anzahl Personen"
+msgstr ""
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:127
+msgid "Arbeitsangebot erfolgreich gelöscht."
+msgstr ""
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:133
+msgid "Arbeitsangebot löschen nicht erfolgreich:"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:184
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:171
+msgid "Arbeitseinsatz erfolgreich verändert."
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:190
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:177
+msgid "Arbeitseinsatz ändern nicht erfolgreich:"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
+msgid "Bei Arbeitsangebot teilnehmen"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:35
+msgid "Bemerkungen"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:103
 #: app/scripts/rechnungen/list/rechnungenlist.html:46
 msgid "Betrag"
 msgstr "Monto"
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:67
 msgid "Bu."
 msgstr "Manojo"
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:67
 msgid "Bund"
 msgstr "Manojo"
 
-#: app/index.html:84
+#: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "El servidor no está disponible actualmente, por favor, intentelo un poco mas tarde."
 
-#: app/scripts/dashboard/dashboard.html:31
-msgid "Das Modul „Arbeitseinsätze“ wird in Kürze zur Verfügung stehen."
-msgstr "El modulo \"horas de trabajo\" estará disponible próximamente."
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
+msgid "Das Einschreiben war nicht erfolgreich:"
+msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:27
-#: app/scripts/rechnungen/list/rechnungenlist.html:91
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr "Fecha"
 
@@ -68,7 +112,7 @@ msgstr "Fecha"
 msgid "Deine Abos"
 msgstr "Tus abonos"
 
-#: app/scripts/dashboard/dashboard.html:25
+#: app/scripts/dashboard/dashboard.html:27
 msgid "Deine Arbeitseinsätze"
 msgstr "Tus días y horas de trabajo"
 
@@ -92,7 +136,7 @@ msgstr "La cesta actual"
 msgid "Der nächste Korb"
 msgstr "La siguiente cesta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:64
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "Details werden geladen..."
 msgstr "Cargando los detalles..."
 
@@ -104,11 +148,15 @@ msgstr "Las cestas anteriores"
 msgid "Diese Seite konnte nicht gefunden werden!"
 msgstr "¡La página solicitada no ha sido encontrada!"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:57
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
+msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:60
 msgid "ESR-Nr."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:56
+#: app/scripts/rechnungen/list/rechnungenlist.html:59
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr ""
 
@@ -133,13 +181,17 @@ msgstr "Entrada muy larga"
 msgid "Einheit"
 msgstr "Unidad"
 
-#: app/index.html:73
-msgid "Einstellungen"
-msgstr "Parametros"
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
+msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
+msgstr ""
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
 msgstr "Error 404"
+
+#: app/scripts/app.js:112
+msgid "Error:"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:16
 msgid "Es liegen noch keine Rechnungen vor."
@@ -157,7 +209,7 @@ msgstr "Ninguna planificación de la distribución ha sido concluida."
 msgid "Fehlerhafte Email Adresse"
 msgstr "Dirección de correo electrónico incorrecta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:94
+#: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Fällig"
 msgstr "A pagar hasta"
 
@@ -165,7 +217,7 @@ msgstr "A pagar hasta"
 msgid "Fällig am"
 msgstr "Fecha límite"
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:68
 msgid "Gramm"
 msgstr "Gramos"
 
@@ -173,7 +225,15 @@ msgstr "Gramos"
 msgid "Inhalt der Körbe"
 msgstr "Contenido de las cestas"
 
-#: app/scripts/app.js:67
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:33
+msgid "Kategorien"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:7
+msgid "Keine Arbeitsangebote."
+msgstr ""
+
+#: app/scripts/app.js:69
 msgid "Kilogramm"
 msgstr "Kilogramos"
 
@@ -181,15 +241,15 @@ msgstr "Kilogramos"
 msgid "Konto für Einzahlungen:"
 msgstr "Cuenta de pago:"
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:58
 msgid "Laufzeit:"
 msgstr "Duración del contrato:"
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:42
 msgid "Lieferrhythmus:"
 msgstr "Ciclo de entrega:"
 
-#: app/scripts/abos/list/aboslist.html:26
+#: app/scripts/abos/list/aboslist.html:34
 msgid "Liefertag:"
 msgstr "Día de entrega:"
 
@@ -197,7 +257,7 @@ msgstr "Día de entrega:"
 msgid "Lieferung"
 msgstr "Entrega"
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:71
 msgid "Liter"
 msgstr "Litro"
 
@@ -206,19 +266,23 @@ msgstr "Litro"
 msgid "Menge"
 msgstr "Cantidad"
 
-#: app/index.html:55
+#: app/index.html:56
 msgid "OpenOlitor Mitgliederportal:"
 msgstr "Portal de abonado a OpenOlitor:"
 
-#: app/index.html:75
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
+msgid "Ort"
+msgstr ""
+
+#: app/index.html:73
 msgid "Passwort wechseln"
 msgstr "Cambiar la contraseña"
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:72
 msgid "Por."
 msgstr ""
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:72
 msgid "Portion"
 msgstr "Porción"
 
@@ -227,7 +291,7 @@ msgstr "Porción"
 msgid "Preis"
 msgstr "Precio"
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:50
 msgid "Preis:"
 msgstr "Precio:"
 
@@ -245,25 +309,31 @@ msgstr "Productores"
 msgid "Rechnungsdatum"
 msgstr "Fecha de facturas"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:49
+#: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Referenznummer"
 msgstr "Número de referencia"
 
-#: app/scripts/app.js:64
+#: app/scripts/rechnungen/list/rechnungenlist.html:50
+msgid "Referenznummer in Zwischenablage kopieren"
+msgstr ""
+
+#: app/scripts/app.js:66
 msgid "St."
 msgstr "Unidad"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:106
-#: app/scripts/rechnungen/list/rechnungenlist.html:52
+#: app/scripts/rechnungen/list/rechnungenlist.html:109
+#: app/scripts/rechnungen/list/rechnungenlist.html:55
 msgid "Status"
 msgstr "Estado"
 
-#: app/scripts/app.js:64
+#: app/scripts/app.js:66
 msgid "Stück"
 msgstr "Unidad"
 
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
+#: app/scripts/rechnungen/list/rechnungenlist.html:100
 #: app/scripts/rechnungen/list/rechnungenlist.html:43
-#: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Titel"
 msgstr "Título"
 
@@ -271,11 +341,19 @@ msgstr "Título"
 msgid "Tour:"
 msgstr "Recorrido:"
 
-#: app/index.html:94
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
+msgid "Verbindlich Einschreiben"
+msgstr ""
+
+#: app/index.html:92
 msgid "Version:"
 msgstr "Versión:"
 
-#: app/scripts/abos/list/aboslist.html:53
+#: app/scripts/abos/list/aboslist.html:26
+msgid "Vertrieb:"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:61
 msgid "Von"
 msgstr "De"
 
@@ -287,19 +365,28 @@ msgstr "Mostrar más cestas..."
 msgid "Weitere Lieferungen anzeigen..."
 msgstr "Mostrar más entregas..."
 
-#: app/index.html:58
-msgid "Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge."
-msgstr "Estamos más que contentos de que nos envíes tus comentarios, ideas y sugerencias de mejora. ¡Así haremos de OpenOlitor un proyecto que ayude cada vez a más grupos de consumo!"
+#: app/scripts/dashboard/dashboard.html:35
+msgid "Wo ist Mitarbeit möglich?"
+msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
+msgid "Zeitpunkt"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
 msgid "alle"
 msgstr "todos"
 
-#: app/scripts/abos/list/aboslist.html:53
+#: app/scripts/abos/list/aboslist.html:61
 msgid "bis"
 msgstr "de"
 
-#: app/scripts/app.js:66
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
+msgid "bisher eingeschrieben"
+msgstr ""
+
+#: app/scripts/app.js:68
 msgid "gr"
 msgstr "gr"
 
@@ -307,15 +394,15 @@ msgstr "gr"
 msgid "in Stammdaten nicht definiert"
 msgstr "sin definir en los datos básicos"
 
-#: app/scripts/app.js:68
+#: app/scripts/app.js:70
 msgid "kg"
 msgstr "kg"
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:71
 msgid "l"
 msgstr "l"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
 msgid "pendente"
 msgstr "pendiente"
 
