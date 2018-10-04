@@ -10,7 +10,7 @@
         <div class="row">
           <div class="col-md-12">
             <table ng-show="entries" ng-table="arbeitseinsatzTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
-              <tr ng-repeat="arbeitseinsatz in $data | orderBy:'zeitVon'">
+              <tr ng-repeat="arbeitseinsatz in $data">
                 <td data-title="'Titel'|translate">
                   <a ng-click="highlightAngebot(arbeitseinsatz.arbeitsangebotId)">{{arbeitseinsatz.arbeitsangebotTitel}}</a>
                 </td>

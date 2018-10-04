@@ -10,9 +10,10 @@
         <div class="row">
           <div class="col-md-12">
             <table ng-show="entries" ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
-              <tr ng-repeat="arbeitsangebot in $data | orderBy: 'zeitVon'">
+              <tr ng-repeat="arbeitsangebot in $data">
                 <td data-title="'Titel'|translate" sortable="'titel'">
                   <a id="arbeitsangebot{{arbeitsangebot.id}}">{{arbeitsangebot.titel}}</a>
+                  <span ng-if="arbeitsangebot.bezeichnung">&nbsp;<i class="fa fa-info-circle ng-scope" uib-tooltip-html="arbeitsangebot.bezeichnung"></i></span>
                 </td>
                 <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'">
                   <span ng-if="sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
