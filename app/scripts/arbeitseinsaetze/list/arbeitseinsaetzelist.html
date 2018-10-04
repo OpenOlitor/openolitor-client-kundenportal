@@ -23,9 +23,6 @@
                     {{arbeitseinsatz.zeitVon | date:'dd.MM.yyyy @ HH:mm'}} - {{arbeitseinsatz.zeitBis | date:'dd.MM.yyyy @ HH:mm'}}
                   </span>
                 </td>
-                <!--td data-title="'Ort'|translate">
-                  {{arbeitseinsatz.arbeitsangebot.ort}}
-                </td-->
                 <td data-title="'#&nbsp;Pers.'|translate" sortable="'anzahlPersonen'">
                   {{arbeitseinsatz.anzahlPersonen}}
                 </td>
@@ -35,11 +32,6 @@
                 <td data-title="'Bemerkungen'|translate">
                   {{arbeitseinsatz.bemerkungen}}
                 </td>
-                <!--td data-title="'Kategorien'|translate">
-                  <span ng-repeat="arbeitskategorie in arbeitseinsatz.arbeitsangebot.arbeitskategorien" class="badge" ng-if="arbeitskategorie !== ''">
-                    {{arbeitskategorie}}
-                  </span>
-                </td-->
                 <td>
                   <div class="btn-group">
                     <a role="button" class="btn btn-sm btn-warning" ng-click="quit(arbeitseinsatz)"><span class="glyphicon glyphicon-minus"></span></a>
