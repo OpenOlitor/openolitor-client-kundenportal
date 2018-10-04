@@ -52,6 +52,7 @@ angular
     'angular-sortable-view',
     'ngclipboard',
     'mm.iban',
+    'piwik',
     'openolitor-core'
   ])
   .constant('API_URL', '@@API_URL')
@@ -108,7 +109,7 @@ angular
           notice.context.version = VERSION;
           return notice;
         });
-        var message = 'Error: ';
+        var message = gettext('Error: ');
         if (!angular.isUndefined(rejection.config) && !angular.isUndefined(rejection.config.url)) {
           message += rejection.config.url;
         }

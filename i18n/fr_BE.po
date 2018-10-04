@@ -11,55 +11,100 @@ msgstr ""
 "Last-Translator: al_openolitor <alwin.egger@openolitor.ch>\n"
 "Language-Team: French, Belgium\n"
 "Language: fr_BE\n"
-"PO-Revision-Date: 2017-10-19 08:50-0400\n"
+"PO-Revision-Date: 2018-10-04 12:54\n"
 
-#: app/index.html:76
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
+msgid "#&nbsp;Pers."
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "+"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
+msgid "Abbrechen"
+msgstr ""
+
+#: app/index.html:74
 msgid "Abmelden"
 msgstr "se déconnecter"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:103
+#: app/scripts/rechnungen/list/rechnungenlist.html:106
 msgid "Abo"
 msgstr "Abon"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:71
+#: app/scripts/rechnungen/list/rechnungenlist.html:74
 msgid "Abo:"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:48
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
 msgid "Abwesenheit erfassen"
 msgstr "Pas d'enregistrement"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
-msgid "Abwesenheiten <small>({{getCurrentlyMatchingGJItem.value}}<span ng-if=\"abo.abotyp.anzahlAbwesenheiten > 0\"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small>"
+msgid "Abwesenheiten"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:72
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Anzahl Lieferungen"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:100
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:8
+msgid "Anzahl Personen"
+msgstr ""
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:127
+msgid "Arbeitsangebot erfolgreich gelöscht."
+msgstr ""
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:133
+msgid "Arbeitsangebot löschen nicht erfolgreich:"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:184
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:171
+msgid "Arbeitseinsatz erfolgreich verändert."
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:190
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:177
+msgid "Arbeitseinsatz ändern nicht erfolgreich:"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
+msgid "Bei Arbeitsangebot teilnehmen"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:35
+msgid "Bemerkungen"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:103
 #: app/scripts/rechnungen/list/rechnungenlist.html:46
 msgid "Betrag"
 msgstr "Montant"
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:67
 msgid "Bu."
 msgstr ""
 
-#: app/scripts/app.js:65
+#: app/scripts/app.js:67
 msgid "Bund"
 msgstr ""
 
-#: app/index.html:84
+#: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "Le back-end est momentanément ineccessible. Merci de revenir un peu plus tard."
 
-#: app/scripts/dashboard/dashboard.html:31
-msgid "Das Modul „Arbeitseinsätze“ wird in Kürze zur Verfügung stehen."
-msgstr "Le module « Travail » sera bientôt disponible."
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
+msgid "Das Einschreiben war nicht erfolgreich:"
+msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:27
-#: app/scripts/rechnungen/list/rechnungenlist.html:91
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr "Date"
 
@@ -67,7 +112,7 @@ msgstr "Date"
 msgid "Deine Abos"
 msgstr "Vos abonnements"
 
-#: app/scripts/dashboard/dashboard.html:25
+#: app/scripts/dashboard/dashboard.html:27
 msgid "Deine Arbeitseinsätze"
 msgstr "Vos missions"
 
@@ -91,7 +136,7 @@ msgstr ""
 msgid "Der nächste Korb"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:64
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "Details werden geladen..."
 msgstr ""
 
@@ -103,11 +148,15 @@ msgstr "Les paniers précédents"
 msgid "Diese Seite konnte nicht gefunden werden!"
 msgstr "La page demandée n’a pas été trouvée"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:57
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
+msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:60
 msgid "ESR-Nr."
 msgstr "No de l’ISR"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:56
+#: app/scripts/rechnungen/list/rechnungenlist.html:59
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr ""
 
@@ -132,13 +181,17 @@ msgstr "Entrée trop longue"
 msgid "Einheit"
 msgstr "Unité"
 
-#: app/index.html:73
-msgid "Einstellungen"
-msgstr "Paramètres"
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
+msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
+msgstr ""
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
 msgstr "Erreur 404"
+
+#: app/scripts/app.js:112
+msgid "Error:"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:16
 msgid "Es liegen noch keine Rechnungen vor."
@@ -156,7 +209,7 @@ msgstr ""
 msgid "Fehlerhafte Email Adresse"
 msgstr "adresse e-mail erronné"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:94
+#: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Fällig"
 msgstr "Du"
 
@@ -164,7 +217,7 @@ msgstr "Du"
 msgid "Fällig am"
 msgstr "Date d’échéance"
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:68
 msgid "Gramm"
 msgstr ""
 
@@ -172,7 +225,15 @@ msgstr ""
 msgid "Inhalt der Körbe"
 msgstr ""
 
-#: app/scripts/app.js:67
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:33
+msgid "Kategorien"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:7
+msgid "Keine Arbeitsangebote."
+msgstr ""
+
+#: app/scripts/app.js:69
 msgid "Kilogramm"
 msgstr ""
 
@@ -180,15 +241,15 @@ msgstr ""
 msgid "Konto für Einzahlungen:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:58
 msgid "Laufzeit:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:42
 msgid "Lieferrhythmus:"
 msgstr "Cadence de livraison:"
 
-#: app/scripts/abos/list/aboslist.html:26
+#: app/scripts/abos/list/aboslist.html:34
 msgid "Liefertag:"
 msgstr "Jour de livraison:"
 
@@ -196,7 +257,7 @@ msgstr "Jour de livraison:"
 msgid "Lieferung"
 msgstr ""
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:71
 msgid "Liter"
 msgstr ""
 
@@ -205,19 +266,23 @@ msgstr ""
 msgid "Menge"
 msgstr "Quantité"
 
-#: app/index.html:55
+#: app/index.html:56
 msgid "OpenOlitor Mitgliederportal:"
 msgstr "Portail des membres de OpenOlitor :"
 
-#: app/index.html:75
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
+msgid "Ort"
+msgstr ""
+
+#: app/index.html:73
 msgid "Passwort wechseln"
 msgstr "Changer mot de passe"
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:72
 msgid "Por."
 msgstr ""
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:72
 msgid "Portion"
 msgstr ""
 
@@ -226,7 +291,7 @@ msgstr ""
 msgid "Preis"
 msgstr "Prix"
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:50
 msgid "Preis:"
 msgstr "Prix :"
 
@@ -244,25 +309,31 @@ msgstr "Producteur"
 msgid "Rechnungsdatum"
 msgstr "Date de la facture"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:49
+#: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Referenznummer"
 msgstr ""
 
-#: app/scripts/app.js:64
+#: app/scripts/rechnungen/list/rechnungenlist.html:50
+msgid "Referenznummer in Zwischenablage kopieren"
+msgstr ""
+
+#: app/scripts/app.js:66
 msgid "St."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:106
-#: app/scripts/rechnungen/list/rechnungenlist.html:52
+#: app/scripts/rechnungen/list/rechnungenlist.html:109
+#: app/scripts/rechnungen/list/rechnungenlist.html:55
 msgid "Status"
 msgstr "Statut"
 
-#: app/scripts/app.js:64
+#: app/scripts/app.js:66
 msgid "Stück"
 msgstr ""
 
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
+#: app/scripts/rechnungen/list/rechnungenlist.html:100
 #: app/scripts/rechnungen/list/rechnungenlist.html:43
-#: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Titel"
 msgstr "Titre"
 
@@ -270,11 +341,19 @@ msgstr "Titre"
 msgid "Tour:"
 msgstr "Tournée:"
 
-#: app/index.html:94
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
+msgid "Verbindlich Einschreiben"
+msgstr ""
+
+#: app/index.html:92
 msgid "Version:"
 msgstr "Version :"
 
-#: app/scripts/abos/list/aboslist.html:53
+#: app/scripts/abos/list/aboslist.html:26
+msgid "Vertrieb:"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:61
 msgid "Von"
 msgstr ""
 
@@ -286,19 +365,28 @@ msgstr ""
 msgid "Weitere Lieferungen anzeigen..."
 msgstr ""
 
-#: app/index.html:58
-msgid "Wir sind froh über Rückmeldungen, Ideen und Verbesserungsvorschläge."
+#: app/scripts/dashboard/dashboard.html:35
+msgid "Wo ist Mitarbeit möglich?"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
+msgid "Zeitpunkt"
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
 msgid "alle"
 msgstr "tous"
 
-#: app/scripts/abos/list/aboslist.html:53
+#: app/scripts/abos/list/aboslist.html:61
 msgid "bis"
 msgstr ""
 
-#: app/scripts/app.js:66
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
+msgid "bisher eingeschrieben"
+msgstr ""
+
+#: app/scripts/app.js:68
 msgid "gr"
 msgstr ""
 
@@ -306,15 +394,15 @@ msgstr ""
 msgid "in Stammdaten nicht definiert"
 msgstr ""
 
-#: app/scripts/app.js:68
+#: app/scripts/app.js:70
 msgid "kg"
 msgstr ""
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:71
 msgid "l"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
 msgid "pendente"
 msgstr "en attente"
 

@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row" ng-show="!entries">
+          <div class="col-md-12 col-sm-12" >
+            <span translate>Du hast dich in keine Arbeitseinsaetze eingeschrieben.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <table ng-show="entries" ng-table="arbeitseinsatzTableParams" class="table table-striped" show-filter="false" template-pagination="removePagerRow.html">
+              <tr ng-repeat="arbeitseinsatz in $data">
+                <td data-title="'Titel'|translate">
+                  <a ng-click="highlightAngebot(arbeitseinsatz.arbeitsangebotId)">{{arbeitseinsatz.arbeitsangebotTitel}}</a>
+                </td>
+                <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'">
+                  <span ng-if="sameDay(arbeitseinsatz.zeitBis, arbeitseinsatz.zeitVon)">
+                    {{arbeitseinsatz.zeitVon | date:'dd.MM.yyyy'}}
+                    {{arbeitseinsatz.zeitVon | date:'@ HH:mm'}} - {{arbeitseinsatz.zeitBis | date:'HH:mm'}}
+                  </span>
+                  <span ng-if="!sameDay(arbeitseinsatz.zeitBis, arbeitseinsatz.zeitVon)">
+                    {{arbeitseinsatz.zeitVon | date:'dd.MM.yyyy @ HH:mm'}} - {{arbeitseinsatz.zeitBis | date:'dd.MM.yyyy @ HH:mm'}}
+                  </span>
+                </td>
+                <!--td data-title="'Ort'|translate">
+                  {{arbeitseinsatz.arbeitsangebot.ort}}
+                </td-->
+                <td data-title="'#&nbsp;Pers.'|translate" sortable="'anzahlPersonen'">
+                  {{arbeitseinsatz.anzahlPersonen}}
+                </td>
+                <td data-title="'bisher eingeschrieben'|translate" sortable="'anzahlPersonen'">
+                  {{arbeitseinsatz.arbeitsangebot.anzahlEingeschriebene}}
+                </td>
+                <td data-title="'Bemerkungen'|translate">
+                  {{arbeitseinsatz.bemerkungen}}
+                </td>
+                <!--td data-title="'Kategorien'|translate">
+                  <span ng-repeat="arbeitskategorie in arbeitseinsatz.arbeitsangebot.arbeitskategorien" class="badge" ng-if="arbeitskategorie !== ''">
+                    {{arbeitskategorie}}
+                  </span>
+                </td-->
+                <td>
+                  <div class="btn-group">
+                    <a role="button" class="btn btn-sm btn-warning" ng-click="quit(arbeitseinsatz)"><span class="glyphicon glyphicon-minus"></span></a>
+                    <a role="button" class="btn btn-sm btn-info" ng-click="edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
