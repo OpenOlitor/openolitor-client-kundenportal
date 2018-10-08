@@ -46,14 +46,17 @@
     "ng-table": "~1.0.0",
     "ng1-lodash": "^0.5.1",
     "ngclipboard": "^1.1.1",
-    "openolitor-core": "git://github.com/OpenOlitor/openolitor-client-core.git#2.2.10-SNAPSHOT",
     "pako": "^1.0.5"
   },
   "notfound": {
     "angular-hamburger-toggle": "~0.2.0",
+    "openolitor-core": "git://github.com/OpenOlitor/openolitor-client-core.git#2.2.10-SNAPSHOT",
     "ng-table-export": "*"
   },
   "devDependencies": {
+    "angular-loading-bar": "^0.9.0",
+    "angular-mocks": "~1.6.5",
+    "angular-scenario": "~1.6.5",
     "http-server": "^0.10.0",
     "jasmine-core": "^2.6.4",
     "jshint-stylish": "^2.2.1",
@@ -64,14 +67,22 @@
     "karma-junit-reporter": "^1.2.0",
     "karma-ng-html2js-preprocessor": "^1.0.0",
     "karma-phantomjs-launcher": "^1.0.4",
-    "load-grunt-tasks": "^3.5.2",
     "phantomjs-prebuilt": "^2.1.14",
     "shelljs": "^0.7.8",
-    "time-grunt": "^1.4.0",
-    "angular-mocks": "~1.6.5",
-    "angular-scenario": "~1.6.5"
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "html-loader": "^0.5.5",
+    "sass-loader": "^7.1.0",
+    "node-sass": "^4.9.3",
+    "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-manifest-plugin": "^2.0.4",
+    "zip-webpack-plugin": "^3.0.0"
   },
   "grunter": {
+    "load-grunt-tasks": "^3.5.2",
+    "time-grunt": "^1.4.0",
     "grunt": "^1.0.1",
     "grunt-angular-gettext": "^2.3.5",
     "grunt-angular-templates": "^1.1.0",

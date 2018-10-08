@@ -1,5 +1,40 @@
 'use strict';
 
+require('angular');
+require('angular-animate');
+require('angular-resource');
+require('angular-route');
+require('angular-sanitize');
+require('angular-touch');
+require('ng-table');
+require('angular-file-saver');
+require('angular-cookie');
+require('ng-password-strength');
+require('angular-messages');
+require('angular-gettext');
+require('angular-moment');
+require('angular-file-saver');
+require('ng1-lodash');
+require('angular-cookies');
+require('angular-filter');
+require('angular-ui-bootstrap');
+require('bootstrap-ui-datetime-picker');
+require('angular-bootstrap-switch');
+require('angularjs-color-picker');
+require('ng-file-upload');
+require('angular-sortable-view');
+require('ngclipboard');
+require('ng-iban');
+
+//require('openolitor-core/dist/scripts/openolitor-core');
+
+require('./lib/oocore');
+require('./lib/hamburger');
+require('angular-loader')
+
+// move to oo-core
+require('angular-loading-bar');
+
 var userRoles = {
   Guest: 'Guest',
   Administrator: 'Administrator',
@@ -45,7 +80,7 @@ angular
     'ipCookie',
     'frapontillo.bootstrap-switch',
     'gettext',
-    'ngHamburger',
+    //'ngHamburger',
     'angularMoment',
     'ngFileUpload',
     'ngLodash',

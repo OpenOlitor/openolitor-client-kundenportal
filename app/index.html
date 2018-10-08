@@ -16,19 +16,19 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(app) styles/vendor.css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/font-awsome/css/font-awesome.css" />
-  <link rel="stylesheet" href="styles/bootstrap_cosmo.css">
+  <link rel="stylesheet" href="styles/bootstrap_cosmo.css"> -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+  <!--<link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
   <link rel="stylesheet" href="bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
   <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
   <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-color-picker/dist/angularjs-color-picker.css" />
   <link rel="stylesheet" href="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.css" />
-  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" /> -->
   <!-- endbower -->
-  <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+  <!--<link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" /> -->
   <!-- endbuild -->
 
   <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -36,7 +36,7 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
-  <link rel="stylesheet" href="@@API_URLressource/style/kundenportal" />
+  <!--<link rel="stylesheet" href="@@API_URLressource/style/kundenportal" />-->
 </head>
 
 <body class="white openolitor kundenportal" ng-controller="OpenOlitorRootController">
@@ -49,22 +49,27 @@
           <!-- Older browsers will ignore it. -->
           <object data="@@API_URLopen/projekt/1/logo" type="image/png" height="32">
             <!-- First, the default logo is displayed. After the http-src request completes, the logo will be replaced -->
-            <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32"/>
+            <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32" />
           </object>
         </a>
-        <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
+        <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span>
+          <span>{{projekt.bezeichnung}}</span></p>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{activeLang()}} <span class="caret"></span></a>
+            <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">{{activeLang()}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li ng-hide="activeLang() === 'de'"><a role="button" ng-click="changeLang('de')" title="Deutsch"><span>Deutsch</span></a></li>
-              <li ng-hide="activeLang() === 'fr_CH'"><a role="button" ng-click="changeLang('fr_CH')" title="Français"><span>Français (Suisse)</span></a></li>
-              <li ng-hide="activeLang() === 'fr_BE'"><a role="button" ng-click="changeLang('fr_BE')" title="Français"><span>Français (Belgique)</span></a></li>
+              <li ng-hide="activeLang() === 'fr_CH'"><a role="button" ng-click="changeLang('fr_CH')" title="Français"><span>Français
+                    (Suisse)</span></a></li>
+              <li ng-hide="activeLang() === 'fr_BE'"><a role="button" ng-click="changeLang('fr_BE')" title="Français"><span>Français
+                    (Belgique)</span></a></li>
               <li ng-hide="activeLang() === 'en'"><a role="button" ng-click="changeLang('en')" title="English"><span>English</span></a></li>
             </ul>
           </li>
           <li class="dropdown" ng-show="loggedIn">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.vorname}} {{user.name}} <span class="caret"></span></a>
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.vorname}}
+              {{user.name}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <!--li><a href="#" translate>Einstellungen</a></li-->
               <!--li role="separator" class="divider"></li-->
@@ -77,7 +82,8 @@
     </div>
   </div>
 
-  <div ng-if="!connected && showConnectionErrorMessage" class="connected-alert alert alert-danger" role="alert" translate>Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder.</div>
+  <div ng-if="!connected && showConnectionErrorMessage" class="connected-alert alert alert-danger" role="alert"
+    translate>Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder.</div>
 
   <div class="master-content content">
     <!--[if lt IE 9]>
@@ -94,7 +100,8 @@
     </script>
     <a href="http://www.openolitor.org" target="_blank">www.openolitor.org</a>
     <span class="pre-info">
-      <span class="glyphicon glyphicon-info-sign" uib-tooltip-template="'versionInfo.html'" tooltip-popup-close-delay="3000" tooltip-placement="top" tooltip-class="version-tooltip"></span>
+      <span class="glyphicon glyphicon-info-sign" uib-tooltip-template="'versionInfo.html'" tooltip-popup-close-delay="3000"
+        tooltip-placement="top" tooltip-class="version-tooltip"></span>
     </span>
     <span ng-class="[{disconnected:!connected, connected:connected}]"><i class="fa fa-wifi" ng-attr-title="{{messagingSocketClosedReason}}"></i></span>
   </footer>
@@ -108,7 +115,7 @@
 
   <!-- build:js(app) scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <!--<script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-base64/angular-base64.js"></script>
@@ -153,7 +160,7 @@
   <script src="bower_components/openolitor-core/dist/scripts/openolitor-core.js"></script>
   <script src="bower_components/clipboard/dist/clipboard.js"></script>
   <script src="bower_components/ngclipboard/dist/ngclipboard.js"></script>
-  <script src="bower_components/ng-iban/dist/ng-iban.js"></script>
+  <script src="bower_components/ng-iban/dist/ng-iban.js"></script> -->
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -161,7 +168,7 @@
   <script src="https://code.angularjs.org/1.4.9/i18n/angular-locale_de-ch.js"></script>
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="scripts/app.js"></script>
+  <!--<script src="scripts/app.js"></script>
   <script src="scripts/root.js"></script>
 
   <script src="scripts/abos/list/aboslist.model.js"></script>
@@ -184,7 +191,7 @@
   <script src="scripts/open/lastlieferplanungen.controller.js"></script>
   <script src="scripts/open/lastlieferplanungen.model.js"></script>
 
-  <script src="scripts/i18n/translations.js"></script>
+  <script src="scripts/i18n/translations.js"></script>-->
   <!-- endbuild -->
 </body>
 
