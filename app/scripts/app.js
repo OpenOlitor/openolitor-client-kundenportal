@@ -74,24 +74,24 @@ angular
     $rootScope.location = $location;
   })
   .factory('checkSize', ['$rootScope', '$window', function($rootScope, $window) {
-      return function() {
-        if ($window.innerWidth >= 1200) {
-          $rootScope.tgState = true;
-        }
-      };
+    return function() {
+      if ($window.innerWidth >= 1200) {
+        $rootScope.tgState = true;
+      }
+    };
   }])
   .config(['$provide', function($provide) {
     $provide.decorator('$exceptionHandler', ['$log', '$injector',
-        function($log, $injector) {
-          return function(exception) {
-            // using the injector to retrieve services, otherwise circular dependency
-            var alertService = $injector.get('alertService');
-            alertService.addAlert('error', exception.message);
-            // log error default style
-            $log.error.apply($log, arguments);
-          };
-        }
-      ]);
+      function($log, $injector) {
+        return function(exception) {
+          // using the injector to retrieve services, otherwise circular dependency
+          var alertService = $injector.get('alertService');
+          alertService.addAlert('error', exception.message);
+          // log error default style
+          $log.error.apply($log, arguments);
+        };
+      }
+    ]);
   }])
   .factory('errbitErrorInterceptor', function($q, ENV, VERSION, AIRBREAK_API_KEY, AIRBREAK_URL) {
     return {
