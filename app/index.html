@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
   <link rel="stylesheet" href="bower_components/angular-color-picker/dist/angularjs-color-picker.css" />
   <link rel="stylesheet" href="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.css" />
+  <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
   <!-- endbower -->
   <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
   <!-- endbuild -->
@@ -39,8 +40,7 @@
 </head>
 
 <body class="white openolitor kundenportal" ng-controller="OpenOlitorRootController">
-  <ngp-piwik ngp-set-js-url="https://stats.tegonal.com/piwik.js" ngp-set-tracker-url="https://stats.tegonal.com/piwik.php"
-    ngp-set-site-id="13"> </ngp-piwik>
+  <ngp-piwik ngp-set-js-url="https://stats.tegonal.com/piwik.js" ngp-set-tracker-url="https://stats.tegonal.com/piwik.php" ngp-set-site-id="13"> </ngp-piwik>
   <!-- top navbar -->
   <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -50,28 +50,23 @@
           <!-- Older browsers will ignore it. -->
           <object data="@@API_URLopen/projekt/1/logo" type="image/png" height="32">
             <!-- First, the default logo is displayed. After the http-src request completes, the logo will be replaced -->
-            <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32" />
+            <img alt="logo" http-src="{{logoUrl}}" src="images/logo_openolitor.png" height="32"/>
           </object>
         </a>
-        <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span>
-          <span>{{projekt.bezeichnung}}</span></p>
+        <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">{{activeLang()}} <span class="caret"></span></a>
+            <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{activeLang()}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li ng-hide="activeLang() === 'de'"><a role="button" ng-click="changeLang('de')" title="Deutsch"><span>Deutsch</span></a></li>
-              <li ng-hide="activeLang() === 'fr_CH'"><a role="button" ng-click="changeLang('fr_CH')" title="Français"><span>Français
-                    (Suisse)</span></a></li>
-              <li ng-hide="activeLang() === 'fr_BE'"><a role="button" ng-click="changeLang('fr_BE')" title="Français"><span>Français
-                    (Belgique)</span></a></li>
+              <li ng-hide="activeLang() === 'fr_CH'"><a role="button" ng-click="changeLang('fr_CH')" title="Français"><span>Français (Suisse)</span></a></li>
+              <li ng-hide="activeLang() === 'fr_BE'"><a role="button" ng-click="changeLang('fr_BE')" title="Français"><span>Français (Belgique)</span></a></li>
               <li ng-hide="activeLang() === 'en_US'"><a role="button" ng-click="changeLang('en_US')" title="English"><span>English</span></a></li>
               <li ng-hide="activeLang() === 'es_ES'"><a role="button" ng-click="changeLang('es_ES')" title="Castellano"><span>Castellano</span></a></li>
             </ul>
           </li>
           <li class="dropdown" ng-show="loggedIn">
-            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.vorname}}
-              {{user.name}} <span class="caret"></span></a>
+            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{user.vorname}} {{user.name}} <span class="caret"></span></a>
             <ul class="dropdown-menu">
               <!--li><a href="#" translate>Einstellungen</a></li-->
               <!--li role="separator" class="divider"></li-->
@@ -84,8 +79,7 @@
     </div>
   </div>
 
-  <div ng-if="!connected && showConnectionErrorMessage" class="connected-alert alert alert-danger" role="alert"
-    translate>Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder.</div>
+  <div ng-if="!connected && showConnectionErrorMessage" class="connected-alert alert alert-danger" role="alert" translate>Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder.</div>
 
   <div class="master-content content">
     <!--[if lt IE 9]>
@@ -102,8 +96,7 @@
     </script>
     <a href="http://www.openolitor.org" target="_blank">www.openolitor.org</a>
     <span class="pre-info">
-      <span class="glyphicon glyphicon-info-sign" uib-tooltip-template="'versionInfo.html'" tooltip-popup-close-delay="3000"
-        tooltip-placement="top" tooltip-class="version-tooltip"></span>
+      <span class="glyphicon glyphicon-info-sign" uib-tooltip-template="'versionInfo.html'" tooltip-popup-close-delay="3000" tooltip-placement="top" tooltip-class="version-tooltip"></span>
     </span>
     <span ng-class="[{disconnected:!connected, connected:connected}]"><i class="fa fa-wifi" ng-attr-title="{{messagingSocketClosedReason}}"></i></span>
   </footer>
@@ -158,6 +151,8 @@
   <script src="bower_components/angular-sortable-view/src/angular-sortable-view.js"></script>
   <script src="bower_components/angular-css-injector/angular-css-injector.js"></script>
   <script src="bower_components/airbrake-js/dist/client.js"></script>
+  <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+  <script src="bower_components/openolitor-core/dist/scripts/openolitor-core.js"></script>
   <script src="bower_components/clipboard/dist/clipboard.js"></script>
   <script src="bower_components/ngclipboard/dist/ngclipboard.js"></script>
   <script src="bower_components/ng-iban/dist/ng-iban.js"></script>
@@ -194,15 +189,29 @@
   <script src="scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js"></script>
   <script src="scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.directive.js"></script>
 
+  <script src="scripts/services/oo-alert.service.js"></script>
+  <script src="scripts/services/oo-auth.service.js"></script>
+  <script src="scripts/services/oo-dialog.service.js"></script>
+  <script src="scripts/server/server.model.js"></script>
+  <script src="scripts/server/server.service.js"></script>
+  <script src="scripts/util/file.util.js"></script>
+  <script src="scripts/login/login.controller.js"></script>
+
   <script src="scripts/projekt/projekt.model.js"></script>
   <script src="scripts/projekt/projekt.service.js"></script>
 
-  <script src="scripts/dashboard/dashboard.controller.js"></script>
+
+  <script src="scripts/services/oo-alert.service.js"></script>
+  <script src="scripts/services/oo-auth.service.js"></script>
+  <script src="scripts/services/oo-dialog.service.js"></script>
+  <script src="scripts/server/server.model.js"></script>
+  <script src="scripts/server/server.service.js"></script>
+  <script src="scripts/util/file.util.js"></script>
+  <script src="scripts/login/login.controller.js"></script>
 
   <script src="scripts/open/lastlieferplanungen.controller.js"></script>
   <script src="scripts/open/lastlieferplanungen.model.js"></script>
 
-  <script src="scripts/i18n/translations.js"></script>
 
   <script src="scripts/services/oo-alert.service.js"></script>
   <script src="scripts/services/oo-auth.service.js"></script>
