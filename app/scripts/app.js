@@ -65,38 +65,23 @@ angular
     STUECK: addExtendedEnumValue('Stueck', gettext('Stück'), gettext('St.')),
     BUND: addExtendedEnumValue('Bund', gettext('Bund'), gettext('Bu.')),
     GRAMM: addExtendedEnumValue('Gramm', gettext('Gramm'), gettext('gr')),
-    KILOGRAMM: addExtendedEnumValue(
-      'Kilogramm',
-      gettext('Kilogramm'),
-      gettext('kg')
-    ),
+    KILOGRAMM: addExtendedEnumValue('Kilogramm', gettext('Kilogramm'),
+      gettext('kg')),
     LITER: addExtendedEnumValue('Liter', gettext('Liter'), gettext('l')),
-    PORTION: addExtendedEnumValue(
-      'Portion',
-      gettext('Portion'),
-      gettext('Por.')
-    )
+    PORTION: addExtendedEnumValue('Portion', gettext('Portion'), gettext('Por.'))
   })
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
-  .factory('checkSize', [
-    '$rootScope',
-    '$window',
-    function($rootScope, $window) {
+  .factory('checkSize', ['$rootScope', '$window', function($rootScope, $window) {
       return function() {
         if ($window.innerWidth >= 1200) {
           $rootScope.tgState = true;
         }
       };
-    }
-  ])
-  .config([
-    '$provide',
-    function($provide) {
-      $provide.decorator('$exceptionHandler', [
-        '$log',
-        '$injector',
+  }])
+  .config(['$provide', function($provide) {
+    $provide.decorator('$exceptionHandler', ['$log', '$injector',
         function($log, $injector) {
           return function(exception) {
             // using the injector to retrieve services, otherwise circular dependency
@@ -107,15 +92,8 @@ angular
           };
         }
       ]);
-    }
-  ])
-  .factory('errbitErrorInterceptor', function(
-    $q,
-    ENV,
-    VERSION,
-    AIRBREAK_API_KEY,
-    AIRBREAK_URL
-  ) {
+  }])
+  .factory('errbitErrorInterceptor', function($q, ENV, VERSION, AIRBREAK_API_KEY, AIRBREAK_URL) {
     return {
       responseError: function(rejection) {
         /*jshint -W117 */
@@ -131,10 +109,7 @@ angular
           return notice;
         });
         var message = gettext('Error: ');
-        if (
-          !angular.isUndefined(rejection.config) &&
-          !angular.isUndefined(rejection.config.url)
-        ) {
+        if (!angular.isUndefined(rejection.config) && !angular.isUndefined(rejection.config.url)) {
           message += rejection.config.url;
         }
         airbrake.notify(message);
@@ -210,25 +185,16 @@ angular
       return moment(input).fromNow();
     };
   })
-  .config([
-    '$httpProvider',
-    function($httpProvider) {
-      $httpProvider.interceptors.push('loggedOutInterceptor');
-      $httpProvider.interceptors.push('errbitErrorInterceptor');
-    }
-  ])
-  .config([
-    '$locationProvider',
-    function($locationProvider) {
-      $locationProvider.hashPrefix('');
-    }
-  ])
-  .config([
-    '$qProvider',
-    function($qProvider) {
-      $qProvider.errorOnUnhandledRejections(false);
-    }
-  ])
+  .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.interceptors.push('loggedOutInterceptor');
+    $httpProvider.interceptors.push('errbitErrorInterceptor');
+  }])
+  .config(['$locationProvider', function($locationProvider) {
+    $locationProvider.hashPrefix('');
+  }])
+  .config(['$qProvider', function ($qProvider) {
+    $qProvider.errorOnUnhandledRejections(false);
+  }])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
