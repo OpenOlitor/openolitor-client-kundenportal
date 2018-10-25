@@ -227,7 +227,8 @@ angular
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
-        redirectTo: '/dashboard'
+        redirectTo: '/dashboard',
+        access: userRoles.Guest
       })
       .when('/dashboard', {
         templateUrl: 'scripts/dashboard/dashboard.html',
@@ -240,5 +241,46 @@ angular
         controller: 'LastLieferplanungenController',
         name: 'LastLieferplanungen',
         access: [userRoles.Guest, userRoles.Administrator, userRoles.Kunde]
+      })
+      .when('/login', {
+        templateUrl: 'scripts/login/login.html',
+        controller: 'LoginController',
+        name: 'Login',
+        access: userRoles.Guest
+      })
+      .when('/passwd', {
+        templateUrl: 'scripts/login/change_password.html',
+        controller: 'LoginController',
+        name: 'Passwortwechsel',
+        access: [userRoles.Administrator, userRoles.Kunde]
+      })
+      .when('/logout', {
+        templateUrl: 'scripts/login/logout.html',
+        controller: 'LoginController',
+        logout: true,
+        name: 'Logout',
+        access: userRoles.Guest
+      })
+      .when('/forbidden', {
+        templateUrl: 'scripts/login/forbidden.html',
+        controller: 'LoginController',
+        name: 'Forbidden',
+        access: userRoles.Guest
+      })
+      .when('/zugangaktivieren', {
+        templateUrl: 'scripts/login/zugangaktivieren.html',
+        controller: 'LoginController',
+        name: 'Einladung',
+        access: userRoles.Guest
+      })
+      .when('/passwordreset', {
+        templateUrl: 'scripts/login/passwordreset.html',
+        controller: 'LoginController',
+        name: 'PasswordReset',
+        access: userRoles.Guest
+      })
+      .otherwise({
+        templateUrl: 'scripts/not-found.html',
+        access: userRoles.Guest
       });
   });
