@@ -1,11 +1,41 @@
 'use strict';
 
+var regexIso8601 =
+  /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})\.(\d{1,})(Z|([\-+])(\d{2}):(\d{2}))?$/;
+// Matches YYYY-MM-ddThh:mm:ss.sssZ where .sss is optional
+
 var userRoles = {
   Guest: 'Guest',
   Administrator: 'Administrator',
   Kunde: 'Kunde'
 };
 
+function convertDateStringsToDates(input) {
+  // Ignore things that aren't objects.
+  if (typeof input !== 'object') {
+    return input;
+  }
+
+  for (var key in input) {
+    if (!input.hasOwnProperty(key)) {
+      continue;
+    }
+
+    var value = input[key];
+    var match;
+    // Check for string properties which look like dates.
+    if (typeof value === 'string' && (match = value.match(regexIso8601))) {
+      var milliseconds = Date.parse(match[0]);
+      if (!isNaN(milliseconds)) {
+        input[key] = new Date(milliseconds);
+      }
+    } else if (typeof value === 'object') {
+      // Recurse into object
+      input[key] = convertDateStringsToDates(value);
+    }
+  }
+  return input;
+}
 function addExtendedEnumValue(id, labelLong, labelShort, value) {
   return {
     id: id,
@@ -73,6 +103,16 @@ angular
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
+  .constant('WAEHRUNG', {
+    CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
+      'CHF')),
+    EUR: addExtendedEnumValue('EUR', gettext('Euro'), gettext('EUR')),
+    USD: addExtendedEnumValue('USD', gettext('US Dollar'), gettext('USD')),
+    GBP: addExtendedEnumValue('GBP', gettext('Britisches Pfund'), gettext(
+      'GBP')),
+    CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext(
+      'CAD'))
+  })
   .factory('checkSize', ['$rootScope', '$window', function($rootScope, $window) {
     return function() {
       if ($window.innerWidth >= 1200) {
@@ -131,6 +171,10 @@ angular
       return msgBus;
     }
   ])
+  .run(['ooClientMessageService', function(clientMessageService) {
+    console.log('Start clientMessageService');
+    clientMessageService.start();
+  }])
   .factory('loggedOutInterceptor', function($q, alertService) {
     return {
       responseError: function(rejection) {
@@ -144,6 +188,11 @@ angular
       }
     };
   })
+  .config(['$httpProvider', function($httpProvider) {
+    $httpProvider.defaults.transformResponse.push(function(responseData) {
+      return convertDateStringsToDates(responseData);
+    });
+  }])
   .filter('dateRange', function(moment) {
     function isMidnight(mom) {
       // The moment at midnight
@@ -195,6 +244,22 @@ angular
   .config(['$qProvider', function ($qProvider) {
     $qProvider.errorOnUnhandledRejections(false);
   }])
+  .filter('notIn', function() {
+    return function(items, property, elements) {
+      var filtered = [];
+      if (!items) {
+        return filtered;
+      }
+      for (var i = 0; i < items.length; i++) {
+        var item = items[i];
+        var val = item[property];
+        if (elements.indexOf(val) < 0) {
+          filtered.push(item);
+        }
+      }
+      return filtered;
+    };
+  })
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
