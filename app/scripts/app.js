@@ -205,6 +205,11 @@ angular
       }
     };
   })
+  .filter('fromNow', function(moment) {
+    return function(input) {
+      return moment(input).fromNow();
+    };
+  })
   .config([
     '$httpProvider',
     function($httpProvider) {
