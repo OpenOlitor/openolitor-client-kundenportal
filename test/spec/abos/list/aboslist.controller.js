@@ -3,7 +3,6 @@
 describe('Controller: AbosListController', function() {
   // load the controller's module
   beforeEach(module('ui.bootstrap'));
-  beforeEach(module('openolitor-core'));
   beforeEach(module('openolitor-kundenportal'));
 
   var controller, $scope, $q;
