@@ -142,8 +142,7 @@ angular
       $scope.edit = function(arbeitseinsatz) {
         var modalInstance = $uibModal.open({
           animation: true,
-          templateUrl:
-            'scripts/arbeitsangebote/list/arbeitsangebot-participate.html',
+          template: require('../../arbeitsangebote/list/arbeitsangebot-participate.html'),
           controller: 'ArbeitsangebotParticipateController',
           resolve: {
             arbeitsangebot: function() {

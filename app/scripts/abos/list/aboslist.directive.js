@@ -8,7 +8,7 @@ angular.module('openolitor-kundenportal').directive('ooAbosList', [
       scope: {
       },
       transclude: true,
-      templateUrl: 'scripts/abos/list/aboslist.html',
+      template: require('./aboslist.html'),
       controller: 'AbosListController'
     };
   }

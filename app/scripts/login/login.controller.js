@@ -1,5 +1,8 @@
 'use strict';
 
+var moment = require('moment');
+require('angular-moment');
+
 /**
  */
 angular.module('openolitor-kundenportal').controller('LoginController', [
@@ -157,7 +160,9 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
 
     $scope.login = function() {
       if ($scope.loginForm.$valid) {
-        $http.post(API_URL + 'auth/login', $scope.loginData).then(
+        // TODO replace with loader
+        //$http.post(API_URL + 'auth/login', $scope.loginData).then(
+        $http.post('http://localhost:9003/m1/' + 'auth/login', $scope.loginData).then(
           function(result) {
             $scope.loginData.message = undefined;
 

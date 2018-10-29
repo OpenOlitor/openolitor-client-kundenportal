@@ -9,7 +9,7 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
         abo: '='
       },
       transclude: true,
-      templateUrl: 'scripts/abos/list/lieferungen/lieferungen.html',
+      template: require('./lieferungen.html'),
       controller: function($scope,  $rootScope, NgTableParams, LieferungenListModel, $filter, LIEFEREINHEIT) {
         $scope.lieferungen = undefined;
         $scope.projekt = $rootScope.projekt;

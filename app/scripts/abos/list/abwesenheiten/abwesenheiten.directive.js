@@ -9,7 +9,7 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
         abo: '='
       },
       transclude: true,
-      templateUrl: 'scripts/abos/list/abwesenheiten/abwesenheiten.html',
+      template: require('./abwesenheiten.html'),
       controller: function($scope, $rootScope, NgTableParams, AbwesenheitenListModel,
         msgBus, lodash, GeschaeftsjahrUtil, moment) {
         $scope.projekt = $rootScope.projekt;

@@ -1,5 +1,12 @@
 'use strict';
 
+//TODO already defined in app.js, use this one
+var userRoles = {
+  Guest: 'Guest',
+  Administrator: 'Administrator',
+  Kunde: 'Kunde'
+};
+
 /**
  * If the current route does not resolve, go back to the start page.
  */

@@ -8,7 +8,7 @@ angular.module('openolitor-kundenportal').directive('ooRechnungenList', [
       scope: {
       },
       transclude: true,
-      templateUrl: 'scripts/rechnungen/list/rechnungenlist.html',
+      template: require('./rechnungenlist.html'),
       controller: 'RechnungenListController'
     };
   }

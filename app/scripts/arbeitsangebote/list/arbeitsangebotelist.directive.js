@@ -8,7 +8,7 @@ angular.module('openolitor-kundenportal').directive('ooArbeitsangeboteList', [
       scope: {
       },
       transclude: true,
-      templateUrl: 'scripts/arbeitsangebote/list/arbeitsangebotelist.html',
+      template: require('./arbeitsangebotelist.html'),
       controller: 'ArbeitsangeboteListController'
     };
   }

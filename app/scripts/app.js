@@ -1,5 +1,44 @@
 'use strict';
 
+require('angular');
+require('angular-animate');
+require('angular-resource');
+require('angular-route');
+require('angular-sanitize');
+require('angular-touch');
+require('ng-table');
+require('angular-file-saver');
+require('angular-cookie');
+require('ng-password-strength');
+require('angular-messages');
+require('angular-gettext');
+require('angular-moment');
+require('angular-file-saver');
+require('ng1-lodash');
+require('angular-cookies');
+require('angular-filter');
+require('angular-ui-bootstrap');
+require('bootstrap-ui-datetime-picker');
+require('angular-bootstrap-switch');
+require('angularjs-color-picker');
+require('ng-file-upload');
+require('angular-sortable-view');
+require('angular-loader');
+require('ngclipboard');
+require('ng-iban');
+var moment = require('moment');
+require('angular-moment');
+
+
+
+// require('./arbeitskategorien');
+// require('./common');
+// require('./i18n');
+// require('./kundentypen');
+// require('./login');
+// require('./server');
+
+
 var regexIso8601 =
   /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})\.(\d{1,})(Z|([\-+])(\d{2}):(\d{2}))?$/;
 // Matches YYYY-MM-ddThh:mm:ss.sssZ where .sss is optional
@@ -84,7 +123,9 @@ angular
     'mm.iban',
     'piwik'
   ])
-  .constant('API_URL', '@@API_URL')
+  // todo make with stringreplace
+  //.constant('API_URL', '@@API_URL')
+  .constant('API_URL', 'http://localhost:9003/m1/')
   .constant('API_WS_URL', '@@API_WS_URL')
   .constant('BUILD_NR', '@@BUILD_NR')
   .constant('ENV', '@@ENV')
@@ -267,56 +308,213 @@ angular
         access: userRoles.Guest
       })
       .when('/dashboard', {
-        templateUrl: 'scripts/dashboard/dashboard.html',
+        //templateUrl: 'scripts/dashboard/dashboard.html',
+        //template: dashboardRequire,
+        template: require('./dashboard/dashboard.html'),
         controller: 'DashboardController',
         name: 'Dashboard',
         access: [userRoles.Administrator, userRoles.Kunde]
       })
       .when('/open/lastlieferplanungen', {
-        templateUrl: 'scripts/open/lastlieferplanungen.html',
+        template: require('./open/lastlieferplanungen.html'),
         controller: 'LastLieferplanungenController',
         name: 'LastLieferplanungen',
         access: [userRoles.Guest, userRoles.Administrator, userRoles.Kunde]
       })
       .when('/login', {
-        templateUrl: 'scripts/login/login.html',
+        template: require('./login/login.html'),
         controller: 'LoginController',
         name: 'Login',
         access: userRoles.Guest
       })
       .when('/passwd', {
-        templateUrl: 'scripts/login/change_password.html',
+        template: require('./login/change_password.html'),
         controller: 'LoginController',
         name: 'Passwortwechsel',
         access: [userRoles.Administrator, userRoles.Kunde]
       })
       .when('/logout', {
-        templateUrl: 'scripts/login/logout.html',
+        template: require('./login/logout.html'),
         controller: 'LoginController',
         logout: true,
         name: 'Logout',
         access: userRoles.Guest
       })
       .when('/forbidden', {
-        templateUrl: 'scripts/login/forbidden.html',
+        template: require('./login/forbidden.html'),
         controller: 'LoginController',
         name: 'Forbidden',
         access: userRoles.Guest
       })
       .when('/zugangaktivieren', {
-        templateUrl: 'scripts/login/zugangaktivieren.html',
+        template: require('./login/zugangaktivieren.html'),
         controller: 'LoginController',
         name: 'Einladung',
         access: userRoles.Guest
       })
       .when('/passwordreset', {
-        templateUrl: 'scripts/login/passwordreset.html',
+        template: require('./login/passwordreset.html'),
         controller: 'LoginController',
         name: 'PasswordReset',
         access: userRoles.Guest
       })
       .otherwise({
-        templateUrl: 'scripts/not-found.html',
+        template: 'scripts/not-found.html',
         access: userRoles.Guest
       });
   });
+
+
+angular.module('openolitor-kundenportal')
+  .controller('OpenOlitorRootController', ['$scope', '$rootScope',
+    'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
+    '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
+    'ENV', 'VERSION',
+    'ooAuthService', 'API_URL', '$cookies', 'dialogService',
+    function($scope, $rootScope, ServerService, ProjektService,
+      gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
+      $timeout, BUILD_NR, ENV, VERSION, ooAuthService, API_URL,
+      $cookies, dialogService) {
+      angular.element($window).bind('resize', function() {
+        checkSize();
+      });
+
+      $scope.currentPathContains = function(pathJunk) {
+        return $location.url().indexOf(pathJunk) !== -1;
+      };
+
+      //initial launch
+      checkSize();
+
+      $scope.connected = false;
+
+      var unwatchLoggedIn = $scope.$watch(function() {
+        return ooAuthService.getUser();
+      }, function(user) {
+        $scope.loggedIn = ooAuthService.isUserLoggedIn(user);
+        $scope.user = user;
+
+        if ($scope.loggedIn) {
+          ProjektService.resolveProjekt(false).then(function(projekt) {
+            $scope.projekt = projekt;
+            $rootScope.projekt = projekt;
+            $scope.checkWelcomeMessage();
+          });
+        } else {
+          ProjektService.resolveProjekt(true).then(function(projekt) {
+            $scope.projekt = projekt;
+            $rootScope.projekt = projekt;
+          });
+        }
+      });
+
+      var unwatchStaticServerInfo = $scope.$watch(ServerService.getStaticServerInfo,
+        function(info) {
+          if (!angular.isUndefined(info)) {
+            $scope.serverInfo = info;
+            $scope.connected = true;
+          }
+        });
+
+      $scope.buildNr = BUILD_NR;
+      $scope.env = ENV;
+      $scope.version = VERSION;
+
+      msgBus.onMsg('WebSocketClosed', $rootScope, function(event, msg) {
+        $scope.connected = false;
+        $scope.messagingSocketClosedReason = msg.reason;
+        $timeout(function() {
+          $scope.showConnectionErrorMessage = true;
+        }, 30000);
+        $scope.$apply();
+      });
+
+      msgBus.onMsg('WebSocketOpen', $rootScope, function() {
+        $scope.connected = true;
+        $scope.showConnectionErrorMessage = false;
+        $scope.messagingSocketClosedReason = '';
+        $scope.$apply();
+      });
+
+      $scope.changeLang = function(lang) {
+        if (!angular.isUndefined(lang)) {
+
+          msgBus.emitMsg({
+            type: 'ChangeLang',
+            reason: lang
+          });
+          $scope.storeActiveLang(lang);
+          $scope.$emit('languageChanged');
+        }
+      };
+
+      msgBus.onMsg('ChangeLang', $rootScope, function(event, msg) {
+        gettextCatalog.setCurrentLanguage(msg.reason);
+      });
+
+      $scope.activeLang = function() {
+        return gettextCatalog.getCurrentLanguage();
+      };
+
+      $scope.storedActiveLang = function() {
+        return $cookies.get('activeLang');
+      };
+
+      $scope.storeActiveLang = function(lang) {
+        $cookies.put('activeLang', lang);
+      };
+
+      if (angular.isUndefined($scope.storedActiveLang())) {
+        var lang = $window.navigator.language || $window.navigator.userLanguage;
+        if (lang.indexOf('de-') > 0) {
+          $scope.changeLang('de');
+        } else if (lang.indexOf('fr-') > 0) {
+          $scope.changeLang('fr');
+        } else if (lang.indexOf('en-') > 0) {
+          $scope.changeLang('en');
+        } else {
+          $scope.changeLang('de');
+        }
+      } else {
+        $scope.changeLang($scope.storedActiveLang());
+      }
+
+
+      $scope.checkWelcomeMessage = function() {
+        if ($scope.projekt.welcomeMessage2) {
+          dialogService.displayDialogOkAbort(
+            $scope.projekt.welcomeMessage2,
+            function() {},
+            'Mitteilung',
+            true,
+            'Schliessen'
+          );
+        }
+      };
+
+      $scope.$on('destroy', function() {
+        unwatchLoggedIn();
+        unwatchStaticServerInfo();
+      });
+    }
+  ]);
+
+
+
+require('./abos/list');
+require('./arbeitsangebote/list');
+require('./arbeitseinsaetze/list');
+require('./components');
+require('./dashboard');
+require('./filters');
+require('./i18n');
+require('./libs/hamburger');
+require('./libs/angular-piwik');
+require('./login');
+require('./ngtable');
+require('./open');
+require('./projekt');
+require('./rechnungen/list');
+require('./server');
+require('./services');
+require('./util');

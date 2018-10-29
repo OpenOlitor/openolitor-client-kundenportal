@@ -1,5 +1,6 @@
 'use strict';
 
+var arbeitsangebotParticipateHtml = require('./arbeitsangebot-participate.html')
 /**
  */
 angular
@@ -93,8 +94,7 @@ angular
       $scope.participate = function(arbeitsangebot) {
         var modalInstance = $uibModal.open({
           animation: true,
-          templateUrl:
-            'scripts/arbeitsangebote/list/arbeitsangebot-participate.html',
+          template: arbeitsangebotParticipateHtml,
           controller: 'ArbeitsangebotParticipateController',
           resolve: {
             arbeitsangebot: function() {
@@ -155,8 +155,7 @@ angular
         var arbeitseinsatz = $scope.getArbeitseinsatz(arbeitsangebot);
         var modalInstance = $uibModal.open({
           animation: true,
-          templateUrl:
-            'scripts/arbeitsangebote/list/arbeitsangebot-participate.html',
+          template: arbeitsangebotParticipateHtml,
           controller: 'ArbeitsangebotParticipateController',
           resolve: {
             arbeitsangebot: function() {

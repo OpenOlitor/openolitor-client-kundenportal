@@ -8,7 +8,7 @@ angular.module('openolitor-kundenportal').directive('ooArbeitseinsaetzeList', [
       scope: {
       },
       transclude: true,
-      templateUrl: 'scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html',
+      template: require('./arbeitseinsaetzelist.html'),
       controller: 'ArbeitseinsaetzeListController'
     };
   }
