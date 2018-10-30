@@ -18,7 +18,7 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="../../../ngtable/oo-ngtable-noPaginationTemplate.html">
                 <tr ng-repeat-start="rechnung in $data | orderBy:'-rechnungsDatum'">
                   <td>
                     <button class="btn btn-xs glyphicon glyphicon-plus" ng-show="!rechnung.detailsVisible" ng-click="displayDetails(rechnung)" />
@@ -79,7 +79,7 @@
                 <tr ng-repeat-end />
               </table>
 
-              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="../../../ngtable/oo-ngtable-noPaginationTemplate.html">
                 <tr ng-repeat="rechnung in $data | orderBy:'-rechnungsDatum'">
                   <td>
                     <span role="button" ng-if="rechnung.fileStoreId">

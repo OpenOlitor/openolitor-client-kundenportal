@@ -9,7 +9,7 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <table ng-show="entries" ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+            <table ng-show="entries" ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="false" template-pagination="../../../ngtable/oo-ngtable-noPaginationTemplate.html">
               <tr ng-repeat="arbeitsangebot in $data">
                 <td data-title="'Titel'|translate" sortable="'titel'">
                   <a id="arbeitsangebot{{arbeitsangebot.id}}">{{arbeitsangebot.titel}}</a>

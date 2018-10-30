@@ -3,6 +3,8 @@
 //import './../styles/main.scss';
 //require('./styles/main.scss');
 
+require('jquery');
+
 require('./scripts/app.js');
 
 require('./styles/bootstrap_cosmo.css');

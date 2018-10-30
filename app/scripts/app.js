@@ -126,7 +126,8 @@ angular
   // todo make with stringreplace
   //.constant('API_URL', '@@API_URL')
   .constant('API_URL', 'http://localhost:9003/m1/')
-  .constant('API_WS_URL', '@@API_WS_URL')
+  // .constant('API_WS_URL', '@@API_WS_URL')
+  .constant('API_WS_URL', 'http://localhost:9003/m1/ws')
   .constant('BUILD_NR', '@@BUILD_NR')
   .constant('ENV', '@@ENV')
   .constant('VERSION', '@@VERSION')
