@@ -2,6 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ZipPlugin = require('zip-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
+var StringReplacePlugin = require("string-replace-webpack-plugin");
 
 var optimization = {
   runtimeChunk: 'single',
@@ -46,16 +48,54 @@ module.exports = {
         use: ['file-loader']
       },
       {
-        test: /\.(html)$/,
+        test: /index\.html$/,
         use: [
-          { loader: 'html-loader' },
           {
             loader: 'string-replace-loader',
             options: {
-              search: '@@API_URL',
-              replace: 'http://localhost:9003/m1/'
+              multiple: [ {
+                  search: '@@API_URL',
+                  replace: 'http://localhost:9003/m1/',
+                  strict: true,
+                  flags: 'g'
+                }
+              ]
             }
           }
+        ]
+      },
+      {
+        test: /app\.js$/,
+        use: [
+          {
+            loader: 'string-replace-loader',
+            options: {
+              multiple: [ {
+                  search: '@@API_URL',
+                  replace: 'http://localhost:9003/m1/',
+                  strict: true
+                }, {
+                  search: '@@API_WS_URL',
+                  replace: 'http://localhost:9003/m1/ws',
+                  strict: true
+                }, {
+                  search: '@@BUILD_NR',
+                  replace: '1',
+                  strict: true
+                }, {
+                  search: '@@ENV',
+                  replace: 'testest',
+                  strict: true
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        test: /\.(html)$/,
+        use: [
+          { loader: 'html-loader' },
         ]
       }
     ]
@@ -70,9 +110,15 @@ module.exports = {
       template: __dirname + '/app/index.html',
       inject: 'header'
     }),
+    new StringReplacePlugin(),
     new CleanWebpackPlugin(['dist']),
     new ZipPlugin({
       filename: 'dist.zip'
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      "window.jQuery": "jquery"
     })
   ]
 };

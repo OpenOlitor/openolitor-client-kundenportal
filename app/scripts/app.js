@@ -19,7 +19,14 @@ require('angular-cookies');
 require('angular-filter');
 require('angular-ui-bootstrap');
 require('bootstrap-ui-datetime-picker');
+
+// jquery has to be loaded before angular-bootstrap-switch...
+require('bootstrap/dist/css/bootstrap.css');
+require('bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css');
+require('bootstrap');
+require('bootstrap-switch');
 require('angular-bootstrap-switch');
+
 require('angularjs-color-picker');
 require('ng-file-upload');
 require('angular-sortable-view');
@@ -124,10 +131,10 @@ angular
     'piwik'
   ])
   // todo make with stringreplace
-  //.constant('API_URL', '@@API_URL')
-  .constant('API_URL', 'http://localhost:9003/m1/')
-  // .constant('API_WS_URL', '@@API_WS_URL')
-  .constant('API_WS_URL', 'http://localhost:9003/m1/ws')
+  .constant('API_URL', '@@API_URL')
+  //.constant('API_URL', 'http://localhost:9003/m1/')
+  .constant('API_WS_URL', '@@API_WS_URL')
+  //.constant('API_WS_URL', 'http://localhost:9003/m1/ws')
   .constant('BUILD_NR', '@@BUILD_NR')
   .constant('ENV', '@@ENV')
   .constant('VERSION', '@@VERSION')
