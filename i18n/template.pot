@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
 msgstr ""
 
@@ -13,7 +13,16 @@ msgstr ""
 msgid "+"
 msgstr ""
 
+#: app/scripts/login/login.html:7
+msgid "- Entwicklungsumgebung"
+msgstr ""
+
+#: app/scripts/login/login.html:6
+msgid "- Testumgebung"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
+#: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
 msgstr ""
 
@@ -35,6 +44,27 @@ msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
 msgid "Abwesenheiten"
+msgstr ""
+
+#: app/scripts/login/change_password.html:11
+msgid "Aktuelles Passwort"
+msgstr ""
+
+#: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
+msgid "Alle"
+msgstr ""
+
+#: app/scripts/login/login.html:74
+#: app/scripts/login/login.html:91
+msgid "Anmelden"
+msgstr ""
+
+#: app/scripts/login/login.html:5
+msgid "Anmeldung"
+msgstr ""
+
+#: app/scripts/login/login.controller.js:139
+msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:75
@@ -63,14 +93,22 @@ msgstr ""
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr ""
 
+#: app/scripts/login/login.controller.js:78
+msgid "Aufwiedersehen"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
 msgid "Bei Arbeitsangebot teilnehmen"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:35
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
 msgid "Bemerkungen"
+msgstr ""
+
+#: app/scripts/components/oo-dialogokabort.directive.modal.html:3
+msgid "Bestätigung"
 msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:103
@@ -78,12 +116,24 @@ msgstr ""
 msgid "Betrag"
 msgstr ""
 
-#: app/scripts/app.js:67
+#: app/scripts/app.js:111
+msgid "Britisches Pfund"
+msgstr ""
+
+#: app/scripts/app.js:96
 msgid "Bu."
 msgstr ""
 
-#: app/scripts/app.js:67
+#: app/scripts/app.js:96
 msgid "Bund"
+msgstr ""
+
+#: app/scripts/app.js:113
+msgid "CAD"
+msgstr ""
+
+#: app/scripts/app.js:107
+msgid "CHF"
 msgstr ""
 
 #: app/index.html:82
@@ -92,6 +142,24 @@ msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
 msgid "Das Einschreiben war nicht erfolgreich:"
+msgstr ""
+
+#: app/scripts/login/login.html:53
+msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
+msgstr ""
+
+#: app/scripts/login/change_password.html:21
+#: app/scripts/login/zugangaktivieren.html:15
+msgid "Das Passwort muss aus mindestens 6 Zeichen bestehen"
+msgstr ""
+
+#: app/scripts/login/change_password.html:22
+#: app/scripts/login/zugangaktivieren.html:16
+msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
+msgstr ""
+
+#: app/scripts/login/login.controller.js:126
+msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
@@ -119,6 +187,10 @@ msgstr ""
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
 msgstr ""
 
+#: app/scripts/login/forbidden.html:6
+msgid "Der Zugriff auf diese Ressource wurde verweigert."
+msgstr ""
+
 #: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
 msgstr ""
@@ -129,6 +201,12 @@ msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "Details werden geladen..."
+msgstr ""
+
+#: app/scripts/login/login.html:18
+#: app/scripts/login/login.html:29
+#: app/scripts/login/login.html:42
+msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:50
@@ -143,6 +221,16 @@ msgstr ""
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
 msgstr ""
 
+#: app/scripts/login/login.html:68
+msgid "E-Mail Adresse"
+msgstr ""
+
+#: app/scripts/login/login.html:15
+#: app/scripts/login/login.html:26
+#: app/scripts/login/login.html:38
+msgid "E-Mail:"
+msgstr ""
+
 #: app/scripts/rechnungen/list/rechnungenlist.html:60
 msgid "ESR-Nr."
 msgstr ""
@@ -151,7 +239,19 @@ msgstr ""
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr ""
 
+#: app/scripts/app.js:109
+msgid "EUR"
+msgstr ""
+
+#: app/scripts/login/change_password.html:5
+msgid "Eigenes Passwort wechseln"
+msgstr ""
+
 #: app/messages.html:2
+#: app/scripts/login/change_password.html:20
+#: app/scripts/login/change_password.html:35
+#: app/scripts/login/zugangaktivieren.html:14
+#: app/scripts/login/zugangaktivieren.html:29
 msgid "Eingabe erforderlich"
 msgstr ""
 
@@ -172,6 +272,10 @@ msgstr ""
 msgid "Einheit"
 msgstr ""
 
+#: app/scripts/login/passwordreset.html:14
+msgid "Email Adresse"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr ""
@@ -180,12 +284,16 @@ msgstr ""
 msgid "Error 404"
 msgstr ""
 
-#: app/scripts/app.js:112
+#: app/scripts/app.js:151
 msgid "Error:"
 msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:16
 msgid "Es liegen noch keine Rechnungen vor."
+msgstr ""
+
+#: app/scripts/login/login.html:84
+msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
@@ -194,6 +302,10 @@ msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:7
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
+msgstr ""
+
+#: app/scripts/app.js:109
+msgid "Euro"
 msgstr ""
 
 #: app/messages.html:5
@@ -208,12 +320,36 @@ msgstr ""
 msgid "Fällig am"
 msgstr ""
 
-#: app/scripts/app.js:68
+#: app/scripts/login/login.html:80
+msgid "Für das Testen der Administrationsumgebung, bitte hier klicken!"
+msgstr ""
+
+#: app/scripts/login/login.html:41
+msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
+msgstr ""
+
+#: app/scripts/login/login.html:33
+msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
+msgstr ""
+
+#: app/scripts/login/login.html:10
+msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
+msgstr ""
+
+#: app/scripts/app.js:111
+msgid "GBP"
+msgstr ""
+
+#: app/scripts/app.js:97
 msgid "Gramm"
 msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
+msgstr ""
+
+#: app/scripts/app.js:113
+msgid "Kanadischer Dollar"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:33
@@ -224,7 +360,7 @@ msgstr ""
 msgid "Keine Arbeitsangebote."
 msgstr ""
 
-#: app/scripts/app.js:69
+#: app/scripts/app.js:98
 msgid "Kilogramm"
 msgstr ""
 
@@ -248,13 +384,25 @@ msgstr ""
 msgid "Lieferung"
 msgstr ""
 
-#: app/scripts/app.js:71
+#: app/scripts/app.js:100
 msgid "Liter"
+msgstr ""
+
+#: app/scripts/login/login.html:80
+msgid "Login Administration"
 msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:26
 #: app/scripts/abos/list/lieferungen/lieferungen.html:75
 msgid "Menge"
+msgstr ""
+
+#: app/scripts/login/change_password.html:17
+msgid "Neues Passwort"
+msgstr ""
+
+#: app/scripts/components/oo-dialogokabort.directive.modal.html:13
+msgid "Ok"
 msgstr ""
 
 #: app/index.html:56
@@ -265,15 +413,69 @@ msgstr ""
 msgid "Ort"
 msgstr ""
 
+#: app/scripts/login/login.html:71
+#: app/scripts/login/zugangaktivieren.html:11
+msgid "Passwort"
+msgstr ""
+
+#: app/scripts/login/zugangaktivieren.html:35
+msgid "Passwort setzen"
+msgstr ""
+
+#: app/scripts/login/zugangaktivieren.html:5
+msgid "Passwort setzen und Zugang aktivieren"
+msgstr ""
+
+#: app/scripts/login/login.html:77
+#: app/scripts/login/passwordreset.html:5
+msgid "Passwort vergessen?"
+msgstr ""
+
 #: app/index.html:73
+#: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr ""
 
-#: app/scripts/app.js:72
+#: app/scripts/login/change_password.html:32
+#: app/scripts/login/zugangaktivieren.html:26
+msgid "Passwort wiederholen"
+msgstr ""
+
+#: app/scripts/login/login.controller.js:110
+msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
+msgstr ""
+
+#: app/scripts/login/login.controller.js:117
+msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
+msgstr ""
+
+#: app/scripts/login/passwordreset.html:17
+msgid "Passwort zurücksetzen"
+msgstr ""
+
+#: app/scripts/login/login.html:16
+#: app/scripts/login/login.html:27
+#: app/scripts/login/login.html:39
+msgid "Passwort:"
+msgstr ""
+
+#: app/scripts/login/change_password.html:23
+#: app/scripts/login/change_password.html:36
+#: app/scripts/login/zugangaktivieren.html:17
+#: app/scripts/login/zugangaktivieren.html:30
+msgid "Passworteingabe stimmt nicht übereint"
+msgstr ""
+
+#: app/scripts/login/change_password.html:28
+#: app/scripts/login/zugangaktivieren.html:22
+msgid "Passwortstärke"
+msgstr ""
+
+#: app/scripts/app.js:101
 msgid "Por."
 msgstr ""
 
-#: app/scripts/app.js:72
+#: app/scripts/app.js:101
 msgid "Portion"
 msgstr ""
 
@@ -308,7 +510,23 @@ msgstr ""
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr ""
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:107
+msgid "Schweizer Franken"
+msgstr ""
+
+#: app/scripts/login/login.html:23
+msgid "Sie befinden sich auf dem Lasius Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
+msgstr ""
+
+#: app/scripts/login/login.html:35
+msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
+msgstr ""
+
+#: app/scripts/login/login.html:12
+msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
+msgstr ""
+
+#: app/scripts/app.js:95
 msgid "St."
 msgstr ""
 
@@ -317,7 +535,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: app/scripts/app.js:66
+#: app/scripts/app.js:95
 msgid "Stück"
 msgstr ""
 
@@ -330,6 +548,18 @@ msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:18
 msgid "Tour:"
+msgstr ""
+
+#: app/scripts/app.js:110
+msgid "US Dollar"
+msgstr ""
+
+#: app/scripts/app.js:110
+msgid "USD"
+msgstr ""
+
+#: app/scripts/login/login.html:58
+msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
@@ -356,13 +586,37 @@ msgstr ""
 msgid "Weitere Lieferungen anzeigen..."
 msgstr ""
 
+#: app/scripts/login/passwordreset.html:6
+msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
+msgstr ""
+
+#: app/scripts/login/login.controller.js:63
+msgid "Willkommen"
+msgstr ""
+
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
+msgstr ""
+
+#: app/scripts/components/oo-dialogokabort.directive.modal.html:8
+msgid "Wollen Sie fortfahren?"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
 msgid "Zeitpunkt"
+msgstr ""
+
+#: app/scripts/login/login.html:88
+msgid "Zugangscode"
+msgstr ""
+
+#: app/scripts/login/login.html:94
+msgid "Zugangscode erneut versenden"
+msgstr ""
+
+#: app/scripts/login/forbidden.html:5
+msgid "Zugriff verweigert"
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
@@ -373,11 +627,11 @@ msgstr ""
 msgid "bis"
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
 msgid "bisher eingeschrieben"
 msgstr ""
 
-#: app/scripts/app.js:68
+#: app/scripts/app.js:97
 msgid "gr"
 msgstr ""
 
@@ -385,11 +639,11 @@ msgstr ""
 msgid "in Stammdaten nicht definiert"
 msgstr ""
 
-#: app/scripts/app.js:70
+#: app/scripts/app.js:99
 msgid "kg"
 msgstr ""
 
-#: app/scripts/app.js:71
+#: app/scripts/app.js:100
 msgid "l"
 msgstr ""
 
@@ -399,4 +653,12 @@ msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
+msgstr ""
+
+#: app/scripts/login/login.html:84
+msgid "zugestellt."
+msgstr ""
+
+#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
+msgid "{{title | translate}}"
 msgstr ""
