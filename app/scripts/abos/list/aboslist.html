@@ -6,58 +6,58 @@
       </div>
       <div class="panel-body">
         <div class="row depot" ng-if="abo.depotName">
-          <div class="col-md-4 col-sm-6" >
+          <div class="col-md-4 col-sm-5 col-xs-5" >
             <span translate>Depot:</span>
           </div>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-5 col-xs-5">
              {{abo.depotName}}
           </div>
         </div>
         <div class="row tour" ng-if="abo.tourName">
-          <div class="col-md-4 col-sm-6" >
+          <div class="col-md-4 col-sm-5 col-xs-5" >
             <span translate>Tour:</span>
           </div>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-5 col-xs-5">
              {{abo.tourName}}
           </div>
         </div>
         <div class="row vertrieb" ng-if="abo.vertrieb.beschrieb">
-          <div class="col-md-4 col-sm-6" >
+          <div class="col-md-4 col-sm-5 col-xs-5" >
             <span translate>Vertrieb:</span>
           </div>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-5 col-xs-5">
              {{abo.vertrieb.beschrieb| translate}}
           </div>
         </div>
         <div class="row liefertag" ng-if="abo.vertrieb.liefertag">
-          <div class="col-md-4 col-sm-6" >
+          <div class="col-md-4 col-sm-5 col-xs-5" >
             <span translate>Liefertag:</span>
           </div>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-5 col-xs-5">
              {{abo.vertrieb.liefertag | translate}}
           </div>
         </div>
         <div class="row rythmus" ng-if="abo.abotyp.lieferrhythmus">
-          <div class="col-md-4 col-sm-6" >
+          <div class="col-md-4 col-sm-5 col-xs-5" >
             <span translate>Lieferrhythmus:</span>
           </div>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-5 col-xs-5">
              {{abo.abotyp.lieferrhythmus | translate}}
           </div>
         </div>
         <div class="row preis" ng-if="abo.abotyp.preis">
-          <div class="col-md-4 col-sm-6" >
+          <div class="col-md-4 col-sm-5 col-xs-5" >
             <span translate>Preis:</span>
           </div>
-          <div class="col-md-4 col-sm-6">
+          <div class="col-md-4 col-sm-5 col-xs-5">
               {{projekt.waehrung | translate}} {{abo.abotyp.preis | ooCHF}} / {{abo.abotyp.preiseinheit | translate}}
           </div>
         </div>
         <div class="row laufzeit">
-          <div class="col-md-4 col-sm-6" >
+          <div class="col-md-4 col-sm-5 col-xs-5" >
             <span translate>Laufzeit:</span>
           </div>
-          <div class="col-md-6 col-sm-6">
+          <div class="col-md-6 col-sm-5 col-xs-5">
             <span translate>Von </span> {{abo.start | date:'dd.MM.yyyy'}} <span translate ng-if="abo.ende">bis </span> {{abo.ende | date:'dd.MM.yyyy'}}
           </div>
         </div>

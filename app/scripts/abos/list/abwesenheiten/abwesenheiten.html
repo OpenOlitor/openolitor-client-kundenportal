@@ -1,12 +1,28 @@
 <div>
   <div class="row form-group">
     <div class="col-md-12">
-        <h4> <span translate>Abwesenheiten</span><small>({{gettingCurrentAbsences()}}<span ng-if="abo.abotyp.anzahlAbwesenheiten > 0"> / {{abo.abotyp.anzahlAbwesenheiten}}</span>)</small></h4>
+      <h4>
+        <span translate>Abwesenheiten</span>&nbsp;<small
+          >{{getCurrentAbsences()}}<span
+            ng-if="abo.abotyp.anzahlAbwesenheiten > 0"
+          >
+            / {{abo.abotyp.anzahlAbwesenheiten}}</span
+          >&nbsp;<span
+            class="fa fa-info-circle"
+            aria-hidden="true"
+            tooltip-popup-close-delay="500"
+            uib-tooltip-html="getAbwesenheitenTooltip(abo)"
+          ></span
+        ></small>
+      </h4>
     </div>
   </div>
   <div class="row form-group">
     <div class="col-md-8 col-sm-12">
-      <script type="text/ng-template" id="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+      <script
+        type="text/ng-template"
+        id="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
+      >
         <!-- nothing -->
       </script>
       <script type="text/ng-template" id="headerSwitch.html">
@@ -22,33 +38,74 @@
             ng-false-value="false"
             switch-icon="fa fa-history">
           </span>
-    </script>
-      <table ng-table="abwesenheitenTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
-        <tr ng-repeat="abw in $data | filter:(templateObject.showOnlyPending || '') && filterIfLieferungOpen | orderBy:'-':datum">
+      </script>
+      <table
+        ng-table="abwesenheitenTableParams"
+        class="table table-striped"
+        show-filter="false"
+        template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
+      >
+        <tr
+          ng-repeat="abw in $data | filter:(templateObject.showOnlyPending || '') && filterIfLieferungOpen | orderBy:'-datum'"
+        >
           <td data-title="'Datum'|translate">
             {{abw.datum|date:"EEE, dd.MM.yyyy"}}
           </td>
-          <!--td data-title="'Bemerkung'|translate">
-            <i ng-if="abw.bemerkung" class="fa fa-info-circle" aria-hidden="true" uib-tooltip="{{abw.bemerkung}}" tooltip-popup-close-delay="500"></i>
-          </td-->
+          <!--
+            td data-title="'Bemerkung'|translate">
+              <i ng-if="abw.bemerkung" class="fa fa-info-circle" aria-hidden="true" uib-tooltip="{{abw.bemerkung}}" tooltip-popup-close-delay="500"></i>
+            </td
+          -->
           <td header="'headerSwitch.html'">
             <span class="pull-right">
-                <a href="" ng-hide="deletingAbwesenheit(abw)" ng-click="deleteAbwesenheit(abw)" ng-if="isLieferungOpen(abw)"><i class="glyphicon glyphicon-remove"></i></a>
-                <i ng-show="deletingAbwesenheit(abw)" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-              </span>
+              <a
+                href=""
+                ng-hide="deletingAbwesenheit(abw)"
+                ng-click="deleteAbwesenheit(abw)"
+                ng-if="isLieferungOpen(abw)"
+                ><i class="glyphicon glyphicon-remove"></i
+              ></a>
+              <i
+                ng-show="deletingAbwesenheit(abw)"
+                ng-cloak
+                class="fa fa-circle-o-notch fa-spin"
+              ></i>
+            </span>
           </td>
         </tr>
       </table>
-      <span class="pull-right" ng-show="showLoading()"><i class="fa fa-circle-o-notch fa-spin fa-lg"></i></span>
+
+      <span class="pull-right" ng-show="showLoading()"
+        ><i class="fa fa-circle-o-notch fa-spin fa-lg"></i
+      ></span>
     </div>
   </div>
   <div class="row">
     <div class="col-md-4 col-sm-6 form-group">
       <div class="dropdown" ng-if="isAboRunning(abo)">
-        <div uib-dropdown class="btn-group" role="group" ng-show="abo.lieferdaten.length > 0">
-          <a uib-dropdown-toggle role="button" ng-href="" class="btn btn-sm btn-success"><i class="fa fa-calendar-plus-o" aria-hidden="true"></i> <span translate>Abwesenheit erfassen</span></a>
+        <div
+          uib-dropdown
+          class="btn-group"
+          role="group"
+          ng-show="abo.lieferdaten.length > 0"
+        >
+          <a
+            uib-dropdown-toggle
+            role="button"
+            ng-href=""
+            class="btn btn-sm btn-success"
+            ><i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+            <span translate>Abwesenheit erfassen</span></a
+          >
           <ul uib-dropdown-menu role="menu" class="dropdown-form">
-            <li role="menuitem" ng-repeat="lieferdat in abo.lieferdaten | notIn:'id':abwesenheitsDaten() | dateRange:abo.start:abo.ende:'datum'"><a href="" ng-click="addAbwesenheit(lieferdat)">{{lieferdat.datum | date: 'EEE, dd.MM.yyyy'}}</a></li>
+            <li
+              role="menuitem"
+              ng-repeat="lieferdat in abo.lieferdaten | notIn:'id':abwesenheitsDaten() | dateRange:abo.start:abo.ende:'datum'"
+            >
+              <a href="" ng-click="addAbwesenheit(lieferdat)"
+                >{{lieferdat.datum | date: 'EEE, dd.MM.yyyy'}}</a
+              >
+            </li>
           </ul>
         </div>
       </div>

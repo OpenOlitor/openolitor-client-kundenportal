@@ -55,8 +55,8 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
 
         var unwatch = $scope.$watch('abo', function(abo) {
           if (abo) {
-            LieferungenListModel.query({abotypId: abo.abotypId}, function(data) {
-              $scope.lieferungen = data;
+            LieferungenListModel.query({abotypId: abo.abotypId, vertriebId: abo.vertriebId}, function(data) {
+              $scope.lieferungen = data; 
               createLieferungenTableParams();
             });
           }
