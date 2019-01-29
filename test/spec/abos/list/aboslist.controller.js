@@ -1,10 +1,8 @@
 'use strict';
 
 describe('Controller: AbosListController', function() {
-
   // load the controller's module
   beforeEach(module('ui.bootstrap'));
-  beforeEach(module('openolitor-core'));
   beforeEach(module('openolitor-kundenportal'));
 
   var controller, $scope, $q;
@@ -22,13 +20,11 @@ describe('Controller: AbosListController', function() {
 
     controller = $controller('AbosListController', {
       $scope: $scope,
-      'AbosListModel': mockAbosListModel
+      AbosListModel: mockAbosListModel
     });
   }));
 
   it('should initialize scope variables', function() {
     expect($scope.loading).toBeDefined();
   });
-
 });
-

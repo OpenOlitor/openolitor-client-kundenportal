@@ -38,7 +38,7 @@
                   </h3>
                 </div>
                 <div class="panel-body collapse in" id="abotypLieferung_{{abotypLieferung.id}}">
-                  <table class="table table-striped table-small table-lieferplanung" template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html">
+                  <table class="table table-striped table-small table-lieferplanung" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
                     <tr ng-repeat="korbprodukt in abotypLieferung.lieferpositionen | orderBy:'produktBeschrieb'">
                       <td>
                         {{korbprodukt.produktBeschrieb}}

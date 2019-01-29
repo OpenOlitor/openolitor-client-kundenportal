@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="row" ng-show="!entries">
+          <div class="col-md-4 col-sm-12" >
+            <span translate>Keine Arbeitsangebote.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <table ng-show="entries" ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+              <tr ng-repeat="arbeitsangebot in $data">
+                <td data-title="'Titel'|translate" sortable="'titel'">
+                  <a id="arbeitsangebot{{arbeitsangebot.id}}">{{arbeitsangebot.titel}}</a>
+                  <span ng-if="arbeitsangebot.bezeichnung">&nbsp;<i class="fa fa-info-circle ng-scope" uib-tooltip-html="arbeitsangebot.bezeichnung"></i></span>
+                </td>
+                <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'">
+                  <span ng-if="sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
+                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy'}}
+                    {{arbeitsangebot.zeitVon | date:'@ HH:mm'}} - {{arbeitsangebot.zeitBis | date:'HH:mm'}}
+                  </span>
+                  <span ng-if="!sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
+                    {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy @ HH:mm'}} - {{arbeitsangebot.zeitBis | date:'dd.MM.yyyy @ HH:mm'}}
+                  </span>
+                </td>
+                <td data-title="'Ort'|translate">
+                  {{arbeitsangebot.ort}}
+                </td>
+                <td data-title="'#&nbsp;Pers.'|translate" sortable="'anzahlPersonen'">
+                  {{arbeitsangebot.anzahlPersonen}} <span ng-if="arbeitsangebot.mehrPersonenOk" translate>+</span>
+                </td>
+                <td data-title="'Kategorien'|translate">
+                  <span ng-repeat="arbeitskategorie in arbeitsangebot.arbeitskategorien" class="badge" ng-if="arbeitskategorie !== ''">
+                    {{arbeitskategorie}}
+                  </span>
+                </td>
+                <td>
+                  <a role="button" ng-if="!isParticipating(arbeitsangebot)" class="btn btn-sm btn-primary" ng-click="participate(arbeitsangebot)"><span class="glyphicon glyphicon-plus"></span></a>
+                  <a role="button" ng-if="isParticipating(arbeitsangebot)" class="btn btn-sm btn-info" ng-click="edit(arbeitsangebot)"><span class="glyphicon glyphicon-edit"></span></a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
