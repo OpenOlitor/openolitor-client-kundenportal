@@ -38,11 +38,11 @@ msgstr ""
 msgid "Abo:"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
 msgstr ""
 
@@ -162,7 +162,7 @@ msgstr ""
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr ""
@@ -191,7 +191,7 @@ msgstr ""
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:6
+#: app/scripts/abos/list/lieferungen/lieferungen.html:8
 msgid "Der aktuelle Korb"
 msgstr ""
 
@@ -209,7 +209,7 @@ msgstr ""
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Die früheren Körbe"
 msgstr ""
 
@@ -267,8 +267,8 @@ msgstr ""
 msgid "Eingabe zu lang"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:29
-#: app/scripts/abos/list/lieferungen/lieferungen.html:78
+#: app/scripts/abos/list/lieferungen/lieferungen.html:142
+#: app/scripts/abos/list/lieferungen/lieferungen.html:46
 msgid "Einheit"
 msgstr ""
 
@@ -296,7 +296,7 @@ msgstr ""
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:14
+#: app/scripts/abos/list/lieferungen/lieferungen.html:20
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr ""
 
@@ -392,8 +392,8 @@ msgstr ""
 msgid "Login Administration"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:26
-#: app/scripts/abos/list/lieferungen/lieferungen.html:75
+#: app/scripts/abos/list/lieferungen/lieferungen.html:141
+#: app/scripts/abos/list/lieferungen/lieferungen.html:43
 msgid "Menge"
 msgstr ""
 
@@ -479,8 +479,8 @@ msgstr ""
 msgid "Portion"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:32
-#: app/scripts/abos/list/lieferungen/lieferungen.html:81
+#: app/scripts/abos/list/lieferungen/lieferungen.html:145
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
 msgid "Preis"
 msgstr ""
 
@@ -488,13 +488,13 @@ msgstr ""
 msgid "Preis:"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:23
-#: app/scripts/abos/list/lieferungen/lieferungen.html:72
+#: app/scripts/abos/list/lieferungen/lieferungen.html:138
+#: app/scripts/abos/list/lieferungen/lieferungen.html:40
 msgid "Produkt"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:40
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:156
+#: app/scripts/abos/list/lieferungen/lieferungen.html:64
 msgid "Produzent"
 msgstr ""
 
@@ -578,7 +578,7 @@ msgstr ""
 msgid "Von"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:101
+#: app/scripts/abos/list/lieferungen/lieferungen.html:172
 msgid "Weitere Körbe anzeigen..."
 msgstr ""
 
@@ -619,7 +619,7 @@ msgstr ""
 msgid "Zugriff verweigert"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr ""
 
@@ -647,7 +647,7 @@ msgstr ""
 msgid "l"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
 msgstr ""
 
