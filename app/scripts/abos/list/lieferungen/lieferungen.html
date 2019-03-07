@@ -34,7 +34,7 @@
           ng-table="getLastLieferung().lieferungenTableParams"
           class="table table-striped"
           show-filter="false"
-          template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html"
+          template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
         >
           <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
             <td data-title="'Produkt'|translate" class="lieferung-produkt">
@@ -132,7 +132,7 @@
               ng-table="lieferung.lieferungenTableParams"
               class="table table-striped"
               show-filter="false"
-              template-pagination="scripts/common/ngtable/oo-ngtable-noPaginationTemplate.html"
+              template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
             >
               <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
                 <td data-title="'Produkt'|translate">
