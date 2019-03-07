@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.2.1-SNAPSHOT",
+  "version": "2.3.0-SNAPSHOT",
   "description": "OpenOlitor Client Webapplication",
   "repository": {
     "type": "git",
