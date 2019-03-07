@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.2.0",
+  "version": "2.3.0-SNAPSHOT",
   "private": false,
   "dependencies": {
     "jquery": "3.2.1",
