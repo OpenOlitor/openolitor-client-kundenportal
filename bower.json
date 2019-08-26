@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "private": false,
   "dependencies": {
     "jquery": "3.2.1",
@@ -43,7 +43,8 @@
     "airbrake-js": "^0.5.9",
     "ngclipboard": "^1.1.1",
     "ng-iban": "^1.2.0",
-    "angular-piwik": "^1.3.2"
+    "angular-piwik": "^1.3.2",
+    "openolitor-core": "2.3.11"
   },
   "devDependencies": {
     "angular-mocks": "~1.6.5",
