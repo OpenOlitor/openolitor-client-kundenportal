@@ -3,168 +3,139 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: openolitor\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: openolitor\n"
-"X-Crowdin-Language: en\n"
+"X-Crowdin-Language: cs\n"
 "X-Crowdin-File: /consumer-portal/template.pot\n"
 "Last-Translator: al_openolitor\n"
-"Language-Team: English\n"
-"Language: en\n"
+"Language-Team: Czech\n"
+"Language: cs\n"
 "PO-Revision-Date: 2019-05-09 11:56\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
-msgstr ""
+msgstr "#&nbsp;Os."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
-msgstr "-Development environment"
+msgstr "-Vývojové prostředí"
 
 #: app/scripts/login/login.html:6
 msgid "- Testumgebung"
-msgstr "-Test environment"
+msgstr "-Testovací prostředí"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
-msgstr "Cancel"
+msgstr "Zrušit"
 
 #: app/index.html:74
 msgid "Abmelden"
-msgstr "Log out"
+msgstr "Odhlásit"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:106
 msgid "Abo"
-msgstr "Subscription"
+msgstr "Odběr"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:74
 msgid "Abo:"
-msgstr "Subscription:"
+msgstr "Odběr:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
 msgid "Abwesenheit erfassen"
-msgstr "No records"
+msgstr "Žádné záznamy"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
 msgid "Abwesenheiten"
-msgstr "Absences"
+msgstr "Nepřítomnosti"
 
 #: app/scripts/login/change_password.html:11
 msgid "Aktuelles Passwort"
-msgstr "Current password"
+msgstr "Vaše současné heslo"
 
 #: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
 msgid "Alle"
-msgstr "All"
+msgstr "Vše "
 
 #: app/scripts/login/login.html:74
 #: app/scripts/login/login.html:91
 msgid "Anmelden"
-msgstr "Log in"
+msgstr "Přihlásit se"
 
 #: app/scripts/login/login.html:5
 msgid "Anmeldung"
-msgstr "Log-in"
+msgstr "Přihlášení"
 
 #: app/scripts/login/login.controller.js:139
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr "An email was send with the required information to modify the email password."
-
-#: app/scripts/login/change_password.html:11
-msgid "Aktuelles Passwort"
-msgstr ""
-
-#: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
-msgid "Alle"
-msgstr ""
-
-#: app/scripts/login/login.html:74
-#: app/scripts/login/login.html:91
-msgid "Anmelden"
-msgstr ""
-
-#: app/scripts/login/login.html:5
-msgid "Anmeldung"
-msgstr ""
-
-#: app/scripts/login/login.controller.js:139
-msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr ""
+msgstr "Pokyny pro nastavení hesla že vám byly odeslány na vaši e-mailovou adresu."
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Anzahl Lieferungen"
-msgstr "Number of deliveries"
+msgstr "Počet dosavadních závozů"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:8
 msgid "Anzahl Personen"
-msgstr "Number of persons"
+msgstr "Počet osob"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:127
 msgid "Arbeitsangebot erfolgreich gelöscht."
-msgstr "Work assignment successfully deleted."
+msgstr "Pracovní nabídka úspěšně odstraněna."
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:133
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
-msgstr "Deletion of work assignment not successful:"
+msgstr "Pracovní nabídka nebyla ostraněna:"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:184
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:171
 msgid "Arbeitseinsatz erfolgreich verändert."
-msgstr "Work assignment successfully edited."
+msgstr "Pracovní nabídka úspěšně změněna."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:190
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:177
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
-msgstr "Editing of work assignment not successful:"
+msgstr "Pracovní nabídka nebyla změněna:"
 
 #: app/scripts/login/login.controller.js:78
 msgid "Aufwiedersehen"
-msgstr "See you later!"
-
-#: app/scripts/login/login.controller.js:78
-msgid "Aufwiedersehen"
-msgstr ""
+msgstr "Nashledanou"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
 msgid "Bei Arbeitsangebot teilnehmen"
-msgstr "Assign to work opportunity"
+msgstr "Připojit se k dobrovolné práci"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
 msgid "Bemerkungen"
-msgstr "Remarks"
+msgstr "Poznámky"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:3
 msgid "Bestätigung"
-msgstr "Confirmation"
-
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:3
-msgid "Bestätigung"
-msgstr ""
+msgstr "Potvrzení"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:103
 #: app/scripts/rechnungen/list/rechnungenlist.html:46
 msgid "Betrag"
-msgstr "Amount"
+msgstr "Množství"
 
 #: app/scripts/app.js:111
 msgid "Britisches Pfund"
-msgstr "UK Pound"
+msgstr "Britská libra"
 
 #: app/scripts/app.js:96
 msgid "Bu."
-msgstr "Bunch"
+msgstr "Úč."
 
 #: app/scripts/app.js:96
 msgid "Bund"
-msgstr "Bunch"
+msgstr "Trs"
 
 #: app/scripts/app.js:113
 msgid "CAD"
@@ -176,110 +147,92 @@ msgstr "CHF"
 
 #: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
-msgstr "The backend is currently not available. Please visit us later again."
+msgstr "Administrace není momentálně dostupná. Prosíme, navštivte nás později."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
 msgid "Das Einschreiben war nicht erfolgreich:"
-msgstr "Assignment was not successful:"
+msgstr "Přihlášení nebylo úspěšné:"
 
 #: app/scripts/login/login.html:53
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr "The member portal is currently unavailable. We are currently working on some maintenance tasks. We will be back online soon."
+msgstr "Podílnický portál momentálně nění dostupný. Pracuejem právě na úpravách. Budeme brzy online."
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
 msgid "Das Passwort muss aus mindestens 6 Zeichen bestehen"
-msgstr "Your password must contain at least 6 characters"
+msgstr "Heslo musí obsahovat minimálně 6 znaků"
 
 #: app/scripts/login/change_password.html:22
 #: app/scripts/login/zugangaktivieren.html:16
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
-msgstr "The password must contain at least an upper - and lowercase letters, as well as a numeric value, or symbol"
+msgstr "Heslo musí obsahovat nejméně jedno velké a malé písmeno, a také číslo či jiný znak"
 
 #: app/scripts/login/login.controller.js:126
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
-msgstr "The password has been set successfully. You can log in now."
-
-#: app/scripts/login/login.html:53
-msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr ""
-
-#: app/scripts/login/change_password.html:21
-#: app/scripts/login/zugangaktivieren.html:15
-msgid "Das Passwort muss aus mindestens 6 Zeichen bestehen"
-msgstr ""
-
-#: app/scripts/login/change_password.html:22
-#: app/scripts/login/zugangaktivieren.html:16
-msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
-msgstr ""
-
-#: app/scripts/login/login.controller.js:126
-msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
-msgstr ""
+msgstr "Heslo bylo úspěšně nastaveno. Nyní se můžete přihlásit."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
-msgstr "Date"
+msgstr "Datum"
 
 #: app/scripts/dashboard/dashboard.html:9
 msgid "Deine Abos"
-msgstr "Your subscriptions"
+msgstr "Vaše podíly"
 
 #: app/scripts/dashboard/dashboard.html:27
 msgid "Deine Arbeitseinsätze"
-msgstr "Your assignments"
+msgstr "Vaše dobrovolné práce"
 
 #: app/scripts/dashboard/dashboard.html:17
 msgid "Deine Rechnungen"
-msgstr "Your invoices"
+msgstr "Vaše doklady"
 
 #: app/scripts/abos/list/aboslist.html:10
 msgid "Depot:"
-msgstr "Pick-up:"
+msgstr "Výdejní místo:"
 
 #: app/scripts/dashboard/dashboard.html:15
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
-msgstr "The invoice status is updated periodically by the administration. A paid invoice can appear so as unpaid."
+msgstr "Stav dokladů se pravidelně v administraci aktualizuje. Zaplacený doklade se může ještě zobrazovat jako nezaplacený."
 
 #: app/scripts/login/forbidden.html:6
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
-msgstr "Denied access."
+msgstr "Přístup k tomuto zdroji byl odepřen."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
-msgstr "Current basket"
+msgstr "Současný košík"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:5
 msgid "Der nächste Korb"
-msgstr "Next basket"
+msgstr "Následující košík"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "Details werden geladen..."
-msgstr "Loading details..."
+msgstr "Nahrávám podrobnosti..."
 
 #: app/scripts/login/login.html:18
 #: app/scripts/login/login.html:29
 #: app/scripts/login/login.html:42
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
-msgstr "The data in the system are sporadically reset to their default values."
+msgstr "Data v tomto systému jsou sporadicky resetována na výchozí hodnoty."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:50
 msgid "Die früheren Körbe"
-msgstr "Previous baskets"
+msgstr "Předcházející košíky"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
-msgstr "The page cannot be found"
+msgstr "Tuto stránku se nepodařilo najít!"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
-msgstr "You have no subscribed work assignments."
+msgstr "Nezapsal/a jste se k žádné dobrovolné práci."
 
 #: app/scripts/login/login.html:68
 msgid "E-Mail Adresse"
-msgstr "E-mail address"
+msgstr "Emailová adresa"
 
 #: app/scripts/login/login.html:15
 #: app/scripts/login/login.html:26
@@ -287,23 +240,13 @@ msgstr "E-mail address"
 msgid "E-Mail:"
 msgstr "E-mail:"
 
-#: app/scripts/login/login.html:68
-msgid "E-Mail Adresse"
-msgstr ""
-
-#: app/scripts/login/login.html:15
-#: app/scripts/login/login.html:26
-#: app/scripts/login/login.html:38
-msgid "E-Mail:"
-msgstr ""
-
 #: app/scripts/rechnungen/list/rechnungenlist.html:60
 msgid "ESR-Nr."
-msgstr ""
+msgstr "Č. ISR."
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:59
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
-msgstr "Copy ESR-number to clipboard (for use in payment systems)"
+msgstr "Zkopírovat ESR do schránky (pro použití v platebních systémech)"
 
 #: app/scripts/app.js:109
 msgid "EUR"
@@ -311,15 +254,7 @@ msgstr "EUR"
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
-msgstr "Change own password"
-
-#: app/scripts/app.js:109
-msgid "EUR"
-msgstr ""
-
-#: app/scripts/login/change_password.html:5
-msgid "Eigenes Passwort wechseln"
-msgstr ""
+msgstr "Změnit vlastní heslo"
 
 #: app/messages.html:2
 #: app/scripts/login/change_password.html:20
@@ -327,56 +262,56 @@ msgstr ""
 #: app/scripts/login/zugangaktivieren.html:14
 #: app/scripts/login/zugangaktivieren.html:29
 msgid "Eingabe erforderlich"
-msgstr "Input required"
+msgstr "Vyžadován vstup"
 
 #: app/messages.html:6
 msgid "Eingabe stimmt nicht übereint"
-msgstr "Input doesn't match"
+msgstr "Zadané informace se neodpovídají"
 
 #: app/messages.html:3
 msgid "Eingabe zu kurz"
-msgstr "Input too short"
+msgstr "Zadané informace příliš krátké"
 
 #: app/messages.html:4
 msgid "Eingabe zu lang"
-msgstr "Input too long"
+msgstr "Zadané informace příliš dlouhé"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:29
 #: app/scripts/abos/list/lieferungen/lieferungen.html:78
 msgid "Einheit"
-msgstr "Unit"
+msgstr "Jednotka"
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
-msgstr "E-mail Address"
+msgstr "Emailová adresa"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
-msgstr "Successfully subscribed to work assignment"
+msgstr "Úspěšně zapsán/a k dobrovolné práci"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr "Error 404"
+msgstr "Chyba 404"
 
 #: app/scripts/app.js:151
 msgid "Error:"
-msgstr ""
+msgstr "Chyba:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:16
 msgid "Es liegen noch keine Rechnungen vor."
-msgstr "There are no invoices yet."
+msgstr "Zde nejsou ještě žádné doklady."
 
 #: app/scripts/login/login.html:84
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
-msgstr "An access code was sent to your email address"
+msgstr "Přístupový kód byl zaslán na váš email"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
-msgstr "Still no baskets of this type have been scheduled or delivered."
+msgstr "Žádné dodávky tohoto typu nejsou plánovány nebo doručeny."
 
 #: app/scripts/open/lastlieferplanungen.html:7
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
-msgstr "Still no delivery planning have been completed."
+msgstr "Zatím nebyly dokončeny žádné plány závozů."
 
 #: app/scripts/app.js:109
 msgid "Euro"
@@ -384,31 +319,31 @@ msgstr "Euro"
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
-msgstr "Incorrect email address"
+msgstr "Nesprávná emailová adresa"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Fällig"
-msgstr "Due"
+msgstr "Datum platnosti"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:40
 msgid "Fällig am"
-msgstr "Due date"
+msgstr "Platný do"
 
 #: app/scripts/login/login.html:80
 msgid "Für das Testen der Administrationsumgebung, bitte hier klicken!"
-msgstr "For testing of the administration portal, click here!"
+msgstr "Pro testovací administrační prostředí klikněte zde!"
 
 #: app/scripts/login/login.html:41
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
-msgstr "To access the OpenOlitor administration portal, use the link on the bottom right."
+msgstr "Pro přístup do administrace systému OpenOlitor, prosím klikněte na odkaz dole vpravo."
 
 #: app/scripts/login/login.html:33
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
-msgstr "Registration is required for access to OpenOlitor"
+msgstr "Pro přístup k OpenOlitor je vyžadováno přihlášení"
 
 #: app/scripts/login/login.html:10
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
-msgstr "Registration is required for access to OpenOlitor"
+msgstr "Pro přístup do administrace je vyžadováno přihlášení"
 
 #: app/scripts/app.js:111
 msgid "GBP"
@@ -416,64 +351,64 @@ msgstr "GBP"
 
 #: app/scripts/app.js:97
 msgid "Gramm"
-msgstr "Grams"
+msgstr "Gram"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
-msgstr "Content of the basket"
+msgstr "Obsah košíku"
 
 #: app/scripts/app.js:113
 msgid "Kanadischer Dollar"
-msgstr "Canadian Dollar"
+msgstr "Kanadský dolar"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:33
 msgid "Kategorien"
-msgstr "Categories"
+msgstr "Kategorie"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:7
 msgid "Keine Arbeitsangebote."
-msgstr "No work opportunities."
+msgstr "Žádná nabídka pracovního místa."
 
 #: app/scripts/app.js:98
 msgid "Kilogramm"
-msgstr "Kilograms"
+msgstr "Kilogram"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:7
 msgid "Konto für Einzahlungen:"
-msgstr "Payment account:"
+msgstr "Platební účet:"
 
 #: app/scripts/abos/list/aboslist.html:58
 msgid "Laufzeit:"
-msgstr "Contract period:"
+msgstr "Platí od:"
 
 #: app/scripts/abos/list/aboslist.html:42
 msgid "Lieferrhythmus:"
-msgstr "Delivery frequency:"
+msgstr "Frekvence závozů:"
 
 #: app/scripts/abos/list/aboslist.html:34
 msgid "Liefertag:"
-msgstr "Delivery day:"
+msgstr "Dodací den:"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Lieferung"
-msgstr "Delivery"
+msgstr "Závoz"
 
 #: app/scripts/app.js:100
 msgid "Liter"
-msgstr "Liter"
+msgstr "Litr"
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
-msgstr "Login administration"
+msgstr "Přihlášení do administrace"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:26
 #: app/scripts/abos/list/lieferungen/lieferungen.html:75
 msgid "Menge"
-msgstr "Quantity"
+msgstr "Počet"
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
-msgstr "New password"
+msgstr "Nové heslo"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
@@ -481,162 +416,144 @@ msgstr "Ok"
 
 #: app/index.html:56
 msgid "OpenOlitor Mitgliederportal:"
-msgstr "OpenOlitor Member Portal:"
+msgstr "OpenOlitor portál pro podílníky:"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
 msgid "Ort"
-msgstr "City"
+msgstr "Místo"
 
 #: app/scripts/login/login.html:71
 #: app/scripts/login/zugangaktivieren.html:11
 msgid "Passwort"
-msgstr "Password"
+msgstr "Heslo"
 
 #: app/scripts/login/zugangaktivieren.html:35
 msgid "Passwort setzen"
-msgstr "Define password"
+msgstr "Nastavit heslo"
 
 #: app/scripts/login/zugangaktivieren.html:5
 msgid "Passwort setzen und Zugang aktivieren"
-msgstr "Reset password and enable access"
+msgstr "Nastavit heslo a povoit přístup"
 
 #: app/scripts/login/login.html:77
 #: app/scripts/login/passwordreset.html:5
 msgid "Passwort vergessen?"
-msgstr "Forgot your password?"
-
-#: app/scripts/login/login.html:71
-#: app/scripts/login/zugangaktivieren.html:11
-msgid "Passwort"
-msgstr ""
-
-#: app/scripts/login/zugangaktivieren.html:35
-msgid "Passwort setzen"
-msgstr ""
-
-#: app/scripts/login/zugangaktivieren.html:5
-msgid "Passwort setzen und Zugang aktivieren"
-msgstr ""
-
-#: app/scripts/login/login.html:77
-#: app/scripts/login/passwordreset.html:5
-msgid "Passwort vergessen?"
-msgstr ""
+msgstr "Zapomenuté heslo?"
 
 #: app/index.html:73
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
-msgstr "Change password"
+msgstr "Změnit heslo"
 
 #: app/scripts/login/change_password.html:32
 #: app/scripts/login/zugangaktivieren.html:26
 msgid "Passwort wiederholen"
-msgstr "Confirm password"
+msgstr "Zadejte heslo znovu"
 
 #: app/scripts/login/login.controller.js:110
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
-msgstr "The password has been changed successfully, you will be automatically logged out."
+msgstr "Heslo bylo úspěšně změněno, budete automaticky odhlášeni."
 
 #: app/scripts/login/login.controller.js:117
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
-msgstr "The password was successfully modified. Please, use your new credentials to login."
+msgstr "Heslo bylo úspěšně změněno, byli jste automaticky odhlášeni. Přihlaste se znovu s novým heslem."
 
 #: app/scripts/login/passwordreset.html:17
 msgid "Passwort zurücksetzen"
-msgstr "Reset password"
+msgstr "Obnovit heslo"
 
 #: app/scripts/login/login.html:16
 #: app/scripts/login/login.html:27
 #: app/scripts/login/login.html:39
 msgid "Passwort:"
-msgstr "Password:"
+msgstr "Heslo:"
 
 #: app/scripts/login/change_password.html:23
 #: app/scripts/login/change_password.html:36
 #: app/scripts/login/zugangaktivieren.html:17
 #: app/scripts/login/zugangaktivieren.html:30
 msgid "Passworteingabe stimmt nicht übereint"
-msgstr "Password doesn't match"
+msgstr "Zadané heslo neodpovídá"
 
 #: app/scripts/login/change_password.html:28
 #: app/scripts/login/zugangaktivieren.html:22
 msgid "Passwortstärke"
-msgstr "Password quality"
+msgstr "Síla hesla"
 
 #: app/scripts/app.js:101
 msgid "Por."
-msgstr ""
+msgstr "Část."
 
 #: app/scripts/app.js:101
 msgid "Portion"
-msgstr "Portion"
+msgstr "Část"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:32
 #: app/scripts/abos/list/lieferungen/lieferungen.html:81
 msgid "Preis"
-msgstr "Price"
+msgstr "Cena"
 
 #: app/scripts/abos/list/aboslist.html:50
 msgid "Preis:"
-msgstr "Price:"
+msgstr "Cena:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:23
 #: app/scripts/abos/list/lieferungen/lieferungen.html:72
 msgid "Produkt"
-msgstr "Product"
+msgstr "Produkt"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:40
 #: app/scripts/abos/list/lieferungen/lieferungen.html:89
 msgid "Produzent"
-msgstr "Producer"
+msgstr "Výrobce"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:37
 msgid "Rechnungsdatum"
-msgstr "Invoice date"
+msgstr "Datum vystavení"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Referenznummer"
-msgstr "Reference No."
+msgstr "Referenční číslo"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Referenznummer in Zwischenablage kopieren"
-msgstr "Copy reference number to clipboard"
+msgstr "Kopírovat referenční číslo do schránky"
 
 #: app/scripts/app.js:107
 msgid "Schweizer Franken"
-msgstr "Swiss Franc"
+msgstr "Švýcarské franky"
 
 #: app/scripts/login/login.html:23
 msgid "Sie befinden sich auf dem Lasius Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "You are on the Lasius testing system. You can login as an administrator with the following credentials:"
+msgstr "Nacházíte se v testovacím systému Lasius. Do administrace se můžete přihlásit pomocí následujících přihlašovacích údajů:"
 
 #: app/scripts/login/login.html:35
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
-msgstr "You are on the OpenOlitor testing system. You can login with the following credentials:"
+msgstr "Nacházíte se v testovacím systému OpenOlitor. Jako zákazník se můžete přihlásit pomocí následujících přihlašovacích údajů:"
 
 #: app/scripts/login/login.html:12
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "You are on the OpenOlitor testing system. You can login with the following credentials:"
+msgstr "Nacházíte se v testovacím systému OpenOlitor. Do administrace se můžete přihlásit pomocí následujících přihlašovacích údajů:"
 
 #: app/scripts/app.js:95
 msgid "St."
-msgstr "piece"
+msgstr "Kus."
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:109
 #: app/scripts/rechnungen/list/rechnungenlist.html:55
 msgid "Status"
-msgstr "State"
+msgstr "Stav"
 
 #: app/scripts/app.js:95
 msgid "Stück"
-msgstr "Piece"
+msgstr "Kus"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
 #: app/scripts/rechnungen/list/rechnungenlist.html:100
 #: app/scripts/rechnungen/list/rechnungenlist.html:43
 msgid "Titel"
-msgstr "Title"
+msgstr "Název"
 
 #: app/scripts/abos/list/aboslist.html:18
 msgid "Tour:"
@@ -644,7 +561,7 @@ msgstr "Tour:"
 
 #: app/scripts/app.js:110
 msgid "US Dollar"
-msgstr "US dollar"
+msgstr "AMERICKÝ dolar"
 
 #: app/scripts/app.js:110
 msgid "USD"
@@ -652,92 +569,76 @@ msgstr "USD"
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr "Maintenance mode! The customer portal is currently unavailable.We will activate it as soon as possible!"
+msgstr "Probíhá údržba! Podílnický portál není v současné době k dispozici. Bude co nejdříve znovu zprovzněn!"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
 msgid "Verbindlich Einschreiben"
-msgstr "Binding subscription"
+msgstr "Závazné přihlášení"
 
 #: app/index.html:92
 msgid "Version:"
-msgstr "Version:"
+msgstr "Verze:"
 
 #: app/scripts/abos/list/aboslist.html:26
 msgid "Vertrieb:"
-msgstr "Distribution:"
+msgstr "Distribuce:"
 
 #: app/scripts/abos/list/aboslist.html:61
 msgid "Von"
-msgstr "By"
+msgstr "Od"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:101
 msgid "Weitere Körbe anzeigen..."
-msgstr "View more baskets..."
+msgstr "Zobrazit další košíky..."
 
 #: app/scripts/open/lastlieferplanungen.html:74
 msgid "Weitere Lieferungen anzeigen..."
-msgstr "View more deliveries..."
+msgstr "Zobrazit další závozy..."
 
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
-msgstr "If you forgot your password, you can send an email for reset it from there."
+msgstr "Pokud jste zapomněli své heslo, můžete si nechat poslat odkaz pro obnovení."
 
 #: app/scripts/login/login.controller.js:63
 msgid "Willkommen"
-msgstr "Welcome"
+msgstr "Vítejte"
 
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
-msgstr "Current work opportunities:"
+msgstr "Kde je možná spolupráce?"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:8
 msgid "Wollen Sie fortfahren?"
-msgstr "Do you want to continue?"
-
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:8
-msgid "Wollen Sie fortfahren?"
-msgstr ""
+msgstr "Chcete pokračovat?"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
 msgid "Zeitpunkt"
-msgstr "Date & Time"
+msgstr "Čas"
 
 #: app/scripts/login/login.html:88
 msgid "Zugangscode"
-msgstr "Access code"
+msgstr "Přístupový kód"
 
 #: app/scripts/login/login.html:94
 msgid "Zugangscode erneut versenden"
-msgstr "Send access code again"
+msgstr "Znovu odeslat přístupový kód"
 
 #: app/scripts/login/forbidden.html:5
 msgid "Zugriff verweigert"
-msgstr "Access denied"
-
-#: app/scripts/login/login.html:88
-msgid "Zugangscode"
-msgstr ""
-
-#: app/scripts/login/login.html:94
-msgid "Zugangscode erneut versenden"
-msgstr ""
-
-#: app/scripts/login/forbidden.html:5
-msgid "Zugriff verweigert"
-msgstr ""
+msgstr "Přístup odepřen"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
 msgid "alle"
-msgstr "all"
+msgstr "vše"
 
 #: app/scripts/abos/list/aboslist.html:61
 msgid "bis"
-msgstr "to"
+msgstr "do"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
 msgid "bisher eingeschrieben"
-msgstr "Subscribed work assignments"
+msgstr "dříve zapsané"
 
 #: app/scripts/app.js:97
 msgid "gr"
@@ -745,7 +646,7 @@ msgstr "gr"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:9
 msgid "in Stammdaten nicht definiert"
-msgstr "not defined in the data base"
+msgstr "není definována v kmenových datech"
 
 #: app/scripts/app.js:99
 msgid "kg"
@@ -757,16 +658,17 @@ msgstr "l"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
 msgid "pendente"
-msgstr "pending"
+msgstr "čeká na vyřízení"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
-msgstr "on"
+msgstr "na"
 
 #: app/scripts/login/login.html:84
 msgid "zugestellt."
-msgstr "delivered."
+msgstr "doručeno."
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
 msgid "{{title | translate}}"
-msgstr ""
+msgstr "{{title | translate}}"
+

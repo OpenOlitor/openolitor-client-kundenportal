@@ -6,165 +6,136 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: openolitor\n"
-"X-Crowdin-Language: en\n"
+"X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /consumer-portal/template.pot\n"
 "Last-Translator: al_openolitor\n"
-"Language-Team: English\n"
-"Language: en\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
 "PO-Revision-Date: 2019-05-09 11:56\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
-msgstr ""
+msgstr "Nº&nbsp;Pers."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
-msgstr "-Development environment"
+msgstr "- Plataforma de desarrollo"
 
 #: app/scripts/login/login.html:6
 msgid "- Testumgebung"
-msgstr "-Test environment"
+msgstr "- Entorno de prueba"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
-msgstr "Cancel"
+msgstr "Cancelar"
 
 #: app/index.html:74
 msgid "Abmelden"
-msgstr "Log out"
+msgstr "Cerrar sesión"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:106
 msgid "Abo"
-msgstr "Subscription"
+msgstr "Subscripción"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:74
 msgid "Abo:"
-msgstr "Subscription:"
+msgstr "Subscripción:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
 msgid "Abwesenheit erfassen"
-msgstr "No records"
+msgstr "Sin registro"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
 msgid "Abwesenheiten"
-msgstr "Absences"
+msgstr "Ausencias"
 
 #: app/scripts/login/change_password.html:11
 msgid "Aktuelles Passwort"
-msgstr "Current password"
+msgstr "Contraseña actual"
 
 #: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
 msgid "Alle"
-msgstr "All"
+msgstr "Todos"
 
 #: app/scripts/login/login.html:74
 #: app/scripts/login/login.html:91
 msgid "Anmelden"
-msgstr "Log in"
+msgstr "Conectarse"
 
 #: app/scripts/login/login.html:5
 msgid "Anmeldung"
-msgstr "Log-in"
+msgstr "Acceso"
 
 #: app/scripts/login/login.controller.js:139
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr "An email was send with the required information to modify the email password."
-
-#: app/scripts/login/change_password.html:11
-msgid "Aktuelles Passwort"
-msgstr ""
-
-#: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
-msgid "Alle"
-msgstr ""
-
-#: app/scripts/login/login.html:74
-#: app/scripts/login/login.html:91
-msgid "Anmelden"
-msgstr ""
-
-#: app/scripts/login/login.html:5
-msgid "Anmeldung"
-msgstr ""
-
-#: app/scripts/login/login.controller.js:139
-msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr ""
+msgstr "Te hemos enviado un correo electrónico con la información necesaria para modificar tu contraseña."
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Anzahl Lieferungen"
-msgstr "Number of deliveries"
+msgstr "Número de entregas"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:8
 msgid "Anzahl Personen"
-msgstr "Number of persons"
+msgstr "Número de personas"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:127
 msgid "Arbeitsangebot erfolgreich gelöscht."
-msgstr "Work assignment successfully deleted."
+msgstr "Colaboración borrada."
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:133
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
-msgstr "Deletion of work assignment not successful:"
+msgstr "La oferta de colaboración no ha sido borrada:"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:184
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:171
 msgid "Arbeitseinsatz erfolgreich verändert."
-msgstr "Work assignment successfully edited."
+msgstr "Colaboración modificada."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:190
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:177
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
-msgstr "Editing of work assignment not successful:"
+msgstr "La colaboración no ha sido modificada:"
 
 #: app/scripts/login/login.controller.js:78
 msgid "Aufwiedersehen"
-msgstr "See you later!"
-
-#: app/scripts/login/login.controller.js:78
-msgid "Aufwiedersehen"
-msgstr ""
+msgstr "Hasta la vista"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
 msgid "Bei Arbeitsangebot teilnehmen"
-msgstr "Assign to work opportunity"
+msgstr "Participar en esta oferta de colaboración"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
 msgid "Bemerkungen"
-msgstr "Remarks"
+msgstr "Comentarios"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:3
 msgid "Bestätigung"
-msgstr "Confirmation"
-
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:3
-msgid "Bestätigung"
-msgstr ""
+msgstr "Confirmación"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:103
 #: app/scripts/rechnungen/list/rechnungenlist.html:46
 msgid "Betrag"
-msgstr "Amount"
+msgstr "Monto"
 
 #: app/scripts/app.js:111
 msgid "Britisches Pfund"
-msgstr "UK Pound"
+msgstr "Libra esterlina"
 
 #: app/scripts/app.js:96
 msgid "Bu."
-msgstr "Bunch"
+msgstr "Manojo"
 
 #: app/scripts/app.js:96
 msgid "Bund"
-msgstr "Bunch"
+msgstr "Manojo"
 
 #: app/scripts/app.js:113
 msgid "CAD"
@@ -176,134 +147,106 @@ msgstr "CHF"
 
 #: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
-msgstr "The backend is currently not available. Please visit us later again."
+msgstr "El servidor no está disponible actualmente, por favor, intentelo un poco mas tarde."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
 msgid "Das Einschreiben war nicht erfolgreich:"
-msgstr "Assignment was not successful:"
+msgstr "La inscripción no ha sido posible:"
 
 #: app/scripts/login/login.html:53
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr "The member portal is currently unavailable. We are currently working on some maintenance tasks. We will be back online soon."
+msgstr "El portal de abonado no está actualmente disponible ya que estamos realizando alguna tarea de mantenimiento. En breve, el portal estará disponible de nuevo."
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
 msgid "Das Passwort muss aus mindestens 6 Zeichen bestehen"
-msgstr "Your password must contain at least 6 characters"
+msgstr "La contraseña debe tener al menos 6 caracteres"
 
 #: app/scripts/login/change_password.html:22
 #: app/scripts/login/zugangaktivieren.html:16
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
-msgstr "The password must contain at least an upper - and lowercase letters, as well as a numeric value, or symbol"
+msgstr "La contraseña debe contener letras minusculas y mayusculas así como al menos un número o caracter especial"
 
 #: app/scripts/login/login.controller.js:126
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
-msgstr "The password has been set successfully. You can log in now."
-
-#: app/scripts/login/login.html:53
-msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr ""
-
-#: app/scripts/login/change_password.html:21
-#: app/scripts/login/zugangaktivieren.html:15
-msgid "Das Passwort muss aus mindestens 6 Zeichen bestehen"
-msgstr ""
-
-#: app/scripts/login/change_password.html:22
-#: app/scripts/login/zugangaktivieren.html:16
-msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
-msgstr ""
-
-#: app/scripts/login/login.controller.js:126
-msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
-msgstr ""
+msgstr "La contraseña ha sido inicializada. Ahora puedes conectarte con el nombre de usuario y la contraseña."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
-msgstr "Date"
+msgstr "Fecha"
 
 #: app/scripts/dashboard/dashboard.html:9
 msgid "Deine Abos"
-msgstr "Your subscriptions"
+msgstr "Tus abonos"
 
 #: app/scripts/dashboard/dashboard.html:27
 msgid "Deine Arbeitseinsätze"
-msgstr "Your assignments"
+msgstr "Tus días y horas de trabajo"
 
 #: app/scripts/dashboard/dashboard.html:17
 msgid "Deine Rechnungen"
-msgstr "Your invoices"
+msgstr "Tus facturas"
 
 #: app/scripts/abos/list/aboslist.html:10
 msgid "Depot:"
-msgstr "Pick-up:"
+msgstr "Punto de recogida:"
 
 #: app/scripts/dashboard/dashboard.html:15
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
-msgstr "The invoice status is updated periodically by the administration. A paid invoice can appear so as unpaid."
+msgstr "El estado de una factura está actualizada periódicamente por la administración. Por lo tanto, una factura pagada puede aparecer como no pagada."
 
 #: app/scripts/login/forbidden.html:6
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
-msgstr "Denied access."
+msgstr "El acceso ha sido denegado. Contacta a la persona encargada de la gestión de tu grupo de consumo."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
-msgstr "Current basket"
+msgstr "La cesta actual"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:5
 msgid "Der nächste Korb"
-msgstr "Next basket"
+msgstr "La siguiente cesta"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "Details werden geladen..."
-msgstr "Loading details..."
+msgstr "Cargando los detalles..."
 
 #: app/scripts/login/login.html:18
 #: app/scripts/login/login.html:29
 #: app/scripts/login/login.html:42
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
-msgstr "The data in the system are sporadically reset to their default values."
+msgstr "Los datos se reinicializan periódicamente."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:50
 msgid "Die früheren Körbe"
-msgstr "Previous baskets"
+msgstr "Las cestas anteriores"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
-msgstr "The page cannot be found"
+msgstr "¡La página solicitada no ha sido encontrada!"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
-msgstr "You have no subscribed work assignments."
+msgstr "No se ha realizado ninguna inscripción."
 
 #: app/scripts/login/login.html:68
 msgid "E-Mail Adresse"
-msgstr "E-mail address"
+msgstr "Dirección de correo electrónico"
 
 #: app/scripts/login/login.html:15
 #: app/scripts/login/login.html:26
 #: app/scripts/login/login.html:38
 msgid "E-Mail:"
-msgstr "E-mail:"
-
-#: app/scripts/login/login.html:68
-msgid "E-Mail Adresse"
-msgstr ""
-
-#: app/scripts/login/login.html:15
-#: app/scripts/login/login.html:26
-#: app/scripts/login/login.html:38
-msgid "E-Mail:"
-msgstr ""
+msgstr "Correo electrónico:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:60
 msgid "ESR-Nr."
-msgstr ""
+msgstr "Nº ESR"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:59
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
-msgstr "Copy ESR-number to clipboard (for use in payment systems)"
+msgstr "Copiar el número ESR al portapapeles (para utilizarlo en el sistema de pago)"
 
 #: app/scripts/app.js:109
 msgid "EUR"
@@ -311,15 +254,7 @@ msgstr "EUR"
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
-msgstr "Change own password"
-
-#: app/scripts/app.js:109
-msgid "EUR"
-msgstr ""
-
-#: app/scripts/login/change_password.html:5
-msgid "Eigenes Passwort wechseln"
-msgstr ""
+msgstr "Cambiar la contraseña"
 
 #: app/messages.html:2
 #: app/scripts/login/change_password.html:20
@@ -327,32 +262,32 @@ msgstr ""
 #: app/scripts/login/zugangaktivieren.html:14
 #: app/scripts/login/zugangaktivieren.html:29
 msgid "Eingabe erforderlich"
-msgstr "Input required"
+msgstr "Campo obligatorio"
 
 #: app/messages.html:6
 msgid "Eingabe stimmt nicht übereint"
-msgstr "Input doesn't match"
+msgstr "Las contraseñas no coinciden"
 
 #: app/messages.html:3
 msgid "Eingabe zu kurz"
-msgstr "Input too short"
+msgstr "Entrada muy corta"
 
 #: app/messages.html:4
 msgid "Eingabe zu lang"
-msgstr "Input too long"
+msgstr "Entrada muy larga"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:29
 #: app/scripts/abos/list/lieferungen/lieferungen.html:78
 msgid "Einheit"
-msgstr "Unit"
+msgstr "Unidad"
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
-msgstr "E-mail Address"
+msgstr "Dirección de correo electrónico"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
-msgstr "Successfully subscribed to work assignment"
+msgstr "Inscripción realizada"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
@@ -360,23 +295,23 @@ msgstr "Error 404"
 
 #: app/scripts/app.js:151
 msgid "Error:"
-msgstr ""
+msgstr "Error:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:16
 msgid "Es liegen noch keine Rechnungen vor."
-msgstr "There are no invoices yet."
+msgstr "Todavía no hay facturas."
 
 #: app/scripts/login/login.html:84
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
-msgstr "An access code was sent to your email address"
+msgstr "Se le ha enviado un código de acceso a su dirección de correo electrónico"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
-msgstr "Still no baskets of this type have been scheduled or delivered."
+msgstr "Todavía no hay cestas de este tipo que hayan sido programadas o entregadas."
 
 #: app/scripts/open/lastlieferplanungen.html:7
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
-msgstr "Still no delivery planning have been completed."
+msgstr "Ninguna planificación de la distribución ha sido concluida."
 
 #: app/scripts/app.js:109
 msgid "Euro"
@@ -384,31 +319,31 @@ msgstr "Euro"
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
-msgstr "Incorrect email address"
+msgstr "Dirección de correo electrónico incorrecta"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Fällig"
-msgstr "Due"
+msgstr "A pagar hasta"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:40
 msgid "Fällig am"
-msgstr "Due date"
+msgstr "Fecha límite"
 
 #: app/scripts/login/login.html:80
 msgid "Für das Testen der Administrationsumgebung, bitte hier klicken!"
-msgstr "For testing of the administration portal, click here!"
+msgstr "Para probar el portal de admistración, ir aquí"
 
 #: app/scripts/login/login.html:41
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
-msgstr "To access the OpenOlitor administration portal, use the link on the bottom right."
+msgstr "Para acceder al espacio del administrador en OpenOlitor, clicar en el enlace que se encuentra abajo a la derecha."
 
 #: app/scripts/login/login.html:33
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
-msgstr "Registration is required for access to OpenOlitor"
+msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 
 #: app/scripts/login/login.html:10
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
-msgstr "Registration is required for access to OpenOlitor"
+msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 
 #: app/scripts/app.js:111
 msgid "GBP"
@@ -416,235 +351,217 @@ msgstr "GBP"
 
 #: app/scripts/app.js:97
 msgid "Gramm"
-msgstr "Grams"
+msgstr "Gramos"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
-msgstr "Content of the basket"
+msgstr "Contenido de las cestas"
 
 #: app/scripts/app.js:113
 msgid "Kanadischer Dollar"
-msgstr "Canadian Dollar"
+msgstr "Dolar Canadiense"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:33
 msgid "Kategorien"
-msgstr "Categories"
+msgstr "Categorías"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:7
 msgid "Keine Arbeitsangebote."
-msgstr "No work opportunities."
+msgstr "Ninguna oferta de colaboración."
 
 #: app/scripts/app.js:98
 msgid "Kilogramm"
-msgstr "Kilograms"
+msgstr "Kilogramos"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:7
 msgid "Konto für Einzahlungen:"
-msgstr "Payment account:"
+msgstr "Cuenta de pago:"
 
 #: app/scripts/abos/list/aboslist.html:58
 msgid "Laufzeit:"
-msgstr "Contract period:"
+msgstr "Duración del contrato:"
 
 #: app/scripts/abos/list/aboslist.html:42
 msgid "Lieferrhythmus:"
-msgstr "Delivery frequency:"
+msgstr "Ciclo de entrega:"
 
 #: app/scripts/abos/list/aboslist.html:34
 msgid "Liefertag:"
-msgstr "Delivery day:"
+msgstr "Día de entrega:"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Lieferung"
-msgstr "Delivery"
+msgstr "Entrega"
 
 #: app/scripts/app.js:100
 msgid "Liter"
-msgstr "Liter"
+msgstr "Litro"
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
-msgstr "Login administration"
+msgstr "Administración de inicio de sesión"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:26
 #: app/scripts/abos/list/lieferungen/lieferungen.html:75
 msgid "Menge"
-msgstr "Quantity"
+msgstr "Cantidad"
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
-msgstr "New password"
+msgstr "Nueva contraseña"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr "Ok"
+msgstr "Vale"
 
 #: app/index.html:56
 msgid "OpenOlitor Mitgliederportal:"
-msgstr "OpenOlitor Member Portal:"
+msgstr "Portal de abonado a OpenOlitor:"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
 msgid "Ort"
-msgstr "City"
+msgstr "Municipio"
 
 #: app/scripts/login/login.html:71
 #: app/scripts/login/zugangaktivieren.html:11
 msgid "Passwort"
-msgstr "Password"
+msgstr "Contraseña"
 
 #: app/scripts/login/zugangaktivieren.html:35
 msgid "Passwort setzen"
-msgstr "Define password"
+msgstr "Definir una contraseña"
 
 #: app/scripts/login/zugangaktivieren.html:5
 msgid "Passwort setzen und Zugang aktivieren"
-msgstr "Reset password and enable access"
+msgstr "Restablecer contraseña y permitir el acceso"
 
 #: app/scripts/login/login.html:77
 #: app/scripts/login/passwordreset.html:5
 msgid "Passwort vergessen?"
-msgstr "Forgot your password?"
-
-#: app/scripts/login/login.html:71
-#: app/scripts/login/zugangaktivieren.html:11
-msgid "Passwort"
-msgstr ""
-
-#: app/scripts/login/zugangaktivieren.html:35
-msgid "Passwort setzen"
-msgstr ""
-
-#: app/scripts/login/zugangaktivieren.html:5
-msgid "Passwort setzen und Zugang aktivieren"
-msgstr ""
-
-#: app/scripts/login/login.html:77
-#: app/scripts/login/passwordreset.html:5
-msgid "Passwort vergessen?"
-msgstr ""
+msgstr "¿Has olvidado tu contraseña?"
 
 #: app/index.html:73
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
-msgstr "Change password"
+msgstr "Cambiar la contraseña"
 
 #: app/scripts/login/change_password.html:32
 #: app/scripts/login/zugangaktivieren.html:26
 msgid "Passwort wiederholen"
-msgstr "Confirm password"
+msgstr "Confirma la contraseña"
 
 #: app/scripts/login/login.controller.js:110
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
-msgstr "The password has been changed successfully, you will be automatically logged out."
+msgstr "La contraseña ha sido modificiada y te redireccionaremos directamente a tu cuenta."
 
 #: app/scripts/login/login.controller.js:117
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
-msgstr "The password was successfully modified. Please, use your new credentials to login."
+msgstr "La contraseña ha sido modificada. Conectate con tu nueva contraseña."
 
 #: app/scripts/login/passwordreset.html:17
 msgid "Passwort zurücksetzen"
-msgstr "Reset password"
+msgstr "Restablecer contraseña"
 
 #: app/scripts/login/login.html:16
 #: app/scripts/login/login.html:27
 #: app/scripts/login/login.html:39
 msgid "Passwort:"
-msgstr "Password:"
+msgstr "Contraseña:"
 
 #: app/scripts/login/change_password.html:23
 #: app/scripts/login/change_password.html:36
 #: app/scripts/login/zugangaktivieren.html:17
 #: app/scripts/login/zugangaktivieren.html:30
 msgid "Passworteingabe stimmt nicht übereint"
-msgstr "Password doesn't match"
+msgstr "Las contraseñas no coinciden"
 
 #: app/scripts/login/change_password.html:28
 #: app/scripts/login/zugangaktivieren.html:22
 msgid "Passwortstärke"
-msgstr "Password quality"
+msgstr "Calidad de la contraseña"
 
 #: app/scripts/app.js:101
 msgid "Por."
-msgstr ""
+msgstr "Por."
 
 #: app/scripts/app.js:101
 msgid "Portion"
-msgstr "Portion"
+msgstr "Porción"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:32
 #: app/scripts/abos/list/lieferungen/lieferungen.html:81
 msgid "Preis"
-msgstr "Price"
+msgstr "Precio"
 
 #: app/scripts/abos/list/aboslist.html:50
 msgid "Preis:"
-msgstr "Price:"
+msgstr "Precio:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:23
 #: app/scripts/abos/list/lieferungen/lieferungen.html:72
 msgid "Produkt"
-msgstr "Product"
+msgstr "Producto"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:40
 #: app/scripts/abos/list/lieferungen/lieferungen.html:89
 msgid "Produzent"
-msgstr "Producer"
+msgstr "Productores"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:37
 msgid "Rechnungsdatum"
-msgstr "Invoice date"
+msgstr "Fecha de facturas"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Referenznummer"
-msgstr "Reference No."
+msgstr "Número de referencia"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Referenznummer in Zwischenablage kopieren"
-msgstr "Copy reference number to clipboard"
+msgstr "Copiar el nº de referencia en el portapapeles"
 
 #: app/scripts/app.js:107
 msgid "Schweizer Franken"
-msgstr "Swiss Franc"
+msgstr "Franco suizo"
 
 #: app/scripts/login/login.html:23
 msgid "Sie befinden sich auf dem Lasius Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "You are on the Lasius testing system. You can login as an administrator with the following credentials:"
+msgstr "Estás en el sistema de prueba de Lasius. Te puedes conectar como administrador utilizado la información de identificación siguiente:"
 
 #: app/scripts/login/login.html:35
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
-msgstr "You are on the OpenOlitor testing system. You can login with the following credentials:"
+msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como abonado utilizado la información de identificación siguiente:"
 
 #: app/scripts/login/login.html:12
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "You are on the OpenOlitor testing system. You can login with the following credentials:"
+msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como abonado utilizado la información de identificación siguiente:"
 
 #: app/scripts/app.js:95
 msgid "St."
-msgstr "piece"
+msgstr "Unidad"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:109
 #: app/scripts/rechnungen/list/rechnungenlist.html:55
 msgid "Status"
-msgstr "State"
+msgstr "Estado"
 
 #: app/scripts/app.js:95
 msgid "Stück"
-msgstr "Piece"
+msgstr "Unidad"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
 #: app/scripts/rechnungen/list/rechnungenlist.html:100
 #: app/scripts/rechnungen/list/rechnungenlist.html:43
 msgid "Titel"
-msgstr "Title"
+msgstr "Título"
 
 #: app/scripts/abos/list/aboslist.html:18
 msgid "Tour:"
-msgstr "Tour:"
+msgstr "Recorrido:"
 
 #: app/scripts/app.js:110
 msgid "US Dollar"
-msgstr "US dollar"
+msgstr "Dólar estadounidense"
 
 #: app/scripts/app.js:110
 msgid "USD"
@@ -652,92 +569,76 @@ msgstr "USD"
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr "Maintenance mode! The customer portal is currently unavailable.We will activate it as soon as possible!"
+msgstr "¡estamos realizando tareas de mantenimiento! el portal del abonado está indisponible. Intentalo un poco más tarde!"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
 msgid "Verbindlich Einschreiben"
-msgstr "Binding subscription"
+msgstr "Inscribirse de manera definitiva"
 
 #: app/index.html:92
 msgid "Version:"
-msgstr "Version:"
+msgstr "Versión:"
 
 #: app/scripts/abos/list/aboslist.html:26
 msgid "Vertrieb:"
-msgstr "Distribution:"
+msgstr "Distribución:"
 
 #: app/scripts/abos/list/aboslist.html:61
 msgid "Von"
-msgstr "By"
+msgstr "De"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:101
 msgid "Weitere Körbe anzeigen..."
-msgstr "View more baskets..."
+msgstr "Mostrar más cestas..."
 
 #: app/scripts/open/lastlieferplanungen.html:74
 msgid "Weitere Lieferungen anzeigen..."
-msgstr "View more deliveries..."
+msgstr "Mostrar más entregas..."
 
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
-msgstr "If you forgot your password, you can send an email for reset it from there."
+msgstr "Si has olvidado tu contraseña, aquí puedes enviarte un correo electrónico para reiniciarla."
 
 #: app/scripts/login/login.controller.js:63
 msgid "Willkommen"
-msgstr "Welcome"
+msgstr "¡Bienvenid@!"
 
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
-msgstr "Current work opportunities:"
+msgstr "¿Dónde hay una posibilidad de colaboración?"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:8
 msgid "Wollen Sie fortfahren?"
-msgstr "Do you want to continue?"
-
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:8
-msgid "Wollen Sie fortfahren?"
-msgstr ""
+msgstr "¿Desea continuar?"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
 msgid "Zeitpunkt"
-msgstr "Date & Time"
+msgstr "Hora"
 
 #: app/scripts/login/login.html:88
 msgid "Zugangscode"
-msgstr "Access code"
+msgstr "Código de acceso"
 
 #: app/scripts/login/login.html:94
 msgid "Zugangscode erneut versenden"
-msgstr "Send access code again"
+msgstr "Enviar el código de acceso una vez más"
 
 #: app/scripts/login/forbidden.html:5
 msgid "Zugriff verweigert"
-msgstr "Access denied"
-
-#: app/scripts/login/login.html:88
-msgid "Zugangscode"
-msgstr ""
-
-#: app/scripts/login/login.html:94
-msgid "Zugangscode erneut versenden"
-msgstr ""
-
-#: app/scripts/login/forbidden.html:5
-msgid "Zugriff verweigert"
-msgstr ""
+msgstr "Acceso denegado"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
 msgid "alle"
-msgstr "all"
+msgstr "todos"
 
 #: app/scripts/abos/list/aboslist.html:61
 msgid "bis"
-msgstr "to"
+msgstr "de"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
 msgid "bisher eingeschrieben"
-msgstr "Subscribed work assignments"
+msgstr "Ya inscrito"
 
 #: app/scripts/app.js:97
 msgid "gr"
@@ -745,7 +646,7 @@ msgstr "gr"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:9
 msgid "in Stammdaten nicht definiert"
-msgstr "not defined in the data base"
+msgstr "sin definir en los datos básicos"
 
 #: app/scripts/app.js:99
 msgid "kg"
@@ -757,16 +658,17 @@ msgstr "l"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
 msgid "pendente"
-msgstr "pending"
+msgstr "pendiente"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
-msgstr "on"
+msgstr "del"
 
 #: app/scripts/login/login.html:84
 msgid "zugestellt."
-msgstr "delivered."
+msgstr "entregado."
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
 msgid "{{title | translate}}"
-msgstr ""
+msgstr "{title | translate}"
+
