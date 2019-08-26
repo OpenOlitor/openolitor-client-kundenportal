@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.3.0-SNAPSHOT",
+  "version": "2.4.0-SNAPSHOT",
   "description": "OpenOlitor Client Webapplication",
   "repository": {
     "type": "git",
@@ -52,6 +52,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "load-grunt-tasks": "^3.5.2",
     "phantomjs-prebuilt": "^2.1.14",
+    "openolitor-core": "2.3.11",
     "shelljs": "^0.7.8",
     "time-grunt": "^1.4.0"
   },
