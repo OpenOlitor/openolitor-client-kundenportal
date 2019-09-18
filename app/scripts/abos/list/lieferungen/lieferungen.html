@@ -24,7 +24,7 @@
           class="panel panel-success"
           ng-show="lieferungen && getLastLieferung().lieferplanungBemerkungen"
         >
-          <div class="panel-body" ng-bind-html="getLastLieferung().lieferplanungBemerkungen | unsafe">
+          <div class="panel-body html-content" ng-bind-html="getLastLieferung().lieferplanungBemerkungen | unsafe">
           </div>
         </div>
 
@@ -122,7 +122,7 @@
               class="panel panel-success"
               ng-show="lieferung.lieferplanungBemerkungen"
             >
-              <div class="panel-body" ng-bind-html="lieferung.lieferplanungBemerkungen | unsafe">
+              <div class="panel-body html-content" ng-bind-html="lieferung.lieferplanungBemerkungen | unsafe">
               </div>
             </div>
             <table
