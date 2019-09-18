@@ -21,7 +21,7 @@
               </div>
             </div>
             <div class="col-md-12" ng-if="planung.bemerkungen">
-              <div class="alert alert-warning preformat" role="alert">{{planung.bemerkungen}}</div>
+              <div class="alert alert-warning preformat" role="alert" ng-bind-html="planung.bemerkungen | unsafe"></div>
             </div>
           </div>
           <div class="row section-abodetails">
