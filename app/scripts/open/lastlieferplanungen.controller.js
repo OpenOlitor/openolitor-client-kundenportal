@@ -33,7 +33,7 @@ angular.module('openolitor-kundenportal')
             return planung.bemerkungenPreview;
           } else {
             planung.bemerkungenPreview = true;
-            let bemSplit = planung.bemerkungen.split('<p>');
+            var bemSplit = planung.bemerkungen.split('<p>');
             planung.bemerkungenShort = bemSplit[0] + '<p>' + bemSplit[1];
             return planung.bemerkungenPreview;
           }

@@ -73,7 +73,7 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
               return lieferung.bemerkungenPreview;
             } else {
               lieferung.bemerkungenPreview = true;
-              let bemSplit = lieferung.lieferplanungBemerkungen.split('<p>');
+              var bemSplit = lieferung.lieferplanungBemerkungen.split('<p>');
               lieferung.bemerkungenShort = bemSplit[0] + '<p>' + bemSplit[1];
               return lieferung.bemerkungenPreview;
             }
