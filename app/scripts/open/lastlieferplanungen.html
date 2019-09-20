@@ -20,7 +20,13 @@
                 </h3>
               </div>
             </div>
-            <div class="col-md-12" ng-if="planung.bemerkungen">
+            <div class="col-md-12" ng-if="hasBemerkungenPreview(planung)">
+              <div class="alert alert-warning preformat html-content" role="alert">
+                <span ng-bind-html="planung.bemerkungenShort | unsafe"></span>
+                <button ng-click="toggleBemerkungenPreview(planung)" class="btn btn-info"><span class="fa fa-book"></span> <span translate>Weiterlesen ...</span></button>
+              </div>
+            </div>
+            <div class="col-md-12" ng-if="hasBemerkungenFullview(planung)">
               <div class="alert alert-warning preformat html-content" role="alert" ng-bind-html="planung.bemerkungen | unsafe"></div>
             </div>
           </div>
