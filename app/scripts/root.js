@@ -16,6 +16,8 @@ angular.module('openolitor-kundenportal')
         checkSize();
       });
 
+      $scope.welcomeDisplayed = false;
+
       $scope.currentPathContains = function(pathJunk) {
         return $location.url().indexOf(pathJunk) !== -1;
       };
@@ -118,14 +120,17 @@ angular.module('openolitor-kundenportal')
 
 
       $scope.checkWelcomeMessage = function() {
-        if ($scope.projekt.welcomeMessage2) {
-          dialogService.displayDialogOkAbort(
-            $scope.projekt.welcomeMessage2,
-            function() {},
-            'Mitteilung',
-            true,
-            'Schliessen'
-          );
+        if (!$scope.welcomeDisplayed) {
+          $scope.welcomeDisplayed = true;
+          if ($scope.projekt.welcomeMessage2) {
+            dialogService.displayDialogOkAbort(
+              $scope.projekt.welcomeMessage2,
+              function() {},
+              'Mitteilung',
+              true,
+              'Schliessen'
+            );
+          }
         }
       };
 
