@@ -3,9 +3,9 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .controller('LastLieferplanungenController', ['$scope', 'NgTableParams', 'LastLieferplanungenModel',
+  .controller('LastLieferplanungenController', ['$scope', 'NgTableParams', 'LastLieferplanungenModel', 'lodash',
     'LIEFEREINHEIT',
-    function($scope, NgTableParams, LastLieferplanungenModel, LIEFEREINHEIT) {
+    function($scope, NgTableParams, LastLieferplanungenModel, lodash, LIEFEREINHEIT) {
       $scope.entries = [];
       $scope.shownEntries = 1;
 
@@ -25,6 +25,33 @@ angular.module('openolitor-kundenportal')
 
       $scope.showMore = function() {
         $scope.shownEntries = $scope.shownEntries + 2;
+      };
+
+      $scope.hasBemerkungenPreview = function(planung) {
+        if(planung && planung.bemerkungen && planung.bemerkungen.length > 0 && planung.bemerkungen.split('<p>').length > 3) {
+          if(!angular.isUndefined(planung.bemerkungenPreview)) {
+            return planung.bemerkungenPreview;
+          } else {
+            planung.bemerkungenPreview = true;
+            var bemSplit = planung.bemerkungen.split('<p>');
+            planung.bemerkungenShort = bemSplit[0] + '<p>' + bemSplit[1];
+            return planung.bemerkungenPreview;
+          }
+        } else {
+          return false;
+        }
+      };
+
+      $scope.hasBemerkungenFullview = function(planung) {
+        if(planung && planung.bemerkungen && planung.bemerkungen.length > 0 && planung.bemerkungen.split('<p>').length > 3) {
+          return !planung.bemerkungenPreview;
+        } else {
+          return !angular.isUndefined(planung.bemerkungen);
+        }
+      };
+
+      $scope.toggleBemerkungenPreview = function(planung) {
+        planung.bemerkungenPreview = !planung.bemerkungenPreview;
       };
 
       $scope.hasCommonLieferdatum = function(planung) {

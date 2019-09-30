@@ -2,14 +2,14 @@
   <div class="panel-heading clearfix">
     <h3 class="panel-title">
       <span class="navbar-brand">
-        <span ng-if="getLastLieferung().datum > today" translate
+        <span ng-if="lieferungen[0] && lieferungen[0].datum > today" translate
           >Der nächste Korb</span
         >
-        <span ng-if="getLastLieferung().datum <= today" translate
+        <span ng-if="lieferungen[0] && lieferungen[0].datum <= today" translate
           >Der aktuelle Korb</span
         >
         <span ng-show="lieferungen"
-          >vom {{getLastLieferung().datum | date}}</span
+          >vom {{lieferungen[0].datum | date}}</span
         >
       </span>
     </h3>
@@ -22,16 +22,16 @@
         </div>
         <div
           class="panel panel-success"
-          ng-show="lieferungen && getLastLieferung().lieferplanungBemerkungen"
+          ng-if="lieferungen[0].lieferplanungBemerkungen"
         >
-          <div class="panel-body">
-            {{getLastLieferung().lieferplanungBemerkungen}}
-          </div>
+          <div class="panel-body html-content" ng-if="hasBemerkungenPreview(lieferungen[0])" ng-bind-html="lieferungen[0].bemerkungenShort | unsafe"></div>
+          <div class="panel-body html-content" ng-if="hasBemerkungenFullview(lieferungen[0])" ng-bind-html="lieferungen[0].lieferplanungBemerkungen | unsafe"></div>
+          <div class="panel-footer" ng-if="hasBemerkungenPreview(lieferungen[0])" ng-click="toggleBemerkungenPreview(lieferungen[0])"><span class="fa fa-book"></span> <span translate>Weiterlesen ...</span></div>
         </div>
 
         <table
           ng-show="lieferungen"
-          ng-table="getLastLieferung().lieferungenTableParams"
+          ng-table="lieferungen[0].lieferungenTableParams"
           class="table table-striped"
           show-filter="false"
           template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
@@ -94,7 +94,7 @@
   >
     <div class="panel-group" role="tablist" aria-multiselectable="true">
       <div
-        ng-repeat="lieferung in lieferungen| dateRange:abo.start:abo.ende:'datum'|limitTo:maxKoerbe"
+        ng-repeat="lieferung in lieferungen|limitTo:maxKoerbe"
         ng-if="$index > 0"
         class="panel panel-default"
       >
@@ -121,11 +121,12 @@
           <div class="panel-body">
             <div
               class="panel panel-success"
-              ng-show="lieferung.lieferplanungBemerkungen"
+              ng-if="lieferung.lieferplanungBemerkungen"
             >
-              <div class="panel-body">
-                {{lieferung.lieferplanungBemerkungen}}
+              <div class="panel-body html-content" ng-if="hasBemerkungenPreview(lieferung)" ng-bind-html="lieferung.bemerkungenShort | unsafe"></div>
+              <div class="panel-body html-content" ng-if="hasBemerkungenFullview(lieferung)" ng-bind-html="lieferung.lieferplanungBemerkungen | unsafe"></div>
               </div>
+              <div class="panel-footer" ng-if="hasBemerkungenPreview(lieferung)" ng-click="toggleBemerkungenPreview(lieferung)"><span class="fa fa-book"></span> <span translate>Weiterlesen ...</span></div>
             </div>
             <table
               ng-show="lieferungen"
