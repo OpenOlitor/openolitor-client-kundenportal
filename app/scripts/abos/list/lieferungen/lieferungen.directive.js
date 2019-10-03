@@ -68,13 +68,13 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
         };
 
         $scope.hasBemerkungenPreview = function(lieferung) {
-          if(!angular.isUndefined(lieferung) && lieferung.lieferplanungBemerkungen && lieferung.lieferplanungBemerkungen.length > 0 && lieferung.lieferplanungBemerkungen.split('<p>').length > 3) {
+          if(!angular.isUndefined(lieferung) && lieferung.lieferplanungBemerkungen && lieferung.lieferplanungBemerkungen.length > 0 && lieferung.lieferplanungBemerkungen.split('<div>').length > 3) {
             if(!angular.isUndefined(lieferung.bemerkungenPreview)) {
               return lieferung.bemerkungenPreview;
             } else {
               lieferung.bemerkungenPreview = true;
-              var bemSplit = lieferung.lieferplanungBemerkungen.split('<p>');
-              lieferung.bemerkungenShort = bemSplit[0] + '<p>' + bemSplit[1];
+              var bemSplit = lieferung.lieferplanungBemerkungen.split('<div>');
+              lieferung.bemerkungenShort = bemSplit[0] + '<div>' + bemSplit[1];
               return lieferung.bemerkungenPreview;
             }
           } else {
@@ -83,7 +83,7 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
         };
 
         $scope.hasBemerkungenFullview = function(lieferung) {
-          if(!angular.isUndefined(lieferung) && lieferung.lieferplanungBemerkungen && lieferung.lieferplanungBemerkungen.length > 0 && lieferung.lieferplanungBemerkungen.split('<p>').length > 3) {
+          if(!angular.isUndefined(lieferung) && lieferung.lieferplanungBemerkungen && lieferung.lieferplanungBemerkungen.length > 0 && lieferung.lieferplanungBemerkungen.split('<div>').length > 3) {
             return !lieferung.bemerkungenPreview;
           } else {
             return !angular.isUndefined(lieferung) && !angular.isUndefined(lieferung.lieferplanungBemerkungen);

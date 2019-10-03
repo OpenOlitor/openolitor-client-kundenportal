@@ -28,13 +28,13 @@ angular.module('openolitor-kundenportal')
       };
 
       $scope.hasBemerkungenPreview = function(planung) {
-        if(planung && planung.bemerkungen && planung.bemerkungen.length > 0 && planung.bemerkungen.split('<p>').length > 3) {
+        if(planung && planung.bemerkungen && planung.bemerkungen.length > 0 && planung.bemerkungen.split('<div>').length > 3) {
           if(!angular.isUndefined(planung.bemerkungenPreview)) {
             return planung.bemerkungenPreview;
           } else {
             planung.bemerkungenPreview = true;
-            var bemSplit = planung.bemerkungen.split('<p>');
-            planung.bemerkungenShort = bemSplit[0] + '<p>' + bemSplit[1];
+            var bemSplit = planung.bemerkungen.split('<div>');
+            planung.bemerkungenShort = bemSplit[0] + '<div>' + bemSplit[1];
             return planung.bemerkungenPreview;
           }
         } else {
@@ -43,7 +43,7 @@ angular.module('openolitor-kundenportal')
       };
 
       $scope.hasBemerkungenFullview = function(planung) {
-        if(planung && planung.bemerkungen && planung.bemerkungen.length > 0 && planung.bemerkungen.split('<p>').length > 3) {
+        if(planung && planung.bemerkungen && planung.bemerkungen.length > 0 && planung.bemerkungen.split('<div>').length > 3) {
           return !planung.bemerkungenPreview;
         } else {
           return !angular.isUndefined(planung.bemerkungen);
