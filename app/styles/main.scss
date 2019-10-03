@@ -452,6 +452,10 @@ footer, .footer {
   padding: 10px;
 }
 
+.html-content img {
+  max-width: 100%;
+}
+
 @media (max-width: 940px) {
   .adsbygoogle {
     float: none !important;
