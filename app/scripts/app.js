@@ -194,13 +194,14 @@ angular
     });
   }])
   .filter('unsafe', [
-    '$sce',
-    function($sce) {
-      return function(value) {
-        return $sce.trustAsHtml(value);
-      };
-    }
-  ])
+        '$sce',
+        function($sce) {
+            return function(value) {
+                return $sce.trustAsHtml(value);
+            };
+        }
+    ])
+
   .filter('dateRange', function(moment) {
     function isMidnight(mom) {
       // The moment at midnight

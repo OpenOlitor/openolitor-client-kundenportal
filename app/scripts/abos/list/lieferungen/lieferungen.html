@@ -2,14 +2,14 @@
   <div class="panel-heading clearfix">
     <h3 class="panel-title">
       <span class="navbar-brand">
-        <span ng-if="getLastLieferung().datum > today" translate
+        <span ng-if="lieferungen[0] && lieferungen[0].datum > today" translate
           >Der nächste Korb</span
         >
-        <span ng-if="getLastLieferung().datum <= today" translate
+        <span ng-if="lieferungen[0] && lieferungen[0].datum <= today" translate
           >Der aktuelle Korb</span
         >
         <span ng-show="lieferungen"
-          >vom {{getLastLieferung().datum | date}}</span
+          >vom {{lieferungen[0].datum | date}}</span
         >
       </span>
     </h3>
@@ -22,34 +22,41 @@
         </div>
         <div
           class="panel panel-success"
-          ng-show="lieferungen && getLastLieferung().lieferplanungBemerkungen"
+          ng-if="lieferungen[0].lieferplanungBemerkungen"
         >
-          <div
-            class="panel-body html-content"
-            ng-bind-html="getLastLieferung().lieferplanungBemerkungen | unsafe"
-          ></div>
+          <div class="panel-body html-content" ng-if="hasBemerkungenPreview(lieferungen[0])" ng-bind-html="lieferungen[0].bemerkungenShort | unsafe"></div>
+          <div class="panel-body html-content" ng-if="hasBemerkungenFullview(lieferungen[0])" ng-bind-html="lieferungen[0].lieferplanungBemerkungen | unsafe"></div>
+          <div class="panel-footer" ng-if="hasBemerkungenPreview(lieferungen[0])" ng-click="toggleBemerkungenPreview(lieferungen[0])"><span class="fa fa-book"></span> <span translate>Weiterlesen ...</span></div>
+        </div>
 
-          <table
-            ng-show="lieferungen"
-            ng-table="getLastLieferung().lieferungenTableParams"
-            class="table table-striped"
-            show-filter="false"
-            template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
-          >
-            <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
-              <td data-title="'Produkt'|translate" class="lieferung-produkt">
-                {{korbprodukt.produktBeschrieb}}
-              </td>
-              <td data-title="'Menge'|translate" class="lieferung-menge">
-                {{korbprodukt.menge}}
-              </td>
-              <td data-title="'Einheit'|translate" class="lieferung-eh">
-                {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
-              </td>
-              <td
-                data-title="'Preis'|translate"
-                ng-if="projekt.preiseSichtbar"
-                class="lieferung-preis"
+        <table
+          ng-show="lieferungen"
+          ng-table="lieferungen[0].lieferungenTableParams"
+          class="table table-striped"
+          show-filter="false"
+          template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
+        >
+          <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
+            <td data-title="'Produkt'|translate" class="lieferung-produkt">
+              {{korbprodukt.produktBeschrieb}}
+            </td>
+            <td data-title="'Menge'|translate" class="lieferung-menge">
+              {{korbprodukt.menge}}
+            </td>
+            <td data-title="'Einheit'|translate" class="lieferung-eh">
+              {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
+            </td>
+            <td
+              data-title="'Preis'|translate"
+              ng-if="projekt.preiseSichtbar"
+              class="lieferung-preis"
+            >
+              <span ng-show="korbprodukt.menge">
+                {{calculatePreis(korbprodukt)| ooCHF}}
+              </span>
+              <span
+                ng-hide="korbprodukt.menge"
+                class="base-preis lieferung-preiseh"
               >
                 <span ng-show="korbprodukt.menge">
                   {{calculatePreis(korbprodukt)| ooCHF}}
@@ -77,13 +84,21 @@
       ng-show="lieferungen && lieferungen.length > 1"
       id="archivTitle"
     >
-      <span
-        role="button"
-        data-toggle="collapse"
-        data-parent="#archivTitle"
-        data-target="#archiv{{rand}}"
-        aria-expanded="true"
-        aria-controls="archiv{{rand}}"
+      <h3 class="panel-title">
+        <span class="navbar-brand" translate>Die früheren Körbe</span>
+      </h3>
+    </span>
+  </div>
+  <div
+    class="panel-body panel-collapse collapse"
+    ng-show="lieferungen && lieferungen.length > 1"
+    id="archiv{{rand}}"
+  >
+    <div class="panel-group" role="tablist" aria-multiselectable="true">
+      <div
+        ng-repeat="lieferung in lieferungen|limitTo:maxKoerbe"
+        ng-if="$index > 0"
+        class="panel panel-default"
       >
         <h3 class="panel-title">
           <span class="navbar-brand" translate>Die früheren Körbe</span>
@@ -101,71 +116,15 @@
           ng-if="$index > 0"
           class="panel panel-default"
         >
-          <div class="panel-heading" role="tab" id="heading{{lieferung.id}}">
-            <h4 class="panel-title">
-              <span
-                role="button"
-                data-toggle="collapse"
-                data-parent="#archiv{{rand}}"
-                data-target="#collapse{{lieferung.id}}"
-                aria-expanded="true"
-                aria-controls="collapse{{lieferung.id}}"
-              >
-                Korb vom {{lieferung.datum | date}}
-              </span>
-            </h4>
-          </div>
-          <div
-            id="collapse{{lieferung.id}}"
-            class="panel-collapse collapse"
-            role="tabpanel"
-            aria-labelledby="heading{{lieferung.id}}"
-          >
-            <div class="panel-body">
-              <div
-                class="panel panel-success"
-                ng-show="lieferung.lieferplanungBemerkungen"
-              >
-                <div
-                  class="panel-body html-content"
-                  ng-bind-html="lieferung.lieferplanungBemerkungen | unsafe"
-                ></div>
-                <table
-                  ng-show="lieferungen"
-                  ng-table="lieferung.lieferungenTableParams"
-                  class="table table-striped"
-                  show-filter="false"
-                  template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html"
-                >
-                  <tr
-                    ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'"
-                  >
-                    <td data-title="'Produkt'|translate">
-                      {{korbprodukt.produktBeschrieb}}
-                    </td>
-                    <td data-title="'Menge'|translate">
-                      {{korbprodukt.menge}}
-                    </td>
-                    <td data-title="'Einheit'|translate">
-                      {{liefereinheiten[korbprodukt.einheit.toUpperCase()].label.short|translate}}
-                    </td>
-                    <td
-                      data-title="'Preis'|translate"
-                      ng-if="projekt.preiseSichtbar"
-                    >
-                      <span ng-show="korbprodukt.menge">
-                        {{calculatePreis(korbprodukt)| ooCHF}}
-                      </span>
-                      <span ng-hide="korbprodukt.menge" class="base-preis">
-                        {{korbprodukt.preisEinheit | ooCHF}}
-                      </span>
-                    </td>
-                    <td data-title="'Produzent'|translate">
-                      {{korbprodukt.produzentKurzzeichen}}
-                    </td>
-                  </tr>
-                </table>
+          <div class="panel-body">
+            <div
+              class="panel panel-success"
+              ng-if="lieferung.lieferplanungBemerkungen"
+            >
+              <div class="panel-body html-content" ng-if="hasBemerkungenPreview(lieferung)" ng-bind-html="lieferung.bemerkungenShort | unsafe"></div>
+              <div class="panel-body html-content" ng-if="hasBemerkungenFullview(lieferung)" ng-bind-html="lieferung.lieferplanungBemerkungen | unsafe"></div>
               </div>
+              <div class="panel-footer" ng-if="hasBemerkungenPreview(lieferung)" ng-click="toggleBemerkungenPreview(lieferung)"><span class="fa fa-book"></span> <span translate>Weiterlesen ...</span></div>
             </div>
           </div>
           <div

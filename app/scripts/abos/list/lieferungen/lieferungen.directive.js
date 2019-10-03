@@ -23,14 +23,6 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
           return $scope.loading || $scope.template.creating > 0;
         };
 
-        $scope.getLastLieferung = function() {
-          var filtered = $filter('dateRange')($scope.lieferungen, $scope.abo.start, $scope.abo.ende, 'datum');
-          if(filtered !== undefined && filtered.length > 0) {
-            return filtered[0];
-          }
-          return {};
-        };
-
         var createLieferungenTableParams = function() {
           angular.forEach($scope.lieferungen, function(lieferung) {
             if (!lieferung.lieferungenTableParams) {
@@ -56,7 +48,8 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
         var unwatch = $scope.$watch('abo', function(abo) {
           if (abo) {
             LieferungenListModel.query({abotypId: abo.abotypId, vertriebId: abo.vertriebId}, function(data) {
-              $scope.lieferungen = data; 
+              var filtered = $filter('dateRange')(data, $scope.abo.start, $scope.abo.ende, 'datum');
+              $scope.lieferungen = filtered;
               createLieferungenTableParams();
             });
           }
@@ -72,6 +65,33 @@ angular.module('openolitor-kundenportal').directive('ooAboKorbinhalt', [
 
         $scope.showMore = function() {
           $scope.maxKoerbe = $scope.maxKoerbe + 5;
+        };
+
+        $scope.hasBemerkungenPreview = function(lieferung) {
+          if(!angular.isUndefined(lieferung) && lieferung.lieferplanungBemerkungen && lieferung.lieferplanungBemerkungen.length > 0 && lieferung.lieferplanungBemerkungen.split('<div>').length > 3) {
+            if(!angular.isUndefined(lieferung.bemerkungenPreview)) {
+              return lieferung.bemerkungenPreview;
+            } else {
+              lieferung.bemerkungenPreview = true;
+              var bemSplit = lieferung.lieferplanungBemerkungen.split('<div>');
+              lieferung.bemerkungenShort = bemSplit[0] + '<div>' + bemSplit[1];
+              return lieferung.bemerkungenPreview;
+            }
+          } else {
+            return false;
+          }
+        };
+
+        $scope.hasBemerkungenFullview = function(lieferung) {
+          if(!angular.isUndefined(lieferung) && lieferung.lieferplanungBemerkungen && lieferung.lieferplanungBemerkungen.length > 0 && lieferung.lieferplanungBemerkungen.split('<div>').length > 3) {
+            return !lieferung.bemerkungenPreview;
+          } else {
+            return !angular.isUndefined(lieferung) && !angular.isUndefined(lieferung.lieferplanungBemerkungen);
+          }
+        };
+
+        $scope.toggleBemerkungenPreview = function(lieferung) {
+          lieferung.bemerkungenPreview = !lieferung.bemerkungenPreview;
         };
 
       }
