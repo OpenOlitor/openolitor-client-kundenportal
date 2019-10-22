@@ -14,7 +14,7 @@ angular.module('openolitor-kundenportal').factory('dialogService', [
         var modalInstance = $uibModal.open({
           animation: true,
           templateUrl:
-            'scripts/common/oo-dialogokabort.directive.modal.html',
+            'scripts/common/components/oo-dialogokabort.directive.modal.html',
           controller: 'ooDialogOkAbortModalInstanceCtrl',
           resolve: {
             message: function() {
