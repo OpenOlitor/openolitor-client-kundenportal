@@ -40,7 +40,7 @@
     "angular-messages": "~1.7.8",
     "angular-sortable-view": "~0.0.15",
     "angular-css-injector": "^1.4.0",
-    "airbrake-js-client": "npm:@airbrake/browser",
+    "airbrake-js": "npm:airbrake-js#0.5.9",
     "ngclipboard": "^1.1.1",
     "ng-iban": "^1.2.0",
     "angular-piwik": "^1.3.2",

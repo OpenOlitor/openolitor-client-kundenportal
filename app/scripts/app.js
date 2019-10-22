@@ -133,22 +133,28 @@ angular
       }
     ]);
   }])
-  .factory('errbitErrorInterceptor', function ($log, ENV, VERSION, AIRBREAK_API_KEY, AIRBREAK_URL) {
-    var airbrake = new Notifier({
-      projectid: 1,       // Airbrake project id
-      host: AIRBREAK_URL,
-      projectkey: AIRBREAK_API_KEY
-    });
-
-    airbrake.addFilter(function (notice) {
-      notice.context.environment = ENV;
-      notice.context.version = VERSION;
-      return notice;
-    });
-
-    return function (exception, cause) {
-      $log.error(exception);
-      airbrake.notify({error: exception, params: {angular_cause: cause}});
+  .factory('errbitErrorInterceptor', function($q, ENV, VERSION, AIRBREAK_API_KEY, AIRBREAK_URL) {
+    return {
+      responseError: function(rejection) {
+        /*jshint -W117 */
+        var airbrake = new airbrakeJs.Client({
+          projectId: 1,
+          host: AIRBREAK_URL,
+          projectKey: AIRBREAK_API_KEY
+        });
+        /*jshint +W117 */
+        airbrake.addFilter(function(notice) {
+          notice.context.environment = ENV;
+          notice.context.version = VERSION;
+          return notice;
+        });
+        var message = gettext('Error: ');
+        if (!angular.isUndefined(rejection.config) && !angular.isUndefined(rejection.config.url)) {
+          message += rejection.config.url;
+        }
+        airbrake.notify(message);
+        return $q.reject(rejection);
+      }
     };
   })
   .factory('msgBus', [
