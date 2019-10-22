@@ -57,6 +57,9 @@
   "overrides": {
     "moment": {
       "main": ["./min/moment-with-locales.min.js"]
+    },
+    "airbrake-js" : {
+      "main": ["./dist/client.min.js"]
     }
   }
 }
