@@ -50,7 +50,7 @@
             <span translate>Preis:</span>
           </div>
           <div class="col-md-4 col-sm-5 col-xs-5">
-              {{projekt.waehrung | translate}} {{abo.abotyp.preis | ooCHF}} / {{abo.abotyp.preiseinheit | translate}}
+              {{projekt.waehrung | translate}} {{(abo.price)?abo.price:abo.abotyp.preis | ooCHF}} / {{abo.abotyp.preiseinheit | translate}}
           </div>
         </div>
         <div class="row laufzeit">
