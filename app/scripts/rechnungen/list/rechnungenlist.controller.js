@@ -42,6 +42,10 @@ angular.module('openolitor-kundenportal')
         });
       }
 
+      $scope.teilnehmerNummerToKonto = function(teilnehmerNummer) {
+        return( teilnehmerNummer.substring(0,2) + "-" + teilnehmerNummer.substring(2,8).replace(/^0+/, '') + "-" + teilnehmerNummer.substring(8) );
+      }
+
       $scope.downloadRechnung = function(rechnung) {
         rechnung.isDownloading = true;
         FileUtil.downloadGet('kundenportal/rechnungen/' + rechnung.id +
