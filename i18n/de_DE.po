@@ -4,14 +4,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: openolitor\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: openolitor\n"
 "X-Crowdin-Language: de\n"
 "X-Crowdin-File: /consumer-portal/template.pot\n"
-"Last-Translator: al_openolitor\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2019-04-24 06:32\n"
+"PO-Revision-Date: 2020-02-28 10:41\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -78,7 +76,7 @@ msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Anzahl Lieferungen"
-msgstr "Anzahl der Lieferungen"
+msgstr "Anzahl"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:8
 msgid "Anzahl Personen"
@@ -104,11 +102,11 @@ msgstr ""
 
 #: app/scripts/login/login.controller.js:78
 msgid "Aufwiedersehen"
-msgstr ""
+msgstr "Auf Wiedersehen"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
 msgid "Bei Arbeitsangebot teilnehmen"
-msgstr ""
+msgstr "An Arbeitsangebot teilnehmen"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
@@ -155,7 +153,7 @@ msgstr ""
 
 #: app/scripts/login/login.html:53
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr ""
+msgstr "Das Mitgliederportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
@@ -186,7 +184,7 @@ msgstr "Deine Arbeitseinsätze"
 
 #: app/scripts/dashboard/dashboard.html:17
 msgid "Deine Rechnungen"
-msgstr "Deine Rechnungen"
+msgstr "Deine Mitgliedsbieträge"
 
 #: app/scripts/abos/list/aboslist.html:10
 msgid "Depot:"
@@ -202,11 +200,11 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
-msgstr "Der aktuelle Korb"
+msgstr "Der aktuelle Anteil (Änderungen möglich)"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:5
 msgid "Der nächste Korb"
-msgstr "Der nächste Korb"
+msgstr "Der nächste Anteil"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "Details werden geladen..."
@@ -220,7 +218,7 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:50
 msgid "Die früheren Körbe"
-msgstr "Der vorherige Korb"
+msgstr "Der vorherige Anteil"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
@@ -307,7 +305,7 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
-msgstr "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
+msgstr "Es wurden noch keine Anteile dieses Typs geplant oder geliefert."
 
 #: app/scripts/open/lastlieferplanungen.html:7
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
@@ -319,7 +317,7 @@ msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
-msgstr "Fehlerhafte Email Adresse"
+msgstr "Fehlerhafte E-mail Adresse"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:97
 msgid "Fällig"
@@ -355,7 +353,7 @@ msgstr "Gramm"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
-msgstr "Inhalt der Körbe"
+msgstr "Inhalt der Anteile"
 
 #: app/scripts/app.js:113
 msgid "Kanadischer Dollar"
@@ -491,11 +489,11 @@ msgstr "Portion"
 #: app/scripts/abos/list/lieferungen/lieferungen.html:32
 #: app/scripts/abos/list/lieferungen/lieferungen.html:81
 msgid "Preis"
-msgstr "Preis"
+msgstr "Beitrag"
 
 #: app/scripts/abos/list/aboslist.html:50
 msgid "Preis:"
-msgstr "Preis:"
+msgstr "Beitrag:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:23
 #: app/scripts/abos/list/lieferungen/lieferungen.html:72
@@ -509,7 +507,7 @@ msgstr "Erzeuger"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:37
 msgid "Rechnungsdatum"
-msgstr "Rechnungsdatum"
+msgstr "Mitgliedsbeitrag"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Referenznummer"
@@ -569,7 +567,7 @@ msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr ""
+msgstr "Unterhalts-Moduls! Das Mitgliederportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
 msgid "Verbindlich Einschreiben"
@@ -585,11 +583,11 @@ msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:61
 msgid "Von"
-msgstr "Von"
+msgstr "Seit"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:101
 msgid "Weitere Körbe anzeigen..."
-msgstr "Weitere Körbe anzeigen..."
+msgstr "Weitere Anteile anzeigen..."
 
 #: app/scripts/open/lastlieferplanungen.html:74
 msgid "Weitere Lieferungen anzeigen..."
