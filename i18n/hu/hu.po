@@ -2,16 +2,14 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: openolitor\n"
+"Project-Id-Version: openolitor-subscriber-client\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
-"X-Crowdin-Project: openolitor\n"
+"X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Language: hu\n"
-"X-Crowdin-File: /consumer-portal/template.pot\n"
-"Last-Translator: al_openolitor\n"
+"X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: Hungarian\n"
-"Language: hu\n"
-"PO-Revision-Date: 2019-05-09 11:56\n"
+"Language: hu_HU\n"
+"PO-Revision-Date: 2020-03-23 18:38\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -20,7 +18,7 @@ msgstr "#&nbsp;fő."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -47,11 +45,11 @@ msgstr "Előfizetés"
 msgid "Abo:"
 msgstr "Előfizetés:"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
 msgstr "Nincs rekord"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
 msgstr "Távollét"
 
@@ -139,11 +137,11 @@ msgstr "Csokor"
 
 #: app/scripts/app.js:113
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
 #: app/scripts/app.js:107
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -171,7 +169,7 @@ msgstr "A jelszó tartalmazzon legalább egy-egy kis- és nagybetűt, valamint s
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "Sikeresen létrehozott egy jelszót. Most más be tud jelentkezni."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr "Dátum"
@@ -200,7 +198,7 @@ msgstr "A számlák állapotát az adminisztráció csak bizonyos időszakonkén
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr "Hozzáférés megtagadva."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:6
+#: app/scripts/abos/list/lieferungen/lieferungen.html:8
 msgid "Der aktuelle Korb"
 msgstr "Jelenlegi tagság"
 
@@ -218,7 +216,7 @@ msgstr "Részletek betöltése..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "A rendszer adatai időként visszaállnak az alapértelmezett értékekre."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Die früheren Körbe"
 msgstr "Korábbi tagságok"
 
@@ -250,7 +248,7 @@ msgstr "ESR szám másolása a vágólapra (hogy használhassa a pénzügyi modu
 
 #: app/scripts/app.js:109
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -276,8 +274,8 @@ msgstr "Érték túl rövid"
 msgid "Eingabe zu lang"
 msgstr "Érték túl hosszú"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:29
-#: app/scripts/abos/list/lieferungen/lieferungen.html:78
+#: app/scripts/abos/list/lieferungen/lieferungen.html:142
+#: app/scripts/abos/list/lieferungen/lieferungen.html:46
 msgid "Einheit"
 msgstr "Egység"
 
@@ -305,7 +303,7 @@ msgstr "Nincs több számla."
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr "Megerősítő kódot elküldtük az e-mail címedre."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:14
+#: app/scripts/abos/list/lieferungen/lieferungen.html:20
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr "Még nem készült ilyen típusú tagság."
 
@@ -315,7 +313,7 @@ msgstr "Még nincs megvalósított szállítási terv."
 
 #: app/scripts/app.js:109
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -347,7 +345,7 @@ msgstr "Az admin felület használatához bejelentkezés szükséges."
 
 #: app/scripts/app.js:111
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/scripts/app.js:97
 msgid "Gramm"
@@ -371,7 +369,7 @@ msgstr "Nincs önkéntes munka ajánlat."
 
 #: app/scripts/app.js:98
 msgid "Kilogramm"
-msgstr "Kilogramm"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:7
 msgid "Konto für Einzahlungen:"
@@ -395,14 +393,14 @@ msgstr "Szállítás"
 
 #: app/scripts/app.js:100
 msgid "Liter"
-msgstr "Liter"
+msgstr ""
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
 msgstr "Adminisztráció"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:26
-#: app/scripts/abos/list/lieferungen/lieferungen.html:75
+#: app/scripts/abos/list/lieferungen/lieferungen.html:141
+#: app/scripts/abos/list/lieferungen/lieferungen.html:43
 msgid "Menge"
 msgstr "Mennyiség"
 
@@ -488,8 +486,8 @@ msgstr "Rész."
 msgid "Portion"
 msgstr "Rész"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:32
-#: app/scripts/abos/list/lieferungen/lieferungen.html:81
+#: app/scripts/abos/list/lieferungen/lieferungen.html:145
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
 msgid "Preis"
 msgstr "Ár"
 
@@ -497,13 +495,13 @@ msgstr "Ár"
 msgid "Preis:"
 msgstr "Ár:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:23
-#: app/scripts/abos/list/lieferungen/lieferungen.html:72
+#: app/scripts/abos/list/lieferungen/lieferungen.html:138
+#: app/scripts/abos/list/lieferungen/lieferungen.html:40
 msgid "Produkt"
 msgstr "Termék"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:40
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:156
+#: app/scripts/abos/list/lieferungen/lieferungen.html:64
 msgid "Produzent"
 msgstr "Termelő"
 
@@ -565,7 +563,7 @@ msgstr "USA dollár"
 
 #: app/scripts/app.js:110
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -587,7 +585,7 @@ msgstr "Értékesítés:"
 msgid "Von"
 msgstr "-tól"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:101
+#: app/scripts/abos/list/lieferungen/lieferungen.html:172
 msgid "Weitere Körbe anzeigen..."
 msgstr "Más kosarak mutatása..."
 
@@ -628,7 +626,7 @@ msgstr "Megerősítő kód küldése"
 msgid "Zugriff verweigert"
 msgstr "Hozzáférés megtagadva."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "mind"
 
@@ -642,7 +640,7 @@ msgstr "Már korábban regisztrált."
 
 #: app/scripts/app.js:97
 msgid "gr"
-msgstr "gr"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:9
 msgid "in Stammdaten nicht definiert"
@@ -650,13 +648,13 @@ msgstr "Az adatbázisban nem definiált."
 
 #: app/scripts/app.js:99
 msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:100
 msgid "l"
-msgstr "l"
+msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
 msgstr "függőben lévő"
 
@@ -670,5 +668,5 @@ msgstr "szállított."
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
 msgid "{{title | translate}}"
-msgstr "{{title | translate}}"
+msgstr ""
 
