@@ -2,25 +2,23 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: openolitor\n"
+"Project-Id-Version: openolitor-subscriber-client\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: crowdin.com\n"
-"X-Crowdin-Project: openolitor\n"
+"X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Language: fr-CH\n"
-"X-Crowdin-File: /consumer-portal/template.pot\n"
-"Last-Translator: al_openolitor\n"
+"X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2019-04-24 06:32\n"
+"PO-Revision-Date: 2020-03-23 18:38\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
-msgstr "#&nbsp;Pers."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -47,11 +45,11 @@ msgstr "Abonnement"
 msgid "Abo:"
 msgstr "Abonnement:"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
 msgstr "Saisir des absences"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
 msgstr "Absences"
 
@@ -139,11 +137,11 @@ msgstr "botte"
 
 #: app/scripts/app.js:113
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
 #: app/scripts/app.js:107
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -171,7 +169,7 @@ msgstr "Le mot de passe doit contenir au moins un dessus - et minuscules, ainsi 
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "Le mot de passe a été défini avec succès. Vous pouvez vous connecter maintenant."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr "Date"
@@ -200,7 +198,7 @@ msgstr "Le statut d’une facture est mis à jour périodiquement par l’admini
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr "L’accès à cette ressource a été refusé, veuillez contacter l'administration de votre initiative."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:6
+#: app/scripts/abos/list/lieferungen/lieferungen.html:8
 msgid "Der aktuelle Korb"
 msgstr "Le panier actuel"
 
@@ -218,7 +216,7 @@ msgstr "Détails sont téléchargés..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "De temps en temps, les données dans ce système sont réinitialisées aux valeurs de défaut."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Die früheren Körbe"
 msgstr "Les paniers précédents"
 
@@ -250,7 +248,7 @@ msgstr "Copier le numéro de référence au presse-papier (pour une utilisation 
 
 #: app/scripts/app.js:109
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -276,8 +274,8 @@ msgstr "Entrée trop courte"
 msgid "Eingabe zu lang"
 msgstr "Entrée trop longue"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:29
-#: app/scripts/abos/list/lieferungen/lieferungen.html:78
+#: app/scripts/abos/list/lieferungen/lieferungen.html:142
+#: app/scripts/abos/list/lieferungen/lieferungen.html:46
 msgid "Einheit"
 msgstr "Unité"
 
@@ -305,7 +303,7 @@ msgstr "Aucune facture n'a été créé jusqu'ici."
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr "Un code d’accès a été envoyé à votre adresse courriel"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:14
+#: app/scripts/abos/list/lieferungen/lieferungen.html:20
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr "Aucun panier de ce type n'a été planifié jusqu'ici."
 
@@ -315,7 +313,7 @@ msgstr "Aucune planification de livraison n'a été clôturée"
 
 #: app/scripts/app.js:109
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -347,7 +345,7 @@ msgstr "Une inscription est nécessaire pour accéder à OpenOlitor"
 
 #: app/scripts/app.js:111
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/scripts/app.js:97
 msgid "Gramm"
@@ -401,8 +399,8 @@ msgstr "Litre"
 msgid "Login Administration"
 msgstr "Login frontend d'administration"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:26
-#: app/scripts/abos/list/lieferungen/lieferungen.html:75
+#: app/scripts/abos/list/lieferungen/lieferungen.html:141
+#: app/scripts/abos/list/lieferungen/lieferungen.html:43
 msgid "Menge"
 msgstr "Quantité"
 
@@ -412,7 +410,7 @@ msgstr "Nouveau mot de passe"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 #: app/index.html:56
 msgid "OpenOlitor Mitgliederportal:"
@@ -482,14 +480,14 @@ msgstr "Qualité du mot de passe"
 
 #: app/scripts/app.js:101
 msgid "Por."
-msgstr "Por."
+msgstr ""
 
 #: app/scripts/app.js:101
 msgid "Portion"
-msgstr "Portion"
+msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:32
-#: app/scripts/abos/list/lieferungen/lieferungen.html:81
+#: app/scripts/abos/list/lieferungen/lieferungen.html:145
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
 msgid "Preis"
 msgstr "Prix"
 
@@ -497,13 +495,13 @@ msgstr "Prix"
 msgid "Preis:"
 msgstr "Prix:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:23
-#: app/scripts/abos/list/lieferungen/lieferungen.html:72
+#: app/scripts/abos/list/lieferungen/lieferungen.html:138
+#: app/scripts/abos/list/lieferungen/lieferungen.html:40
 msgid "Produkt"
 msgstr "Produit"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:40
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:156
+#: app/scripts/abos/list/lieferungen/lieferungen.html:64
 msgid "Produzent"
 msgstr "Producteur, productrice"
 
@@ -557,7 +555,7 @@ msgstr "Titre"
 
 #: app/scripts/abos/list/aboslist.html:18
 msgid "Tour:"
-msgstr "Tour:"
+msgstr ""
 
 #: app/scripts/app.js:110
 msgid "US Dollar"
@@ -565,7 +563,7 @@ msgstr "Dollar des Etats-Unis"
 
 #: app/scripts/app.js:110
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -577,7 +575,7 @@ msgstr "S'inscrire de manière définitive"
 
 #: app/index.html:92
 msgid "Version:"
-msgstr "Version:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:26
 msgid "Vertrieb:"
@@ -587,7 +585,7 @@ msgstr "Distribution:"
 msgid "Von"
 msgstr "Depuis le"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:101
+#: app/scripts/abos/list/lieferungen/lieferungen.html:172
 msgid "Weitere Körbe anzeigen..."
 msgstr "Afficher plus de paniers"
 
@@ -628,7 +626,7 @@ msgstr "Envoyer le code d'accès encore une fois"
 msgid "Zugriff verweigert"
 msgstr "Accès refusé"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "tous"
 
@@ -642,7 +640,7 @@ msgstr "déjà inscrits"
 
 #: app/scripts/app.js:97
 msgid "gr"
-msgstr "gr"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:9
 msgid "in Stammdaten nicht definiert"
@@ -650,13 +648,13 @@ msgstr "pas défini dans les données de base"
 
 #: app/scripts/app.js:99
 msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:100
 msgid "l"
-msgstr "l"
+msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
 msgstr "en suspens"
 
@@ -670,5 +668,5 @@ msgstr "livré."
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
 msgid "{{title | translate}}"
-msgstr "{{title | translate}}"
+msgstr ""
 
