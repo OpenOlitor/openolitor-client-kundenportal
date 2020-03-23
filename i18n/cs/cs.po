@@ -2,16 +2,14 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: openolitor\n"
+"Project-Id-Version: openolitor-subscriber-client\n"
 "Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 3;\n"
-"X-Generator: crowdin.com\n"
-"X-Crowdin-Project: openolitor\n"
+"X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Language: cs\n"
-"X-Crowdin-File: /consumer-portal/template.pot\n"
-"Last-Translator: al_openolitor\n"
+"X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: Czech\n"
-"Language: cs\n"
-"PO-Revision-Date: 2019-05-09 11:56\n"
+"Language: cs_CZ\n"
+"PO-Revision-Date: 2020-03-23 18:38\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -20,7 +18,7 @@ msgstr "#&nbsp;Os."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -47,11 +45,11 @@ msgstr "Odběr"
 msgid "Abo:"
 msgstr "Odběr:"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
 msgstr "Žádné záznamy"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
 msgstr "Nepřítomnosti"
 
@@ -139,11 +137,11 @@ msgstr "Trs"
 
 #: app/scripts/app.js:113
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
 #: app/scripts/app.js:107
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -171,10 +169,10 @@ msgstr "Heslo musí obsahovat nejméně jedno velké a malé písmeno, a také �
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "Heslo bylo úspěšně nastaveno. Nyní se můžete přihlásit."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
-msgstr "Datum"
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:9
 msgid "Deine Abos"
@@ -200,7 +198,7 @@ msgstr "Stav dokladů se pravidelně v administraci aktualizuje. Zaplacený dokl
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr "Přístup k tomuto zdroji byl odepřen."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:6
+#: app/scripts/abos/list/lieferungen/lieferungen.html:8
 msgid "Der aktuelle Korb"
 msgstr "Současný košík"
 
@@ -218,7 +216,7 @@ msgstr "Nahrávám podrobnosti..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "Data v tomto systému jsou sporadicky resetována na výchozí hodnoty."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Die früheren Körbe"
 msgstr "Předcházející košíky"
 
@@ -250,7 +248,7 @@ msgstr "Zkopírovat ESR do schránky (pro použití v platebních systémech)"
 
 #: app/scripts/app.js:109
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -276,8 +274,8 @@ msgstr "Zadané informace příliš krátké"
 msgid "Eingabe zu lang"
 msgstr "Zadané informace příliš dlouhé"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:29
-#: app/scripts/abos/list/lieferungen/lieferungen.html:78
+#: app/scripts/abos/list/lieferungen/lieferungen.html:142
+#: app/scripts/abos/list/lieferungen/lieferungen.html:46
 msgid "Einheit"
 msgstr "Jednotka"
 
@@ -305,7 +303,7 @@ msgstr "Zde nejsou ještě žádné doklady."
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr "Přístupový kód byl zaslán na váš email"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:14
+#: app/scripts/abos/list/lieferungen/lieferungen.html:20
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr "Žádné dodávky tohoto typu nejsou plánovány nebo doručeny."
 
@@ -315,7 +313,7 @@ msgstr "Zatím nebyly dokončeny žádné plány závozů."
 
 #: app/scripts/app.js:109
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -347,7 +345,7 @@ msgstr "Pro přístup do administrace je vyžadováno přihlášení"
 
 #: app/scripts/app.js:111
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/scripts/app.js:97
 msgid "Gramm"
@@ -401,8 +399,8 @@ msgstr "Litr"
 msgid "Login Administration"
 msgstr "Přihlášení do administrace"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:26
-#: app/scripts/abos/list/lieferungen/lieferungen.html:75
+#: app/scripts/abos/list/lieferungen/lieferungen.html:141
+#: app/scripts/abos/list/lieferungen/lieferungen.html:43
 msgid "Menge"
 msgstr "Počet"
 
@@ -412,7 +410,7 @@ msgstr "Nové heslo"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 #: app/index.html:56
 msgid "OpenOlitor Mitgliederportal:"
@@ -488,8 +486,8 @@ msgstr "Část."
 msgid "Portion"
 msgstr "Část"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:32
-#: app/scripts/abos/list/lieferungen/lieferungen.html:81
+#: app/scripts/abos/list/lieferungen/lieferungen.html:145
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
 msgid "Preis"
 msgstr "Cena"
 
@@ -497,13 +495,13 @@ msgstr "Cena"
 msgid "Preis:"
 msgstr "Cena:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:23
-#: app/scripts/abos/list/lieferungen/lieferungen.html:72
-msgid "Produkt"
-msgstr "Produkt"
-
+#: app/scripts/abos/list/lieferungen/lieferungen.html:138
 #: app/scripts/abos/list/lieferungen/lieferungen.html:40
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+msgid "Produkt"
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:156
+#: app/scripts/abos/list/lieferungen/lieferungen.html:64
 msgid "Produzent"
 msgstr "Výrobce"
 
@@ -557,7 +555,7 @@ msgstr "Název"
 
 #: app/scripts/abos/list/aboslist.html:18
 msgid "Tour:"
-msgstr "Tour:"
+msgstr ""
 
 #: app/scripts/app.js:110
 msgid "US Dollar"
@@ -565,7 +563,7 @@ msgstr "AMERICKÝ dolar"
 
 #: app/scripts/app.js:110
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -587,7 +585,7 @@ msgstr "Distribuce:"
 msgid "Von"
 msgstr "Od"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:101
+#: app/scripts/abos/list/lieferungen/lieferungen.html:172
 msgid "Weitere Körbe anzeigen..."
 msgstr "Zobrazit další košíky..."
 
@@ -628,7 +626,7 @@ msgstr "Znovu odeslat přístupový kód"
 msgid "Zugriff verweigert"
 msgstr "Přístup odepřen"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "vše"
 
@@ -642,7 +640,7 @@ msgstr "dříve zapsané"
 
 #: app/scripts/app.js:97
 msgid "gr"
-msgstr "gr"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:9
 msgid "in Stammdaten nicht definiert"
@@ -650,13 +648,13 @@ msgstr "není definována v kmenových datech"
 
 #: app/scripts/app.js:99
 msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:100
 msgid "l"
-msgstr "l"
+msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
 msgstr "čeká na vyřízení"
 
@@ -670,5 +668,5 @@ msgstr "doručeno."
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
 msgid "{{title | translate}}"
-msgstr "{{title | translate}}"
+msgstr ""
 
