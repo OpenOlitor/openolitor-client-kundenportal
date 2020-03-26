@@ -2,16 +2,14 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: openolitor\n"
+"Project-Id-Version: openolitor-subscriber-client\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
-"X-Crowdin-Project: openolitor\n"
+"X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Language: en\n"
-"X-Crowdin-File: /consumer-portal/template.pot\n"
-"Last-Translator: al_openolitor\n"
+"X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: English\n"
-"Language: en\n"
-"PO-Revision-Date: 2019-05-09 11:56\n"
+"Language: en_US\n"
+"PO-Revision-Date: 2020-03-26 15:19\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -47,11 +45,11 @@ msgstr "Subscription"
 msgid "Abo:"
 msgstr "Subscription:"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
 msgstr "No records"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
 msgstr "Absences"
 
@@ -75,27 +73,6 @@ msgstr "Log-in"
 #: app/scripts/login/login.controller.js:139
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr "An email was send with the required information to modify the email password."
-
-#: app/scripts/login/change_password.html:11
-msgid "Aktuelles Passwort"
-msgstr ""
-
-#: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
-msgid "Alle"
-msgstr ""
-
-#: app/scripts/login/login.html:74
-#: app/scripts/login/login.html:91
-msgid "Anmelden"
-msgstr ""
-
-#: app/scripts/login/login.html:5
-msgid "Anmeldung"
-msgstr ""
-
-#: app/scripts/login/login.controller.js:139
-msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Anzahl Lieferungen"
@@ -127,10 +104,6 @@ msgstr "Editing of work assignment not successful:"
 msgid "Aufwiedersehen"
 msgstr "See you later!"
 
-#: app/scripts/login/login.controller.js:78
-msgid "Aufwiedersehen"
-msgstr ""
-
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
 msgid "Bei Arbeitsangebot teilnehmen"
 msgstr "Assign to work opportunity"
@@ -144,10 +117,6 @@ msgstr "Remarks"
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:3
 msgid "Bestätigung"
 msgstr "Confirmation"
-
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:3
-msgid "Bestätigung"
-msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:103
 #: app/scripts/rechnungen/list/rechnungenlist.html:46
@@ -200,25 +169,7 @@ msgstr "The password must contain at least an upper - and lowercase letters, as 
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "The password has been set successfully. You can log in now."
 
-#: app/scripts/login/login.html:53
-msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr ""
-
-#: app/scripts/login/change_password.html:21
-#: app/scripts/login/zugangaktivieren.html:15
-msgid "Das Passwort muss aus mindestens 6 Zeichen bestehen"
-msgstr ""
-
-#: app/scripts/login/change_password.html:22
-#: app/scripts/login/zugangaktivieren.html:16
-msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
-msgstr ""
-
-#: app/scripts/login/login.controller.js:126
-msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
-msgstr ""
-
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr "Date"
@@ -247,7 +198,7 @@ msgstr "The invoice status is updated periodically by the administration. A paid
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr "Denied access."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:6
+#: app/scripts/abos/list/lieferungen/lieferungen.html:8
 msgid "Der aktuelle Korb"
 msgstr "Current basket"
 
@@ -265,7 +216,7 @@ msgstr "Loading details..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "The data in the system are sporadically reset to their default values."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Die früheren Körbe"
 msgstr "Previous baskets"
 
@@ -287,16 +238,6 @@ msgstr "E-mail address"
 msgid "E-Mail:"
 msgstr "E-mail:"
 
-#: app/scripts/login/login.html:68
-msgid "E-Mail Adresse"
-msgstr ""
-
-#: app/scripts/login/login.html:15
-#: app/scripts/login/login.html:26
-#: app/scripts/login/login.html:38
-msgid "E-Mail:"
-msgstr ""
-
 #: app/scripts/rechnungen/list/rechnungenlist.html:60
 msgid "ESR-Nr."
 msgstr ""
@@ -312,14 +253,6 @@ msgstr "EUR"
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
 msgstr "Change own password"
-
-#: app/scripts/app.js:109
-msgid "EUR"
-msgstr ""
-
-#: app/scripts/login/change_password.html:5
-msgid "Eigenes Passwort wechseln"
-msgstr ""
 
 #: app/messages.html:2
 #: app/scripts/login/change_password.html:20
@@ -341,8 +274,8 @@ msgstr "Input too short"
 msgid "Eingabe zu lang"
 msgstr "Input too long"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:29
-#: app/scripts/abos/list/lieferungen/lieferungen.html:78
+#: app/scripts/abos/list/lieferungen/lieferungen.html:142
+#: app/scripts/abos/list/lieferungen/lieferungen.html:46
 msgid "Einheit"
 msgstr "Unit"
 
@@ -370,7 +303,7 @@ msgstr "There are no invoices yet."
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr "An access code was sent to your email address"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:14
+#: app/scripts/abos/list/lieferungen/lieferungen.html:20
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr "Still no baskets of this type have been scheduled or delivered."
 
@@ -466,8 +399,8 @@ msgstr "Liter"
 msgid "Login Administration"
 msgstr "Login administration"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:26
-#: app/scripts/abos/list/lieferungen/lieferungen.html:75
+#: app/scripts/abos/list/lieferungen/lieferungen.html:141
+#: app/scripts/abos/list/lieferungen/lieferungen.html:43
 msgid "Menge"
 msgstr "Quantity"
 
@@ -504,24 +437,6 @@ msgstr "Reset password and enable access"
 #: app/scripts/login/passwordreset.html:5
 msgid "Passwort vergessen?"
 msgstr "Forgot your password?"
-
-#: app/scripts/login/login.html:71
-#: app/scripts/login/zugangaktivieren.html:11
-msgid "Passwort"
-msgstr ""
-
-#: app/scripts/login/zugangaktivieren.html:35
-msgid "Passwort setzen"
-msgstr ""
-
-#: app/scripts/login/zugangaktivieren.html:5
-msgid "Passwort setzen und Zugang aktivieren"
-msgstr ""
-
-#: app/scripts/login/login.html:77
-#: app/scripts/login/passwordreset.html:5
-msgid "Passwort vergessen?"
-msgstr ""
 
 #: app/index.html:73
 #: app/scripts/login/change_password.html:41
@@ -571,8 +486,8 @@ msgstr ""
 msgid "Portion"
 msgstr "Portion"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:32
-#: app/scripts/abos/list/lieferungen/lieferungen.html:81
+#: app/scripts/abos/list/lieferungen/lieferungen.html:145
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
 msgid "Preis"
 msgstr "Price"
 
@@ -580,13 +495,13 @@ msgstr "Price"
 msgid "Preis:"
 msgstr "Price:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:23
-#: app/scripts/abos/list/lieferungen/lieferungen.html:72
+#: app/scripts/abos/list/lieferungen/lieferungen.html:138
+#: app/scripts/abos/list/lieferungen/lieferungen.html:40
 msgid "Produkt"
 msgstr "Product"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:40
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:156
+#: app/scripts/abos/list/lieferungen/lieferungen.html:64
 msgid "Produzent"
 msgstr "Producer"
 
@@ -670,7 +585,7 @@ msgstr "Distribution:"
 msgid "Von"
 msgstr "By"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:101
+#: app/scripts/abos/list/lieferungen/lieferungen.html:172
 msgid "Weitere Körbe anzeigen..."
 msgstr "View more baskets..."
 
@@ -694,10 +609,6 @@ msgstr "Current work opportunities:"
 msgid "Wollen Sie fortfahren?"
 msgstr "Do you want to continue?"
 
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:8
-msgid "Wollen Sie fortfahren?"
-msgstr ""
-
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
 msgid "Zeitpunkt"
@@ -715,19 +626,7 @@ msgstr "Send access code again"
 msgid "Zugriff verweigert"
 msgstr "Access denied"
 
-#: app/scripts/login/login.html:88
-msgid "Zugangscode"
-msgstr ""
-
-#: app/scripts/login/login.html:94
-msgid "Zugangscode erneut versenden"
-msgstr ""
-
-#: app/scripts/login/forbidden.html:5
-msgid "Zugriff verweigert"
-msgstr ""
-
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "all"
 
@@ -755,7 +654,7 @@ msgstr "kg"
 msgid "l"
 msgstr "l"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
 msgstr "pending"
 
@@ -770,3 +669,4 @@ msgstr "delivered."
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
 msgid "{{title | translate}}"
 msgstr ""
+

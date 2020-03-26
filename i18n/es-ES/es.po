@@ -2,16 +2,14 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: openolitor\n"
+"Project-Id-Version: openolitor-subscriber-client\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
-"X-Crowdin-Project: openolitor\n"
+"X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Language: es-ES\n"
-"X-Crowdin-File: /consumer-portal/template.pot\n"
-"Last-Translator: al_openolitor\n"
+"X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: Spanish\n"
-"Language: es\n"
-"PO-Revision-Date: 2019-05-09 11:56\n"
+"Language: es_ES\n"
+"PO-Revision-Date: 2020-03-26 15:19\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -47,11 +45,11 @@ msgstr "Subscripción"
 msgid "Abo:"
 msgstr "Subscripción:"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:49
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
 msgstr "Sin registro"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:4
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
 msgstr "Ausencias"
 
@@ -171,7 +169,7 @@ msgstr "La contraseña debe contener letras minusculas y mayusculas así como al
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "La contraseña ha sido inicializada. Ahora puedes conectarte con el nombre de usuario y la contraseña."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:28
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:94
 msgid "Datum"
 msgstr "Fecha"
@@ -200,7 +198,7 @@ msgstr "El estado de una factura está actualizada periódicamente por la admini
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr "El acceso ha sido denegado. Contacta a la persona encargada de la gestión de tu grupo de consumo."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:6
+#: app/scripts/abos/list/lieferungen/lieferungen.html:8
 msgid "Der aktuelle Korb"
 msgstr "La cesta actual"
 
@@ -218,7 +216,7 @@ msgstr "Cargando los detalles..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "Los datos se reinicializan periódicamente."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Die früheren Körbe"
 msgstr "Las cestas anteriores"
 
@@ -276,8 +274,8 @@ msgstr "Entrada muy corta"
 msgid "Eingabe zu lang"
 msgstr "Entrada muy larga"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:29
-#: app/scripts/abos/list/lieferungen/lieferungen.html:78
+#: app/scripts/abos/list/lieferungen/lieferungen.html:142
+#: app/scripts/abos/list/lieferungen/lieferungen.html:46
 msgid "Einheit"
 msgstr "Unidad"
 
@@ -305,7 +303,7 @@ msgstr "Todavía no hay facturas."
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr "Se le ha enviado un código de acceso a su dirección de correo electrónico"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:14
+#: app/scripts/abos/list/lieferungen/lieferungen.html:20
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr "Todavía no hay cestas de este tipo que hayan sido programadas o entregadas."
 
@@ -401,8 +399,8 @@ msgstr "Litro"
 msgid "Login Administration"
 msgstr "Administración de inicio de sesión"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:26
-#: app/scripts/abos/list/lieferungen/lieferungen.html:75
+#: app/scripts/abos/list/lieferungen/lieferungen.html:141
+#: app/scripts/abos/list/lieferungen/lieferungen.html:43
 msgid "Menge"
 msgstr "Cantidad"
 
@@ -488,8 +486,8 @@ msgstr "Por."
 msgid "Portion"
 msgstr "Porción"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:32
-#: app/scripts/abos/list/lieferungen/lieferungen.html:81
+#: app/scripts/abos/list/lieferungen/lieferungen.html:145
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
 msgid "Preis"
 msgstr "Precio"
 
@@ -497,13 +495,13 @@ msgstr "Precio"
 msgid "Preis:"
 msgstr "Precio:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:23
-#: app/scripts/abos/list/lieferungen/lieferungen.html:72
+#: app/scripts/abos/list/lieferungen/lieferungen.html:138
+#: app/scripts/abos/list/lieferungen/lieferungen.html:40
 msgid "Produkt"
 msgstr "Producto"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:40
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:156
+#: app/scripts/abos/list/lieferungen/lieferungen.html:64
 msgid "Produzent"
 msgstr "Productores"
 
@@ -587,7 +585,7 @@ msgstr "Distribución:"
 msgid "Von"
 msgstr "De"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:101
+#: app/scripts/abos/list/lieferungen/lieferungen.html:172
 msgid "Weitere Körbe anzeigen..."
 msgstr "Mostrar más cestas..."
 
@@ -628,7 +626,7 @@ msgstr "Enviar el código de acceso una vez más"
 msgid "Zugriff verweigert"
 msgstr "Acceso denegado"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:20
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "todos"
 
@@ -656,7 +654,7 @@ msgstr "kg"
 msgid "l"
 msgstr "l"
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:19
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
 msgstr "pendiente"
 
