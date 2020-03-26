@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: English\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2020-03-23 18:38\n"
+"PO-Revision-Date: 2020-03-26 15:19\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -137,11 +137,11 @@ msgstr "Bunch"
 
 #: app/scripts/app.js:113
 msgid "CAD"
-msgstr ""
+msgstr "CAD"
 
 #: app/scripts/app.js:107
 msgid "CHF"
-msgstr ""
+msgstr "CHF"
 
 #: app/index.html:82
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -248,7 +248,7 @@ msgstr "Copy ESR-number to clipboard (for use in payment systems)"
 
 #: app/scripts/app.js:109
 msgid "EUR"
-msgstr ""
+msgstr "EUR"
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -289,7 +289,7 @@ msgstr "Successfully subscribed to work assignment"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr ""
+msgstr "Error 404"
 
 #: app/scripts/app.js:151
 msgid "Error:"
@@ -313,7 +313,7 @@ msgstr "Still no delivery planning have been completed."
 
 #: app/scripts/app.js:109
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -345,7 +345,7 @@ msgstr "Registration is required for access to OpenOlitor"
 
 #: app/scripts/app.js:111
 msgid "GBP"
-msgstr ""
+msgstr "GBP"
 
 #: app/scripts/app.js:97
 msgid "Gramm"
@@ -393,7 +393,7 @@ msgstr "Delivery"
 
 #: app/scripts/app.js:100
 msgid "Liter"
-msgstr ""
+msgstr "Liter"
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
@@ -410,7 +410,7 @@ msgstr "New password"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: app/index.html:56
 msgid "OpenOlitor Mitgliederportal:"
@@ -484,7 +484,7 @@ msgstr ""
 
 #: app/scripts/app.js:101
 msgid "Portion"
-msgstr ""
+msgstr "Portion"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:145
 #: app/scripts/abos/list/lieferungen/lieferungen.html:49
@@ -555,7 +555,7 @@ msgstr "Title"
 
 #: app/scripts/abos/list/aboslist.html:18
 msgid "Tour:"
-msgstr ""
+msgstr "Tour:"
 
 #: app/scripts/app.js:110
 msgid "US Dollar"
@@ -563,7 +563,7 @@ msgstr "US dollar"
 
 #: app/scripts/app.js:110
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -575,7 +575,7 @@ msgstr "Binding subscription"
 
 #: app/index.html:92
 msgid "Version:"
-msgstr ""
+msgstr "Version:"
 
 #: app/scripts/abos/list/aboslist.html:26
 msgid "Vertrieb:"
@@ -640,7 +640,7 @@ msgstr "Subscribed work assignments"
 
 #: app/scripts/app.js:97
 msgid "gr"
-msgstr ""
+msgstr "gr"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:9
 msgid "in Stammdaten nicht definiert"
@@ -648,11 +648,11 @@ msgstr "not defined in the data base"
 
 #: app/scripts/app.js:99
 msgid "kg"
-msgstr ""
+msgstr "kg"
 
 #: app/scripts/app.js:100
 msgid "l"
-msgstr ""
+msgstr "l"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
