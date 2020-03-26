@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2020-03-23 18:38\n"
+"PO-Revision-Date: 2020-03-26 15:09\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -31,11 +31,11 @@ msgstr ""
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
-msgstr ""
+msgstr "Abbrechen"
 
 #: app/index.html:74
 msgid "Abmelden"
-msgstr ""
+msgstr "Abmelden"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:106
 msgid "Abo"
@@ -51,7 +51,7 @@ msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
-msgstr ""
+msgstr "Abwesenheiten"
 
 #: app/scripts/login/change_password.html:11
 msgid "Aktuelles Passwort"
@@ -59,7 +59,7 @@ msgstr ""
 
 #: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
 msgid "Alle"
-msgstr ""
+msgstr "Alle"
 
 #: app/scripts/login/login.html:74
 #: app/scripts/login/login.html:91
