@@ -4,17 +4,15 @@
       <div class="panel-heading clearfix">
           <h3 class="panel-title">
             <div>
-            <span class="navbar-brand">
+            <span class="navbar-brand" ng-if="kontodaten.iban">
               <span translate>IBAN für Einzahlungen:</span>
-              <span ng-if="kontodaten.iban">{{kontodaten.iban | iban:separator}}</span>
-              <span ng-if="!kontodaten.iban" translate>in Stammdaten nicht definiert</span>
+              <span >{{kontodaten.iban | iban:separator}}</span>
             </span>
             </div>
             <div>
-            <span class="navbar-brand">
+            <span class="navbar-brand" ng-if="kontodaten.teilnehmerNummer">
               <span translate>Konto für Einzahlungen:</span>
-              <span ng-if="kontodaten.teilnehmerNummer">{{teilnehmerNummerToKonto(kontodaten.teilnehmerNummer) }}</span>
-              <span ng-if="!kontodaten.teilnehmerNummer" translate>in Stammdaten nicht definiert</span>
+              <span >{{teilnehmerNummerToKonto(kontodaten.teilnehmerNummer) }}</span>
             </span>
             </div>
             </span>
