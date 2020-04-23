@@ -9,7 +9,7 @@ msgstr ""
 "X-Crowdin-File: /prod/template.pot\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2020-03-23 18:38\n"
+"PO-Revision-Date: 2020-04-23 14:05\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -33,15 +33,19 @@ msgstr ""
 msgid "Abbrechen"
 msgstr ""
 
-#: app/index.html:74
+#: app/index.html:77
 msgid "Abmelden"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:106
+#: app/scripts/rechnungen/list/rechnungenlist.html:114
 msgid "Abo"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:74
+#: app/scripts/abos/list/aboslist.html:34
+msgid "Abo-Beschrieb:"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:82
 msgid "Abo:"
 msgstr ""
 
@@ -74,7 +78,7 @@ msgstr ""
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:75
+#: app/scripts/rechnungen/list/rechnungenlist.html:83
 msgid "Anzahl Lieferungen"
 msgstr ""
 
@@ -118,8 +122,8 @@ msgstr ""
 msgid "Bestätigung"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:103
-#: app/scripts/rechnungen/list/rechnungenlist.html:46
+#: app/scripts/rechnungen/list/rechnungenlist.html:111
+#: app/scripts/rechnungen/list/rechnungenlist.html:54
 msgid "Betrag"
 msgstr ""
 
@@ -143,7 +147,7 @@ msgstr ""
 msgid "CHF"
 msgstr ""
 
-#: app/index.html:82
+#: app/index.html:85
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr ""
 
@@ -170,7 +174,7 @@ msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
-#: app/scripts/rechnungen/list/rechnungenlist.html:94
+#: app/scripts/rechnungen/list/rechnungenlist.html:102
 msgid "Datum"
 msgstr ""
 
@@ -198,7 +202,7 @@ msgstr ""
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:8
+#: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
 msgstr ""
 
@@ -206,7 +210,7 @@ msgstr ""
 msgid "Der nächste Korb"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:67
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Details werden geladen..."
 msgstr ""
 
@@ -216,7 +220,7 @@ msgstr ""
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:86
+#: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
 msgstr ""
 
@@ -238,11 +242,11 @@ msgstr ""
 msgid "E-Mail:"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:60
+#: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:59
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr ""
 
@@ -274,8 +278,8 @@ msgstr ""
 msgid "Eingabe zu lang"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:142
-#: app/scripts/abos/list/lieferungen/lieferungen.html:46
+#: app/scripts/abos/list/lieferungen/lieferungen.html:33
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Einheit"
 msgstr ""
 
@@ -295,7 +299,7 @@ msgstr ""
 msgid "Error:"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:16
+#: app/scripts/rechnungen/list/rechnungenlist.html:24
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr ""
 
@@ -303,7 +307,7 @@ msgstr ""
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:20
+#: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr ""
 
@@ -319,11 +323,11 @@ msgstr ""
 msgid "Fehlerhafte Email Adresse"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:97
+#: app/scripts/rechnungen/list/rechnungenlist.html:105
 msgid "Fällig"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:40
+#: app/scripts/rechnungen/list/rechnungenlist.html:48
 msgid "Fällig am"
 msgstr ""
 
@@ -351,6 +355,10 @@ msgstr ""
 msgid "Gramm"
 msgstr ""
 
+#: app/scripts/rechnungen/list/rechnungenlist.html:8
+msgid "IBAN für Einzahlungen:"
+msgstr ""
+
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
 msgstr ""
@@ -371,19 +379,23 @@ msgstr ""
 msgid "Kilogramm"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:7
+#: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:58
+#: app/scripts/abos/list/lieferungen/lieferungen.html:70
+msgid "Korb vom"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:66
 msgid "Laufzeit:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:50
 msgid "Lieferrhythmus:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:42
 msgid "Liefertag:"
 msgstr ""
 
@@ -399,8 +411,8 @@ msgstr ""
 msgid "Login Administration"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:141
-#: app/scripts/abos/list/lieferungen/lieferungen.html:43
+#: app/scripts/abos/list/lieferungen/lieferungen.html:30
+#: app/scripts/abos/list/lieferungen/lieferungen.html:83
 msgid "Menge"
 msgstr ""
 
@@ -438,7 +450,7 @@ msgstr ""
 msgid "Passwort vergessen?"
 msgstr ""
 
-#: app/index.html:73
+#: app/index.html:76
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr ""
@@ -486,34 +498,34 @@ msgstr ""
 msgid "Portion"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:145
-#: app/scripts/abos/list/lieferungen/lieferungen.html:49
+#: app/scripts/abos/list/lieferungen/lieferungen.html:36
+#: app/scripts/abos/list/lieferungen/lieferungen.html:89
 msgid "Preis"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:58
 msgid "Preis:"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:138
-#: app/scripts/abos/list/lieferungen/lieferungen.html:40
+#: app/scripts/abos/list/lieferungen/lieferungen.html:27
+#: app/scripts/abos/list/lieferungen/lieferungen.html:80
 msgid "Produkt"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:156
-#: app/scripts/abos/list/lieferungen/lieferungen.html:64
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
+#: app/scripts/abos/list/lieferungen/lieferungen.html:97
 msgid "Produzent"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:37
+#: app/scripts/rechnungen/list/rechnungenlist.html:45
 msgid "Rechnungsdatum"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:51
+#: app/scripts/rechnungen/list/rechnungenlist.html:59
 msgid "Referenznummer"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:50
+#: app/scripts/rechnungen/list/rechnungenlist.html:58
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr ""
 
@@ -537,8 +549,8 @@ msgstr ""
 msgid "St."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:109
-#: app/scripts/rechnungen/list/rechnungenlist.html:55
+#: app/scripts/rechnungen/list/rechnungenlist.html:117
+#: app/scripts/rechnungen/list/rechnungenlist.html:63
 msgid "Status"
 msgstr ""
 
@@ -548,8 +560,9 @@ msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
-#: app/scripts/rechnungen/list/rechnungenlist.html:100
-#: app/scripts/rechnungen/list/rechnungenlist.html:43
+#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
+#: app/scripts/rechnungen/list/rechnungenlist.html:108
+#: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Titel"
 msgstr ""
 
@@ -573,7 +586,7 @@ msgstr ""
 msgid "Verbindlich Einschreiben"
 msgstr ""
 
-#: app/index.html:92
+#: app/index.html:95
 msgid "Version:"
 msgstr ""
 
@@ -581,16 +594,22 @@ msgstr ""
 msgid "Vertrieb:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:61
+#: app/scripts/abos/list/aboslist.html:69
 msgid "Von"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:172
+#: app/scripts/abos/list/lieferungen/lieferungen.html:115
 msgid "Weitere Körbe anzeigen..."
 msgstr ""
 
-#: app/scripts/open/lastlieferplanungen.html:74
+#: app/scripts/open/lastlieferplanungen.html:80
 msgid "Weitere Lieferungen anzeigen..."
+msgstr ""
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:105
+#: app/scripts/abos/list/lieferungen/lieferungen.html:22
+#: app/scripts/open/lastlieferplanungen.html:26
+msgid "Weiterlesen ..."
 msgstr ""
 
 #: app/scripts/login/passwordreset.html:6
@@ -630,7 +649,7 @@ msgstr ""
 msgid "alle"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:61
+#: app/scripts/abos/list/aboslist.html:69
 msgid "bis"
 msgstr ""
 
@@ -640,10 +659,6 @@ msgstr ""
 
 #: app/scripts/app.js:97
 msgid "gr"
-msgstr ""
-
-#: app/scripts/rechnungen/list/rechnungenlist.html:9
-msgid "in Stammdaten nicht definiert"
 msgstr ""
 
 #: app/scripts/app.js:99
@@ -664,9 +679,5 @@ msgstr ""
 
 #: app/scripts/login/login.html:84
 msgid "zugestellt."
-msgstr ""
-
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
-msgid "{{title | translate}}"
 msgstr ""
 
