@@ -1,5 +1,5 @@
 
-[![Build Status](https://travis-ci.org/OpenOlitor/openolitor-client-kundenportal.svg?branch=prod)](https://travis-ci.org/OpenOlitor/openolitor-client-kundenportal)
+[![Build Status](https://travis-ci.com/OpenOlitor/openolitor-client-kundenportal.svg?branch=prod)](https://travis-ci.com/OpenOlitor/openolitor-client-kundenportal)
 [![Code Climate](https://codeclimate.com/github/OpenOlitor/openolitor-client-kundenportal/badges/gpa.svg)](https://codeclimate.com/github/OpenOlitor/openolitor-client-kundenportal)
 
 # openolitor-client-kundenportal
