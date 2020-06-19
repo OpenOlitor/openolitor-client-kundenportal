@@ -6,11 +6,10 @@ angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
-    'ENV', 'VERSION',
-    'ooAuthService', 'API_URL', '$cookies', 'dialogService',
+    'ooAuthService', 'appConfig', '$cookies', 'dialogService',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
-      $timeout, BUILD_NR, ENV, VERSION, ooAuthService, API_URL,
+      $timeout, BUILD_NR, ooAuthService, appConfig,
       $cookies, dialogService) {
       angular.element($window).bind('resize', function() {
         checkSize();
@@ -56,8 +55,8 @@ angular.module('openolitor-kundenportal')
         });
 
       $scope.buildNr = BUILD_NR;
-      $scope.env = ENV;
-      $scope.version = VERSION;
+      $scope.env = appConfig.get().ENV;
+      $scope.version = appConfig.get().version;
 
       msgBus.onMsg('WebSocketClosed', $rootScope, function(event, msg) {
         $scope.connected = false;
@@ -94,13 +93,8 @@ angular.module('openolitor-kundenportal')
       $scope.displayActiveLang = function() {
         switch(gettextCatalog.getCurrentLanguage()){
           case 'en_US': return 'en';
-            break;
-          case 'cs-CZ': return 'cs';
-            break;
           case 'es-ES': return 'es';
-            break;
           case 'hu-HU': return 'hu';
-            break;
           default: return(gettextCatalog.getCurrentLanguage());
         }
       };

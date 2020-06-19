@@ -16,35 +16,11 @@ module.exports = function(grunt) {
     env = grunt.option('env');
   }
 
-  var urls = grunt.file.readJSON('variables.json').ENVIRONMENTS;
+  // var urls = grunt.file.readJSON('variables.json').ENVIRONMENTS;
   //var emails = grunt.file.readJSON('variables.json').EMAIL_TO_ADDRESS;
   // text replace in js files used for environment specific configurations
   var config = {
-    API_URL: urls[env].m1 || 'http://localhost:9003/m1/', //replace @@API_URL with value
-    API_WS_URL: urls[env].m1 + 'ws' || 'http://localhost:9003/m1/ws', //replace @@API_WS_URL with value
     BUILD_NR: grunt.option('buildnr') || 'dev',
-    ENV: env,
-    VERSION: grunt.file.readJSON('package.json').version,
-
-    AIRBREAK_API_KEY: '48f4d0be704fafd7ed7b4fdf2d2119d9',
-    AIRBREAK_URL: 'https://errbit.tegonal.com/'
-  };
-
-  var mandantenConfig = {
-    mandant1: {
-      API_URL: urls[env].m1 || 'http://localhost:9003/m1/', //replace @@API_URL with value
-      API_WS_URL: urls[env].m1 + 'ws' || 'http://localhost:9003/m1/ws', //replace @@API_WS_URL with value
-      BUILD_NR: grunt.option('buildnr') || 'dev',
-      ENV: env,
-      VERSION: grunt.file.readJSON('package.json').version
-    },
-    mandant2: {
-      API_URL: urls[env].m2 || 'http://localhost:9003/m2/', //replace @@API_URL with value
-      API_WS_URL: urls[env].m2 + 'ws' || 'http://localhost:9003/m2/ws', //replace @@API_WS_URL with value
-      BUILD_NR: grunt.option('buildnr') || 'dev',
-      ENV: env,
-      VERSION: grunt.file.readJSON('package.json').version
-    }
   };
 
   // Define the configuration for all the tasks
@@ -88,32 +64,6 @@ module.exports = function(grunt) {
           dest: '<%= openolitor.dist %>'
         }]
       },
-      mandant1: {
-        options: {
-          patterns: [{
-            json: mandantenConfig.mandant1
-          }]
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: ['<%= openolitor.mandanten %>/mandant1/scripts/*.scripts.js'],
-          dest: '<%= openolitor.mandanten %>/mandant1/scripts/'
-        }]
-      },
-      mandant2: {
-        options: {
-          patterns: [{
-            json: mandantenConfig.mandant2
-          }]
-        },
-        files: [{
-          expand: true,
-          flatten: true,
-          src: ['<%= openolitor.mandanten %>/mandant2/scripts/*.scripts.js'],
-          dest: '<%= openolitor.mandanten %>/mandant2/scripts/'
-        }]
-      }
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -283,7 +233,7 @@ module.exports = function(grunt) {
             '<%= openolitor.dist %>/scripts/**/*.js',
             '<%= openolitor.dist %>/styles/**/*.css',
             '<%= openolitor.dist %>/images/**/*.{png,jpg,jpeg,gif,webp,svg}',
-            '<%= openolitor.dist %>/styles/fonts/*'
+            '<%= openolitor.dist %>/styles/fonts/*',
           ]
         }
       }
@@ -392,7 +342,8 @@ module.exports = function(grunt) {
               '*.html',
               'scripts/**/*.html',
               'images/**/*.{webp,png,jpg}',
-              'fonts/*'
+              'fonts/*',
+              '/environments/*'
             ]
           },
           {

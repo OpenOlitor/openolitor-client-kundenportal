@@ -3,6 +3,6 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .factory('LastLieferplanungenModel', function($resource, API_URL) {
-    return $resource(API_URL + 'open/lastlieferplanungen');
+  .factory('LastLieferplanungenModel', function($resource, appConfig) {
+    return $resource(appConfig.get().API_URL + 'open/lastlieferplanungen');
   });

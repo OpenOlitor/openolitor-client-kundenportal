@@ -3,8 +3,8 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .factory('ArbeitsangeboteListModel', function($resource, API_URL) {
-    return $resource(API_URL + 'kundenportal/arbeitsangebote/:id', {
+  .factory('ArbeitsangeboteListModel', function($resource, appConfig) {
+    return $resource(appConfig.get().API_URL + 'kundenportal/arbeitsangebote/:id', {
       id: '@id'
     });
   });

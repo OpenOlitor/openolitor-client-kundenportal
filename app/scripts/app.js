@@ -4,12 +4,6 @@ var regexIso8601 =
   /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})\.(\d{1,})(Z|([\-+])(\d{2}):(\d{2}))?$/;
 // Matches YYYY-MM-ddThh:mm:ss.sssZ where .sss is optional
 
-var userRoles = {
-  Guest: 'Guest',
-  Administrator: 'Administrator',
-  Kunde: 'Kunde'
-};
-
 function convertDateStringsToDates(input) {
   // Ignore things that aren't objects.
   if (typeof input !== 'object') {
@@ -84,13 +78,7 @@ angular
     'mm.iban',
     'piwik'
   ])
-  .constant('API_URL', '@@API_URL')
-  .constant('API_WS_URL', '@@API_WS_URL')
   .constant('BUILD_NR', '@@BUILD_NR')
-  .constant('ENV', '@@ENV')
-  .constant('VERSION', '@@VERSION')
-  .constant('AIRBREAK_API_KEY', '@@AIRBREAK_API_KEY')
-  .constant('AIRBREAK_URL', '@@AIRBREAK_URL')
   .constant('LIEFEREINHEIT', {
     STUECK: addExtendedEnumValue('Stueck', gettext('Stück'), gettext('St.')),
     BUND: addExtendedEnumValue('Bund', gettext('Bund'), gettext('Bu.')),
@@ -100,9 +88,25 @@ angular
     LITER: addExtendedEnumValue('Liter', gettext('Liter'), gettext('l')),
     PORTION: addExtendedEnumValue('Portion', gettext('Portion'), gettext('Por.'))
   })
+  .constant('USER_ROLES', {
+    Guest: 'Guest',
+    Administrator: 'Administrator',
+    Kunde:'Kunde'
+  })
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
+  .service('appConfig', ['$http', function($http) {
+    var configData = {};
+    $http.get('environments/config.json').then(function(payload) {
+      configData = payload.data;
+    });
+    return {
+      get: function() {
+        return configData;
+      }
+    };
+  }])
   .constant('WAEHRUNG', {
     CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
       'CHF')),
@@ -120,6 +124,11 @@ angular
       }
     };
   }])
+  .factory('convertDateStringsToDatesFct', function() {
+    return function(input) {
+      return convertDateStringsToDates(input);
+    };
+  })
   .config(['$provide', function($provide) {
     $provide.decorator('$exceptionHandler', ['$log', '$injector',
       function($log, $injector) {
@@ -133,19 +142,21 @@ angular
       }
     ]);
   }])
-  .factory('errbitErrorInterceptor', function($q, ENV, VERSION, AIRBREAK_API_KEY, AIRBREAK_URL) {
+  .factory('errbitErrorInterceptor', function($q, $injector) {
     return {
       responseError: function(rejection) {
+        var appConfig = $injector.get('appConfig');
         /*jshint -W117 */
         var airbrake = new airbrakeJs.Client({
           projectId: 1,
-          host: AIRBREAK_URL,
-          projectKey: AIRBREAK_API_KEY
+          host: appConfig.get().AIRBREAK_URL,
+          projectKey: appConfig.get().AIRBREAK_API_KEY
         });
         /*jshint +W117 */
         airbrake.addFilter(function(notice) {
-          notice.context.environment = ENV;
-          notice.context.version = VERSION;
+
+          notice.context.environment = appConfig.get().ENV;
+          notice.context.version = appConfig.get().version;
           return notice;
         });
         var message = gettext('Error: ');
@@ -171,9 +182,11 @@ angular
       return msgBus;
     }
   ])
-  .run(['ooClientMessageService', function(clientMessageService) {
-    console.log('Start clientMessageService');
-    clientMessageService.start();
+  .run(['ooClientMessageService', '$timeout', function(clientMessageService, $timeout) {
+    $timeout(function() {
+      console.log('Start clientMessageService');
+      clientMessageService.start();
+    }, 1000);
   }])
   .factory('loggedOutInterceptor', function($q, alertService) {
     return {
@@ -269,63 +282,63 @@ angular
       return filtered;
     };
   })
-  .config(function($routeProvider) {
+  .config(function($routeProvider, USER_ROLES) {
     $routeProvider
       .when('/', {
         redirectTo: '/dashboard',
-        access: userRoles.Guest
+        access: USER_ROLES.Guest
       })
       .when('/dashboard', {
         templateUrl: 'scripts/dashboard/dashboard.html',
         controller: 'DashboardController',
         name: 'Dashboard',
-        access: [userRoles.Administrator, userRoles.Kunde]
+        access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
       })
       .when('/open/lastlieferplanungen', {
         templateUrl: 'scripts/open/lastlieferplanungen.html',
         controller: 'LastLieferplanungenController',
         name: 'LastLieferplanungen',
-        access: [userRoles.Guest, userRoles.Administrator, userRoles.Kunde]
+        access: [USER_ROLES.Guest, USER_ROLES.Administrator, USER_ROLES.Kunde]
       })
       .when('/login', {
         templateUrl: 'scripts/login/login.html',
         controller: 'LoginController',
         name: 'Login',
-        access: userRoles.Guest
+        access: USER_ROLES.Guest
       })
       .when('/passwd', {
         templateUrl: 'scripts/login/change_password.html',
         controller: 'LoginController',
         name: 'Passwortwechsel',
-        access: [userRoles.Administrator, userRoles.Kunde]
+        access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
       })
       .when('/logout', {
         templateUrl: 'scripts/login/logout.html',
         controller: 'LoginController',
         logout: true,
         name: 'Logout',
-        access: userRoles.Guest
+        access: USER_ROLES.Guest
       })
       .when('/forbidden', {
         templateUrl: 'scripts/login/forbidden.html',
         controller: 'LoginController',
         name: 'Forbidden',
-        access: userRoles.Guest
+        access: USER_ROLES.Guest
       })
       .when('/zugangaktivieren', {
         templateUrl: 'scripts/login/zugangaktivieren.html',
         controller: 'LoginController',
         name: 'Einladung',
-        access: userRoles.Guest
+        access: USER_ROLES.Guest
       })
       .when('/passwordreset', {
         templateUrl: 'scripts/login/passwordreset.html',
         controller: 'LoginController',
         name: 'PasswordReset',
-        access: userRoles.Guest
+        access: USER_ROLES.Guest
       })
       .otherwise({
         templateUrl: 'scripts/not-found.html',
-        access: userRoles.Guest
+        access: USER_ROLES.Guest
       });
   });
