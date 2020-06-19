@@ -36,5 +36,5 @@ jobs:
     - name: Upload build artifact
       uses: actions/upload-artifact@v1
       with:
-        name: client-kundenportal-build
-        path: build
+        name: client-kundenportal-dist
+        path: dist
