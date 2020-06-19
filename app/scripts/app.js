@@ -96,6 +96,16 @@ angular
   .run(function($rootScope, $location) {
     $rootScope.location = $location;
   })
+  .constant('WAEHRUNG', {
+    CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
+      'CHF')),
+    EUR: addExtendedEnumValue('EUR', gettext('Euro'), gettext('EUR')),
+    USD: addExtendedEnumValue('USD', gettext('US Dollar'), gettext('USD')),
+    GBP: addExtendedEnumValue('GBP', gettext('Britisches Pfund'), gettext(
+      'GBP')),
+    CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext(
+      'CAD'))
+  })
   .service('appConfig', ['$http', function($http) {
     var loaded = false;
     var configData = {
@@ -116,16 +126,6 @@ angular
   }])
   .run(function(appConfig) {
     appConfig.get();
-  })
-  .constant('WAEHRUNG', {
-    CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
-      'CHF')),
-    EUR: addExtendedEnumValue('EUR', gettext('Euro'), gettext('EUR')),
-    USD: addExtendedEnumValue('USD', gettext('US Dollar'), gettext('USD')),
-    GBP: addExtendedEnumValue('GBP', gettext('Britisches Pfund'), gettext(
-      'GBP')),
-    CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext(
-      'CAD'))
   })
   .factory('checkSize', ['$rootScope', '$window', function($rootScope, $window) {
     return function() {
