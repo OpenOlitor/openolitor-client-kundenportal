@@ -16,6 +16,7 @@ angular.module('openolitor-kundenportal')
       });
 
       $scope.welcomeDisplayed = false;
+      $scope.loaded = false;
 
       $scope.currentPathContains = function(pathJunk) {
         return $location.url().indexOf(pathJunk) !== -1;
@@ -55,8 +56,22 @@ angular.module('openolitor-kundenportal')
         });
 
       $scope.buildNr = BUILD_NR;
-      $scope.env = appConfig.get().ENV;
-      $scope.version = appConfig.get().version;
+
+      $scope.loadAppConfig = function(count) {
+        if(appConfig.isLoaded()) {
+          $scope.loaded = true;
+          $scope.env = appConfig.get().ENV;
+          $scope.version = appConfig.get().version;
+        } else {
+          if(count < 100) {
+            $timeout(function() {
+              $scope.loadAppConfig(count++);
+            }, 100);
+          }
+        }
+      };
+
+      $scope.loadAppConfig(0);
 
       msgBus.onMsg('WebSocketClosed', $rootScope, function(event, msg) {
         $scope.connected = false;

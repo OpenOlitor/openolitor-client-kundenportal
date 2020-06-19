@@ -97,16 +97,32 @@ angular
     $rootScope.location = $location;
   })
   .service('appConfig', ['$http', function($http) {
-    var configData = {};
+    var loaded = false;
+    var configData = {
+      'API_URL': '',
+      'API_WS_URL': '',
+      'ENV': '',
+      'version': '',
+      'AIRBREAK_API_KEY': '',
+      'AIRBREAK_URL': ''
+    };
     $http.get('environments/config.json').then(function(payload) {
       configData = payload.data;
+      loaded = true;
+    }, function(error) {
     });
     return {
       get: function() {
         return configData;
+      },
+      isLoaded: function() {
+        return loaded;
       }
     };
   }])
+  .run(function(appConfig) {
+    appConfig.get();
+  })
   .constant('WAEHRUNG', {
     CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
       'CHF')),

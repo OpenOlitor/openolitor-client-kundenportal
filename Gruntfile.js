@@ -29,8 +29,7 @@ module.exports = function(grunt) {
     openolitor: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: 'dist',
-      mandanten: 'mandanten'
+      dist: 'dist'
     },
 
     // task used to replace config values in js files
@@ -161,7 +160,6 @@ module.exports = function(grunt) {
             '.tmp',
             '<%= openolitor.dist %>/*',
             '!<%= openolitor.dist %>/.git*',
-            '<%= openolitor.mandanten %>',
             '!<%= openolitor.dist %>/index.php'
           ]
         }]
@@ -342,9 +340,14 @@ module.exports = function(grunt) {
               '*.html',
               'scripts/**/*.html',
               'images/**/*.{webp,png,jpg}',
-              'fonts/*',
-              '/environments/*'
+              'fonts/*'
             ]
+          },
+          {
+            expand: true,
+            cwd: '<%= openolitor.app %>',
+            dest: '<%= openolitor.dist %>',
+            src: ['environments/*']
           },
           {
             expand: true,
@@ -381,18 +384,6 @@ module.exports = function(grunt) {
         cwd: '<%= openolitor.app %>/styles',
         dest: '.tmp/styles/',
         src: '**/*.css'
-      },
-      mandant1: {
-        expand: true,
-        cwd: '<%= openolitor.dist %>',
-        src: '**',
-        dest: '<%= openolitor.mandanten %>/mandant1'
-      },
-      mandant2: {
-        expand: true,
-        cwd: '<%= openolitor.dist %>',
-        src: '**',
-        dest: '<%= openolitor.mandanten %>/mandant2'
       }
     },
 
@@ -482,31 +473,6 @@ module.exports = function(grunt) {
           '<%= openolitor.app %>/scripts/i18n/translations.js': ['i18n/*/*.po']
         }
       }
-    },
-
-    compress: {
-      main: {
-        options: {
-          archive: 'dist/openolitor-client.zip'
-        },
-        files: [{
-          expand: true,
-          cwd: 'dist/',
-          src: ['**/*'],
-          dest: '/'
-        }]
-      },
-      mandanten: {
-        options: {
-          archive: 'mandanten/openolitor-client-mandanten.zip'
-        },
-        files: [{
-          expand: true,
-          cwd: 'mandanten/',
-          src: ['**/*'],
-          dest: '/'
-        }]
-      }
     }
   });
 
@@ -562,13 +528,7 @@ module.exports = function(grunt) {
     'rev',
     'usemin',
     'htmlmin',
-    'copy:mandant1',
-    'copy:mandant2',
-    'replace:mandant1',
-    'replace:mandant2',
-    'replace:index',
-    'compress:main',
-    'compress:mandanten'
+    'replace:index'
   ]);
 
   grunt.registerTask('i18nextract', ['nggettext_extract']);
