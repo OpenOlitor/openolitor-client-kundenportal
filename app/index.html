@@ -91,6 +91,14 @@
     <div ng-view="" ng-cloak class="container"></div>
   </div>
 
+  <div class="master-content content" ng-if="!loaded">
+    <div ng-cloak class="container">
+      <div class="jumbotron" translate>
+        <h3>Wir sind gleich bereit...</h3>
+      </div>
+    </div>
+  </div>
+
   <footer ng-if="loaded">
     <script type="text/ng-template" id="versionInfo.html"><span><b translate>Version:</b></span><br />
       <span><b>UI</b> v{{version}} | #{{buildNr}}</span><br />
