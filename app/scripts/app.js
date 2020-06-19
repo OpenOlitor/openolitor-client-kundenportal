@@ -99,12 +99,6 @@ angular
   .service('appConfig', ['$http', function($http) {
     var loaded = false;
     var configData = {
-      'API_URL': '',
-      'API_WS_URL': '',
-      'ENV': '',
-      'version': '',
-      'AIRBREAK_API_KEY': '',
-      'AIRBREAK_URL': ''
     };
     $http.get('environments/config.json').then(function(payload) {
       configData = payload.data;
