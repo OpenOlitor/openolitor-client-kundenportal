@@ -63,6 +63,7 @@ angular.module('openolitor-kundenportal')
           $scope.version = appConfig.get().version;
           $scope.API_URL = appConfig.get().API_URL;
           $scope.loaded = true;
+          ServerService.initialize();
         } else {
           if(count < 100) {
             $timeout(function() {
