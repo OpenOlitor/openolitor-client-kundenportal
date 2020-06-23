@@ -1,7 +1,6 @@
 'use strict';
 
 function getConfig() {
-  debugger;
   return {
     "API_URL": "http://localhost:9003/m1/",
     "API_WS_URL": "http://localhost:9003/m1/ws",
