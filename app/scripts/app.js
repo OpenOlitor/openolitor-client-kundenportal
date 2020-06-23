@@ -106,15 +106,12 @@ angular
     CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext(
       'CAD'))
   })
-  .service('appConfig', ['$http', function($http) {
+  .service('appConfig', function() {
     var loaded = false;
     var configData = {
     };
-    $http.get('environments/config.json').then(function(payload) {
-      configData = payload.data;
-      loaded = true;
-    }, function(error) {
-    });
+    configData = getConfig();
+    loaded = true;
     return {
       get: function() {
         return configData;
@@ -123,7 +120,7 @@ angular
         return loaded;
       }
     };
-  }])
+  })
   .run(function(appConfig) {
     appConfig.get();
   })
