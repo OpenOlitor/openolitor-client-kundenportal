@@ -56,12 +56,14 @@ angular.module('openolitor-kundenportal')
         });
 
       $scope.buildNr = BUILD_NR;
+      $scope.sendStats = false;
 
       $scope.loadAppConfig = function(count) {
         if(appConfig.isLoaded()) {
           $scope.env = appConfig.get().ENV;
           $scope.version = appConfig.get().version;
           $scope.API_URL = appConfig.get().API_URL;
+          $scope.sendStats = appConfig.get().sendStats;
           $scope.loaded = true;
           ServerService.initialize();
         } else {
