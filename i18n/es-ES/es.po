@@ -5,11 +5,13 @@ msgstr ""
 "Project-Id-Version: openolitor-subscriber-client\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: openolitor-subscriber-client\n"
+"X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: /prod/template.pot\n"
+"X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2020-03-26 15:19\n"
+"PO-Revision-Date: 2020-07-09 08:28\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -33,15 +35,19 @@ msgstr "- Entorno de prueba"
 msgid "Abbrechen"
 msgstr "Cancelar"
 
-#: app/index.html:74
+#: app/index.html:77
 msgid "Abmelden"
 msgstr "Cerrar sesión"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:106
+#: app/scripts/rechnungen/list/rechnungenlist.html:114
 msgid "Abo"
 msgstr "Subscripción"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:74
+#: app/scripts/abos/list/aboslist.html:34
+msgid "Abo-Beschrieb:"
+msgstr "Descripción de la suscripción:"
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:82
 msgid "Abo:"
 msgstr "Subscripción:"
 
@@ -74,7 +80,7 @@ msgstr "Acceso"
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr "Te hemos enviado un correo electrónico con la información necesaria para modificar tu contraseña."
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:75
+#: app/scripts/rechnungen/list/rechnungenlist.html:83
 msgid "Anzahl Lieferungen"
 msgstr "Número de entregas"
 
@@ -118,8 +124,8 @@ msgstr "Comentarios"
 msgid "Bestätigung"
 msgstr "Confirmación"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:103
-#: app/scripts/rechnungen/list/rechnungenlist.html:46
+#: app/scripts/rechnungen/list/rechnungenlist.html:111
+#: app/scripts/rechnungen/list/rechnungenlist.html:54
 msgid "Betrag"
 msgstr "Monto"
 
@@ -143,7 +149,7 @@ msgstr "CAD"
 msgid "CHF"
 msgstr "CHF"
 
-#: app/index.html:82
+#: app/index.html:85
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "El servidor no está disponible actualmente, por favor, intentelo un poco mas tarde."
 
@@ -170,7 +176,7 @@ msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "La contraseña ha sido inicializada. Ahora puedes conectarte con el nombre de usuario y la contraseña."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
-#: app/scripts/rechnungen/list/rechnungenlist.html:94
+#: app/scripts/rechnungen/list/rechnungenlist.html:102
 msgid "Datum"
 msgstr "Fecha"
 
@@ -198,7 +204,7 @@ msgstr "El estado de una factura está actualizada periódicamente por la admini
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
 msgstr "El acceso ha sido denegado. Contacta a la persona encargada de la gestión de tu grupo de consumo."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:8
+#: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
 msgstr "La cesta actual"
 
@@ -206,7 +212,7 @@ msgstr "La cesta actual"
 msgid "Der nächste Korb"
 msgstr "La siguiente cesta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:67
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Details werden geladen..."
 msgstr "Cargando los detalles..."
 
@@ -216,7 +222,7 @@ msgstr "Cargando los detalles..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "Los datos se reinicializan periódicamente."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:86
+#: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
 msgstr "Las cestas anteriores"
 
@@ -238,11 +244,11 @@ msgstr "Dirección de correo electrónico"
 msgid "E-Mail:"
 msgstr "Correo electrónico:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:60
+#: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
 msgstr "Nº ESR"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:59
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr "Copiar el número ESR al portapapeles (para utilizarlo en el sistema de pago)"
 
@@ -274,8 +280,8 @@ msgstr "Entrada muy corta"
 msgid "Eingabe zu lang"
 msgstr "Entrada muy larga"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:142
-#: app/scripts/abos/list/lieferungen/lieferungen.html:46
+#: app/scripts/abos/list/lieferungen/lieferungen.html:33
+#: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Einheit"
 msgstr "Unidad"
 
@@ -295,7 +301,7 @@ msgstr "Error 404"
 msgid "Error:"
 msgstr "Error:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:16
+#: app/scripts/rechnungen/list/rechnungenlist.html:24
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr "Todavía no hay facturas."
 
@@ -303,7 +309,7 @@ msgstr "Todavía no hay facturas."
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr "Se le ha enviado un código de acceso a su dirección de correo electrónico"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:20
+#: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
 msgstr "Todavía no hay cestas de este tipo que hayan sido programadas o entregadas."
 
@@ -319,11 +325,11 @@ msgstr "Euro"
 msgid "Fehlerhafte Email Adresse"
 msgstr "Dirección de correo electrónico incorrecta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:97
+#: app/scripts/rechnungen/list/rechnungenlist.html:105
 msgid "Fällig"
 msgstr "A pagar hasta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:40
+#: app/scripts/rechnungen/list/rechnungenlist.html:48
 msgid "Fällig am"
 msgstr "Fecha límite"
 
@@ -351,6 +357,10 @@ msgstr "GBP"
 msgid "Gramm"
 msgstr "Gramos"
 
+#: app/scripts/rechnungen/list/rechnungenlist.html:8
+msgid "IBAN für Einzahlungen:"
+msgstr "Cuenta de pago:"
+
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
 msgstr "Contenido de las cestas"
@@ -371,19 +381,23 @@ msgstr "Ninguna oferta de colaboración."
 msgid "Kilogramm"
 msgstr "Kilogramos"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:7
+#: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
 msgstr "Cuenta de pago:"
 
-#: app/scripts/abos/list/aboslist.html:58
+#: app/scripts/abos/list/lieferungen/lieferungen.html:70
+msgid "Korb vom"
+msgstr "Cesta de "
+
+#: app/scripts/abos/list/aboslist.html:66
 msgid "Laufzeit:"
 msgstr "Duración del contrato:"
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:50
 msgid "Lieferrhythmus:"
 msgstr "Ciclo de entrega:"
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:42
 msgid "Liefertag:"
 msgstr "Día de entrega:"
 
@@ -399,8 +413,8 @@ msgstr "Litro"
 msgid "Login Administration"
 msgstr "Administración de inicio de sesión"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:141
-#: app/scripts/abos/list/lieferungen/lieferungen.html:43
+#: app/scripts/abos/list/lieferungen/lieferungen.html:30
+#: app/scripts/abos/list/lieferungen/lieferungen.html:83
 msgid "Menge"
 msgstr "Cantidad"
 
@@ -438,7 +452,7 @@ msgstr "Restablecer contraseña y permitir el acceso"
 msgid "Passwort vergessen?"
 msgstr "¿Has olvidado tu contraseña?"
 
-#: app/index.html:73
+#: app/index.html:76
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Cambiar la contraseña"
@@ -486,34 +500,34 @@ msgstr "Por."
 msgid "Portion"
 msgstr "Porción"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:145
-#: app/scripts/abos/list/lieferungen/lieferungen.html:49
+#: app/scripts/abos/list/lieferungen/lieferungen.html:36
+#: app/scripts/abos/list/lieferungen/lieferungen.html:89
 msgid "Preis"
 msgstr "Precio"
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:58
 msgid "Preis:"
 msgstr "Precio:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:138
-#: app/scripts/abos/list/lieferungen/lieferungen.html:40
+#: app/scripts/abos/list/lieferungen/lieferungen.html:27
+#: app/scripts/abos/list/lieferungen/lieferungen.html:80
 msgid "Produkt"
 msgstr "Producto"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:156
-#: app/scripts/abos/list/lieferungen/lieferungen.html:64
+#: app/scripts/abos/list/lieferungen/lieferungen.html:49
+#: app/scripts/abos/list/lieferungen/lieferungen.html:97
 msgid "Produzent"
 msgstr "Productores"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:37
+#: app/scripts/rechnungen/list/rechnungenlist.html:45
 msgid "Rechnungsdatum"
 msgstr "Fecha de facturas"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:51
+#: app/scripts/rechnungen/list/rechnungenlist.html:59
 msgid "Referenznummer"
 msgstr "Número de referencia"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:50
+#: app/scripts/rechnungen/list/rechnungenlist.html:58
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr "Copiar el nº de referencia en el portapapeles"
 
@@ -537,8 +551,8 @@ msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como ab
 msgid "St."
 msgstr "Unidad"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:109
-#: app/scripts/rechnungen/list/rechnungenlist.html:55
+#: app/scripts/rechnungen/list/rechnungenlist.html:117
+#: app/scripts/rechnungen/list/rechnungenlist.html:63
 msgid "Status"
 msgstr "Estado"
 
@@ -548,8 +562,9 @@ msgstr "Unidad"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
-#: app/scripts/rechnungen/list/rechnungenlist.html:100
-#: app/scripts/rechnungen/list/rechnungenlist.html:43
+#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
+#: app/scripts/rechnungen/list/rechnungenlist.html:108
+#: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Titel"
 msgstr "Título"
 
@@ -573,7 +588,7 @@ msgstr "¡estamos realizando tareas de mantenimiento! el portal del abonado est�
 msgid "Verbindlich Einschreiben"
 msgstr "Inscribirse de manera definitiva"
 
-#: app/index.html:92
+#: app/index.html:95
 msgid "Version:"
 msgstr "Versión:"
 
@@ -581,17 +596,23 @@ msgstr "Versión:"
 msgid "Vertrieb:"
 msgstr "Distribución:"
 
-#: app/scripts/abos/list/aboslist.html:61
+#: app/scripts/abos/list/aboslist.html:69
 msgid "Von"
 msgstr "De"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:172
+#: app/scripts/abos/list/lieferungen/lieferungen.html:115
 msgid "Weitere Körbe anzeigen..."
 msgstr "Mostrar más cestas..."
 
-#: app/scripts/open/lastlieferplanungen.html:74
+#: app/scripts/open/lastlieferplanungen.html:80
 msgid "Weitere Lieferungen anzeigen..."
 msgstr "Mostrar más entregas..."
+
+#: app/scripts/abos/list/lieferungen/lieferungen.html:105
+#: app/scripts/abos/list/lieferungen/lieferungen.html:22
+#: app/scripts/open/lastlieferplanungen.html:26
+msgid "Weiterlesen ..."
+msgstr "Leer más ..."
 
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
@@ -630,7 +651,7 @@ msgstr "Acceso denegado"
 msgid "alle"
 msgstr "todos"
 
-#: app/scripts/abos/list/aboslist.html:61
+#: app/scripts/abos/list/aboslist.html:69
 msgid "bis"
 msgstr "de"
 
@@ -641,10 +662,6 @@ msgstr "Ya inscrito"
 #: app/scripts/app.js:97
 msgid "gr"
 msgstr "gr"
-
-#: app/scripts/rechnungen/list/rechnungenlist.html:9
-msgid "in Stammdaten nicht definiert"
-msgstr "sin definir en los datos básicos"
 
 #: app/scripts/app.js:99
 msgid "kg"
@@ -665,8 +682,4 @@ msgstr "del"
 #: app/scripts/login/login.html:84
 msgid "zugestellt."
 msgstr "entregado."
-
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
-msgid "{{title | translate}}"
-msgstr "{title | translate}"
 
