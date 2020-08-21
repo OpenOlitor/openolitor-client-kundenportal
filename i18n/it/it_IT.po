@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2020-08-21 09:03\n"
+"PO-Revision-Date: 2020-08-21 09:22\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -28,12 +28,12 @@ msgstr "ambiente di sviluppo"
 
 #: app/scripts/login/login.html:6
 msgid "- Testumgebung"
-msgstr ""
+msgstr "ambiente di test"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
-msgstr ""
+msgstr "annullare"
 
 #: app/index.html:77
 msgid "Abmelden"
