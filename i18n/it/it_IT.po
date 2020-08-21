@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2020-07-07 08:58\n"
+"PO-Revision-Date: 2020-08-21 09:03\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -24,7 +24,7 @@ msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
-msgstr ""
+msgstr "ambiente di sviluppo"
 
 #: app/scripts/login/login.html:6
 msgid "- Testumgebung"
