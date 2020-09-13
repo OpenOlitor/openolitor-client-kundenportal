@@ -73,6 +73,7 @@ angular.module('openolitor-kundenportal')
           link.type = 'text/css';
 
           link.href = $scope.API_URL + 'ressource/style/kundenportal';
+          head.appendChild(link);
 
           ServerService.initialize();
         } else {
