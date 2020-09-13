@@ -65,6 +65,15 @@ angular.module('openolitor-kundenportal')
           $scope.API_URL = appConfig.get().API_URL;
           $scope.sendStats = appConfig.get().sendStats;
           $scope.loaded = true;
+          //add project custom class
+          var head = document.getElementsByTagName('HEAD')[0];
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+
+          link.type = 'text/css';
+
+          link.href = $scope.API_URL + 'ressource/style/kundenportal';
+
           ServerService.initialize();
         } else {
           if(count < 100) {
