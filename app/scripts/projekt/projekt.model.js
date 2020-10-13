@@ -4,11 +4,11 @@
  */
 angular.module('openolitor-kundenportal')
 
-  .factory('OpenProjektModel', ['$resource', 'API_URL', function($resource, API_URL) {
-    return $resource(API_URL + 'open/projekt', {
+  .factory('OpenProjektModel', ['$resource', 'appConfig', function($resource, appConfig) {
+    return $resource(appConfig.get().API_URL + 'open/projekt', {
     }, {'query': {method:'GET', isArray: false},
     'fetchStyle': {
-        url: API_URL + 'ressource/style/:style/download',
+        url: appConfig.get().API_URL + 'ressource/style/:style/download',
         method: 'GET',
         responseType: 'arraybuffer',
         transformResponse: function (data) {
@@ -24,8 +24,8 @@ angular.module('openolitor-kundenportal')
         }
     }});
   }])
-  .factory('ProjektModel', ['$resource', 'API_URL', function($resource, API_URL) {
-    return $resource(API_URL + 'projekt/:id', {
+  .factory('ProjektModel', ['$resource', 'appConfig', function($resource, appConfig) {
+    return $resource(appConfig.get().API_URL + 'projekt/:id', {
     id: '@id'
     }, {'query': {method:'GET', isArray: false}
   });

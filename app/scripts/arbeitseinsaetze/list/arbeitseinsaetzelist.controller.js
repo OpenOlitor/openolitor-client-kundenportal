@@ -18,7 +18,7 @@ angular
     'gettext',
     '$http',
     '$filter',
-    'API_URL',
+    'appConfig',
     'ooAuthService',
     function(
       $scope,
@@ -34,7 +34,7 @@ angular
       gettext,
       $http,
       $filter,
-      API_URL,
+      appConfig,
       ooAuthService
     ) {
       $scope.arbeitseinsatzTableParams = undefined;
@@ -118,7 +118,7 @@ angular
       $scope.quit = function(arbeitseinsatz) {
         $http
           .delete(
-            API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id
+            appConfig.get().API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id
           )
           .then(
             function() {
@@ -161,7 +161,7 @@ angular
             arbeitseinsatz.anzahlPersonen = data.anzahlPersonen;
             $http
               .post(
-                API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
+                appConfig.get().API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
                 arbeitseinsatz
               )
               .then(

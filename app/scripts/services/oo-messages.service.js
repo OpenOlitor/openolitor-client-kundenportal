@@ -3,9 +3,9 @@
 angular.module('openolitor-kundenportal')
   .factory('ooClientMessageService', ['$http', '$location', '$q', '$interval',
     '$rootScope', '$log',
-    'msgBus', 'API_WS_URL', 'BUILD_NR', 'ooAuthService',
+    'msgBus', 'appConfig', 'BUILD_NR', 'ooAuthService', 'convertDateStringsToDatesFct',
     function($http, $location, $q, $interval, $rootScope, $log, msgBus,
-      API_WS_URL, BUILD_NR, ooAuthService) {
+      appConfig, BUILD_NR, ooAuthService, convertDateStringsToDatesFct) {
 
       var send = function(eventType, eventData) {
         // append type to event data
@@ -27,7 +27,7 @@ angular.module('openolitor-kundenportal')
         var ws = new WebSocket(url);
 
         ws.onmessage = function(msg) {
-          var data = convertDateStringsToDates(JSON.parse(msg.data));
+          var data = convertDateStringsToDatesFct(JSON.parse(msg.data));
           console.log('WS received event', data);
           msgBus.emitMsg(data);
         };
@@ -140,7 +140,7 @@ angular.module('openolitor-kundenportal')
         //start websocket based messaging
         start: function() {
           $log.debug('registering websocket, request websocket url');
-          var wsUrl = API_WS_URL.replace('http://', 'ws://').replace(
+          var wsUrl = appConfig.get().API_WS_URL.replace('http://', 'ws://').replace(
             'https://', 'wss://');
           $log.debug('registering websocket, bind to ' + wsUrl);
           //append token to websocket url because normal http headers can't get controlled

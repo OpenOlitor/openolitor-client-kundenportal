@@ -13,11 +13,13 @@ angular.module('openolitor-kundenportal').factory('ServerService', [
         staticServerInfo = result;
       });
     };
-    load();
 
     return {
       getStaticServerInfo: function() {
         return staticServerInfo;
+      },
+      initialize: function() {
+        load();
       }
     };
   }

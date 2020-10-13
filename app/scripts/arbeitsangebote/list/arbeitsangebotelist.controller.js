@@ -14,7 +14,7 @@ angular
     'gettext',
     '$http',
     '$filter',
-    'API_URL',
+    'appConfig',
     'ooAuthService',
     'msgBus',
     function(
@@ -27,7 +27,7 @@ angular
       gettext,
       $http,
       $filter,
-      API_URL,
+      appConfig,
       ooAuthService,
       msgBus
     ) {
@@ -110,7 +110,7 @@ angular
           function(data) {
             data.kundeId = ooAuthService.getUser().kundeId;
             data.personId = ooAuthService.getUser().id;
-            $http.post(API_URL + 'kundenportal/arbeitsangebote', data).then(
+            $http.post(appConfig.get().API_URL + 'kundenportal/arbeitsangebote', data).then(
               function() {
                 alertService.addAlert(
                   'info',
@@ -174,7 +174,7 @@ angular
             arbeitseinsatz.anzahlPersonen = data.anzahlPersonen;
             $http
               .post(
-                API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
+                appConfig.get().API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
                 arbeitseinsatz
               )
               .then(

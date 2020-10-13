@@ -6,7 +6,7 @@
 var checkAuth = function($q, ooAuthService, $rootScope, $location, $log) {
   $rootScope.$on('$routeChangeStart', function(event, next, current) {
     return ooAuthService.authorize(next.access).then(function(authorized) {
-      $log.debug('check authorization:' + next.access + ' -> ' + authorized);
+      $log.debug('check authorization:' + current + ' to '+ next.access + ' -> ' + authorized);
       if (!authorized) {
         ooAuthService.isLoggedIn().then(function(loggedIn) {
           if (loggedIn) {
@@ -29,13 +29,14 @@ angular
     '$q',
     '$cookies',
     '$log',
-    'API_URL',
-    function($http, $location, $q, $cookies, $log, API_URL) {
+    'appConfig',
+    'USER_ROLES',
+    function($http, $location, $q, $cookies, $log, appConfig, USER_ROLES) {
       var user,
         token = $cookies.get('XSRF-TOKEN');
 
       var currentUser = function() {
-        return $http.get(API_URL + 'auth/user').then(function(response) {
+        return $http.get(appConfig.get().API_URL + 'auth/user').then(function(response) {
           user = response.data;
           $log.debug('Login succeeded:' + user);
           return user;
@@ -103,24 +104,24 @@ angular
             $log.debug('authorize:', accessLevel + ' => ' + user.rolle);
             return (
               accessLevel === undefined ||
-              accessLevel === userRoles.Guest ||
+              accessLevel === USER_ROLES.Guest ||
               accessLevel === user.rolle ||
               (Array.isArray(accessLevel) &&
-                (accessLevel.indexOf(userRoles.Guest) > -1 ||
+                (accessLevel.indexOf(USER_ROLES.Guest) > -1 ||
                   accessLevel.indexOf(user.rolle) > -1))
             );
           });
         },
         isLoggedIn: function() {
           return resolveUser().then(function(user) {
-            return user.rolle !== userRoles.Guest;
+            return user.rolle !== USER_ROLES.Guest;
           });
         },
         isUserLoggedIn: function(user) {
           if (user === undefined) {
             return false;
           }
-          return user.rolle !== userRoles.Guest;
+          return user.rolle !== USER_ROLES.Guest;
         }
       };
     }
@@ -128,8 +129,7 @@ angular
   .factory('requestSecurityInjector', [
     '$cookies',
     'moment',
-    '$log',
-    function($cookies, moment, $log) {
+    function($cookies, moment) {
       return {
         request: function(config) {
           var token = $cookies.get('XSRF-TOKEN');

@@ -6,17 +6,17 @@ angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
-    'ENV', 'VERSION',
-    'ooAuthService', 'API_URL', '$cookies', 'dialogService',
+    'ooAuthService', 'appConfig', '$cookies', 'dialogService',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
-      $timeout, BUILD_NR, ENV, VERSION, ooAuthService, API_URL,
+      $timeout, BUILD_NR, ooAuthService, appConfig,
       $cookies, dialogService) {
       angular.element($window).bind('resize', function() {
         checkSize();
       });
 
       $scope.welcomeDisplayed = false;
+      $scope.loaded = false;
 
       $scope.currentPathContains = function(pathJunk) {
         return $location.url().indexOf(pathJunk) !== -1;
@@ -56,8 +56,36 @@ angular.module('openolitor-kundenportal')
         });
 
       $scope.buildNr = BUILD_NR;
-      $scope.env = ENV;
-      $scope.version = VERSION;
+      $scope.sendStats = false;
+
+      $scope.loadAppConfig = function(count) {
+        if(appConfig.isLoaded()) {
+          $scope.env = appConfig.get().ENV;
+          $scope.version = appConfig.get().version;
+          $scope.API_URL = appConfig.get().API_URL;
+          $scope.sendStats = appConfig.get().sendStats;
+          $scope.loaded = true;
+          //add project custom class
+          var head = document.getElementsByTagName('HEAD')[0];
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+
+          link.type = 'text/css';
+
+          link.href = $scope.API_URL + 'ressource/style/kundenportal';
+          head.appendChild(link);
+
+          ServerService.initialize();
+        } else {
+          if(count < 100) {
+            $timeout(function() {
+              $scope.loadAppConfig(count++);
+            }, 100);
+          }
+        }
+      };
+
+      $scope.loadAppConfig(0);
 
       msgBus.onMsg('WebSocketClosed', $rootScope, function(event, msg) {
         $scope.connected = false;
@@ -94,13 +122,9 @@ angular.module('openolitor-kundenportal')
       $scope.displayActiveLang = function() {
         switch(gettextCatalog.getCurrentLanguage()){
           case 'en_US': return 'en';
-            break;
           case 'cs_CZ': return 'cs';
-            break;
           case 'es_ES': return 'es';
-            break;
           case 'hu_HU': return 'hu';
-            break;
           default: return(gettextCatalog.getCurrentLanguage());
         }
       };
