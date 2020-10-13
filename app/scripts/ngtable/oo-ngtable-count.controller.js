@@ -35,7 +35,7 @@ angular.module('openolitor-kundenportal')
 
       $scope.count = function(count) {
           if (count === 'maxValue' ){
-              count = Number.MAX_VALUE
+              count = Number.MAX_VALUE;
           }
         deepFind($scope.$parent, 'params').count(count);
         setCookie(count);

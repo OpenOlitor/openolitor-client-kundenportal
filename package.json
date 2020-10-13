@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.3.4",
+  "version": "2.4.2",
   "description": "OpenOlitor Client Webapplication",
   "repository": {
     "type": "git",
@@ -10,8 +10,9 @@
   "dependencies": {
     "bower": "1.8.8",
     "bower-npm-resolver": "^0.10.0",
-    "openolitor-core": "git://github.com/OpenOlitor/openolitor-client-core.git#2.4.2",
-    "pako": "^1.0.10"
+    "openolitor-core": "git://github.com/OpenOlitor/openolitor-client-core.git#2.5.2",
+    "pako": "^1.0.10",
+    "airbrake-js": "0.5.9"
   },
   "devDependencies": {
     "grunt": "^1.0.4",

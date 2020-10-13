@@ -6,8 +6,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
   '$scope',
   '$rootScope',
   '$http',
-  'API_URL',
-  'ENV',
+  'appConfig',
   'gettext',
   '$rootElement',
   'alertService',
@@ -21,8 +20,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
     $scope,
     $rootScope,
     $http,
-    API_URL,
-    ENV,
+    appConfig,
     gettext,
     $rootElement,
     alertService,
@@ -47,7 +45,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
       token: undefined
     };
     $scope.status = 'login';
-    $scope.env = ENV;
+    $scope.env = appConfig.get().ENV;
     $scope.secondFactorCountdown = 600;
     $scope.secondFactorCountdownDate = function() {
       return moment().add($scope.secondFactorCountdown, 'seconds');
@@ -84,7 +82,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
 
     var doLogout = function(showMessage, msg) {
       var usr = ooAuthService.getUser();
-      $http.post(API_URL + 'auth/logout').then(function() {
+      $http.post(appConfig.get().API_URL + 'auth/logout').then(function() {
         $scope.loginData.message = undefined;
 
         ooAuthService.loggedOut();
@@ -157,7 +155,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
 
     $scope.login = function() {
       if ($scope.loginForm.$valid) {
-        $http.post(API_URL + 'auth/login', $scope.loginData).then(
+        $http.post(appConfig.get().API_URL + 'auth/login', $scope.loginData).then(
           function(result) {
             $scope.loginData.message = undefined;
 
@@ -192,7 +190,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
 
     $scope.secondFactorLogin = function() {
       if ($scope.secondFactorForm.$valid) {
-        $http.post(API_URL + 'auth/secondFactor', $scope.secondFactorData).then(
+        $http.post(appConfig.get().API_URL + 'auth/secondFactor', $scope.secondFactorData).then(
           function(result) {
             $scope.secondFactorData.message = undefined;
             if ($scope.cancelSecondFactorTimer) {
@@ -209,7 +207,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
 
     $scope.changePassword = function() {
       if ($scope.changePwdForm.$valid) {
-        $http.post(API_URL + 'auth/passwd', $scope.changePwd).then(
+        $http.post(appConfig.get().API_URL + 'auth/passwd', $scope.changePwd).then(
           function() {
             $scope.changePwd.message = undefined;
             showPasswordChangedMessage();
@@ -224,7 +222,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
     $scope.setPassword = function() {
       if ($scope.setPasswordForm.$valid) {
         $scope.initPassword.token = $routeParams.token;
-        $http.post(API_URL + 'auth/zugangaktivieren', $scope.initPassword).then(
+        $http.post(appConfig.get().API_URL + 'auth/zugangaktivieren', $scope.initPassword).then(
           function() {
             $scope.initPassword.message = undefined;
             showPasswordSetMessage();
@@ -239,7 +237,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
     $scope.resetPassword = function() {
       if ($scope.resetPasswordForm.$valid) {
         $http
-          .post(API_URL + 'auth/passwordreset', $scope.resetPasswordData)
+          .post(appConfig.get().API_URL + 'auth/passwordreset', $scope.resetPasswordData)
           .then(
             function() {
               $scope.resetPasswordData.message = undefined;

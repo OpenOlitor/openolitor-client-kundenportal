@@ -4,9 +4,9 @@
  */
 angular
   .module('openolitor-kundenportal')
-  .factory('ServerModel', function($resource, API_URL) {
+  .factory('ServerModel', function($resource, appConfig) {
     return $resource(
-      API_URL + 'status/staticInfo/',
+      appConfig.get().API_URL + 'status/staticInfo/',
       {},
       { query: { method: 'GET', isArray: false } }
     );
