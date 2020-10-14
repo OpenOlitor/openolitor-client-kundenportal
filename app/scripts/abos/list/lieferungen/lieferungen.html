@@ -73,8 +73,8 @@
         </div>
         <div id="collapse{{lieferung.id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{lieferung.id}}" >
           <div class="panel-body">
-            <div class="panel panel-success" ng-show="lieferung.lieferplanungBemerkungen" >
-              <div class="panel-body html-content" ng-bind-html="lieferung.lieferplanungBemerkungen | unsafe" ></div>
+            <div class="panel panel-success">
+              <div class="panel-body html-content" ng-bind-html="lieferung.lieferplanungBemerkungen | unsafe" ng-show="lieferung.lieferplanungBemerkungen" ></div>
               <table ng-show="lieferungen" ng-table="lieferung.lieferungenTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html" >
               <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'" >
                 <td data-title="'Produkt'|translate">
