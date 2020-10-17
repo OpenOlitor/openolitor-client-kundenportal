@@ -4,7 +4,7 @@
       <span class="navbar-brand">
         <span ng-if="lieferungen[0] && lieferungen[0].datum > today" translate >Der nächste Korb</span>
         <span ng-if="lieferungen[0] && lieferungen[0].datum <= today" translate >Der aktuelle Korb</span>
-        <span ng-show="lieferungen" translatel> vom </span><span>{{lieferungen[0].datum | date}}</span>
+        <span ng-show="lieferungen" translate> vom </span><span> {{lieferungen[0].datum | date}}</span>
       </span>
     </h3>
   </div>
