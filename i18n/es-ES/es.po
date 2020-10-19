@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2020-10-19 14:34\n"
+"PO-Revision-Date: 2020-10-19 14:44\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -131,7 +131,7 @@ msgstr "Monto"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "Bezahlt"
-msgstr ""
+msgstr "Pagado"
 
 #: app/scripts/app.js:104
 msgid "Britisches Pfund"
@@ -306,7 +306,7 @@ msgstr "Error:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
 msgid "Erstellt"
-msgstr ""
+msgstr "Creado"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:24
 msgid "Es liegen noch keine Rechnungen vor."
@@ -422,7 +422,7 @@ msgstr "Administración de inicio de sesión"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "MahnungVerschickt"
-msgstr ""
+msgstr "Aviso enviado"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
@@ -569,7 +569,7 @@ msgstr "Estado"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Storniert"
-msgstr ""
+msgstr "Cancelado"
 
 #: app/scripts/app.js:83
 msgid "Stück"
@@ -605,7 +605,7 @@ msgstr "Inscribirse de manera definitiva"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Verschickt"
-msgstr ""
+msgstr "Enviado"
 
 #: app/index.html:102
 msgid "Version:"
@@ -643,7 +643,7 @@ msgstr "¡Bienvenid@!"
 
 #: app/index.html:96
 msgid "Wir sind gleich bereit..."
-msgstr ""
+msgstr "Volvemos en un rato..."
 
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
@@ -672,7 +672,7 @@ msgstr "Acceso denegado"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
-msgstr ""
+msgstr "Abono suplementario:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
