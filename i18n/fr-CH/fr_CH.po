@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2020-10-19 14:35\n"
+"PO-Revision-Date: 2020-10-19 14:44\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -45,7 +45,7 @@ msgstr "Abonnement"
 
 #: app/scripts/abos/list/aboslist.html:34
 msgid "Abo-Beschrieb:"
-msgstr ""
+msgstr "Description de la suscription:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:83
 msgid "Abo:"
@@ -131,7 +131,7 @@ msgstr "Montant"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "Bezahlt"
-msgstr ""
+msgstr "Payé"
 
 #: app/scripts/app.js:104
 msgid "Britisches Pfund"
@@ -306,7 +306,7 @@ msgstr "Erreur:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
 msgid "Erstellt"
-msgstr ""
+msgstr "Créé"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:24
 msgid "Es liegen noch keine Rechnungen vor."
@@ -366,7 +366,7 @@ msgstr "gramme"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:8
 msgid "IBAN für Einzahlungen:"
-msgstr ""
+msgstr "IBAN de payement:"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
@@ -394,7 +394,7 @@ msgstr "Compte de payement"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:70
 msgid "Korb vom"
-msgstr ""
+msgstr "Panier de"
 
 #: app/scripts/abos/list/aboslist.html:66
 msgid "Laufzeit:"
@@ -672,7 +672,7 @@ msgstr "Accès refusé"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
-msgstr ""
+msgstr "Abonnement supplémentaire:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
