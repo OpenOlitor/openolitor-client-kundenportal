@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2020-10-19 14:44\n"
+"PO-Revision-Date: 2020-10-19 14:52\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -422,7 +422,7 @@ msgstr "Login frontend d'administration"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "MahnungVerschickt"
-msgstr ""
+msgstr "Rappel-envoyé"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
@@ -569,7 +569,7 @@ msgstr "Etat"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Storniert"
-msgstr ""
+msgstr "Annulé"
 
 #: app/scripts/app.js:83
 msgid "Stück"
@@ -605,7 +605,7 @@ msgstr "S'inscrire de manière définitive"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Verschickt"
-msgstr ""
+msgstr "Envoyé"
 
 #: app/index.html:102
 msgid "Version:"
@@ -631,7 +631,7 @@ msgstr "Afficher plus de livraisons"
 #: app/scripts/abos/list/lieferungen/lieferungen.html:22
 #: app/scripts/open/lastlieferplanungen.html:26
 msgid "Weiterlesen ..."
-msgstr ""
+msgstr "Lire plus ..."
 
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
@@ -643,7 +643,7 @@ msgstr "Bienvenue"
 
 #: app/index.html:96
 msgid "Wir sind gleich bereit..."
-msgstr ""
+msgstr "Nous serons prêts bientôt ..."
 
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
