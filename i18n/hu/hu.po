@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2020-09-05 07:54\n"
+"PO-Revision-Date: 2020-10-19 14:35\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -35,11 +35,11 @@ msgstr "-Tesztkörnyezet"
 msgid "Abbrechen"
 msgstr "Mégsem"
 
-#: app/index.html:77
+#: app/index.html:76
 msgid "Abmelden"
 msgstr "Kijelentkezés"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:114
+#: app/scripts/rechnungen/list/rechnungenlist.html:119
 msgid "Abo"
 msgstr "Előfizetés"
 
@@ -47,7 +47,7 @@ msgstr "Előfizetés"
 msgid "Abo-Beschrieb:"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:82
+#: app/scripts/rechnungen/list/rechnungenlist.html:83
 msgid "Abo:"
 msgstr "Előfizetés:"
 
@@ -76,11 +76,11 @@ msgstr "Bejelentkezés"
 msgid "Anmeldung"
 msgstr "Regisztráció"
 
-#: app/scripts/login/login.controller.js:139
+#: app/scripts/login/login.controller.js:137
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr "A jelszó beállítására vonatkozó utasításokat elküldtük az e-mail címére."
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:83
+#: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
 msgstr "Kiszállítások száma"
 
@@ -106,7 +106,7 @@ msgstr "Önkéntes munkát sikeresen megváltoztatta."
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr "Önkéntes munka nem változott:"
 
-#: app/scripts/login/login.controller.js:78
+#: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
 msgstr "Viszlát"
 
@@ -124,32 +124,36 @@ msgstr "Megjegyzés"
 msgid "Bestätigung"
 msgstr "Megerősítés"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:111
+#: app/scripts/rechnungen/list/rechnungenlist.html:116
 #: app/scripts/rechnungen/list/rechnungenlist.html:54
 msgid "Betrag"
 msgstr "Összeg"
 
-#: app/scripts/app.js:111
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
+msgid "Bezahlt"
+msgstr ""
+
+#: app/scripts/app.js:104
 msgid "Britisches Pfund"
 msgstr "Angol font"
 
-#: app/scripts/app.js:96
+#: app/scripts/app.js:84
 msgid "Bu."
 msgstr "csokor"
 
-#: app/scripts/app.js:96
+#: app/scripts/app.js:84
 msgid "Bund"
 msgstr "Csokor"
 
-#: app/scripts/app.js:113
+#: app/scripts/app.js:106
 msgid "CAD"
 msgstr "CAD"
 
-#: app/scripts/app.js:107
+#: app/scripts/app.js:100
 msgid "CHF"
 msgstr "CHF"
 
-#: app/index.html:85
+#: app/index.html:84
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "A mentés jelenleg nem elérhető. Kérjük látogasson meg minket később."
 
@@ -171,12 +175,11 @@ msgstr "A jelszó minimum 6 karaktert tartalmazzon."
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
 msgstr "A jelszó tartalmazzon legalább egy-egy kis- és nagybetűt, valamint számot és különleges karaktert (szimbólumot)."
 
-#: app/scripts/login/login.controller.js:126
+#: app/scripts/login/login.controller.js:124
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "Sikeresen létrehozott egy jelszót. Most más be tud jelentkezni."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
-#: app/scripts/rechnungen/list/rechnungenlist.html:102
+#: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
 msgstr "Dátum"
 
@@ -212,7 +215,7 @@ msgstr "Jelenlegi tagság"
 msgid "Der nächste Korb"
 msgstr "Következő kosár"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:75
+#: app/scripts/rechnungen/list/rechnungenlist.html:76
 msgid "Details werden geladen..."
 msgstr "Részletek betöltése..."
 
@@ -244,15 +247,15 @@ msgstr "E-mail cím"
 msgid "E-Mail:"
 msgstr "E-mail:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:68
+#: app/scripts/rechnungen/list/rechnungenlist.html:69
 msgid "ESR-Nr."
 msgstr "ISR-szám"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:67
+#: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr "ESR szám másolása a vágólapra (hogy használhassa a pénzügyi modulokban)."
 
-#: app/scripts/app.js:109
+#: app/scripts/app.js:102
 msgid "EUR"
 msgstr "EUR"
 
@@ -297,9 +300,13 @@ msgstr "Sikeresen jelentkezett önkéntes munkára."
 msgid "Error 404"
 msgstr "404-es hiba"
 
-#: app/scripts/app.js:151
+#: app/scripts/app.js:169
 msgid "Error:"
 msgstr "Hiba:"
+
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
+msgid "Erstellt"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:24
 msgid "Es liegen noch keine Rechnungen vor."
@@ -317,7 +324,7 @@ msgstr "Még nem készült ilyen típusú tagság."
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
 msgstr "Még nincs megvalósított szállítási terv."
 
-#: app/scripts/app.js:109
+#: app/scripts/app.js:102
 msgid "Euro"
 msgstr "Euro"
 
@@ -325,7 +332,7 @@ msgstr "Euro"
 msgid "Fehlerhafte Email Adresse"
 msgstr "Helytelen e-mail cím"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:105
+#: app/scripts/rechnungen/list/rechnungenlist.html:110
 msgid "Fällig"
 msgstr "Esedékes"
 
@@ -349,11 +356,11 @@ msgstr "Az OpenOlitor használatához bejelentkezés szükséges."
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
 msgstr "Az admin felület használatához bejelentkezés szükséges."
 
-#: app/scripts/app.js:111
+#: app/scripts/app.js:104
 msgid "GBP"
 msgstr "GBP"
 
-#: app/scripts/app.js:97
+#: app/scripts/app.js:85
 msgid "Gramm"
 msgstr "gramm"
 
@@ -365,7 +372,7 @@ msgstr ""
 msgid "Inhalt der Körbe"
 msgstr "Kosár tartalma"
 
-#: app/scripts/app.js:113
+#: app/scripts/app.js:106
 msgid "Kanadischer Dollar"
 msgstr "Kanadai dollár"
 
@@ -377,7 +384,7 @@ msgstr "Kategóriák"
 msgid "Keine Arbeitsangebote."
 msgstr "Nincs önkéntes munka ajánlat."
 
-#: app/scripts/app.js:98
+#: app/scripts/app.js:86
 msgid "Kilogramm"
 msgstr "Kilogramm"
 
@@ -405,13 +412,17 @@ msgstr "Szállítás napja:"
 msgid "Lieferung"
 msgstr "Szállítás"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:88
 msgid "Liter"
 msgstr "Liter"
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
 msgstr "Adminisztráció"
+
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
+msgid "MahnungVerschickt"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
@@ -426,7 +437,7 @@ msgstr "Új jelszó"
 msgid "Ok"
 msgstr "OK"
 
-#: app/index.html:56
+#: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
 msgstr "OpenOlitor tag portál:"
 
@@ -452,7 +463,7 @@ msgstr "Adjon meg egy jelszót, és aktíválja az OpenOlitor elérését"
 msgid "Passwort vergessen?"
 msgstr "Elfelejtette a jelszavát?"
 
-#: app/index.html:76
+#: app/index.html:75
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Jelszó módosítása"
@@ -462,11 +473,11 @@ msgstr "Jelszó módosítása"
 msgid "Passwort wiederholen"
 msgstr "Jelszó megerősítése"
 
-#: app/scripts/login/login.controller.js:110
+#: app/scripts/login/login.controller.js:108
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
 msgstr "Jelszó sikeresen módosításra került, automatikusan átirányítjuk a felületre."
 
-#: app/scripts/login/login.controller.js:117
+#: app/scripts/login/login.controller.js:115
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
 msgstr "Sikeresen megváltoztatta jelszavát, és automatikusan kijelentkezett. Kérjük, lépjem be újra az új jelszavával."
 
@@ -492,11 +503,11 @@ msgstr "A jelszó nem megfelelő"
 msgid "Passwortstärke"
 msgstr "Jelszó erőssége"
 
-#: app/scripts/app.js:101
+#: app/scripts/app.js:89
 msgid "Por."
 msgstr "Rész."
 
-#: app/scripts/app.js:101
+#: app/scripts/app.js:89
 msgid "Portion"
 msgstr "Rész"
 
@@ -531,7 +542,7 @@ msgstr "Hivatkozási szám"
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr "Hivatkozási szám másolása a vágólapra"
 
-#: app/scripts/app.js:107
+#: app/scripts/app.js:100
 msgid "Schweizer Franken"
 msgstr "Svájci frank"
 
@@ -547,23 +558,27 @@ msgstr "Ön jelenleg a OpenOlitor tesztkörnyezetben van. A használatához az a
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr "Ön jelenleg a OpenOlitor tesztkörnyezetben van. A használatához az alábbi hitelesítő adatokkal tud bejelentkezni adminisztrátorként:"
 
-#: app/scripts/app.js:95
+#: app/scripts/app.js:83
 msgid "St."
 msgstr "Db."
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:117
+#: app/scripts/rechnungen/list/rechnungenlist.html:122
 #: app/scripts/rechnungen/list/rechnungenlist.html:63
 msgid "Status"
 msgstr "Állapot"
 
-#: app/scripts/app.js:95
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
+msgid "Storniert"
+msgstr ""
+
+#: app/scripts/app.js:83
 msgid "Stück"
 msgstr "Darab"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
-#: app/scripts/rechnungen/list/rechnungenlist.html:108
+#: app/scripts/rechnungen/list/rechnungenlist.html:113
 #: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Titel"
 msgstr "Cím"
@@ -572,11 +587,11 @@ msgstr "Cím"
 msgid "Tour:"
 msgstr "Kör:"
 
-#: app/scripts/app.js:110
+#: app/scripts/app.js:103
 msgid "US Dollar"
 msgstr "USA dollár"
 
-#: app/scripts/app.js:110
+#: app/scripts/app.js:103
 msgid "USD"
 msgstr "USD"
 
@@ -588,7 +603,11 @@ msgstr "Karbantartási modul! A tagi oldal jelenleg nem érhető el. Minél elő
 msgid "Verbindlich Einschreiben"
 msgstr "Véglegesítse a regisztrációját!"
 
-#: app/index.html:95
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
+msgid "Verschickt"
+msgstr ""
+
+#: app/index.html:102
 msgid "Version:"
 msgstr "Verzió:"
 
@@ -618,9 +637,13 @@ msgstr ""
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
 msgstr "Ha elfelejtette jelszavát, igényeljen helyreállításhoz szükséges linket. "
 
-#: app/scripts/login/login.controller.js:63
+#: app/scripts/login/login.controller.js:61
 msgid "Willkommen"
 msgstr "Üdvözöljük"
+
+#: app/index.html:96
+msgid "Wir sind gleich bereit..."
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
@@ -647,6 +670,10 @@ msgstr "Megerősítő kód küldése"
 msgid "Zugriff verweigert"
 msgstr "Hozzáférés megtagadva."
 
+#: app/scripts/rechnungen/list/rechnungenlist.html:85
+msgid "Zusatzabo:"
+msgstr ""
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "mind"
@@ -659,15 +686,15 @@ msgstr "-ig"
 msgid "bisher eingeschrieben"
 msgstr "Már korábban regisztrált."
 
-#: app/scripts/app.js:97
+#: app/scripts/app.js:85
 msgid "gr"
 msgstr "gr"
 
-#: app/scripts/app.js:99
+#: app/scripts/app.js:87
 msgid "kg"
 msgstr "kg"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:88
 msgid "l"
 msgstr "l"
 
@@ -675,6 +702,7 @@ msgstr "l"
 msgid "pendente"
 msgstr "függőben lévő"
 
+#: app/scripts/abos/list/lieferungen/lieferungen.html:7
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
 msgstr "-"
