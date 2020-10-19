@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2020-07-09 08:28\n"
+"PO-Revision-Date: 2020-10-19 14:34\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -35,11 +35,11 @@ msgstr "- Entorno de prueba"
 msgid "Abbrechen"
 msgstr "Cancelar"
 
-#: app/index.html:77
+#: app/index.html:76
 msgid "Abmelden"
 msgstr "Cerrar sesión"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:114
+#: app/scripts/rechnungen/list/rechnungenlist.html:119
 msgid "Abo"
 msgstr "Subscripción"
 
@@ -47,7 +47,7 @@ msgstr "Subscripción"
 msgid "Abo-Beschrieb:"
 msgstr "Descripción de la suscripción:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:82
+#: app/scripts/rechnungen/list/rechnungenlist.html:83
 msgid "Abo:"
 msgstr "Subscripción:"
 
@@ -76,11 +76,11 @@ msgstr "Conectarse"
 msgid "Anmeldung"
 msgstr "Acceso"
 
-#: app/scripts/login/login.controller.js:139
+#: app/scripts/login/login.controller.js:137
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr "Te hemos enviado un correo electrónico con la información necesaria para modificar tu contraseña."
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:83
+#: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
 msgstr "Número de entregas"
 
@@ -106,7 +106,7 @@ msgstr "Colaboración modificada."
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr "La colaboración no ha sido modificada:"
 
-#: app/scripts/login/login.controller.js:78
+#: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
 msgstr "Hasta la vista"
 
@@ -124,32 +124,36 @@ msgstr "Comentarios"
 msgid "Bestätigung"
 msgstr "Confirmación"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:111
+#: app/scripts/rechnungen/list/rechnungenlist.html:116
 #: app/scripts/rechnungen/list/rechnungenlist.html:54
 msgid "Betrag"
 msgstr "Monto"
 
-#: app/scripts/app.js:111
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
+msgid "Bezahlt"
+msgstr ""
+
+#: app/scripts/app.js:104
 msgid "Britisches Pfund"
 msgstr "Libra esterlina"
 
-#: app/scripts/app.js:96
+#: app/scripts/app.js:84
 msgid "Bu."
 msgstr "Manojo"
 
-#: app/scripts/app.js:96
+#: app/scripts/app.js:84
 msgid "Bund"
 msgstr "Manojo"
 
-#: app/scripts/app.js:113
+#: app/scripts/app.js:106
 msgid "CAD"
 msgstr "CAD"
 
-#: app/scripts/app.js:107
+#: app/scripts/app.js:100
 msgid "CHF"
 msgstr "CHF"
 
-#: app/index.html:85
+#: app/index.html:84
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "El servidor no está disponible actualmente, por favor, intentelo un poco mas tarde."
 
@@ -171,12 +175,11 @@ msgstr "La contraseña debe tener al menos 6 caracteres"
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
 msgstr "La contraseña debe contener letras minusculas y mayusculas así como al menos un número o caracter especial"
 
-#: app/scripts/login/login.controller.js:126
+#: app/scripts/login/login.controller.js:124
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "La contraseña ha sido inicializada. Ahora puedes conectarte con el nombre de usuario y la contraseña."
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
-#: app/scripts/rechnungen/list/rechnungenlist.html:102
+#: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
 msgstr "Fecha"
 
@@ -212,7 +215,7 @@ msgstr "La cesta actual"
 msgid "Der nächste Korb"
 msgstr "La siguiente cesta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:75
+#: app/scripts/rechnungen/list/rechnungenlist.html:76
 msgid "Details werden geladen..."
 msgstr "Cargando los detalles..."
 
@@ -244,15 +247,15 @@ msgstr "Dirección de correo electrónico"
 msgid "E-Mail:"
 msgstr "Correo electrónico:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:68
+#: app/scripts/rechnungen/list/rechnungenlist.html:69
 msgid "ESR-Nr."
 msgstr "Nº ESR"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:67
+#: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr "Copiar el número ESR al portapapeles (para utilizarlo en el sistema de pago)"
 
-#: app/scripts/app.js:109
+#: app/scripts/app.js:102
 msgid "EUR"
 msgstr "EUR"
 
@@ -297,9 +300,13 @@ msgstr "Inscripción realizada"
 msgid "Error 404"
 msgstr "Error 404"
 
-#: app/scripts/app.js:151
+#: app/scripts/app.js:169
 msgid "Error:"
 msgstr "Error:"
+
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
+msgid "Erstellt"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:24
 msgid "Es liegen noch keine Rechnungen vor."
@@ -317,7 +324,7 @@ msgstr "Todavía no hay cestas de este tipo que hayan sido programadas o entrega
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
 msgstr "Ninguna planificación de la distribución ha sido concluida."
 
-#: app/scripts/app.js:109
+#: app/scripts/app.js:102
 msgid "Euro"
 msgstr "Euro"
 
@@ -325,7 +332,7 @@ msgstr "Euro"
 msgid "Fehlerhafte Email Adresse"
 msgstr "Dirección de correo electrónico incorrecta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:105
+#: app/scripts/rechnungen/list/rechnungenlist.html:110
 msgid "Fällig"
 msgstr "A pagar hasta"
 
@@ -349,11 +356,11 @@ msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
 msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 
-#: app/scripts/app.js:111
+#: app/scripts/app.js:104
 msgid "GBP"
 msgstr "GBP"
 
-#: app/scripts/app.js:97
+#: app/scripts/app.js:85
 msgid "Gramm"
 msgstr "Gramos"
 
@@ -365,7 +372,7 @@ msgstr "Cuenta de pago:"
 msgid "Inhalt der Körbe"
 msgstr "Contenido de las cestas"
 
-#: app/scripts/app.js:113
+#: app/scripts/app.js:106
 msgid "Kanadischer Dollar"
 msgstr "Dolar Canadiense"
 
@@ -377,7 +384,7 @@ msgstr "Categorías"
 msgid "Keine Arbeitsangebote."
 msgstr "Ninguna oferta de colaboración."
 
-#: app/scripts/app.js:98
+#: app/scripts/app.js:86
 msgid "Kilogramm"
 msgstr "Kilogramos"
 
@@ -405,13 +412,17 @@ msgstr "Día de entrega:"
 msgid "Lieferung"
 msgstr "Entrega"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:88
 msgid "Liter"
 msgstr "Litro"
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
 msgstr "Administración de inicio de sesión"
+
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
+msgid "MahnungVerschickt"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
@@ -426,7 +437,7 @@ msgstr "Nueva contraseña"
 msgid "Ok"
 msgstr "Vale"
 
-#: app/index.html:56
+#: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
 msgstr "Portal de abonado a OpenOlitor:"
 
@@ -452,7 +463,7 @@ msgstr "Restablecer contraseña y permitir el acceso"
 msgid "Passwort vergessen?"
 msgstr "¿Has olvidado tu contraseña?"
 
-#: app/index.html:76
+#: app/index.html:75
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Cambiar la contraseña"
@@ -462,11 +473,11 @@ msgstr "Cambiar la contraseña"
 msgid "Passwort wiederholen"
 msgstr "Confirma la contraseña"
 
-#: app/scripts/login/login.controller.js:110
+#: app/scripts/login/login.controller.js:108
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
 msgstr "La contraseña ha sido modificiada y te redireccionaremos directamente a tu cuenta."
 
-#: app/scripts/login/login.controller.js:117
+#: app/scripts/login/login.controller.js:115
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
 msgstr "La contraseña ha sido modificada. Conectate con tu nueva contraseña."
 
@@ -492,11 +503,11 @@ msgstr "Las contraseñas no coinciden"
 msgid "Passwortstärke"
 msgstr "Calidad de la contraseña"
 
-#: app/scripts/app.js:101
+#: app/scripts/app.js:89
 msgid "Por."
 msgstr "Por."
 
-#: app/scripts/app.js:101
+#: app/scripts/app.js:89
 msgid "Portion"
 msgstr "Porción"
 
@@ -531,7 +542,7 @@ msgstr "Número de referencia"
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr "Copiar el nº de referencia en el portapapeles"
 
-#: app/scripts/app.js:107
+#: app/scripts/app.js:100
 msgid "Schweizer Franken"
 msgstr "Franco suizo"
 
@@ -547,23 +558,27 @@ msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como ab
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como abonado utilizado la información de identificación siguiente:"
 
-#: app/scripts/app.js:95
+#: app/scripts/app.js:83
 msgid "St."
 msgstr "Unidad"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:117
+#: app/scripts/rechnungen/list/rechnungenlist.html:122
 #: app/scripts/rechnungen/list/rechnungenlist.html:63
 msgid "Status"
 msgstr "Estado"
 
-#: app/scripts/app.js:95
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
+msgid "Storniert"
+msgstr ""
+
+#: app/scripts/app.js:83
 msgid "Stück"
 msgstr "Unidad"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
-#: app/scripts/rechnungen/list/rechnungenlist.html:108
+#: app/scripts/rechnungen/list/rechnungenlist.html:113
 #: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Titel"
 msgstr "Título"
@@ -572,11 +587,11 @@ msgstr "Título"
 msgid "Tour:"
 msgstr "Recorrido:"
 
-#: app/scripts/app.js:110
+#: app/scripts/app.js:103
 msgid "US Dollar"
 msgstr "Dólar estadounidense"
 
-#: app/scripts/app.js:110
+#: app/scripts/app.js:103
 msgid "USD"
 msgstr "USD"
 
@@ -588,7 +603,11 @@ msgstr "¡estamos realizando tareas de mantenimiento! el portal del abonado est�
 msgid "Verbindlich Einschreiben"
 msgstr "Inscribirse de manera definitiva"
 
-#: app/index.html:95
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
+msgid "Verschickt"
+msgstr ""
+
+#: app/index.html:102
 msgid "Version:"
 msgstr "Versión:"
 
@@ -618,9 +637,13 @@ msgstr "Leer más ..."
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
 msgstr "Si has olvidado tu contraseña, aquí puedes enviarte un correo electrónico para reiniciarla."
 
-#: app/scripts/login/login.controller.js:63
+#: app/scripts/login/login.controller.js:61
 msgid "Willkommen"
 msgstr "¡Bienvenid@!"
+
+#: app/index.html:96
+msgid "Wir sind gleich bereit..."
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
@@ -647,6 +670,10 @@ msgstr "Enviar el código de acceso una vez más"
 msgid "Zugriff verweigert"
 msgstr "Acceso denegado"
 
+#: app/scripts/rechnungen/list/rechnungenlist.html:85
+msgid "Zusatzabo:"
+msgstr ""
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "todos"
@@ -659,15 +686,15 @@ msgstr "de"
 msgid "bisher eingeschrieben"
 msgstr "Ya inscrito"
 
-#: app/scripts/app.js:97
+#: app/scripts/app.js:85
 msgid "gr"
 msgstr "gr"
 
-#: app/scripts/app.js:99
+#: app/scripts/app.js:87
 msgid "kg"
 msgstr "kg"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:88
 msgid "l"
 msgstr "l"
 
@@ -675,6 +702,7 @@ msgstr "l"
 msgid "pendente"
 msgstr "pendiente"
 
+#: app/scripts/abos/list/lieferungen/lieferungen.html:7
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
 msgstr "del"
