@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: English\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2020-10-19 14:35\n"
+"PO-Revision-Date: 2020-10-19 14:44\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -131,7 +131,7 @@ msgstr "Amount"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "Bezahlt"
-msgstr ""
+msgstr "Paid"
 
 #: app/scripts/app.js:104
 msgid "Britisches Pfund"
@@ -306,7 +306,7 @@ msgstr "Error:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
 msgid "Erstellt"
-msgstr ""
+msgstr "Created"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:24
 msgid "Es liegen noch keine Rechnungen vor."
@@ -422,7 +422,7 @@ msgstr "Login administration"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "MahnungVerschickt"
-msgstr ""
+msgstr "Reminder Sent"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
@@ -505,7 +505,7 @@ msgstr "Password quality"
 
 #: app/scripts/app.js:89
 msgid "Por."
-msgstr ""
+msgstr "Por."
 
 #: app/scripts/app.js:89
 msgid "Portion"
@@ -569,7 +569,7 @@ msgstr "State"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Storniert"
-msgstr ""
+msgstr "Cancelled"
 
 #: app/scripts/app.js:83
 msgid "Stück"
@@ -605,7 +605,7 @@ msgstr "Binding subscription"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Verschickt"
-msgstr ""
+msgstr "Sent"
 
 #: app/index.html:102
 msgid "Version:"
@@ -643,7 +643,7 @@ msgstr "Welcome"
 
 #: app/index.html:96
 msgid "Wir sind gleich bereit..."
-msgstr ""
+msgstr "We'll be ready soon ..."
 
 #: app/scripts/dashboard/dashboard.html:35
 msgid "Wo ist Mitarbeit möglich?"
@@ -672,7 +672,7 @@ msgstr "Access denied"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
-msgstr ""
+msgstr "Supplementary subscription:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
