@@ -4,8 +4,8 @@
  */
 angular.module('openolitor-kundenportal')
   .controller('RechnungenListController', ['$scope', 'NgTableParams', 'RechnungenListModel', 'KontoDatenModel',
-    'FileUtil', '$location', '$anchorScroll',
-    function($scope, NgTableParams, RechnungenListModel, KontoDatenModel, FileUtil, $location, $anchorScroll) {
+    'FileUtil', '$location', '$anchorScroll', 'gettext', 'ProjektService',
+    function($scope, NgTableParams, RechnungenListModel, KontoDatenModel, FileUtil, $location, $anchorScroll, gettext, ProjektService) {
       $scope.rechungenTableParams = undefined;
       $scope.kontodaten = undefined;
 
@@ -22,6 +22,10 @@ angular.module('openolitor-kundenportal')
 
       KontoDatenModel.query(function(data) {
         $scope.kontodaten = data;
+      });
+
+      ProjektService.resolveProjekt(false).then(function(projekt) {
+        $scope.projekt = projekt;
       });
 
       if (!$scope.rechungenTableParams) {
@@ -68,6 +72,24 @@ angular.module('openolitor-kundenportal')
           function() {
             rechnung.isDownloadingMahnung = false;
           });
+      };
+
+      $scope.getRechnungStatus = function(rechnung) {
+        if(angular.isDefined(rechnung)) {
+          switch(rechnung.status) {
+            case 'Erstellt':
+                  return gettext('Erstellt');
+            case 'Verschickt':
+                  return gettext('Verschickt');
+            case 'MahnungVerschickt':
+                  return gettext('MahnungVerschickt');
+            case 'Bezahlt':
+                  return gettext('Bezahlt');
+            case 'Storniert':
+                  return gettext('Storniert');
+          }
+        }
+        return '';
       };
 
       $scope.statusClass = function(rechnung) {
