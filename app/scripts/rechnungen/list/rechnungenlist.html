@@ -81,6 +81,11 @@
                   <td colspan="3">
                     <span ng-show="rechnungsPosition.typ == 'Abo'">
                       <span translate>Abo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
+                    </span>
+                    <span ng-show="rechnungsPosition.typ == 'ZusatzAbo'">
+                      <span translate>Zusatzabo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
+                    </span>
+                    <span>
                       <span translate>Anzahl Lieferungen</span>: {{rechnungsPosition.anzahlLieferungen}}
                     </span>
                   </td>

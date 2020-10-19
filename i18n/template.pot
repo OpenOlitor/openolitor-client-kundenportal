@@ -30,7 +30,7 @@ msgstr ""
 msgid "Abmelden"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:115
+#: app/scripts/rechnungen/list/rechnungenlist.html:119
 msgid "Abo"
 msgstr ""
 
@@ -71,7 +71,8 @@ msgstr ""
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:84
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
 msgstr ""
 
@@ -115,10 +116,12 @@ msgstr ""
 msgid "Bestätigung"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:112
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:116
 #: app/scripts/rechnungen/list/rechnungenlist.html:54
 msgid "Betrag"
 msgstr ""
+
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "Bezahlt"
@@ -171,7 +174,8 @@ msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
-#: app/scripts/rechnungen/list/rechnungenlist.html:103
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
 msgstr ""
 
@@ -324,7 +328,7 @@ msgstr ""
 msgid "Fehlerhafte Email Adresse"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:106
+#: app/scripts/rechnungen/list/rechnungenlist.html:110
 msgid "Fällig"
 msgstr ""
 
@@ -554,10 +558,12 @@ msgstr ""
 msgid "St."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:118
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:122
 #: app/scripts/rechnungen/list/rechnungenlist.html:63
 msgid "Status"
 msgstr ""
+
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Storniert"
@@ -570,7 +576,7 @@ msgstr ""
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:2
-#: app/scripts/rechnungen/list/rechnungenlist.html:109
+#: app/scripts/rechnungen/list/rechnungenlist.html:113
 #: app/scripts/rechnungen/list/rechnungenlist.html:51
 msgid "Titel"
 msgstr ""
@@ -660,6 +666,10 @@ msgstr ""
 
 #: app/scripts/login/forbidden.html:5
 msgid "Zugriff verweigert"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:85
+msgid "Zusatzabo:"
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
