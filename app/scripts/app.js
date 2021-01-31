@@ -76,7 +76,8 @@ angular
     'angular-sortable-view',
     'ngclipboard',
     'mm.iban',
-    'piwik'
+    'piwik',
+    'monospaced.qrcode'
   ])
   .constant('BUILD_NR', '@@BUILD_NR')
   .constant('LIEFEREINHEIT', {

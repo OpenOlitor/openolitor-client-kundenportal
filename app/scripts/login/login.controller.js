@@ -16,6 +16,7 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
   '$routeParams',
   'ooAuthService',
   '$interval',
+  '$window',
   function(
     $scope,
     $rootScope,
@@ -29,7 +30,8 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
     $route,
     $routeParams,
     ooAuthService,
-    $interval
+    $interval,
+    $window
   ) {
     $scope.loginData = {};
     $scope.resetPasswordData = {};
