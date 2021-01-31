@@ -153,6 +153,23 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
       $scope.loginData.message = msg;
     }
 
+    var sanitizeSecretBase32 = function(secretBase32) {
+      // replace base32 padding signs to make it work for all clients
+      return secretBase32.replace('=', '');
+    }
+
+    var getOtpUrl = function(username, secretBase32) {
+      return (
+        'otpauth://totp/' +
+        $window.location.hostname +
+        ':' +
+        username +
+        '?secret=' +
+        sanitizeSecretBase32(secretBase32) +
+        '&algorithm=SHA1&digits=6&period=30'
+      );
+    };
+
     $scope.login = function() {
       if ($scope.loginForm.$valid) {
         $http.post(appConfig.get().API_URL + 'auth/login', $scope.loginData).then(
@@ -160,23 +177,23 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
             $scope.loginData.message = undefined;
 
             //check result
-            if (result.data.status === 'LoginSecondFactorRequired') {
+            if (result.data.status === 'SecondFactorRequired') {
               //redirect to second factor authentication
-              $scope.status = 'twoFactor';
+              $scope.status = result.data.secondFactorType == 'email'?'emailTwoFactor':'otpTwoFactor';
               $scope.person = result.data.person;
+              $scope.secondFactorType = result.data.secondFactorType;
+              if (result.data.otpSecret) {
+                $scope.otpSecret = getOtpUrl(result.data.person.email, result.data.otpSecret);
+              }
               $scope.secondFactorData.token = result.data.token;
 
-              $scope.cancelSecondFactorTimer = $interval(
-                function() {
-                  $scope.secondFactorCountdown--;
-                  if ($scope.secondFactorCountdown === 0) {
-                    $interval.cancel($scope.cancelSecondFactorTimer);
-                    $scope.resetForm();
-                  }
-                },
-                1000,
-                0
-              );
+              $scope.cancelSecondFactorTimer = $interval(function() {
+                $scope.secondFactorCountdown--;
+                if($scope.secondFactorCountdown === 0) {
+                  $interval.cancel($scope.cancelSecondFactorTimer);
+                  $scope.resetForm();
+                }
+              }, 1000, 0);              
             } else {
               showWelcomeMessage(result.data.token, result.data.person);
             }
