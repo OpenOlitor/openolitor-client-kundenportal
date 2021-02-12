@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Dollinger\n"
 "Language: de_DO\n"
-"PO-Revision-Date: 2021-02-07 11:13\n"
+"PO-Revision-Date: 2021-02-12 15:00\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -41,15 +41,15 @@ msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:119
 msgid "Abo"
-msgstr ""
+msgstr "Anteil"
 
 #: app/scripts/abos/list/aboslist.html:34
 msgid "Abo-Beschrieb:"
-msgstr ""
+msgstr "Anteil-Beschreibung:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:83
 msgid "Abo:"
-msgstr ""
+msgstr "Anteil:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
@@ -163,7 +163,7 @@ msgstr ""
 
 #: app/scripts/login/login.html:53
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr ""
+msgstr "Das Mitgliederportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
@@ -185,7 +185,7 @@ msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:9
 msgid "Deine Abos"
-msgstr ""
+msgstr "Deine Anteile"
 
 #: app/scripts/dashboard/dashboard.html:27
 msgid "Deine Arbeitseinsätze"
@@ -523,7 +523,7 @@ msgstr ""
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
 #: app/scripts/abos/list/lieferungen/lieferungen.html:80
 msgid "Produkt"
-msgstr ""
+msgstr "Lebensmittel"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:49
 #: app/scripts/abos/list/lieferungen/lieferungen.html:97
