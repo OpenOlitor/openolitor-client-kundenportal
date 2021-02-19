@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Dollinger\n"
 "Language: de_DO\n"
-"PO-Revision-Date: 2021-02-19 16:03\n"
+"PO-Revision-Date: 2021-02-19 16:20\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -108,11 +108,11 @@ msgstr ""
 
 #: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
-msgstr ""
+msgstr "Auf Wiedersehen"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
 msgid "Bei Arbeitsangebot teilnehmen"
-msgstr ""
+msgstr "An Arbeitsangebot teilnehmen"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
@@ -193,7 +193,7 @@ msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:17
 msgid "Deine Rechnungen"
-msgstr ""
+msgstr "Deine Mitgliedsbeiträge"
 
 #: app/scripts/abos/list/aboslist.html:10
 msgid "Depot:"
@@ -269,7 +269,7 @@ msgstr ""
 #: app/scripts/login/zugangaktivieren.html:14
 #: app/scripts/login/zugangaktivieren.html:29
 msgid "Eingabe erforderlich"
-msgstr ""
+msgstr "Pflichtfeld"
 
 #: app/messages.html:6
 msgid "Eingabe stimmt nicht übereint"
@@ -277,11 +277,11 @@ msgstr ""
 
 #: app/messages.html:3
 msgid "Eingabe zu kurz"
-msgstr ""
+msgstr "Eingabe ist zu kurz"
 
 #: app/messages.html:4
 msgid "Eingabe zu lang"
-msgstr ""
+msgstr "Eingabe ist zu lang"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:33
 #: app/scripts/abos/list/lieferungen/lieferungen.html:86
@@ -466,7 +466,7 @@ msgstr ""
 #: app/index.html:75
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
-msgstr ""
+msgstr "Passwort ändern"
 
 #: app/scripts/login/change_password.html:32
 #: app/scripts/login/zugangaktivieren.html:26
@@ -560,7 +560,7 @@ msgstr ""
 
 #: app/scripts/app.js:83
 msgid "St."
-msgstr ""
+msgstr "Stk."
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:122
 #: app/scripts/rechnungen/list/rechnungenlist.html:63
@@ -700,7 +700,7 @@ msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
-msgstr ""
+msgstr "ausstehend"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:7
 #: app/scripts/open/lastlieferplanungen.html:17
