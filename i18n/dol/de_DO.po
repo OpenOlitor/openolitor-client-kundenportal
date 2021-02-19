@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Dollinger\n"
 "Language: de_DO\n"
-"PO-Revision-Date: 2021-02-12 15:00\n"
+"PO-Revision-Date: 2021-02-19 16:03\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -82,7 +82,7 @@ msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
-msgstr ""
+msgstr "Anzahl"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:8
 msgid "Anzahl Personen"
@@ -209,11 +209,11 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
-msgstr ""
+msgstr "Vorschlag zum Teilen (aktuelle Woche)"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:5
 msgid "Der nächste Korb"
-msgstr ""
+msgstr "Vorschlag zum Teilen (nächste Woche)"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:76
 msgid "Details werden geladen..."
@@ -227,7 +227,7 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
-msgstr ""
+msgstr "Vorschlag zum Teilen (frühere Wochen)"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
@@ -318,7 +318,7 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
-msgstr ""
+msgstr "Es wurden noch keine Anteile dieses Typs geplant oder geliefert."
 
 #: app/scripts/open/lastlieferplanungen.html:7
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
@@ -370,7 +370,7 @@ msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
-msgstr ""
+msgstr "Inhalt der Anteile"
 
 #: app/scripts/app.js:106
 msgid "Kanadischer Dollar"
@@ -394,11 +394,11 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:70
 msgid "Korb vom"
-msgstr ""
+msgstr "Anteil vom"
 
 #: app/scripts/abos/list/aboslist.html:66
 msgid "Laufzeit:"
-msgstr ""
+msgstr "Dabei:"
 
 #: app/scripts/abos/list/aboslist.html:50
 msgid "Lieferrhythmus:"
@@ -514,11 +514,11 @@ msgstr ""
 #: app/scripts/abos/list/lieferungen/lieferungen.html:36
 #: app/scripts/abos/list/lieferungen/lieferungen.html:89
 msgid "Preis"
-msgstr ""
+msgstr "Beitrag"
 
 #: app/scripts/abos/list/aboslist.html:58
 msgid "Preis:"
-msgstr ""
+msgstr "Beitrag:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
 #: app/scripts/abos/list/lieferungen/lieferungen.html:80
@@ -552,7 +552,7 @@ msgstr ""
 
 #: app/scripts/login/login.html:35
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
-msgstr ""
+msgstr "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Mitglied anmelden:"
 
 #: app/scripts/login/login.html:12
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
@@ -597,7 +597,7 @@ msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr ""
+msgstr "Unterhalts-Moduls! Das Mitgliederportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
 msgid "Verbindlich Einschreiben"
@@ -621,7 +621,7 @@ msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:115
 msgid "Weitere Körbe anzeigen..."
-msgstr ""
+msgstr "Weitere Anteile anzeigen..."
 
 #: app/scripts/open/lastlieferplanungen.html:80
 msgid "Weitere Lieferungen anzeigen..."
@@ -672,7 +672,7 @@ msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
-msgstr ""
+msgstr "Zusatzanteil:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
