@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2020-10-19 14:35\n"
+"PO-Revision-Date: 2021-02-19 16:03\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -45,7 +45,7 @@ msgstr "Anteil"
 
 #: app/scripts/abos/list/aboslist.html:34
 msgid "Abo-Beschrieb:"
-msgstr ""
+msgstr "Anteil-Beschreibung:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:83
 msgid "Abo:"
