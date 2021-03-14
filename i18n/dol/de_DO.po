@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Dollinger\n"
 "Language: de_DO\n"
-"PO-Revision-Date: 2021-02-19 16:20\n"
+"PO-Revision-Date: 2021-03-14 20:45\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -197,7 +197,7 @@ msgstr "Deine Mitgliedsbeiträge"
 
 #: app/scripts/abos/list/aboslist.html:10
 msgid "Depot:"
-msgstr ""
+msgstr "Abholstation:"
 
 #: app/scripts/dashboard/dashboard.html:15
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
