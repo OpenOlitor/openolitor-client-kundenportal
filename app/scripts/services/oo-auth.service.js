@@ -37,7 +37,7 @@ angular
 
       var currentUser = function() {
         return $http.get(appConfig.get().API_URL + 'auth/user').then(function(response) {
-          user = response.data;
+          user = response.data.user;
           $log.debug('Login succeeded:' + user);
           return user;
         });
