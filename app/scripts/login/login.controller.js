@@ -48,9 +48,24 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
     };
     $scope.status = 'login';
     $scope.env = appConfig.get().ENV;
-    $scope.secondFactorCountdown = 600;
+    var getSecondFactorCountdownDate = function(scope) {
+      return moment().add(scope.secondFactorCountdown, 'seconds');
+    }
+    var startSecondFactorCountdownTimer = function(scope) {
+      if (scope.cancelSecondFactorTimer) {
+        $interval.cancel(scope.cancelSecondFactorTimer);
+      }
+      scope.secondFactorCountdown = 600;  
+      scope.cancelSecondFactorTimer = $interval(function() {
+        scope.secondFactorCountdown--;
+        if(scope.secondFactorCountdown === 0) {
+          $interval.cancel(scope.cancelSecondFactorTimer);
+          scope.resetForm();
+        }
+      }, 1000, 0);
+    }
     $scope.secondFactorCountdownDate = function() {
-      return moment().add($scope.secondFactorCountdown, 'seconds');
+      return getSecondFactorCountdownDate($scope);
     };
 
     $scope.originalTgState = $rootScope.tgState;
@@ -186,16 +201,9 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
               $scope.secondFactorType = result.data.secondFactorType;
               if (result.data.otpSecret) {
                 $scope.otpSecret = getOtpUrl(result.data.person.email, result.data.otpSecret);
-              }
-              $scope.secondFactorData.token = result.data.token;
+              }            
 
-              $scope.cancelSecondFactorTimer = $interval(function() {
-                $scope.secondFactorCountdown--;
-                if($scope.secondFactorCountdown === 0) {
-                  $interval.cancel($scope.cancelSecondFactorTimer);
-                  $scope.resetForm();
-                }
-              }, 1000, 0);              
+              startSecondFactorCountdownTimer($scope);
             } else {
               showWelcomeMessage(result.data.token, result.data.person);
             }
@@ -227,9 +235,21 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
     $scope.changePassword = function() {
       if ($scope.changePwdForm.$valid) {
         $http.post(appConfig.get().API_URL + 'auth/passwd', $scope.changePwd).then(
-          function() {
-            $scope.changePwd.message = undefined;
-            showPasswordChangedMessage();
+          function(result) {
+            if (result.data.status === 'Ok') {
+              $scope.changePwd.message = undefined;
+              showPasswordChangedMessage();
+            }
+            else if (result.data.status === 'SecondFactorRequired') {
+              //redirect to second factor authentication
+              $scope.status = result.data.secondFactorType == 'email'?'emailTwoFactor':'otpTwoFactor';
+              $scope.person = result.data.person;
+              $scope.changePwd.secondFactorAuth = {
+                token: result.data.token
+              };
+
+              startSecondFactorCountdownTimer($scope);
+            }
           },
           function(error) {
             $scope.changePwd.message = gettext(error.data);
