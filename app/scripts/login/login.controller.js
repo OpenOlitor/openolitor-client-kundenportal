@@ -201,7 +201,8 @@ angular.module('openolitor-kundenportal').controller('LoginController', [
               $scope.secondFactorType = result.data.secondFactorType;
               if (result.data.otpSecret) {
                 $scope.otpSecret = getOtpUrl(result.data.person.email, result.data.otpSecret);
-              }            
+              }
+              $scope.secondFactorData.token = result.data.token;
 
               startSecondFactorCountdownTimer($scope);
             } else {
