@@ -2,132 +2,138 @@
   <div class="col-md-12">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
-          <h3 class="panel-title">
-            <div>
+        <h3 class="panel-title">
+          <div>
             <span class="navbar-brand" ng-if="kontodaten.iban">
               <span translate>IBAN für Einzahlungen:</span>
               <span >{{kontodaten.iban | iban:separator}}</span>
             </span>
-            </div>
-            <div>
+          </div>
+          <div>
             <span class="navbar-brand" ng-if="kontodaten.teilnehmerNummer">
               <span translate>Konto für Einzahlungen:</span>
               <span >{{teilnehmerNummerToKonto(kontodaten.teilnehmerNummer) }}</span>
             </span>
-            </div>
-            </span>
-          </h3>
-        </div>
-        <div class="panel-body">
-          <div class="row" ng-show="!entries">
-            <div class="col-md-4 col-sm-12" >
-              <span translate>Es liegen noch keine Rechnungen vor.</span>
-            </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
-                <tr ng-repeat-start="rechnung in $data | orderBy:'-rechnungsDatum'">
-                  <td>
-                    <button class="btn btn-xs glyphicon glyphicon-plus" ng-show="!rechnung.detailsVisible" ng-click="displayDetails(rechnung)" />
-                    <button class="btn btn-xs glyphicon glyphicon-minus" ng-show="rechnung.detailsVisible" ng-click="displayDetails(rechnung)" />
-                  </td>
-                  <td>
-                    <span role="button" ng-if="rechnung.fileStoreId">
-                      <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                      <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                    </span>
-                    <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
-                      <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
-                      <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                    </span>
-                  </td>
-                  <td data-title="'Rechnungsdatum'|translate">
-                    {{rechnung.rechnungsDatum | date}}
-                  </td>
-                  <td data-title="'Fällig am'|translate">
-                    {{rechnung.faelligkeitsDatum | date}}
-                  </td>
-                  <td data-title="'Titel'|translate">
-                    {{rechnung.titel}}
-                  </td>
-                  <td data-title="'Betrag'|translate">
-                    {{projekt.waehrung}} {{rechnung.betrag | ooCHF}}
-                  </td>
-                  <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
-                  <script type="text/ng-template" id="refNrToolTip"><span translate>Referenznummer in Zwischenablage kopieren</span></script>
-                  <td data-title="'Referenznummer'|translate" data-class="hidden-sm hidden-xs">
-                    {{rechnung.referenzNummer}}&nbsp;
-                    <button uib-tooltip-template="'refNrToolTip'"class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.referenzNummer}}"></button>
-                  </td>
-                  <td data-title="'Status'|translate" ng-attr-title="getRechnungStatus(rechnung)" >
-                      <div ng-attr-title="{{getRechnungStatus(rechnung)}}"><div>
-                    <i class="fa" ng-class="statusClass(rechnung)"></i>
-                  </td>
-                  <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
-                  <script type="text/ng-template" id="esrToolTip"><span translate>ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)</span></script>
-                  <td data-title="'ESR-Nr.'|translate" uib-tooltip-template="'esrToolTip'">
-                    <button class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
-                  </td>
-                </tr>
-                <tr ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="detail-rows" ng-repeat="rechnungsPosition in rechnung.rechnungsPositionen | orderBy:'sort'">
-                  <td ></td>
-                  <td>
-                    <span translate ng-show="rechnung.detailsVisible && !rechnung.rechnungsPositionen">Details werden geladen...</span>
-                    <span ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="glyphicon glyphicon-chevron-right" />
-                  </td>
-                  <td colspan="3"><span ng-show="rechnungsPosition.sort"># {{rechnungsPosition.sort}} </span>{{rechnungsPosition.beschrieb}}</td>
-                  <td >{{projekt.waehrung}} {{rechnungsPosition.betrag | ooCHF}}</td>
-                  <td colspan="3">
-                    <span ng-show="rechnungsPosition.typ == 'Abo'">
-                      <span translate>Abo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
-                    </span>
-                    <span ng-show="rechnungsPosition.typ == 'ZusatzAbo'">
-                      <span translate>Zusatzabo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
-                    </span>
-                    <span>
-                      <span translate>Anzahl Lieferungen</span>: {{rechnungsPosition.anzahlLieferungen}}
-                    </span>
-                  </td>
-                </tr>
-                <tr ng-repeat-end />
-              </table>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="row" ng-show="!entries">
+          <div class="col-md-4 col-sm-12" >
+            <span translate>Es liegen noch keine Rechnungen vor.</span>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-xs hidden-sm" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+              <tr ng-repeat-start="rechnung in $data | orderBy:'-rechnungsDatum'">
+                <td>
+                  <button class="btn btn-xs glyphicon glyphicon-plus" ng-show="!rechnung.detailsVisible" ng-click="displayDetails(rechnung)" />
+                  <button class="btn btn-xs glyphicon glyphicon-minus" ng-show="rechnung.detailsVisible" ng-click="displayDetails(rechnung)" />
+                </td>
+                <td>
+                  <span role="button" ng-if="rechnung.fileStoreId">
+                    <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                  </span>
+                  <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
+                    <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
+                    <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                  </span>
+                </td>
+                <td data-title="'Rechnungsdatum'|translate">
+                  {{rechnung.rechnungsDatum | date}}
+                </td>
+                <td data-title="'Fällig am'|translate">
+                  {{rechnung.faelligkeitsDatum | date}}
+                </td>
+                <td data-title="'Titel'|translate">
+                  {{rechnung.titel}}
+                </td>
+                <td data-title="'Betrag'|translate">
+                  {{projekt.waehrung}} {{rechnung.betrag | ooCHF}}
+                </td>
+                <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
+                <script type="text/ng-template" id="refNrToolTip"><span translate>Referenznummer in Zwischenablage kopieren</span></script>
+                <td data-title="'Referenznummer'|translate" data-class="hidden-sm hidden-xs">
+                  {{rechnung.referenzNummer}}&nbsp;
+                  <button uib-tooltip-template="'refNrToolTip'"class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.referenzNummer}}"></button>
+                </td>
+                <td data-title="'Status'|translate" ng-attr-title="getRechnungStatus(rechnung)" >
+                    <div ng-attr-title="{{getRechnungStatus(rechnung)}}"><div>
+                  <i class="fa" ng-class="statusClass(rechnung)"></i>
+                </td>
+                <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
+                <script type="text/ng-template" id="esrToolTip"><span translate>ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)</span></script>
+                <td data-title="'ESR-Nr.'|translate" uib-tooltip-template="'esrToolTip'">
+                  <button class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.esrNummer}}"></button>
+                </td>
+              </tr>
+              <tr ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="detail-rows" ng-repeat="rechnungsPosition in rechnung.rechnungsPositionen | orderBy:'sort'">
+                <td ></td>
+                <td>
+                  <span translate ng-show="rechnung.detailsVisible && !rechnung.rechnungsPositionen">Details werden geladen...</span>
+                  <span ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="glyphicon glyphicon-chevron-right" />
+                </td>
+                <td colspan="3"><span ng-show="rechnungsPosition.sort"># {{rechnungsPosition.sort}} </span>{{rechnungsPosition.beschrieb}}</td>
+                <td >{{projekt.waehrung}} {{rechnungsPosition.betrag | ooCHF}}</td>
+                <td colspan="3">
+                  <span ng-show="rechnungsPosition.typ == 'Abo'">
+                    <span translate>Abo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
+                  </span>
+                  <span ng-show="rechnungsPosition.typ == 'ZusatzAbo'">
+                    <span translate>Zusatzabo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
+                  </span>
+                  <span>
+                    <span translate>Anzahl Lieferungen</span>: {{rechnungsPosition.anzahlLieferungen}}
+                  </span>
+                </td>
+              </tr>
+              <tr ng-repeat-end />
+            </table>
 
-              <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
-                <tr ng-repeat="rechnung in $data | orderBy:'-rechnungsDatum'">
-                  <td>
-                    <span role="button" ng-if="rechnung.fileStoreId">
-                      <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
-                      <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                    </span>
-                    <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
-                      <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
-                      <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
-                    </span>
-                  </td>
-                  <td data-title="'Datum'|translate">
-                    {{rechnung.rechnungsDatum | date}}
-                  </td>
-                  <td data-title="'Fällig'|translate">
-                    {{rechnung.faelligkeitsDatum | date}}
-                  </td>
-                  <td data-title="'Titel'|translate">
-                    {{rechnung.titel}}
-                  </td>
-                  <td data-title="'Betrag'|translate">
-                    {{projekt.waehrung}} {{rechnung.betrag | ooCHF}}
-                  </td>
-                  <td data-title="'Abo'|translate">
-                    <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
-                  </td>
-                  <td data-title="'Status'|translate">
-                    <i class="fa" ng-class="statusClass(rechnung)" ng-attr-title="{{rechnung.status}}"></i>
-                  </td>
-                </tr>
-              </table>
-            </div>
+            <table ng-show="entries" ng-table="rechungenTableParams" class="table table-striped hidden-md hidden-lg" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+              <tr ng-repeat="rechnung in $data | orderBy:'-rechnungsDatum'">
+                <td>
+                  <span role="button" ng-if="rechnung.fileStoreId">
+                    <i ng-hide="rechnung.isDownloading" ng-click="downloadRechnung(rechnung)" class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    <i ng-show="rechnung.isDownloading" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                  </span>
+                  <span ng-repeat="fileId in rechnung.mahnungFileStoreIds" role="button" ng-if="rechnung.mahnungFileStoreIds && fileId !== ''">
+                    <i ng-hide="rechnung.isDownloadingMahnung" ng-click="downloadMahnung(rechnung, fileId)" class="fa fa-file-pdf-o" aria-hidden="true" style="color:darkred"></i>
+                    <i ng-show="rechnung.isDownloadingMahnung" ng-cloak class="fa fa-circle-o-notch fa-spin"></i>
+                  </span>
+                </td>
+                <td data-title="'Datum'|translate">
+                  {{rechnung.rechnungsDatum | date}}
+                </td>
+                <td data-title="'Fällig'|translate">
+                  {{rechnung.faelligkeitsDatum | date}}
+                </td>
+                <td data-title="'Titel'|translate">
+                  {{rechnung.titel}}
+                </td>
+                <td data-title="'Betrag'|translate">
+                  {{projekt.waehrung}} {{rechnung.betrag | ooCHF}}
+                </td>
+                <td data-title="'Abo'|translate">
+                  <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>
+                </td>
+                <td data-title="'Status'|translate">
+                  <i class="fa" ng-class="statusClass(rechnung)" ng-attr-title="{{rechnung.status}}"></i>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
+      </div>
+      <div class="panel-heading clearfix" ng-show="entries && entries.length > 4 && maxRechnungen < entries.length" id="archivTitle" >
+        <span role="button" ng-click="showMore()" >
+          <h3 class="panel-title">
+            <span class="navbar-brand" translate>Die früheren Rechnungen anzeigen</span>
+          </h3>
+        </span>
+      </div>
     </div>
   </div>
 </div>
