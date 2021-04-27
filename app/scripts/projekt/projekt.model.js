@@ -25,7 +25,7 @@ angular.module('openolitor-kundenportal')
     }});
   }])
   .factory('ProjektModel', ['$resource', 'appConfig', function($resource, appConfig) {
-    return $resource(appConfig.get().API_URL + 'projekt/:id', {
+    return $resource(appConfig.get().API_URL + 'kundenportal/projekt/:id', {
     id: '@id'
     }, {'query': {method:'GET', isArray: false}
   });

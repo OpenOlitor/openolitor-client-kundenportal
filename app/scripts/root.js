@@ -177,6 +177,7 @@ angular.module('openolitor-kundenportal')
         if (!$scope.welcomeDisplayed) {
           $scope.welcomeDisplayed = true;
           if ($scope.projekt.welcomeMessage2) {
+            debugger;
             dialogService.displayDialogOkAbort(
               $scope.projekt.welcomeMessage2,
               function() {},
