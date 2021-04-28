@@ -22,6 +22,14 @@ h3 .small {
   margin-right: 5px;
 }
 
+.kundenportal h2 a {
+  color: inherit;
+}
+
+.kundenportal h2 a:hover {
+  text-decoration: none;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -207,6 +215,20 @@ input.ng-invalid {
 .dropdown .pull-right>.dropdown-form:after{
  left: auto;
  right: 12px;
+}
+
+.dropdown .dropdown-menu .menu-title {
+  margin-left: 20px;
+}
+
+.dropdown .dropdown-menu .menu-level1 {
+  a span {
+    margin-left: 15px;
+  }
+
+   &.selected a span {
+    text-decoration: underline;
+  }
 }
 
 .abotypHeader>h3>span {

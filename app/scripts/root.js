@@ -5,10 +5,10 @@
 angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
-    '$location', 'msgBus', 'checkSize', '$window', '$timeout', 'BUILD_NR',
+    '$location', 'msgBus', 'checkSize', '$anchorScroll', '$window', '$timeout', 'BUILD_NR',
     'ooAuthService', 'appConfig', '$cookies', 'dialogService',
     function($scope, $rootScope, ServerService, ProjektService,
-      gettextCatalog, amMoment, $location, msgBus, checkSize, $window,
+      gettextCatalog, amMoment, $location, msgBus, checkSize, $anchorScroll, $window,
       $timeout, BUILD_NR, ooAuthService, appConfig,
       $cookies, dialogService) {
       angular.element($window).bind('resize', function() {
@@ -172,12 +172,10 @@ angular.module('openolitor-kundenportal')
         $scope.changeLang($scope.storedActiveLang());
       }
 
-
       $scope.checkWelcomeMessage = function() {
         if (!$scope.welcomeDisplayed) {
           $scope.welcomeDisplayed = true;
           if ($scope.projekt.welcomeMessage2) {
-            debugger;
             dialogService.displayDialogOkAbort(
               $scope.projekt.welcomeMessage2,
               function() {},
@@ -186,6 +184,14 @@ angular.module('openolitor-kundenportal')
               'Schliessen'
             );
           }
+        }
+      };
+
+      $scope.gotoAnchor = function(anchor) {
+        if ($location.hash() !== anchor) {
+          $location.hash(anchor);
+        } else {
+          $anchorScroll();
         }
       };
 
