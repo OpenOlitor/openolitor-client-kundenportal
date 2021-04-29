@@ -36,6 +36,7 @@ angular
       $scope.entries = [];
       $scope.loading = false;
       $scope.model = {};
+      $scope.maxEntries = 10;
 
       ArbeitsangeboteListModel.query(function(data) {
         $scope.entries = data;
@@ -208,5 +209,12 @@ angular
       msgBus.onMsg('ArbeitseinsatzListLoaded', $scope, function(event, msg) {
         $scope.arbeitseinsatzList = msg.list;
       });
+
+      $scope.showMore = function() {
+        $scope.maxEntries = Number.MAX_SAFE_INTEGER;
+        if($scope.arbeitsangebotTableParams) {
+          $scope.arbeitsangebotTableParams.reload();
+        }
+      };
     }
   ]);

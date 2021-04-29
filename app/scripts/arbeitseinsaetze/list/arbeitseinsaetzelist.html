@@ -43,6 +43,13 @@
           </div>
         </div>
       </div>
+      <div class="panel-heading clearfix" ng-show="entries && entries.length > 4 && maxEntries < entries.length" id="arbeitsEinsatzArchivTitle" >
+        <span role="button" ng-click="showMore()" >
+          <h3 class="panel-title">
+            <span class="navbar-brand" translate>Die früheren Arbeitseinsätze anzeigen</span>
+          </h3>
+        </span>
+      </div>
     </div>
   </div>
 </div>

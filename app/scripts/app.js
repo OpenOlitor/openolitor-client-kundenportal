@@ -96,7 +96,11 @@ angular
   })
   .run(function($rootScope, $location, $anchorScroll) {
     $rootScope.location = $location;
-    $anchorScroll.yOffset = 35;   // always scroll 50 px less
+    $anchorScroll.yOffset = 50;
+
+    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+      if($location.hash()) $anchorScroll();
+    });
   })
   .constant('WAEHRUNG', {
     CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
