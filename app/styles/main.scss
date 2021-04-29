@@ -34,6 +34,25 @@ h3 .small {
   text-transform: uppercase;
 }
 
+.kundenportal-content {
+  display: flex;
+  flex-direction: column;
+
+  .kundenportal-content-item-abos {
+    order: 1;
+  }
+  .kundenportal-content-item-rechnungen {
+    order: 2;
+  }
+  .kundenportal-content-item-arbeitseinsaetze {
+    order: 3;
+  }
+  .kundenportal-content-item-arbeitsangebote {
+    order: 4;
+  }
+}
+
+
 i.red {
   color: red;
 }
