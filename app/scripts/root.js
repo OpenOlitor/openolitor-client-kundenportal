@@ -188,6 +188,7 @@ angular.module('openolitor-kundenportal')
       };
 
       $scope.gotoAnchor = function(anchor) {
+        debugger;
         if ($location.hash() !== anchor) {
           $location.hash(anchor);
         } else {

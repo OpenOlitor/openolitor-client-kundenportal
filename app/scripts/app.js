@@ -94,8 +94,9 @@ angular
     Administrator: 'Administrator',
     Kunde:'Kunde'
   })
-  .run(function($rootScope, $location) {
+  .run(function($rootScope, $location, $anchorScroll) {
     $rootScope.location = $location;
+    $anchorScroll.yOffset = 35;   // always scroll 50 px less
   })
   .constant('WAEHRUNG', {
     CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(

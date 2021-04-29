@@ -131,7 +131,7 @@ angular.module('openolitor-kundenportal')
       };
 
       $scope.showMore = function() {
-        $scope.maxRechnungen = $scope.maxRechnungen + 3;
+        $scope.maxRechnungen = Number.MAX_SAFE_INTEGER;
         if($scope.rechungenTableParams) {
           $scope.rechungenTableParams.reload();
         }
