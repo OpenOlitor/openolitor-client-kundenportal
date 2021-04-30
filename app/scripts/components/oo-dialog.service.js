@@ -6,8 +6,8 @@
       displayDialogOkAbort: function(msg, okFct, title, dismissOnly, dismissButtonTitle) {
         var modalInstance = $uibModal.open({
           animation: true,
-          templateUrl: 'scripts/common/components/oo-dialogokabort.directive.modal.html',
-          controller: 'ooDialogOkAbortModalInstanceCtrl',
+          templateUrl: 'scripts/components/oo-dialogokabort.directive.modal.html',
+          controller: 'ooKPDialogOkAbortModalInstanceCtrl',
           resolve: {
             message: function() {
               return msg;
