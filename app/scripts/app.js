@@ -73,7 +73,6 @@ angular
     'angularMoment',
     'ngFileUpload',
     'ngLodash',
-    'openolitor-core',
     'angular-sortable-view',
     'ngclipboard',
     'mm.iban',
