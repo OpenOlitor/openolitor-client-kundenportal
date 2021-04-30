@@ -299,12 +299,14 @@ angular
     $routeProvider
       .when('/', {
         redirectTo: '/dashboard',
+        reloadOnSearch: false,
         access: USER_ROLES.Guest
       })
       .when('/dashboard', {
         templateUrl: 'scripts/dashboard/dashboard.html',
         controller: 'DashboardController',
         name: 'Dashboard',
+        reloadOnSearch: false,
         access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
       })
       .when('/open/lastlieferplanungen', {
