@@ -43,6 +43,7 @@ angular.module('openolitor-kundenportal')
           ProjektService.resolveProjekt(true).then(function(projekt) {
             $scope.projekt = projekt;
             $rootScope.projekt = projekt;
+            $scope.initCheckLang();
           });
         }
       });
@@ -143,34 +144,53 @@ angular.module('openolitor-kundenportal')
         $cookies.put('activeLang', lang, {'expires':expireDate});
       };
 
-      if (angular.isUndefined($scope.storedActiveLang())) {
-        var lang = $window.navigator.language || $window.navigator.userLanguage;
-        if (lang.startsWith('de-CH')) {
-          $scope.changeLang('de_CH');
-        } else if (lang.startsWith('de-DE')) {
-          $scope.changeLang('de_DE');
-        } else if (lang.startsWith('de')) {
-          $scope.changeLang('de_DE');
-        } else if (lang.startsWith('fr-BE')) {
-          $scope.changeLang('fr_BE');
-        } else if (lang.startsWith('fr-CH')) {
-          $scope.changeLang('fr_CH');
-        } else if (lang.startsWith('fr')) {
-          $scope.changeLang('fr_CH');
-        } else if (lang.startsWith('en')) {
-          $scope.changeLang('en');
-        } else if (lang.startsWith('es')) {
-          $scope.changeLang('es');
-        } else if (lang.startsWith('cs')) {
-          $scope.changeLang('cs');
-        } else if (lang.startsWith('hu')) {
-          $scope.changeLang('hu');
+      $scope.getContentLanguage = function() {
+        if($scope.storedActiveLang()) {
+          return $scope.storedActiveLang().replace('_', '-');
         } else {
-          $scope.changeLang('en');
+          return 'en';
         }
-      } else {
-        $scope.changeLang($scope.storedActiveLang());
       }
+
+      $scope.initCheckLang = function() {
+        if (angular.isUndefined($scope.storedActiveLang())) {
+          var lang = $window.navigator.language || $window.navigator.userLanguage;
+          debugger;
+          if($scope.projekt && $scope.projekt.sprache) {
+            //select the project-language as default
+            var projLang = $scope.projekt.sprache.replace('_', '-');;
+            if(['de-CH', 'de-DE', 'fr-BE', 'fr-CH', 'en', 'es', 'cs', 'hu'].includes(projLang)) {
+              lang = projLang;
+            }
+          }
+          lang = lang.replace('_', '-');
+          if (lang.startsWith('de-CH')) {
+            $scope.changeLang('de_CH');
+          } else if (lang.startsWith('de-DE')) {
+            $scope.changeLang('de_DE');
+          } else if (lang.startsWith('de')) {
+            $scope.changeLang('de_DE');
+          } else if (lang.startsWith('fr-BE')) {
+            $scope.changeLang('fr_BE');
+          } else if (lang.startsWith('fr-CH')) {
+            $scope.changeLang('fr_CH');
+          } else if (lang.startsWith('fr')) {
+            $scope.changeLang('fr_CH');
+          } else if (lang.startsWith('en')) {
+            $scope.changeLang('en');
+          } else if (lang.startsWith('es')) {
+            $scope.changeLang('es');
+          } else if (lang.startsWith('cs')) {
+            $scope.changeLang('cs');
+          } else if (lang.startsWith('hu')) {
+            $scope.changeLang('hu');
+          } else {
+            $scope.changeLang('en');
+          }
+        } else {
+          $scope.changeLang($scope.storedActiveLang());
+        }
+      };
 
       $scope.checkWelcomeMessage = function() {
         if (!$scope.welcomeDisplayed) {
