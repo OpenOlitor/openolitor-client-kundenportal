@@ -12,6 +12,7 @@ angular.module('openolitor-kundenportal')
       $scope.entries = [];
       $scope.loading = false;
       $scope.model = {};
+      $scope.maxRechnungen = 3;
 
       RechnungenListModel.query(function(data) {
         $scope.entries = data;
@@ -39,8 +40,9 @@ angular.module('openolitor-kundenportal')
             if (!$scope.entries) {
               return;
             }
-            params.total($scope.entries.length);
-            return $scope.entries;
+            var limitedEntries = $scope.entries.slice(-$scope.maxRechnungen);
+            params.total(limitedEntries.length);
+            return limitedEntries;
           }
 
         });
@@ -126,6 +128,13 @@ angular.module('openolitor-kundenportal')
       $scope.gotoAbo = function(aboId) {
         $location.hash('abo' + aboId);
         $anchorScroll();
+      };
+
+      $scope.showMore = function() {
+        $scope.maxRechnungen = Number.MAX_SAFE_INTEGER;
+        if($scope.rechungenTableParams) {
+          $scope.rechungenTableParams.reload();
+        }
       };
     }
   ]);

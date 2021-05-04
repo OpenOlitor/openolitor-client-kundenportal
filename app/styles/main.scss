@@ -22,9 +22,36 @@ h3 .small {
   margin-right: 5px;
 }
 
+.kundenportal h2 a {
+  color: inherit;
+}
+
+.kundenportal h2 a:hover {
+  text-decoration: none;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
+
+.kundenportal-content {
+  display: flex;
+  flex-direction: column;
+
+  .kundenportal-content-item-abos {
+    order: 1;
+  }
+  .kundenportal-content-item-rechnungen {
+    order: 2;
+  }
+  .kundenportal-content-item-arbeitseinsaetze {
+    order: 3;
+  }
+  .kundenportal-content-item-arbeitsangebote {
+    order: 4;
+  }
+}
+
 
 i.red {
   color: red;
@@ -207,6 +234,33 @@ input.ng-invalid {
 .dropdown .pull-right>.dropdown-form:after{
  left: auto;
  right: 12px;
+}
+
+.dropdown {
+  .dropdown-toggle {
+    .menubutton {
+      font-size: 24px;
+    }
+    &.no-uppercase {
+      padding-top: 17.5px;
+      padding-bottom: 17.5px;
+    }
+  }
+  .dropdown-menu {
+    .menu-title {
+      margin-left: 20px;
+    }
+
+    .menu-level1 {
+      a span {
+        margin-left: 15px;
+      }
+
+       &.selected a span {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .abotypHeader>h3>span {

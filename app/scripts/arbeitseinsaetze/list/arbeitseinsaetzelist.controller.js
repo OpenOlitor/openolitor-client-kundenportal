@@ -42,6 +42,7 @@ angular
       $scope.entries = [];
       $scope.loading = false;
       $scope.model = {};
+      $scope.maxEntries = 10;
 
       ArbeitseinsaetzeListModel.query(function(data) {
         $scope.entries = data;
@@ -209,5 +210,12 @@ angular
           $scope.arbeitseinsatzTableParams.reload();
         }
       });
+
+      $scope.showMore = function() {
+        $scope.maxEntries = Number.MAX_SAFE_INTEGER;
+        if($scope.arbeitseinsatzTableParams) {
+          $scope.arbeitseinsatzTableParams.reload();
+        }
+      };
     }
   ]);

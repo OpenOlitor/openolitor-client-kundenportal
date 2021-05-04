@@ -93,8 +93,13 @@ angular
     Administrator: 'Administrator',
     Kunde:'Kunde'
   })
-  .run(function($rootScope, $location) {
+  .run(function($rootScope, $location, $anchorScroll) {
     $rootScope.location = $location;
+    $anchorScroll.yOffset = 50;
+
+    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+      if($location.hash()) $anchorScroll();
+    });
   })
   .constant('WAEHRUNG', {
     CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
@@ -293,12 +298,14 @@ angular
     $routeProvider
       .when('/', {
         redirectTo: '/dashboard',
+        reloadOnSearch: false,
         access: USER_ROLES.Guest
       })
       .when('/dashboard', {
         templateUrl: 'scripts/dashboard/dashboard.html',
         controller: 'DashboardController',
         name: 'Dashboard',
+        reloadOnSearch: false,
         access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
       })
       .when('/open/lastlieferplanungen', {
