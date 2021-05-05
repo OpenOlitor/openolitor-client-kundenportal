@@ -159,7 +159,7 @@ angular.module('openolitor-kundenportal')
           if($scope.projekt && $scope.projekt.sprache) {
             //select the project-language as default
             var projLang = $scope.projekt.sprache.replace('_', '-');;
-            if(['de-CH', 'de-DE', 'fr-BE', 'fr-CH', 'en', 'es', 'cs', 'hu'].includes(projLang)) {
+            if(['de-CH', 'de-DE', 'de-DO', 'fr-BE', 'fr-CH', 'en', 'es', 'cs', 'hu'].includes(projLang)) {
               lang = projLang;
             }
           }
@@ -168,6 +168,8 @@ angular.module('openolitor-kundenportal')
             $scope.changeLang('de_CH');
           } else if (lang.startsWith('de-DE')) {
             $scope.changeLang('de_DE');
+          } else if (lang.startsWith('de-DO')) {
+            $scope.changeLang('de_DO');
           } else if (lang.startsWith('de')) {
             $scope.changeLang('de_DE');
           } else if (lang.startsWith('fr-BE')) {
