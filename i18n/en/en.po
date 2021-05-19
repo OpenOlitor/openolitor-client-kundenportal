@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: English\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2020-10-19 14:44\n"
+"PO-Revision-Date: 2021-05-19 12:12\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -35,7 +35,7 @@ msgstr "-Test environment"
 msgid "Abbrechen"
 msgstr "Cancel"
 
-#: app/index.html:76
+#: app/index.html:83
 msgid "Abmelden"
 msgstr "Log out"
 
@@ -43,13 +43,17 @@ msgstr "Log out"
 msgid "Abo"
 msgstr "Subscription"
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:35
 msgid "Abo-Beschrieb:"
 msgstr "Subscription description:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:83
+#: app/scripts/rechnungen/list/rechnungenlist.html:82
 msgid "Abo:"
 msgstr "Subscription:"
+
+#: app/index.html:60
+msgid "Abos"
+msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
@@ -88,23 +92,27 @@ msgstr "Number of deliveries"
 msgid "Anzahl Personen"
 msgstr "Number of persons"
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:127
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:128
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr "Work assignment successfully deleted."
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:133
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:134
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr "Deletion of work assignment not successful:"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:184
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:171
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:185
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:172
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr "Work assignment successfully edited."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:190
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:177
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:191
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:178
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr "Editing of work assignment not successful:"
+
+#: app/scripts/abos/list/aboslist.html:97
+msgid "Auch ausgelaufene Abos anzeigen"
+msgstr ""
 
 #: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
@@ -125,15 +133,15 @@ msgid "Bestätigung"
 msgstr "Confirmation"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:116
-#: app/scripts/rechnungen/list/rechnungenlist.html:54
+#: app/scripts/rechnungen/list/rechnungenlist.html:53
 msgid "Betrag"
 msgstr "Amount"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Bezahlt"
 msgstr "Paid"
 
-#: app/scripts/app.js:104
+#: app/scripts/app.js:109
 msgid "Britisches Pfund"
 msgstr "UK Pound"
 
@@ -145,19 +153,19 @@ msgstr "Bunch"
 msgid "Bund"
 msgstr "Bunch"
 
-#: app/scripts/app.js:106
+#: app/scripts/app.js:111
 msgid "CAD"
 msgstr "CAD"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:105
 msgid "CHF"
 msgstr "CHF"
 
-#: app/index.html:84
+#: app/index.html:91
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "The backend is currently not available. Please visit us later again."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:124
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr "Assignment was not successful:"
 
@@ -179,27 +187,28 @@ msgstr "The password must contain at least an upper - and lowercase letters, as 
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "The password has been set successfully. You can log in now."
 
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
 msgstr "Date"
 
-#: app/scripts/dashboard/dashboard.html:9
+#: app/scripts/dashboard/dashboard.html:10
 msgid "Deine Abos"
 msgstr "Your subscriptions"
 
-#: app/scripts/dashboard/dashboard.html:27
+#: app/scripts/dashboard/dashboard.html:32
 msgid "Deine Arbeitseinsätze"
 msgstr "Your assignments"
 
-#: app/scripts/dashboard/dashboard.html:17
+#: app/scripts/dashboard/dashboard.html:20
 msgid "Deine Rechnungen"
 msgstr "Your invoices"
 
-#: app/scripts/abos/list/aboslist.html:10
+#: app/scripts/abos/list/aboslist.html:11
 msgid "Depot:"
 msgstr "Pick-up:"
 
-#: app/scripts/dashboard/dashboard.html:15
+#: app/scripts/dashboard/dashboard.html:18
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
 msgstr "The invoice status is updated periodically by the administration. A paid invoice can appear so as unpaid."
 
@@ -215,7 +224,7 @@ msgstr "Current basket"
 msgid "Der nächste Korb"
 msgstr "Next basket"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:76
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Details werden geladen..."
 msgstr "Loading details..."
 
@@ -225,9 +234,17 @@ msgstr "Loading details..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "The data in the system are sporadically reset to their default values."
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:49
+msgid "Die früheren Arbeitseinsätze anzeigen"
+msgstr ""
+
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
 msgstr "Previous baskets"
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:133
+msgid "Die früheren Rechnungen anzeigen"
+msgstr ""
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
@@ -247,15 +264,15 @@ msgstr "E-mail address"
 msgid "E-Mail:"
 msgstr "E-mail:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:69
+#: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
 msgstr "No. ESR "
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:68
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr "Copy ESR-number to clipboard (for use in payment systems)"
 
-#: app/scripts/app.js:102
+#: app/scripts/app.js:107
 msgid "EUR"
 msgstr "EUR"
 
@@ -292,7 +309,7 @@ msgstr "Unit"
 msgid "Email Adresse"
 msgstr "E-mail Address"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:118
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr "Successfully subscribed to work assignment"
 
@@ -300,15 +317,15 @@ msgstr "Successfully subscribed to work assignment"
 msgid "Error 404"
 msgstr "Error 404"
 
-#: app/scripts/app.js:169
+#: app/scripts/app.js:174
 msgid "Error:"
 msgstr "Error:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
 msgstr "Created"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:24
+#: app/scripts/rechnungen/list/rechnungenlist.html:23
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr "There are no invoices yet."
 
@@ -324,7 +341,7 @@ msgstr "Still no baskets of this type have been scheduled or delivered."
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
 msgstr "Still no delivery planning have been completed."
 
-#: app/scripts/app.js:102
+#: app/scripts/app.js:107
 msgid "Euro"
 msgstr "Euro"
 
@@ -336,7 +353,7 @@ msgstr "Incorrect email address"
 msgid "Fällig"
 msgstr "Due"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:48
+#: app/scripts/rechnungen/list/rechnungenlist.html:47
 msgid "Fällig am"
 msgstr "Due date"
 
@@ -356,9 +373,13 @@ msgstr "Registration is required for access to OpenOlitor"
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
 msgstr "Registration is required for access to OpenOlitor"
 
-#: app/scripts/app.js:104
+#: app/scripts/app.js:109
 msgid "GBP"
 msgstr "GBP"
+
+#: app/index.html:62
+msgid "Gebuchte Arbeitseinsätze"
+msgstr ""
 
 #: app/scripts/app.js:85
 msgid "Gramm"
@@ -372,7 +393,7 @@ msgstr "Payment account (IBAN):"
 msgid "Inhalt der Körbe"
 msgstr "Content of the basket"
 
-#: app/scripts/app.js:106
+#: app/scripts/app.js:111
 msgid "Kanadischer Dollar"
 msgstr "Canadian Dollar"
 
@@ -396,15 +417,15 @@ msgstr "Payment account:"
 msgid "Korb vom"
 msgstr "Basket of"
 
-#: app/scripts/abos/list/aboslist.html:66
+#: app/scripts/abos/list/aboslist.html:67
 msgid "Laufzeit:"
 msgstr "Contract period:"
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:51
 msgid "Lieferrhythmus:"
 msgstr "Delivery frequency:"
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:43
 msgid "Liefertag:"
 msgstr "Delivery day:"
 
@@ -420,14 +441,22 @@ msgstr "Liter"
 msgid "Login Administration"
 msgstr "Login administration"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "MahnungVerschickt"
 msgstr "Reminder Sent"
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:50
+msgid "Mehr Angebot anzeigen"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
 msgid "Menge"
 msgstr "Quantity"
+
+#: app/index.html:63
+msgid "Mitarbeit planen"
+msgstr ""
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
@@ -437,7 +466,7 @@ msgstr "New password"
 msgid "Ok"
 msgstr "Ok"
 
-#: app/index.html:55
+#: app/index.html:54
 msgid "OpenOlitor Mitgliederportal:"
 msgstr "OpenOlitor Member Portal:"
 
@@ -463,7 +492,7 @@ msgstr "Reset password and enable access"
 msgid "Passwort vergessen?"
 msgstr "Forgot your password?"
 
-#: app/index.html:75
+#: app/index.html:82
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Change password"
@@ -516,7 +545,7 @@ msgstr "Portion"
 msgid "Preis"
 msgstr "Price"
 
-#: app/scripts/abos/list/aboslist.html:58
+#: app/scripts/abos/list/aboslist.html:59
 msgid "Preis:"
 msgstr "Price:"
 
@@ -530,19 +559,23 @@ msgstr "Product"
 msgid "Produzent"
 msgstr "Producer"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:45
+#: app/index.html:61
+msgid "Rechnungen"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:44
 msgid "Rechnungsdatum"
 msgstr "Invoice date"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:59
+#: app/scripts/rechnungen/list/rechnungenlist.html:58
 msgid "Referenznummer"
 msgstr "Reference No."
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:58
+#: app/scripts/rechnungen/list/rechnungenlist.html:57
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr "Copy reference number to clipboard"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:105
 msgid "Schweizer Franken"
 msgstr "Swiss Franc"
 
@@ -558,16 +591,20 @@ msgstr "You are on the OpenOlitor testing system. You can login with the followi
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr "You are on the OpenOlitor testing system. You can login with the following credentials:"
 
+#: app/index.html:65
+msgid "Sprache"
+msgstr ""
+
 #: app/scripts/app.js:83
 msgid "St."
 msgstr "piece"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:122
-#: app/scripts/rechnungen/list/rechnungenlist.html:63
+#: app/scripts/rechnungen/list/rechnungenlist.html:62
 msgid "Status"
 msgstr "State"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:91
 msgid "Storniert"
 msgstr "Cancelled"
 
@@ -577,21 +614,20 @@ msgstr "Piece"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
 #: app/scripts/rechnungen/list/rechnungenlist.html:113
-#: app/scripts/rechnungen/list/rechnungenlist.html:51
+#: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Titel"
 msgstr "Title"
 
-#: app/scripts/abos/list/aboslist.html:18
+#: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
 msgstr "Tour:"
 
-#: app/scripts/app.js:103
+#: app/scripts/app.js:108
 msgid "US Dollar"
 msgstr "US dollar"
 
-#: app/scripts/app.js:103
+#: app/scripts/app.js:108
 msgid "USD"
 msgstr "USD"
 
@@ -603,19 +639,19 @@ msgstr "Maintenance mode! The customer portal is currently unavailable.We will a
 msgid "Verbindlich Einschreiben"
 msgstr "Binding subscription"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "Verschickt"
 msgstr "Sent"
 
-#: app/index.html:102
+#: app/index.html:109
 msgid "Version:"
 msgstr "Version:"
 
-#: app/scripts/abos/list/aboslist.html:26
+#: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
 msgstr "Distribution:"
 
-#: app/scripts/abos/list/aboslist.html:69
+#: app/scripts/abos/list/aboslist.html:70
 msgid "Von"
 msgstr "By"
 
@@ -641,11 +677,11 @@ msgstr "If you forgot your password, you can send an email for reset it from the
 msgid "Willkommen"
 msgstr "Welcome"
 
-#: app/index.html:96
+#: app/index.html:103
 msgid "Wir sind gleich bereit..."
 msgstr "We'll be ready soon ..."
 
-#: app/scripts/dashboard/dashboard.html:35
+#: app/scripts/dashboard/dashboard.html:44
 msgid "Wo ist Mitarbeit möglich?"
 msgstr "Current work opportunities:"
 
@@ -674,11 +710,15 @@ msgstr "Access denied"
 msgid "Zusatzabo:"
 msgstr "Supplementary subscription:"
 
+#: app/scripts/abos/list/aboslist.html:75
+msgid "Zusatzabos:"
+msgstr ""
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "all"
 
-#: app/scripts/abos/list/aboslist.html:69
+#: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
 msgstr "to"
 
