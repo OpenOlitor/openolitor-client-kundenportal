@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2021-05-19 12:20\n"
+"PO-Revision-Date: 2021-05-19 13:33\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -112,7 +112,7 @@ msgstr "L'intervention de travail n'a pas été modifiée:"
 
 #: app/scripts/abos/list/aboslist.html:97
 msgid "Auch ausgelaufene Abos anzeigen"
-msgstr ""
+msgstr "Afficher les abonnements expirés"
 
 #: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
