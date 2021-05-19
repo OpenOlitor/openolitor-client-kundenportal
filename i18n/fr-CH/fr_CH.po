@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2021-05-19 13:33\n"
+"PO-Revision-Date: 2021-05-19 13:39\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -236,7 +236,7 @@ msgstr "De temps en temps, les données dans ce système sont réinitialisées a
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:49
 msgid "Die früheren Arbeitseinsätze anzeigen"
-msgstr ""
+msgstr "Afficher les interventions de travail précédentes"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
@@ -244,7 +244,7 @@ msgstr "Les paniers précédents"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:133
 msgid "Die früheren Rechnungen anzeigen"
-msgstr ""
+msgstr "Afficher les factures précédentes"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
@@ -379,7 +379,7 @@ msgstr "GBP"
 
 #: app/index.html:62
 msgid "Gebuchte Arbeitseinsätze"
-msgstr ""
+msgstr "Interventions de travail réservées"
 
 #: app/scripts/app.js:85
 msgid "Gramm"
@@ -447,7 +447,7 @@ msgstr "Rappel-envoyé"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:50
 msgid "Mehr Angebot anzeigen"
-msgstr ""
+msgstr "Afficher plus d'offres"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
@@ -456,7 +456,7 @@ msgstr "Quantité"
 
 #: app/index.html:63
 msgid "Mitarbeit planen"
-msgstr ""
+msgstr "Planifier la coopération"
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
