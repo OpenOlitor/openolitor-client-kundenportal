@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: English\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2021-05-19 12:12\n"
+"PO-Revision-Date: 2021-05-19 12:20\n"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
@@ -53,7 +53,7 @@ msgstr "Subscription:"
 
 #: app/index.html:60
 msgid "Abos"
-msgstr ""
+msgstr "Subscriptions"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
@@ -112,7 +112,7 @@ msgstr "Editing of work assignment not successful:"
 
 #: app/scripts/abos/list/aboslist.html:97
 msgid "Auch ausgelaufene Abos anzeigen"
-msgstr ""
+msgstr "Show expired subscriptions"
 
 #: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
@@ -236,7 +236,7 @@ msgstr "The data in the system are sporadically reset to their default values."
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:49
 msgid "Die früheren Arbeitseinsätze anzeigen"
-msgstr ""
+msgstr "Show previous work assignments"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
@@ -244,7 +244,7 @@ msgstr "Previous baskets"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:133
 msgid "Die früheren Rechnungen anzeigen"
-msgstr ""
+msgstr "Show previous invoices"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
@@ -379,7 +379,7 @@ msgstr "GBP"
 
 #: app/index.html:62
 msgid "Gebuchte Arbeitseinsätze"
-msgstr ""
+msgstr "Work assignments"
 
 #: app/scripts/app.js:85
 msgid "Gramm"
@@ -447,7 +447,7 @@ msgstr "Reminder Sent"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:50
 msgid "Mehr Angebot anzeigen"
-msgstr ""
+msgstr "Show more offers"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
@@ -456,7 +456,7 @@ msgstr "Quantity"
 
 #: app/index.html:63
 msgid "Mitarbeit planen"
-msgstr ""
+msgstr "Plan cooperation"
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
@@ -561,7 +561,7 @@ msgstr "Producer"
 
 #: app/index.html:61
 msgid "Rechnungen"
-msgstr ""
+msgstr "Invoices"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:44
 msgid "Rechnungsdatum"
@@ -593,7 +593,7 @@ msgstr "You are on the OpenOlitor testing system. You can login with the followi
 
 #: app/index.html:65
 msgid "Sprache"
-msgstr ""
+msgstr "Language"
 
 #: app/scripts/app.js:83
 msgid "St."
@@ -712,7 +712,7 @@ msgstr "Supplementary subscription:"
 
 #: app/scripts/abos/list/aboslist.html:75
 msgid "Zusatzabos:"
-msgstr ""
+msgstr "Supplementary subscriptions:"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
