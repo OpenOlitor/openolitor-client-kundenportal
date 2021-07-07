@@ -10,7 +10,7 @@ msgid "#&nbsp;Pers."
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
-msgid "+"
+msgid "&nbsp;+"
 msgstr ""
 
 #: app/scripts/login/login.html:7
@@ -83,21 +83,21 @@ msgstr ""
 msgid "Anzahl Personen"
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:128
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:130
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:134
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:136
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:185
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:172
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:194
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:174
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:191
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:178
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:200
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:180
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr ""
 
@@ -156,7 +156,7 @@ msgstr ""
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:124
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:133
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr ""
 
@@ -225,7 +225,7 @@ msgstr ""
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:49
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:51
 msgid "Die früheren Arbeitseinsätze anzeigen"
 msgstr ""
 
@@ -300,7 +300,7 @@ msgstr ""
 msgid "Email Adresse"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:118
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:127
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr ""
 
@@ -582,6 +582,10 @@ msgstr ""
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr ""
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:37
+msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
+msgstr ""
+
 #: app/index.html:65
 msgid "Sprache"
 msgstr ""
@@ -727,6 +731,10 @@ msgstr ""
 
 #: app/scripts/app.js:88
 msgid "l"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35

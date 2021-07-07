@@ -36,8 +36,8 @@
                   </span>
                 </td>
                 <td>
-                  <a role="button" ng-if="!isParticipating(arbeitsangebot)" class="btn btn-sm btn-primary" ng-click="participate(arbeitsangebot)"><span class="glyphicon glyphicon-plus"></span></a>
-                  <a role="button" ng-if="isParticipating(arbeitsangebot)" class="btn btn-sm btn-info" ng-click="edit(arbeitsangebot)"><span class="glyphicon glyphicon-edit">{{getArbeitseinsatz(arbeitsangebot).anzahlPersonen}}</span></a>
+                  <a role="button" ng-disabled=!availableVacancies(arbeitsangebot) ng-if="!isParticipating(arbeitsangebot)" class="btn btn-sm btn-primary" ng-click="participate(arbeitsangebot)"><span class="glyphicon glyphicon-plus"></span></a>
+                  <a role="button" ng-disabled=!availableVacancies(arbeitsangebot) ng-if="isParticipating(arbeitsangebot)" class="btn btn-sm btn-info" ng-click="!availableVacancies() || edit(arbeitsangebot)"><span class="glyphicon glyphicon-edit">{{getArbeitseinsatz(arbeitsangebot).anzahlPersonen}}</span></a>
                 </td>
               </tr>
             </table>
