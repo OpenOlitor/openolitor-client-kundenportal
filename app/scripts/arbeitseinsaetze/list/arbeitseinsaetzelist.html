@@ -34,9 +34,13 @@
                 </td>
                 <td>
                   <div class="btn-group">
-                    <script type="text/ng-template" id="workAssignmentInfoTooltipTemplate.html"><span translate> Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt</span></script>
-                    <a ng-if=(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) ng-disabled=(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) role="button" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)" ><span class="glyphicon glyphicon-minus"></span></a>
-                    <a ng-if=!(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) role="button" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)" ><span class="glyphicon glyphicon-minus"></span></a>
+                    <script type="text/ng-template" id="workAssignmentInfoTooltipTemplate.html">
+                      <span translate> 
+                        Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt
+                      </span>
+                    </script>
+                    <a ng-if="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" ng-disabled="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" role="button" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)"><span class="glyphicon glyphicon-minus"></span></a>
+                    <a ng-if="!(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" role="button" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)" ><span class="glyphicon glyphicon-minus"></span></a>
                     <a role="button" class="btn btn-sm btn-info" ng-click="edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a> 
                   </div>
                 </td>
