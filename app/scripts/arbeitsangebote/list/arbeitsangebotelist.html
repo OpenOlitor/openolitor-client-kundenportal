@@ -28,7 +28,7 @@
                   {{arbeitsangebot.ort}}
                 </td>
                 <td data-title="'#&nbsp;Pers.'|translate" sortable="'anzahlPersonen'">
-                  {{arbeitsangebot.anzahlPersonen}} <span ng-if="arbeitsangebot.mehrPersonenOk" translate>+</span>
+                  {{arbeitsangebot.anzahlEingeschriebene}} / <span ng-if="!arbeitsangebot.mehrPersonenOk" translate>max.</span> {{arbeitsangebot.anzahlPersonen}}<span ng-if="arbeitsangebot.mehrPersonenOk" translate>&nbsp;+</span>
                 </td>
                 <td data-title="'Kategorien'|translate">
                   <span ng-repeat="arbeitskategorie in arbeitsangebot.arbeitskategorien" class="badge" ng-if="arbeitskategorie !== ''">
@@ -37,7 +37,7 @@
                 </td>
                 <td>
                   <a role="button" ng-if="!isParticipating(arbeitsangebot)" class="btn btn-sm btn-primary" ng-click="participate(arbeitsangebot)"><span class="glyphicon glyphicon-plus"></span></a>
-                  <a role="button" ng-if="isParticipating(arbeitsangebot)" class="btn btn-sm btn-info" ng-click="edit(arbeitsangebot)"><span class="glyphicon glyphicon-edit"></span></a>
+                  <a role="button" ng-if="isParticipating(arbeitsangebot)" class="btn btn-sm btn-info" ng-click="edit(arbeitsangebot)"><span class="glyphicon glyphicon-edit">{{getArbeitseinsatz(arbeitsangebot).anzahlPersonen}}</span></a>
                 </td>
               </tr>
             </table>
