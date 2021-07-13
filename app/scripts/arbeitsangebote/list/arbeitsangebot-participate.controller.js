@@ -37,19 +37,6 @@ angular.module('openolitor-kundenportal')
         };
       }
 
-      $scope.getArbeitAngebot = function(arbeitseinsatz) {
-        if ($scope.arbeitseinsatzList) {
-          var ret = undefined;
-          angular.forEach($scope.arbeitseinsatzList, function(arbeitseinsatz) {
-            if (arbeitseinsatz.arbeitsangebotId === arbeitsangebot.id) {
-              ret = arbeitseinsatz;
-            }
-          });
-          return ret;
-        }
-        return undefined;
-      };
-
       $scope.ok = function() {
         $uibModalInstance.close($scope.formDaten);
       };
