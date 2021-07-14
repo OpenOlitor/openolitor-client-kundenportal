@@ -71,7 +71,7 @@ angular
       }
 
       $scope.availableVacancies = function(arbeitsangebot) {
-        if ((arbeitsangebot.anzahlPersonen-arbeitsangebot.anzahlEingeschriebene) === 0) {
+        if ((arbeitsangebot.anzahlPersonen-arbeitsangebot.anzahlEingeschriebene) <= 0) {
           return false;
         } else {
           return true;

@@ -4,13 +4,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
 msgstr ""
 
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+msgid "#Pers."
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
-msgid "&nbsp;+"
+msgid "+"
 msgstr ""
 
 #: app/scripts/login/login.html:7
@@ -225,7 +228,7 @@ msgstr ""
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:51
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:60
 msgid "Die früheren Arbeitseinsätze anzeigen"
 msgstr ""
 
@@ -582,7 +585,7 @@ msgstr ""
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:37
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:38
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
 msgstr ""
 

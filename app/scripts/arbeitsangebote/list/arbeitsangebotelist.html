@@ -27,8 +27,8 @@
                 <td data-title="'Ort'|translate">
                   {{arbeitsangebot.ort}}
                 </td>
-                <td data-title="'#&nbsp;Pers.'|translate" sortable="'anzahlPersonen'">
-                  {{arbeitsangebot.anzahlEingeschriebene}} / <span ng-if="!arbeitsangebot.mehrPersonenOk" translate>max.</span> {{arbeitsangebot.anzahlPersonen}}<span ng-if="arbeitsangebot.mehrPersonenOk" translate>&nbsp;+</span>
+                <td data-title="'#Pers.'|translate" sortable="'anzahlPersonen'">
+                  {{arbeitsangebot.anzahlEingeschriebene}} / <span ng-if="!arbeitsangebot.mehrPersonenOk" translate>max.</span> {{arbeitsangebot.anzahlPersonen}}<span ng-if="arbeitsangebot.mehrPersonenOk" translate>+</span>
                 </td>
                 <td data-title="'Kategorien'|translate">
                   <span ng-repeat="arbeitskategorie in arbeitsangebot.arbeitskategorien" class="badge" ng-if="arbeitskategorie !== ''">
