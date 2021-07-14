@@ -43,8 +43,10 @@ angular
       $scope.loading = false;
       $scope.model = {};
       $scope.maxEntries = 10;
+      var today = new Date();
 
       ArbeitseinsaetzeListModel.query(function(data) {
+      $scope.limitDateForDeletion = today.setDate(today.getDate()+1);
         $scope.entries = data;
         if ($scope.arbeitseinsatzTableParams) {
           $scope.arbeitseinsatzTableParams.reload();

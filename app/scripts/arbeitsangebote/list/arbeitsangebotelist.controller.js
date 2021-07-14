@@ -70,6 +70,15 @@ angular
         );
       }
 
+      $scope.availableVacancies = function(arbeitsangebot) {
+        if ((arbeitsangebot.anzahlPersonen-arbeitsangebot.anzahlEingeschriebene) <= 0) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
+
       $scope.statusClass = function(arbeitsangebot) {
         if (angular.isDefined(arbeitsangebot)) {
           switch (arbeitsangebot.status) {
