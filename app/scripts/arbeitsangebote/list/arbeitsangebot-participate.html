@@ -7,7 +7,7 @@
     <div class="form-group row">
      <span class="col-md-5"><label for="anzahlPersonen" class="form-label" translate>Anzahl Personen</label></span>
      <span class="col-md-7">
-       <input type="number" class="form-control" id="anzahlPersonen" ng-model="formDaten.anzahlPersonen" required>
+       <input type="number" class="form-control" id="anzahlPersonen" ng-model="formDaten.anzahlPersonen" min=0 max={{maxVacancies}} required>
      </span>
    </div>
 
