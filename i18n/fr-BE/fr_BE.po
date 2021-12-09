@@ -7,15 +7,18 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: fr-BE\n"
-"X-Crowdin-File: /prod/template.pot\n"
-"X-Crowdin-File-ID: 12\n"
+"X-Crowdin-File: /[OpenOlitor.openolitor-client-kundenportal] prod/template.pot\n"
+"X-Crowdin-File-ID: 57\n"
 "Language-Team: French, Belgium\n"
 "Language: fr_BE\n"
-"PO-Revision-Date: 2021-05-19 12:12\n"
+"PO-Revision-Date: 2021-12-09 08:59\n"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+msgid "#Pers."
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
@@ -92,21 +95,21 @@ msgstr ""
 msgid "Anzahl Personen"
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:128
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:130
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:134
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:136
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:185
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:172
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:194
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:174
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:191
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:178
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:200
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:180
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr ""
 
@@ -165,7 +168,7 @@ msgstr ""
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "Le back-end est momentanément ineccessible. Merci de revenir un peu plus tard."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:124
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:133
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr ""
 
@@ -234,7 +237,7 @@ msgstr ""
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:49
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:60
 msgid "Die früheren Arbeitseinsätze anzeigen"
 msgstr ""
 
@@ -309,7 +312,7 @@ msgstr "Unité"
 msgid "Email Adresse"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:118
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:127
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr ""
 
@@ -591,6 +594,10 @@ msgstr ""
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr ""
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:38
+msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
+msgstr ""
+
 #: app/index.html:65
 msgid "Sprache"
 msgstr ""
@@ -736,6 +743,10 @@ msgstr ""
 
 #: app/scripts/app.js:88
 msgid "l"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
