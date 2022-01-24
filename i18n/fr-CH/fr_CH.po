@@ -21,6 +21,10 @@ msgstr ""
 msgid "#Pers."
 msgstr ""
 
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+msgid "#Pers."
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
 msgstr ""
@@ -743,6 +747,10 @@ msgstr ""
 
 #: app/scripts/app.js:88
 msgid "l"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31

@@ -749,6 +749,10 @@ msgstr ""
 msgid "max."
 msgstr ""
 
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
+msgstr ""
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
 msgstr "pending"
