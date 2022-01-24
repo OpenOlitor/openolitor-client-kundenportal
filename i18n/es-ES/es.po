@@ -7,11 +7,12 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: es-ES\n"
-"X-Crowdin-File: /prod/template.pot\n"
-"X-Crowdin-File-ID: 12\n"
+"X-Crowdin-File: /[OpenOlitor.openolitor-client-kundenportal] prod/template.pot\n"
+"X-Crowdin-File-ID: 57\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2021-12-09 08:05\n"
+"PO-Revision-Date: 2021-12-09 08:59\n"
+
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -21,9 +22,10 @@ msgstr "Nº&nbsp;Pers."
 msgid "#Pers."
 msgstr "Nº Pers."
 
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -158,11 +160,11 @@ msgstr "Manojo"
 
 #: app/scripts/app.js:111
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
 #: app/scripts/app.js:105
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/index.html:91
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -277,7 +279,7 @@ msgstr "Copiar el número ESR al portapapeles (para utilizarlo en el sistema de 
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -318,11 +320,11 @@ msgstr "Inscripción realizada"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr "Error 404"
+msgstr ""
 
 #: app/scripts/app.js:174
 msgid "Error:"
-msgstr "Error:"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
@@ -346,7 +348,7 @@ msgstr "Ninguna planificación de la distribución ha sido concluida."
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -378,7 +380,7 @@ msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/index.html:62
 msgid "Gebuchte Arbeitseinsätze"
@@ -537,7 +539,7 @@ msgstr "Calidad de la contraseña"
 
 #: app/scripts/app.js:89
 msgid "Por."
-msgstr "Por."
+msgstr ""
 
 #: app/scripts/app.js:89
 msgid "Portion"
@@ -598,6 +600,7 @@ msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como ab
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
 msgstr "No puede eliminar esta asociación porque está demasiado cerca de la fecha de ejecución"
 
+
 #: app/index.html:65
 msgid "Sprache"
 msgstr "Idioma"
@@ -636,7 +639,7 @@ msgstr "Dólar estadounidense"
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -735,15 +738,19 @@ msgstr "Ya inscrito"
 
 #: app/scripts/app.js:85
 msgid "gr"
-msgstr "gr"
+msgstr ""
 
 #: app/scripts/app.js:87
 msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:88
 msgid "l"
-msgstr "l"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."

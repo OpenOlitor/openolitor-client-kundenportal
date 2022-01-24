@@ -7,11 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: en\n"
-"X-Crowdin-File: /prod/template.pot\n"
-"X-Crowdin-File-ID: 12\n"
+"X-Crowdin-File: /[OpenOlitor.openolitor-client-kundenportal] prod/template.pot\n"
+"X-Crowdin-File-ID: 57\n"
 "Language-Team: English\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2021-07-22 11:25\n"
+"PO-Revision-Date: 2021-12-09 08:59\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -23,7 +23,7 @@ msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -158,11 +158,11 @@ msgstr "Bunch"
 
 #: app/scripts/app.js:111
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
 #: app/scripts/app.js:105
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/index.html:91
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -277,7 +277,7 @@ msgstr "Copy ESR-number to clipboard (for use in payment systems)"
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -318,11 +318,11 @@ msgstr "Successfully subscribed to work assignment"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr "Error 404"
+msgstr ""
 
 #: app/scripts/app.js:174
 msgid "Error:"
-msgstr "Error:"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
@@ -346,7 +346,7 @@ msgstr "Still no delivery planning have been completed."
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -378,7 +378,7 @@ msgstr "Registration is required for access to OpenOlitor"
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/index.html:62
 msgid "Gebuchte Arbeitseinsätze"
@@ -438,7 +438,7 @@ msgstr "Delivery"
 
 #: app/scripts/app.js:88
 msgid "Liter"
-msgstr "Liter"
+msgstr ""
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
@@ -467,7 +467,7 @@ msgstr "New password"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 #: app/index.html:54
 msgid "OpenOlitor Mitgliederportal:"
@@ -537,11 +537,11 @@ msgstr "Password quality"
 
 #: app/scripts/app.js:89
 msgid "Por."
-msgstr "Por."
+msgstr ""
 
 #: app/scripts/app.js:89
 msgid "Portion"
-msgstr "Portion"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:36
 #: app/scripts/abos/list/lieferungen/lieferungen.html:89
@@ -628,7 +628,7 @@ msgstr "Title"
 
 #: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
-msgstr "Tour:"
+msgstr ""
 
 #: app/scripts/app.js:108
 msgid "US Dollar"
@@ -636,7 +636,7 @@ msgstr "US dollar"
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -652,7 +652,7 @@ msgstr "Sent"
 
 #: app/index.html:109
 msgid "Version:"
-msgstr "Version:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
@@ -735,15 +735,19 @@ msgstr "Subscribed work assignments"
 
 #: app/scripts/app.js:85
 msgid "gr"
-msgstr "gr"
+msgstr ""
 
 #: app/scripts/app.js:87
 msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:88
 msgid "l"
-msgstr "l"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
