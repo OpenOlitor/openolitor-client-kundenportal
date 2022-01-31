@@ -7,11 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: de\n"
-"X-Crowdin-File: /[OpenOlitor.openolitor-client-kundenportal] prod/template.pot\n"
-"X-Crowdin-File-ID: 57\n"
+"X-Crowdin-File: /prod/template.pot\n"
+"X-Crowdin-File-ID: 12\n"
 "Language-Team: German\n"
 "Language: de_DE\n"
-"PO-Revision-Date: 2021-12-09 08:59\n"
+"PO-Revision-Date: 2022-01-31 13:59\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -36,11 +36,11 @@ msgstr ""
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
-msgstr ""
+msgstr "Abbrechen"
 
 #: app/index.html:83
 msgid "Abmelden"
-msgstr ""
+msgstr "Abmelden"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:119
 msgid "Abo"
@@ -60,11 +60,11 @@ msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
-msgstr ""
+msgstr "Abwesenheit erfassen"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
-msgstr ""
+msgstr "Abwesenheiten"
 
 #: app/scripts/login/change_password.html:11
 msgid "Aktuelles Passwort"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
 msgid "Alle"
-msgstr ""
+msgstr "Alle"
 
 #: app/scripts/login/login.html:74
 #: app/scripts/login/login.html:91
@@ -138,7 +138,7 @@ msgstr ""
 #: app/scripts/rechnungen/list/rechnungenlist.html:116
 #: app/scripts/rechnungen/list/rechnungenlist.html:53
 msgid "Betrag"
-msgstr ""
+msgstr "Betrag"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Bezahlt"
@@ -154,7 +154,7 @@ msgstr ""
 
 #: app/scripts/app.js:84
 msgid "Bund"
-msgstr ""
+msgstr "Bund"
 
 #: app/scripts/app.js:111
 msgid "CAD"
@@ -193,7 +193,7 @@ msgstr ""
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
-msgstr ""
+msgstr "Datum"
 
 #: app/scripts/dashboard/dashboard.html:10
 msgid "Deine Abos"
@@ -201,7 +201,7 @@ msgstr "Deine Anteile"
 
 #: app/scripts/dashboard/dashboard.html:32
 msgid "Deine Arbeitseinsätze"
-msgstr ""
+msgstr "Deine Arbeitseinsätze"
 
 #: app/scripts/dashboard/dashboard.html:20
 msgid "Deine Rechnungen"
@@ -213,7 +213,7 @@ msgstr "Abholstation:"
 
 #: app/scripts/dashboard/dashboard.html:18
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
-msgstr ""
+msgstr "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
 
 #: app/scripts/login/forbidden.html:6
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
@@ -229,7 +229,7 @@ msgstr "Der nächste Anteil"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Details werden geladen..."
-msgstr ""
+msgstr "Details werden geladen..."
 
 #: app/scripts/login/login.html:18
 #: app/scripts/login/login.html:29
@@ -306,7 +306,7 @@ msgstr "Eingabe ist zu lang"
 #: app/scripts/abos/list/lieferungen/lieferungen.html:33
 #: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Einheit"
-msgstr ""
+msgstr "Einheit"
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
@@ -318,7 +318,7 @@ msgstr ""
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr ""
+msgstr "Error 404"
 
 #: app/scripts/app.js:174
 msgid "Error:"
@@ -354,11 +354,11 @@ msgstr "Fehlerhafte E-mail Adresse"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:110
 msgid "Fällig"
-msgstr ""
+msgstr "Fällig"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:47
 msgid "Fällig am"
-msgstr ""
+msgstr "Fällig am"
 
 #: app/scripts/login/login.html:80
 msgid "Für das Testen der Administrationsumgebung, bitte hier klicken!"
@@ -386,7 +386,7 @@ msgstr ""
 
 #: app/scripts/app.js:85
 msgid "Gramm"
-msgstr ""
+msgstr "Gramm"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:8
 msgid "IBAN für Einzahlungen:"
@@ -410,11 +410,11 @@ msgstr ""
 
 #: app/scripts/app.js:86
 msgid "Kilogramm"
-msgstr ""
+msgstr "Kilogramm"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
-msgstr ""
+msgstr "Konto für Einzahlungen:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:70
 msgid "Korb vom"
@@ -422,23 +422,23 @@ msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:67
 msgid "Laufzeit:"
-msgstr ""
+msgstr "Laufzeit:"
 
 #: app/scripts/abos/list/aboslist.html:51
 msgid "Lieferrhythmus:"
-msgstr ""
+msgstr "Lieferrhythmus:"
 
 #: app/scripts/abos/list/aboslist.html:43
 msgid "Liefertag:"
-msgstr ""
+msgstr "Liefertag:"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Lieferung"
-msgstr ""
+msgstr "Lieferung"
 
 #: app/scripts/app.js:88
 msgid "Liter"
-msgstr ""
+msgstr "Liter"
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
@@ -455,7 +455,7 @@ msgstr ""
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
 msgid "Menge"
-msgstr ""
+msgstr "Menge"
 
 #: app/index.html:63
 msgid "Mitarbeit planen"
@@ -471,7 +471,7 @@ msgstr ""
 
 #: app/index.html:54
 msgid "OpenOlitor Mitgliederportal:"
-msgstr ""
+msgstr "OpenOlitor Mitgliederportal:"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
 msgid "Ort"
@@ -541,7 +541,7 @@ msgstr ""
 
 #: app/scripts/app.js:89
 msgid "Portion"
-msgstr ""
+msgstr "Portion"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:36
 #: app/scripts/abos/list/lieferungen/lieferungen.html:89
@@ -555,7 +555,7 @@ msgstr "Beitrag:"
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
 #: app/scripts/abos/list/lieferungen/lieferungen.html:80
 msgid "Produkt"
-msgstr ""
+msgstr "Produkt"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:49
 #: app/scripts/abos/list/lieferungen/lieferungen.html:97
@@ -572,7 +572,7 @@ msgstr "Mitgliedsbeitrag"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:58
 msgid "Referenznummer"
-msgstr ""
+msgstr "Referenznummer"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:57
 msgid "Referenznummer in Zwischenablage kopieren"
@@ -609,7 +609,7 @@ msgstr "Stk."
 #: app/scripts/rechnungen/list/rechnungenlist.html:122
 #: app/scripts/rechnungen/list/rechnungenlist.html:62
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:91
 msgid "Storniert"
@@ -617,18 +617,18 @@ msgstr ""
 
 #: app/scripts/app.js:83
 msgid "Stück"
-msgstr ""
+msgstr "Stück"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
 #: app/scripts/rechnungen/list/rechnungenlist.html:113
 #: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Titel"
-msgstr ""
+msgstr "Titel"
 
 #: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
-msgstr ""
+msgstr "Tour:"
 
 #: app/scripts/app.js:108
 msgid "US Dollar"
@@ -652,7 +652,7 @@ msgstr ""
 
 #: app/index.html:109
 msgid "Version:"
-msgstr ""
+msgstr "Version:"
 
 #: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
@@ -668,7 +668,7 @@ msgstr "Weitere Anteile anzeigen..."
 
 #: app/scripts/open/lastlieferplanungen.html:80
 msgid "Weitere Lieferungen anzeigen..."
-msgstr ""
+msgstr "Weitere Lieferungen anzeigen..."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:105
 #: app/scripts/abos/list/lieferungen/lieferungen.html:22
@@ -723,11 +723,11 @@ msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
-msgstr ""
+msgstr "alle"
 
 #: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
-msgstr ""
+msgstr "bis"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
 msgid "bisher eingeschrieben"
@@ -735,19 +735,15 @@ msgstr ""
 
 #: app/scripts/app.js:85
 msgid "gr"
-msgstr ""
+msgstr "gr"
 
 #: app/scripts/app.js:87
 msgid "kg"
-msgstr ""
+msgstr "kg"
 
 #: app/scripts/app.js:88
 msgid "l"
-msgstr ""
-
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
-msgid "max."
-msgstr ""
+msgstr "l"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
@@ -760,7 +756,7 @@ msgstr "ausstehend"
 #: app/scripts/abos/list/lieferungen/lieferungen.html:7
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
-msgstr ""
+msgstr "vom"
 
 #: app/scripts/login/login.html:84
 msgid "zugestellt."
