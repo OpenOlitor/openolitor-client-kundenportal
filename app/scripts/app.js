@@ -244,7 +244,6 @@ angular
   })
   .config(['$httpProvider', function($httpProvider) {
     $httpProvider.interceptors.push('loggedOutInterceptor');
-    $httpProvider.interceptors.push('errbitErrorInterceptor');
   }])
   .config(['$locationProvider', function($locationProvider) {
     $locationProvider.hashPrefix('');
