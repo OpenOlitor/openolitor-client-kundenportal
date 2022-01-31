@@ -7,12 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: es-ES\n"
-"X-Crowdin-File: /[OpenOlitor.openolitor-client-kundenportal] prod/template.pot\n"
-"X-Crowdin-File-ID: 57\n"
+"X-Crowdin-File: /prod/template.pot\n"
+"X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2021-12-09 08:59\n"
-
+"PO-Revision-Date: 2022-01-31 13:59\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -22,10 +21,9 @@ msgstr "Nº&nbsp;Pers."
 msgid "#Pers."
 msgstr "Nº Pers."
 
-
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -160,11 +158,11 @@ msgstr "Manojo"
 
 #: app/scripts/app.js:111
 msgid "CAD"
-msgstr ""
+msgstr "CAD"
 
 #: app/scripts/app.js:105
 msgid "CHF"
-msgstr ""
+msgstr "CHF"
 
 #: app/index.html:91
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -203,7 +201,7 @@ msgstr "Tus abonos"
 
 #: app/scripts/dashboard/dashboard.html:32
 msgid "Deine Arbeitseinsätze"
-msgstr "Tus días y horas de trabajo"
+msgstr "Tus colaboraciones (días y horas)"
 
 #: app/scripts/dashboard/dashboard.html:20
 msgid "Deine Rechnungen"
@@ -279,7 +277,7 @@ msgstr "Copiar el número ESR al portapapeles (para utilizarlo en el sistema de 
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr ""
+msgstr "EUR"
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -320,11 +318,11 @@ msgstr "Inscripción realizada"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr ""
+msgstr "Error 404"
 
 #: app/scripts/app.js:174
 msgid "Error:"
-msgstr ""
+msgstr "Error:"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
@@ -348,7 +346,7 @@ msgstr "Ninguna planificación de la distribución ha sido concluida."
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -380,11 +378,11 @@ msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr ""
+msgstr "GBP"
 
 #: app/index.html:62
 msgid "Gebuchte Arbeitseinsätze"
-msgstr "Días y horas de trabajo reservadas"
+msgstr "Colaboraciones de trabajo reservadas (días y horas)"
 
 #: app/scripts/app.js:85
 msgid "Gramm"
@@ -539,7 +537,7 @@ msgstr "Calidad de la contraseña"
 
 #: app/scripts/app.js:89
 msgid "Por."
-msgstr ""
+msgstr "Por."
 
 #: app/scripts/app.js:89
 msgid "Portion"
@@ -600,7 +598,6 @@ msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como ab
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
 msgstr "No puede eliminar esta asociación porque está demasiado cerca de la fecha de ejecución"
 
-
 #: app/index.html:65
 msgid "Sprache"
 msgstr "Idioma"
@@ -639,7 +636,7 @@ msgstr "Dólar estadounidense"
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -738,19 +735,15 @@ msgstr "Ya inscrito"
 
 #: app/scripts/app.js:85
 msgid "gr"
-msgstr ""
+msgstr "gr"
 
 #: app/scripts/app.js:87
 msgid "kg"
-msgstr ""
+msgstr "kg"
 
 #: app/scripts/app.js:88
 msgid "l"
-msgstr ""
-
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
-msgid "max."
-msgstr ""
+msgstr "l"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
