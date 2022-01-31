@@ -7,12 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: hu\n"
-"X-Crowdin-File: /[OpenOlitor.openolitor-client-kundenportal] prod/template.pot\n"
-"X-Crowdin-File-ID: 57\n"
+"X-Crowdin-File: /prod/template.pot\n"
+"X-Crowdin-File-ID: 12\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2021-12-09 08:59\n"
-
+"PO-Revision-Date: 2022-01-31 14:00\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -24,7 +23,7 @@ msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -159,11 +158,11 @@ msgstr "Csokor"
 
 #: app/scripts/app.js:111
 msgid "CAD"
-msgstr ""
+msgstr "CAD"
 
 #: app/scripts/app.js:105
 msgid "CHF"
-msgstr ""
+msgstr "CHF"
 
 #: app/index.html:91
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -278,7 +277,7 @@ msgstr "ESR szám másolása a vágólapra (hogy használhassa a pénzügyi modu
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr ""
+msgstr "EUR"
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -347,7 +346,7 @@ msgstr "Még nincs megvalósított szállítási terv."
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -379,7 +378,7 @@ msgstr "Az admin felület használatához bejelentkezés szükséges."
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr ""
+msgstr "GBP"
 
 #: app/index.html:62
 msgid "Gebuchte Arbeitseinsätze"
@@ -411,7 +410,7 @@ msgstr "Nincs önkéntes munka ajánlat."
 
 #: app/scripts/app.js:86
 msgid "Kilogramm"
-msgstr ""
+msgstr "Kilogramm"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
@@ -439,7 +438,7 @@ msgstr "Szállítás"
 
 #: app/scripts/app.js:88
 msgid "Liter"
-msgstr ""
+msgstr "Liter"
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
@@ -637,7 +636,7 @@ msgstr "USA dollár"
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -736,19 +735,15 @@ msgstr "Már korábban regisztrált."
 
 #: app/scripts/app.js:85
 msgid "gr"
-msgstr ""
+msgstr "gr"
 
 #: app/scripts/app.js:87
 msgid "kg"
-msgstr ""
+msgstr "kg"
 
 #: app/scripts/app.js:88
 msgid "l"
-msgstr ""
-
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
-msgid "max."
-msgstr ""
+msgstr "l"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."

@@ -7,11 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: cs\n"
-"X-Crowdin-File: /[OpenOlitor.openolitor-client-kundenportal] prod/template.pot\n"
-"X-Crowdin-File-ID: 57\n"
+"X-Crowdin-File: /prod/template.pot\n"
+"X-Crowdin-File-ID: 12\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2021-12-09 08:59\n"
+"PO-Revision-Date: 2022-01-31 13:59\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -23,7 +23,7 @@ msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -158,11 +158,11 @@ msgstr "Trs"
 
 #: app/scripts/app.js:111
 msgid "CAD"
-msgstr ""
+msgstr "CAD"
 
 #: app/scripts/app.js:105
 msgid "CHF"
-msgstr ""
+msgstr "CHF"
 
 #: app/index.html:91
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -193,7 +193,7 @@ msgstr "Heslo bylo úspěšně nastaveno. Nyní se můžete přihlásit."
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
-msgstr ""
+msgstr "Datum"
 
 #: app/scripts/dashboard/dashboard.html:10
 msgid "Deine Abos"
@@ -277,7 +277,7 @@ msgstr "Zkopírovat ESR do schránky (pro použití v platebních systémech)"
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr ""
+msgstr "EUR"
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -346,7 +346,7 @@ msgstr "Zatím nebyly dokončeny žádné plány závozů."
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -378,7 +378,7 @@ msgstr "Pro přístup do administrace je vyžadováno přihlášení"
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr ""
+msgstr "GBP"
 
 #: app/index.html:62
 msgid "Gebuchte Arbeitseinsätze"
@@ -467,7 +467,7 @@ msgstr "Nové heslo"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: app/index.html:54
 msgid "OpenOlitor Mitgliederportal:"
@@ -555,7 +555,7 @@ msgstr "Cena:"
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
 #: app/scripts/abos/list/lieferungen/lieferungen.html:80
 msgid "Produkt"
-msgstr ""
+msgstr "Produkt"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:49
 #: app/scripts/abos/list/lieferungen/lieferungen.html:97
@@ -628,7 +628,7 @@ msgstr "Název"
 
 #: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
-msgstr ""
+msgstr "Tour:"
 
 #: app/scripts/app.js:108
 msgid "US Dollar"
@@ -636,7 +636,7 @@ msgstr "AMERICKÝ dolar"
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -735,19 +735,15 @@ msgstr "dříve zapsané"
 
 #: app/scripts/app.js:85
 msgid "gr"
-msgstr ""
+msgstr "gr"
 
 #: app/scripts/app.js:87
 msgid "kg"
-msgstr ""
+msgstr "kg"
 
 #: app/scripts/app.js:88
 msgid "l"
-msgstr ""
-
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
-msgid "max."
-msgstr ""
+msgstr "l"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
