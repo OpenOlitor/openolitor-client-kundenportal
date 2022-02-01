@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-01-31 13:59\n"
+"PO-Revision-Date: 2022-02-01 16:00\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -243,7 +243,7 @@ msgstr "Mostrar asignaciones de trabajo anteriores"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
-msgstr "Las cestas anteriores"
+msgstr "Cestas anteriores"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:133
 msgid "Die früheren Rechnungen anzeigen"
