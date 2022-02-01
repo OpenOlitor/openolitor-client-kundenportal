@@ -39,6 +39,7 @@ angular
     ) {
       $scope.arbeitseinsatzTableParams = undefined;
 
+      $scope.contactsVisible = false;
       $scope.entries = [];
       $scope.loading = false;
       $scope.model = {};
@@ -189,6 +190,10 @@ angular
             $log.info('Modal dismissed at: ' + new Date());
           }
         );
+      };
+
+      $scope.displayContacts = function() {
+        $scope.contactsVisible = !$scope.contactsVisible;
       };
 
       msgBus.onMsg('EntityCreated', $scope, function(event, msg) {

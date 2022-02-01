@@ -10,7 +10,12 @@
         <div class="row">
           <div class="col-md-12">
             <table ng-show="entries" ng-table="arbeitseinsatzTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
-              <tr ng-repeat="arbeitseinsatz in $data">
+              <tr ng-repeat-start="arbeitseinsatz in $data">
+                <td ng-show="arbeitseinsatz.coworkers">
+                  <button class="btn btn-xs glyphicon glyphicon-plus" ng-show="!contactsVisible" ng-click="displayContacts()" />
+                  <button class="btn btn-xs glyphicon glyphicon-minus" ng-show="contactsVisible" ng-click="displayContacts()" />
+                </td>
+                <td>
                 <td data-title="'Titel'|translate">
                   <a ng-click="highlightAngebot(arbeitseinsatz.arbeitsangebotId)">{{arbeitseinsatz.arbeitsangebotTitel}}</a>
                 </td>
@@ -50,6 +55,14 @@
                   </div>
                 </td>
               </tr>
+              <tr ng-show="arbeitseinsatz.coworkers && contactsVisible" class="detail-rows" ng-repeat="coworker in arbeitseinsatz.coworkers | orderBy:'sort'">
+                <td ></td>
+                <td>
+                  <span ng-show="arbeitseinsatz.coworkers && contactsVisible" class="glyphicon glyphicon-chevron-right" />
+                </td>
+                <td colspan="3"><div><span translate>name</span> : <span>{{coworker.name}}</div> <div><span translate>email</span> : <span>{{coworker.email}}</span></div></td>
+              </tr>
+              <tr ng-repeat-end />
             </table>
           </div>
         </div>
