@@ -20,6 +20,7 @@ angular
     '$filter',
     'appConfig',
     'ooAuthService',
+    'lodash',
     function(
       $scope,
       $rootScope,
@@ -35,7 +36,8 @@ angular
       $http,
       $filter,
       appConfig,
-      ooAuthService
+      ooAuthService,
+      lodash
     ) {
       $scope.arbeitseinsatzTableParams = undefined;
 
@@ -48,7 +50,19 @@ angular
 
       ArbeitseinsaetzeListModel.query(function(data) {
       $scope.limitDateForDeletion = today.setDate(today.getDate()+1);
-        $scope.entries = data;
+      $scope.entries = _(data).groupBy('arbeitsangebotId')
+          .map(function(items, arbeitangebotId) {
+            return {
+              arbeitangebotId: arbeitangebotId,
+              zeitBis: items[0].zeitBis,
+              zeitVon: items[0].zeitVon,
+              arbeitsangebotTitel: items[0].arbeitsangebotTitel,
+              anzahlPersonen: items[0].anzahlPersonen,
+              anzahlEingeschriebene : items[0].arbeitsangebot.anzahlEingeschriebene,
+              bemerkungen: items[0].bemerkungen,
+              coworkers: _.map(items, function(item){return [item.personName, item.email]})
+            };
+        }).value();
         if ($scope.arbeitseinsatzTableParams) {
           $scope.arbeitseinsatzTableParams.reload();
         }
