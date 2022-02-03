@@ -40,8 +40,7 @@ angular
       lodash
     ) {
       $scope.arbeitseinsatzTableParams = undefined;
-
-      $scope.contactsVisible = false;
+      $scope.contactsVisible = [];
       $scope.entries = [];
       $scope.loading = false;
       $scope.model = {};
@@ -52,6 +51,7 @@ angular
       $scope.limitDateForDeletion = today.setDate(today.getDate()+1);
       $scope.entries = _(data).groupBy('arbeitsangebotId')
           .map(function(items, arbeitangebotId) {
+            $scope.contactsVisible[arbeitangebotId] = false;
             return {
               arbeitangebotId: arbeitangebotId,
               zeitBis: items[0].zeitBis,
@@ -60,7 +60,11 @@ angular
               anzahlPersonen: items[0].anzahlPersonen,
               anzahlEingeschriebene : items[0].arbeitsangebot.anzahlEingeschriebene,
               bemerkungen: items[0].bemerkungen,
-              coworkers: _.map(items, function(item){return [item.personName, item.email]})
+              coworkers: _.map(items, function(item){
+                if (item.personId != ooAuthService.getUser().id) {
+                  return [item.personName, item.email];
+                }  
+              }).filter(item =>item) 
             };
         }).value();
         if ($scope.arbeitseinsatzTableParams) {
@@ -206,8 +210,8 @@ angular
         );
       };
 
-      $scope.displayContacts = function() {
-        $scope.contactsVisible = !$scope.contactsVisible;
+      $scope.displayContacts = function(arbeitangebot) {
+        $scope.contactsVisible[arbeitangebot] = !$scope.contactsVisible[arbeitangebot];
       };
 
       msgBus.onMsg('EntityCreated', $scope, function(event, msg) {
