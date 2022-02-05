@@ -10,6 +10,16 @@
        <input type="number" class="form-control" id="anzahlPersonen" ng-model="formDaten.anzahlPersonen" min=0 max={{maxVacancies}} required>
      </span>
    </div>
+    <!-- Disclaimer -->
+    <div class="form-group row">
+     <span class="col-md-5">
+       <label for="contactPermission" class="form-label" translate>Contact sharing</label>
+       <i class="fa fa-info-circle" aria-hidden="true" uib-tooltip="{{'If you check this option your name and email will be shared with other people on the same shift. This value will be de default one in the future. If you want to change this value you can change it on the user menu (up-right on the main screen)'|translate}}"></i>
+     </span>
+      <span class="col-md-7">
+        <input bs-switch ng-model="formDaten.contactPermission" type="checkbox" switch-size="medium" switch-animate="true" switch-on-text="{{'Ja'|translate}}" switch-off-text="{{'Nein'|translate}}" switch-on-color="success" switch-off-color="danger" switch-radio-off="false" ng-true-value="true" ng-false-value="false">
+      </span>
+    </div>
 
     <!-- Bemerkung -->
     <div class="form-group row">

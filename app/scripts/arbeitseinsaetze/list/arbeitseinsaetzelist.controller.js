@@ -54,6 +54,7 @@ angular
             $scope.contactsVisible[arbeitangebotId] = false;
             return {
               arbeitangebotId: arbeitangebotId,
+              id: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).id,
               zeitBis: items[0].zeitBis,
               zeitVon: items[0].zeitVon,
               arbeitsangebotTitel: items[0].arbeitsangebotTitel,

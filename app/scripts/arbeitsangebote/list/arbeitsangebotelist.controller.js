@@ -8,6 +8,7 @@ angular
     '$scope',
     'NgTableParams',
     'ArbeitsangeboteListModel',
+    'ArbeitseinsaetzeListModel',
     '$uibModal',
     '$log',
     'alertService',
@@ -21,6 +22,7 @@ angular
       $scope,
       NgTableParams,
       ArbeitsangeboteListModel,
+      ArbeitseinsaetzeListModel,
       $uibModal,
       $log,
       alertService,
@@ -216,7 +218,9 @@ angular
       };
 
       msgBus.onMsg('ArbeitseinsatzListLoaded', $scope, function(event, msg) {
-        $scope.arbeitseinsatzList = msg.list;
+        ArbeitseinsaetzeListModel.query(function(data) {
+          $scope.arbeitseinsatzList = data;
+        })
       });
 
       $scope.showMore = function() {

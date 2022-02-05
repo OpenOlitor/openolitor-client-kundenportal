@@ -14,7 +14,8 @@ angular.module('openolitor-kundenportal')
         $scope.formDaten = {
           arbeitsangebotId: arbeitsangebot.id,
           anzahlPersonen: 1,
-          bemerkungen: undefined
+          bemerkungen: undefined,
+          contactPermission: false
         };
         if (!arbeitsangebot.mehrPersonenOk){
           $scope.maxVacancies = arbeitsangebot.anzahlPersonen - arbeitsangebot.anzahlEingeschriebene;
@@ -33,6 +34,7 @@ angular.module('openolitor-kundenportal')
         $scope.formDaten = {
           arbeitsangebotId: arbeitseinsatz.arbeitsangebotId,
           anzahlPersonen: arbeitseinsatz.anzahlPersonen,
+          contactPermission: arbeitseinsatz.contactPermission,
           bemerkungen: arbeitseinsatz.bemerkungen
         };
       }
