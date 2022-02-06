@@ -184,6 +184,7 @@ angular
           function(data) {
             arbeitseinsatz.bemerkungen = data.bemerkungen;
             arbeitseinsatz.anzahlPersonen = data.anzahlPersonen;
+            arbeitseinsatz.contactPermission = data.contactPermission;
             $http
               .post(
                 appConfig.get().API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,

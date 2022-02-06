@@ -50,17 +50,19 @@ angular
       ArbeitseinsaetzeListModel.query(function(data) {
       $scope.limitDateForDeletion = today.setDate(today.getDate()+1);
       $scope.entries = _(data).groupBy('arbeitsangebotId')
-          .map(function(items, arbeitangebotId) {
-            $scope.contactsVisible[arbeitangebotId] = false;
+          .map(function(items, arbeitsangebotId) {
+            $scope.contactsVisible[arbeitsangebotId] = false;
             return {
-              arbeitangebotId: arbeitangebotId,
+              arbeitsangebotId: parseInt(arbeitsangebotId),
               id: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).id,
+              contactPermission: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).contactPermission,
+              kundeId: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).kundeId,
               zeitBis: items[0].zeitBis,
               zeitVon: items[0].zeitVon,
               arbeitsangebotTitel: items[0].arbeitsangebotTitel,
               anzahlPersonen: items[0].anzahlPersonen,
               anzahlEingeschriebene : items[0].arbeitsangebot.anzahlEingeschriebene,
-              bemerkungen: items[0].bemerkungen,
+              bemerkungen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).bemerkungen,
               coworkers: _.map(items, function(item){
                 if (item.personId != ooAuthService.getUser().id) {
                   return [item.personName, item.email];
@@ -182,6 +184,7 @@ angular
           function(data) {
             arbeitseinsatz.bemerkungen = data.bemerkungen;
             arbeitseinsatz.anzahlPersonen = data.anzahlPersonen;
+            arbeitseinsatz.contactPermission = data.contactPermission;
             $http
               .post(
                 appConfig.get().API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
