@@ -214,8 +214,8 @@ angular
         );
       };
 
-      $scope.displayContacts = function(arbeitangebot) {
-        $scope.contactsVisible[arbeitangebot] = !$scope.contactsVisible[arbeitangebot];
+      $scope.displayContacts = function(arbeitsangebot) {
+        $scope.contactsVisible[arbeitsangebot] = !$scope.contactsVisible[arbeitsangebot];
       };
 
       msgBus.onMsg('EntityCreated', $scope, function(event, msg) {

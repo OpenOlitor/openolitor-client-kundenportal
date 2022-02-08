@@ -5,8 +5,9 @@
 angular.module('openolitor-kundenportal')
   .controller('ArbeitsangebotParticipateController', ['$scope', '$uibModalInstance',
     '$log', 'arbeitsangebot', 'arbeitseinsatz', 'ArbeitsangeboteListModel','lodash',
+    'ooAuthService',
 
-    function($scope, $uibModalInstance, $log, arbeitsangebot, arbeitseinsatz, ArbeitsangeboteListModel,lodash) {
+    function($scope, $uibModalInstance, $log, arbeitsangebot, arbeitseinsatz, ArbeitsangeboteListModel,lodash,ooAuthService) {
       $scope.arbeitsangebot = arbeitsangebot;
       $scope.maxVacancies = Number.MAX_ASFE_INTEGER;
 
@@ -15,7 +16,7 @@ angular.module('openolitor-kundenportal')
           arbeitsangebotId: arbeitsangebot.id,
           anzahlPersonen: 1,
           bemerkungen: undefined,
-          contactPermission: false
+          contactPermission: ooAuthService.getUser().contactPermission
         };
         if (!arbeitsangebot.mehrPersonenOk){
           $scope.maxVacancies = arbeitsangebot.anzahlPersonen - arbeitsangebot.anzahlEingeschriebene;
