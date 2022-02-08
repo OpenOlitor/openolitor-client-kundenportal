@@ -65,10 +65,6 @@ msgstr ""
 msgid "Alle"
 msgstr ""
 
-#: app/index.html:65
-msgid "Allow sharing contact"
-msgstr ""
-
 #: app/scripts/login/login.html:74
 #: app/scripts/login/login.html:91
 msgid "Anmelden"
@@ -413,6 +409,10 @@ msgstr ""
 
 #: app/scripts/app.js:86
 msgid "Kilogramm"
+msgstr ""
+
+#: app/index.html:65
+msgid "Kontakt standardmässig freigeben"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:16
