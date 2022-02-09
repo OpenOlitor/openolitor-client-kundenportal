@@ -47,39 +47,42 @@ angular
       $scope.maxEntries = 10;
       var today = new Date();
 
-      ArbeitseinsaetzeListModel.query(function(data) {
-      $scope.limitDateForDeletion = today.setDate(today.getDate()+1);
-      $scope.entries = _(data).groupBy('arbeitsangebotId')
-          .map(function(items, arbeitsangebotId) {
-            $scope.contactsVisible[arbeitsangebotId] = false;
-            return {
-              arbeitsangebotId: parseInt(arbeitsangebotId),
-              id: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).id,
-              contactPermission: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).contactPermission,
-              kundeId: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).kundeId,
-              zeitBis: items[0].zeitBis,
-              zeitVon: items[0].zeitVon,
-              arbeitsangebotTitel: items[0].arbeitsangebotTitel,
-              anzahlPersonen: items[0].anzahlPersonen,
-              anzahlEingeschriebene : items[0].arbeitsangebot.anzahlEingeschriebene,
-              bemerkungen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).bemerkungen,
-              coworkers: _.map(items, function(item){
-                if (item.personId != ooAuthService.getUser().id) {
-                  return [item.personName, item.email];
-                }  
-              }).filter(item =>item) 
-            };
-        }).value();
-        if ($scope.arbeitseinsatzTableParams) {
-          $scope.arbeitseinsatzTableParams.reload();
-        }
-        var msg = {
-          type: 'ArbeitseinsatzListLoaded',
-          list: $scope.entries
-        };
-        msgBus.emitMsg(msg);
-      });
+      $scope.initArbeitseinsaetzeTableParams = function(){
+        ArbeitseinsaetzeListModel.query(function(data) {
+          $scope.limitDateForDeletion = today.setDate(today.getDate()+1);
+          $scope.entries = _(data).groupBy('arbeitsangebotId')
+            .map(function(items, arbeitsangebotId) {
+              $scope.contactsVisible[arbeitsangebotId] = false;
+              return {
+                arbeitsangebotId: parseInt(arbeitsangebotId),
+                id: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).id,
+                contactPermission: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).contactPermission,
+                kundeId: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).kundeId,
+                zeitBis: items[0].zeitBis,
+                zeitVon: items[0].zeitVon,
+                arbeitsangebotTitel: items[0].arbeitsangebotTitel,
+                anzahlPersonen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlPersonen,
+                anzahlEingeschriebene: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).arbeitsangebot.anzahlEingeschriebene,
+                bemerkungen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).bemerkungen,
+                coworkers: _.map(items, function(item){
+                  if (item.personId != ooAuthService.getUser().id) {
+                    return [item.personName, item.email];
+                  }  
+                }).filter(item =>item) 
+              };
+            }).value();
+          if ($scope.arbeitseinsatzTableParams) {
+            $scope.arbeitseinsatzTableParams.reload();
+          }
+          var msg = {
+            type: 'ArbeitseinsatzListLoaded',
+            list: $scope.entries
+          };
+          msgBus.emitMsg(msg);
+        });
+      }
 
+      $scope.initArbeitseinsaetzeTableParams();
       if (!$scope.arbeitseinsatzTableParams) {
         $scope.arbeitseinsatzTableParams = new NgTableParams(
           {
@@ -225,7 +228,18 @@ angular
         ) {
           $scope.entries.push(msg.data);
           $scope.$apply();
-          $scope.arbeitseinsatzTableParams.reload();
+          $scope.initArbeitseinsaetzeTableParams();
+        }
+      });
+      
+      msgBus.onMsg('EntityModified', $scope, function(event, msg) {
+        if (
+          msg.entity === 'Arbeitseinsatz' &&
+          msg.data.personId === ooAuthService.getUser().id
+        ) {
+          $scope.entries.push(msg.data);
+          $scope.$apply();
+          $scope.initArbeitseinsaetzeTableParams();
         }
       });
 
@@ -236,13 +250,14 @@ angular
         ) {
           $scope.entries.splice($scope.entries.indexOf(event.data), 1);
           $scope.$apply();
-          $scope.arbeitseinsatzTableParams.reload();
+          $scope.initArbeitseinsaetzeTableParams();
         }
       });
 
       $scope.showMore = function() {
         $scope.maxEntries = Number.MAX_SAFE_INTEGER;
         if($scope.arbeitseinsatzTableParams) {
+          $scope.initArbeitseinsaetzeTableParams();
           $scope.arbeitseinsatzTableParams.reload();
         }
       };

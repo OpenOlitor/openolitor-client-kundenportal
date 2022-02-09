@@ -40,12 +40,16 @@ angular
       $scope.model = {};
       $scope.maxEntries = 10;
 
-      ArbeitsangeboteListModel.query(function(data) {
-        $scope.entries = data;
-        if ($scope.arbeitsangebotTableParams) {
-          $scope.arbeitsangebotTableParams.reload();
-        }
-      });
+      $scope.loadArbeitsangebotTableParams= function(){
+        ArbeitsangeboteListModel.query(function(data) {
+          $scope.entries = data;
+          if ($scope.arbeitsangebotTableParams) {
+            $scope.arbeitsangebotTableParams.reload();
+          }
+        });
+      };
+
+      $scope.loadArbeitsangebotTableParams();
 
       if (!$scope.arbeitsangebotTableParams) {
         $scope.arbeitsangebotTableParams = new NgTableParams(
@@ -219,9 +223,24 @@ angular
       };
 
       msgBus.onMsg('ArbeitseinsatzListLoaded', $scope, function(event, msg) {
-        ArbeitseinsaetzeListModel.query(function(data) {
-          $scope.arbeitseinsatzList = data;
-        })
+         ArbeitseinsaetzeListModel.query(function(data) {
+          $scope.arbeitseinsatzList = _(data).groupBy('arbeitsangebotId')
+            .map(function(items, arbeitsangebotId) {
+              return {
+                arbeitsangebotId: parseInt(arbeitsangebotId),
+                id: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).id,
+                contactPermission: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).contactPermission,
+                kundeId: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).kundeId,
+                zeitBis: items[0].zeitBis,
+                zeitVon: items[0].zeitVon,
+                arbeitsangebotTitel: items[0].arbeitsangebotTitel,
+                anzahlPersonen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlPersonen, 
+                anzahlEingeschriebene : _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlEingeschriebene,
+                bemerkungen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).bemerkungen,
+              };
+            }).value();
+         });
+        $scope.loadArbeitsangebotTableParams();
       });
 
       $scope.showMore = function() {
