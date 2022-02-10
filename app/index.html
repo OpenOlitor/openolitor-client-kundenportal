@@ -62,6 +62,8 @@
               <li ng-show="loggedIn"><a role="button" ng-click="gotoAnchor('rechnungen')"><span translate>Rechnungen</span></a></li>
               <li ng-show="loggedIn"><a role="button" ng-click="gotoAnchor('arbeitseinsaetze')"><span translate>Gebuchte Arbeitseinsätze</span></a></li>
               <li ng-show="loggedIn"><a role="button" ng-click="gotoAnchor('arbeitsangebote')"><span translate>Mitarbeit planen</span></a></li>
+              <li ng-show="loggedIn && !user.contactPermission"><a role="button" ng-click="contactPermissionChange(true)"><span translate>Kontakt standardmässig freigeben</span></a></li>
+              <li ng-show="loggedIn && user.contactPermission"><a role="button" ng-click="contactPermissionChange(false)"><span translate></span>Kontakt nicht standardmäßig freigeben</a></li>
               <li ng-show="loggedIn" role="separator" class="divider"></li>
               <li class="menu-title"><span translate>Sprache</span></li>
               <li class="menu-level1 de_CH_menu" ng-class="{selected: activeLang() === 'de_CH'}"><a role="button" ng-click="changeLang('de_CH')" title="Deutsch (Schweiz)"><span>Deutsch (CH)</span></a></li>

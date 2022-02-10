@@ -6,11 +6,11 @@ angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$anchorScroll', '$window', '$timeout', 'BUILD_NR',
-    'ooAuthService', 'appConfig', '$cookies', 'dialogService',
+    'ooAuthService', 'appConfig', '$cookies', 'dialogService', '$http',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $anchorScroll, $window,
       $timeout, BUILD_NR, ooAuthService, appConfig,
-      $cookies, dialogService) {
+      $cookies, dialogService, $http) {
       angular.element($window).bind('resize', function() {
         checkSize();
       });
@@ -26,6 +26,33 @@ angular.module('openolitor-kundenportal')
       checkSize();
 
       $scope.connected = false;
+
+      $scope.contactPermissionChange = function(value) {
+         var copyUser = $scope.user;
+         copyUser.contactPermission = value;
+         $http
+              .post(
+                appConfig.get().API_URL + 'kundenportal/personContactVisibility/' + $scope.user.id
+              )
+              .then(
+                function() {
+                  alertService.addAlert(
+                    'info',
+                    gettext('This person contact information will not be available for other users')
+                  );
+                },
+                function(error) {
+                  alertService.addAlert(
+                    'error',
+                    gettext('Changing the contact information permission failed: ') +
+                      error.status +
+                      ':' +
+                      error.statusText
+                  );
+                }
+              );
+      }
+
 
       var unwatchLoggedIn = $scope.$watch(function() {
         return ooAuthService.getUser();
