@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-02-01 16:00\n"
+"PO-Revision-Date: 2022-02-01 17:18\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
 msgid "#&nbsp;Pers."
@@ -390,7 +390,7 @@ msgstr "Gramos"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:8
 msgid "IBAN für Einzahlungen:"
-msgstr "Cuenta de pago:"
+msgstr "IBAN:"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
@@ -414,7 +414,7 @@ msgstr "Kilogramos"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
-msgstr "Cuenta de pago:"
+msgstr "Número de cuenta bancaria:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:70
 msgid "Korb vom"
@@ -690,7 +690,7 @@ msgstr "Volvemos en un rato..."
 
 #: app/scripts/dashboard/dashboard.html:44
 msgid "Wo ist Mitarbeit möglich?"
-msgstr "¿Dónde hay una posibilidad de colaboración?"
+msgstr "¿Cuándo hay una posibilidad de colaboración?"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:8
 msgid "Wollen Sie fortfahren?"
