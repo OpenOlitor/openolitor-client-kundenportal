@@ -26,6 +26,7 @@
           <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'">
             <td data-title="'Produkt'|translate" class="lieferung-produkt">
               {{korbprodukt.produktBeschrieb}}
+              <span class="badge">{{korbprodukt.zusatzabo}}</span>
             </td>
             <td data-title="'Menge'|translate" class="lieferung-menge">
               {{korbprodukt.menge}}
@@ -79,6 +80,7 @@
               <tr ng-repeat="korbprodukt in $data | orderBy:'produktBeschrieb'" >
                 <td data-title="'Produkt'|translate">
                   {{korbprodukt.produktBeschrieb}}
+                  <span class="badge">{{korbprodukt.zusatzabo}}</span>
                 </td>
                 <td data-title="'Menge'|translate">
                   {{korbprodukt.menge}}
