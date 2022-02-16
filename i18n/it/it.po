@@ -3,166 +3,166 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: openolitor-subscriber-client\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
-"X-Crowdin-Language: fr-CH\n"
+"X-Crowdin-Language: it\n"
 "X-Crowdin-File: /prod/template.pot\n"
 "X-Crowdin-File-ID: 12\n"
-"Language-Team: French, Switzerland\n"
-"Language: fr_CH\n"
+"Language-Team: Italian\n"
+"Language: it_IT\n"
 "PO-Revision-Date: 2022-02-10 09:24\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
-msgstr "#&nbsp;Pers."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 msgid "#Pers."
-msgstr "Nº Pers."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
-msgstr "-Environnement de développement"
+msgstr "ambiente di sviluppo"
 
 #: app/scripts/login/login.html:6
 msgid "- Testumgebung"
-msgstr "-Environnement de test"
+msgstr "ambiente di test"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:40
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
-msgstr "Annuler"
+msgstr "annullare"
 
 #: app/index.html:86
 msgid "Abmelden"
-msgstr "Se déconnecter"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:119
 msgid "Abo"
-msgstr "Abonnement"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:35
 msgid "Abo-Beschrieb:"
-msgstr "Description de la suscription:"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:82
 msgid "Abo:"
-msgstr "Abonnement:"
+msgstr ""
 
 #: app/index.html:61
 msgid "Abos"
-msgstr "Abonnements"
+msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
-msgstr "Saisir des absences"
+msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:5
 msgid "Abwesenheiten"
-msgstr "Absences"
+msgstr ""
 
 #: app/scripts/login/change_password.html:11
 msgid "Aktuelles Passwort"
-msgstr "Mot de passe actuel"
+msgstr ""
 
 #: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
 msgid "Alle"
-msgstr "Tous"
+msgstr ""
 
 #: app/scripts/login/login.html:74
 #: app/scripts/login/login.html:91
 msgid "Anmelden"
-msgstr "Se connecter"
+msgstr ""
 
 #: app/scripts/login/login.html:5
 msgid "Anmeldung"
-msgstr "Accès membre"
+msgstr ""
 
 #: app/scripts/login/login.controller.js:137
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr "Vous avez reçu un courriel contenant des information au sujet de la modification de votre mot de passe."
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
-msgstr "Nombre de livraisons"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:8
 msgid "Anzahl Personen"
-msgstr "Nombre de personnes"
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:152
 msgid "Arbeitsangebot erfolgreich gelöscht."
-msgstr "Offre de travail supprimé avec succès."
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:158
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
-msgstr "L’offre de main-d'œuvre n'a pas été supprimée:"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:197
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:197
 msgid "Arbeitseinsatz erfolgreich verändert."
-msgstr "Intervention de travail modifié avec succès."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:203
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:203
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
-msgstr "L'intervention de travail n'a pas été modifiée:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:97
 msgid "Auch ausgelaufene Abos anzeigen"
-msgstr "Afficher les abonnements expirés"
+msgstr ""
 
 #: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
-msgstr "Au revoir"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:2
 msgid "Bei Arbeitsangebot teilnehmen"
-msgstr "Participer à cette intervention de travail"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:27
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:32
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:39
 msgid "Bemerkungen"
-msgstr "Commentaires"
+msgstr ""
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:3
 msgid "Bestätigung"
-msgstr "Confirmation"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:116
 #: app/scripts/rechnungen/list/rechnungenlist.html:53
 msgid "Betrag"
-msgstr "Montant"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Bezahlt"
-msgstr "Payé"
+msgstr ""
 
 #: app/scripts/app.js:109
 msgid "Britisches Pfund"
-msgstr "Livre sterling"
+msgstr ""
 
 #: app/scripts/app.js:84
 msgid "Bu."
-msgstr "botte"
+msgstr ""
 
 #: app/scripts/app.js:84
 msgid "Bund"
-msgstr "botte"
+msgstr ""
 
 #: app/scripts/app.js:111
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
 #: app/scripts/app.js:105
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/scripts/root.js:47
 msgid "Changing the contact information permission failed:"
@@ -170,122 +170,122 @@ msgstr ""
 
 #: app/index.html:94
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
-msgstr "Le backend n'est pas disponible pour le moment, veuillez attendre quelques secondes, s'il vous plaît."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:135
 msgid "Das Einschreiben war nicht erfolgreich:"
-msgstr "L'inscription n’a pas réussie :"
+msgstr ""
 
 #: app/scripts/login/login.html:53
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr "Le portail des membres est actuellement indisponible. Nous effectuons des travaux d’entretien. Sous peu le portail sera de nouveau disponible."
+msgstr ""
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
 msgid "Das Passwort muss aus mindestens 6 Zeichen bestehen"
-msgstr "Le mot de passe doit contenir au moins 6 caractères"
+msgstr ""
 
 #: app/scripts/login/change_password.html:22
 #: app/scripts/login/zugangaktivieren.html:16
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
-msgstr "Le mot de passe doit contenir au moins un dessus - et minuscules, ainsi une valeur numérique, ou symbole"
+msgstr ""
 
 #: app/scripts/login/login.controller.js:124
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
-msgstr "Le mot de passe a été défini avec succès. Vous pouvez vous connecter maintenant."
+msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
-msgstr "Date"
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:10
 msgid "Deine Abos"
-msgstr "Tes abonnements"
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:32
 msgid "Deine Arbeitseinsätze"
-msgstr "Tes journées et heures de travail"
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:20
 msgid "Deine Rechnungen"
-msgstr "Tes factures"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:11
 msgid "Depot:"
-msgstr "Dépôt:"
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:18
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
-msgstr "Le statut d’une facture est mis à jour périodiquement par l’administration. Une facture payée peut apparaître alors comme non payée."
+msgstr ""
 
 #: app/scripts/login/forbidden.html:6
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
-msgstr "L’accès à cette ressource a été refusé, veuillez contacter l'administration de votre initiative."
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:6
 msgid "Der aktuelle Korb"
-msgstr "Le panier actuel"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:5
 msgid "Der nächste Korb"
-msgstr "Le prochain panier"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Details werden geladen..."
-msgstr "Détails sont téléchargés..."
+msgstr ""
 
 #: app/scripts/login/login.html:18
 #: app/scripts/login/login.html:29
 #: app/scripts/login/login.html:42
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
-msgstr "De temps en temps, les données dans ce système sont réinitialisées aux valeurs de défaut."
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:75
 msgid "Die früheren Arbeitseinsätze anzeigen"
-msgstr "Afficher les interventions de travail précédentes"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
-msgstr "Les paniers précédents"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:133
 msgid "Die früheren Rechnungen anzeigen"
-msgstr "Afficher les factures précédentes"
+msgstr ""
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
-msgstr "La page demandée n’a pas été trouvée"
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
-msgstr "Aucune inscription n'a eu lieu."
+msgstr ""
 
 #: app/scripts/login/login.html:68
 msgid "E-Mail Adresse"
-msgstr "Adresse courriel"
+msgstr ""
 
 #: app/scripts/login/login.html:15
 #: app/scripts/login/login.html:26
 #: app/scripts/login/login.html:38
 msgid "E-Mail:"
-msgstr "Courriel:"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
-msgstr "n° BVR"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
-msgstr "Copier le numéro de référence au presse-papier (pour une utilisation dans les systèmes de paiement)"
+msgstr ""
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
-msgstr "Changer mot de passe."
+msgstr ""
 
 #: app/messages.html:2
 #: app/scripts/login/change_password.html:20
@@ -293,24 +293,24 @@ msgstr "Changer mot de passe."
 #: app/scripts/login/zugangaktivieren.html:14
 #: app/scripts/login/zugangaktivieren.html:29
 msgid "Eingabe erforderlich"
-msgstr "Entrée requise"
+msgstr ""
 
 #: app/messages.html:6
 msgid "Eingabe stimmt nicht übereint"
-msgstr "Les deux entrées ne sont pas identiques"
+msgstr ""
 
 #: app/messages.html:3
 msgid "Eingabe zu kurz"
-msgstr "Entrée trop courte"
+msgstr ""
 
 #: app/messages.html:4
 msgid "Eingabe zu lang"
-msgstr "Entrée trop longue"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:33
 #: app/scripts/abos/list/lieferungen/lieferungen.html:86
 msgid "Einheit"
-msgstr "Unité"
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
 msgid "Email"
@@ -318,87 +318,87 @@ msgstr ""
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
-msgstr "Adresse de courriel"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:129
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
-msgstr "Inscription réussie"
+msgstr ""
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr "Erreur 404"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
-msgstr "Créé"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:23
 msgid "Es liegen noch keine Rechnungen vor."
-msgstr "Aucune facture n'a été créé jusqu'ici."
+msgstr ""
 
 #: app/scripts/login/login.html:84
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
-msgstr "Un code d’accès a été envoyé à votre adresse courriel"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
-msgstr "Aucun panier de ce type n'a été planifié jusqu'ici."
+msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:7
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
-msgstr "Aucune planification de livraison n'a été clôturée"
+msgstr ""
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
-msgstr "Adresse courriel non valide"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:110
 msgid "Fällig"
-msgstr "A payer jusqu'au"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:47
 msgid "Fällig am"
-msgstr "Date d’échéance"
+msgstr ""
 
 #: app/scripts/login/login.html:80
 msgid "Für das Testen der Administrationsumgebung, bitte hier klicken!"
-msgstr "Pour tester le frontend d’administration, cliquez ici !"
+msgstr ""
 
 #: app/scripts/login/login.html:41
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
-msgstr "Pour accéder à l’espace d’administration de OpenOlitor, veuillez svp cliquer sur le lien en bas à droite."
+msgstr ""
 
 #: app/scripts/login/login.html:33
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
-msgstr "Une inscription est nécessaire pour accéder à OpenOlitor"
+msgstr ""
 
 #: app/scripts/login/login.html:10
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
-msgstr "Une inscription est nécessaire pour accéder à OpenOlitor"
+msgstr ""
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/index.html:63
 msgid "Gebuchte Arbeitseinsätze"
-msgstr "Interventions de travail réservées"
+msgstr ""
 
 #: app/scripts/app.js:85
 msgid "Gramm"
-msgstr "gramme"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:8
 msgid "IBAN für Einzahlungen:"
-msgstr "IBAN de payement:"
+msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
-msgstr "Contenu des paniers"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 msgid "Ja"
@@ -406,19 +406,19 @@ msgstr ""
 
 #: app/scripts/app.js:111
 msgid "Kanadischer Dollar"
-msgstr "Dollar canadien"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:33
 msgid "Kategorien"
-msgstr "Catégories"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:7
 msgid "Keine Arbeitsangebote."
-msgstr "Aucune offre d’emploi."
+msgstr ""
 
 #: app/scripts/app.js:86
 msgid "Kilogramm"
-msgstr "kilogramme"
+msgstr ""
 
 #: app/index.html:65
 msgid "Kontakt standardmässig freigeben"
@@ -430,52 +430,52 @@ msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
-msgstr "Compte de payement"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:70
 msgid "Korb vom"
-msgstr "Panier de"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:67
 msgid "Laufzeit:"
-msgstr "Durée du contrat:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:51
 msgid "Lieferrhythmus:"
-msgstr "Cadence de livraison:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:43
 msgid "Liefertag:"
-msgstr "Jour de livraison:"
+msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Lieferung"
-msgstr "Livraison"
+msgstr ""
 
 #: app/scripts/app.js:88
 msgid "Liter"
-msgstr "Litre"
+msgstr ""
 
 #: app/scripts/login/login.html:80
 msgid "Login Administration"
-msgstr "Login frontend d'administration"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "MahnungVerschickt"
-msgstr "Rappel-envoyé"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:50
 msgid "Mehr Angebot anzeigen"
-msgstr "Afficher plus d'offres"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
 msgid "Menge"
-msgstr "Quantité"
+msgstr ""
 
 #: app/index.html:64
 msgid "Mitarbeit planen"
-msgstr "Planifier la coopération"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 msgid "Nein"
@@ -483,161 +483,161 @@ msgstr ""
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
-msgstr "Nouveau mot de passe"
+msgstr ""
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 #: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
-msgstr "Portail des membres:"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
 msgid "Ort"
-msgstr "Lieu"
+msgstr ""
 
 #: app/scripts/login/login.html:71
 #: app/scripts/login/zugangaktivieren.html:11
 msgid "Passwort"
-msgstr "Mot de passe"
+msgstr ""
 
 #: app/scripts/login/zugangaktivieren.html:35
 msgid "Passwort setzen"
-msgstr "Saisir un mot de passe"
+msgstr ""
 
 #: app/scripts/login/zugangaktivieren.html:5
 msgid "Passwort setzen und Zugang aktivieren"
-msgstr "Saisir un mot de passe et activer l'accès à OpenOlitor"
+msgstr ""
 
 #: app/scripts/login/login.html:77
 #: app/scripts/login/passwordreset.html:5
 msgid "Passwort vergessen?"
-msgstr "Oubliez le mot de passe ?"
+msgstr ""
 
 #: app/index.html:85
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
-msgstr "Changer mot de passe"
+msgstr ""
 
 #: app/scripts/login/change_password.html:32
 #: app/scripts/login/zugangaktivieren.html:26
 msgid "Passwort wiederholen"
-msgstr "Confirmer le mot de passe"
+msgstr ""
 
 #: app/scripts/login/login.controller.js:108
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
-msgstr "Le mot de passe a été changé avec succès, vous serez automatiquement connecté."
+msgstr ""
 
 #: app/scripts/login/login.controller.js:115
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
-msgstr "Le mot de passe a été changé avec succès. Veuillez vous connecter avec votre nouveau mot de passe."
+msgstr ""
 
 #: app/scripts/login/passwordreset.html:17
 msgid "Passwort zurücksetzen"
-msgstr "Réinitialiser le mot de passe"
+msgstr ""
 
 #: app/scripts/login/login.html:16
 #: app/scripts/login/login.html:27
 #: app/scripts/login/login.html:39
 msgid "Passwort:"
-msgstr "Mot de passe:"
+msgstr ""
 
 #: app/scripts/login/change_password.html:23
 #: app/scripts/login/change_password.html:36
 #: app/scripts/login/zugangaktivieren.html:17
 #: app/scripts/login/zugangaktivieren.html:30
 msgid "Passworteingabe stimmt nicht übereint"
-msgstr "Les deux entrées du mot de passe ne sont pas identiques"
+msgstr ""
 
 #: app/scripts/login/change_password.html:28
 #: app/scripts/login/zugangaktivieren.html:22
 msgid "Passwortstärke"
-msgstr "Qualité du mot de passe"
+msgstr ""
 
 #: app/scripts/app.js:89
 msgid "Por."
-msgstr "Por."
+msgstr ""
 
 #: app/scripts/app.js:89
 msgid "Portion"
-msgstr "Portion"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:36
 #: app/scripts/abos/list/lieferungen/lieferungen.html:89
 msgid "Preis"
-msgstr "Prix"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:59
 msgid "Preis:"
-msgstr "Prix:"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
 #: app/scripts/abos/list/lieferungen/lieferungen.html:80
 msgid "Produkt"
-msgstr "Produit"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:49
 #: app/scripts/abos/list/lieferungen/lieferungen.html:97
 msgid "Produzent"
-msgstr "Producteur, productrice"
+msgstr ""
 
 #: app/index.html:62
 msgid "Rechnungen"
-msgstr "Factures"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:44
 msgid "Rechnungsdatum"
-msgstr "Date de facturation"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:58
 msgid "Referenznummer"
-msgstr "Numéro de référence"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:57
 msgid "Referenznummer in Zwischenablage kopieren"
-msgstr "Copier le numéro de référence dans le presse-papier"
+msgstr ""
 
 #: app/scripts/app.js:105
 msgid "Schweizer Franken"
-msgstr "Francs suisses"
+msgstr ""
 
 #: app/scripts/login/login.html:23
 msgid "Sie befinden sich auf dem Lasius Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "Vous êtes sur le système de test de Lasius. Vous pouvez vous connecter en utilisant les informations d’identification suivantes (en tant qu'administratrice):"
+msgstr ""
 
 #: app/scripts/login/login.html:35
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
-msgstr "Vous êtes sur le système de test d'OpenOlitor. Vous pouvez vous connecter en utilisant les informations d’identification suivantes (en tant que membre):"
+msgstr ""
 
 #: app/scripts/login/login.html:12
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "Vous êtes sur le système de test d'OpenOlitor. Vous pouvez vous connecter en utilisant les informations d’identification suivantes (en tant qu'administratrice):"
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:45
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
-msgstr "Vous ne pouvez pas supprimer cette association car elle est trop proche de la date d'exécution"
+msgstr ""
 
 #: app/index.html:68
 msgid "Sprache"
-msgstr "Langue"
+msgstr ""
 
 #: app/scripts/app.js:83
 msgid "St."
-msgstr "Pièce"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:122
 #: app/scripts/rechnungen/list/rechnungenlist.html:62
 msgid "Status"
-msgstr "Etat"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:91
 msgid "Storniert"
-msgstr "Annulé"
+msgstr ""
 
 #: app/scripts/app.js:83
 msgid "Stück"
-msgstr "Pièce"
+msgstr ""
 
 #: app/scripts/root.js:41
 msgid "This person contact information will not be available for other users"
@@ -648,57 +648,57 @@ msgstr ""
 #: app/scripts/rechnungen/list/rechnungenlist.html:113
 #: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Titel"
-msgstr "Titre"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
-msgstr "Tour:"
+msgstr ""
 
 #: app/scripts/app.js:108
 msgid "US Dollar"
-msgstr "Dollar des Etats-Unis"
+msgstr ""
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
 #: app/scripts/login/login.html:58
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr "Travaux de maintenance ! Le portail client est actuellement indisponible. Veuillez l'activer prochainement."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
-msgstr "S'inscrire de manière définitive"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "Verschickt"
-msgstr "Envoyé"
+msgstr ""
 
 #: app/index.html:112
 msgid "Version:"
-msgstr "Version:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
-msgstr "Distribution:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:70
 msgid "Von"
-msgstr "Depuis le"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:115
 msgid "Weitere Körbe anzeigen..."
-msgstr "Afficher plus de paniers"
+msgstr ""
 
 #: app/scripts/open/lastlieferplanungen.html:80
 msgid "Weitere Lieferungen anzeigen..."
-msgstr "Afficher plus de livraisons"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:105
 #: app/scripts/abos/list/lieferungen/lieferungen.html:22
 #: app/scripts/open/lastlieferplanungen.html:26
 msgid "Weiterlesen ..."
-msgstr "Lire plus ..."
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 msgid "Wenn Sie diese Option ankreuzen, werden Ihr Name und Ihre E-Mail an andere Personen in derselben Schicht weitergegeben. Der Standardwert kann im Benutzermenü geändert werden (oben rechts auf dem Hauptbildschirm)"
@@ -706,87 +706,87 @@ msgstr ""
 
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
-msgstr "Si vous avez oublié votre mot de passe, vous pouvez déclencher l'envoi d'un lien pour la réinitialisation."
+msgstr ""
 
 #: app/scripts/login/login.controller.js:61
 msgid "Willkommen"
-msgstr "Bienvenue"
+msgstr ""
 
 #: app/index.html:106
 msgid "Wir sind gleich bereit..."
-msgstr "Nous serons prêts bientôt ..."
+msgstr ""
 
 #: app/scripts/dashboard/dashboard.html:44
 msgid "Wo ist Mitarbeit möglich?"
-msgstr "Où une intervention de travail est-elle possible ?"
+msgstr ""
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:8
 msgid "Wollen Sie fortfahren?"
-msgstr "Voulez-vous continuer ?"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:24
 msgid "Zeitpunkt"
-msgstr "Heure"
+msgstr ""
 
 #: app/scripts/login/login.html:88
 msgid "Zugangscode"
-msgstr "Code d’accès"
+msgstr ""
 
 #: app/scripts/login/login.html:94
 msgid "Zugangscode erneut versenden"
-msgstr "Envoyer le code d'accès encore une fois"
+msgstr ""
 
 #: app/scripts/login/forbidden.html:5
 msgid "Zugriff verweigert"
-msgstr "Accès refusé"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
-msgstr "Abonnement supplémentaire:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:75
 msgid "Zusatzabos:"
-msgstr "Abonnements supplémentaires:"
+msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
-msgstr "tous"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
-msgstr "de"
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:36
 msgid "bisher eingeschrieben"
-msgstr "déjà inscrits"
+msgstr ""
 
 #: app/scripts/app.js:85
 msgid "gr"
-msgstr "gr"
+msgstr ""
 
 #: app/scripts/app.js:87
 msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:88
 msgid "l"
-msgstr "l"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
-msgstr "max."
+msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
-msgstr "en suspens"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:7
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "vom"
-msgstr "du"
+msgstr ""
 
 #: app/scripts/login/login.html:84
 msgid "zugestellt."
-msgstr "livré."
+msgstr ""
 

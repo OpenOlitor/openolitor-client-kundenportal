@@ -10,7 +10,14 @@
         <div class="row">
           <div class="col-md-12">
             <table ng-show="entries" ng-table="arbeitseinsatzTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
-              <tr ng-repeat="arbeitseinsatz in $data">
+              <tr ng-repeat-start="arbeitseinsatz in $data">
+                <td>
+                  <div ng-show="arbeitseinsatz.coworkers.length > 0">
+                  <button class="btn btn-xs glyphicon glyphicon-plus" ng-show="!contactsVisible[arbeitseinsatz.arbeitsangebotId]" ng-click="displayContacts(arbeitseinsatz.arbeitsangebotId)" />
+                  <button class="btn btn-xs glyphicon glyphicon-minus" ng-show="contactsVisible[arbeitseinsatz.arbeitsangebotId]" ng-click="displayContacts(arbeitseinsatz.arbeitsangebotId)" />
+                  </div>
+                </td>
+                <td>
                 <td data-title="'Titel'|translate">
                   <a ng-click="highlightAngebot(arbeitseinsatz.arbeitsangebotId)">{{arbeitseinsatz.arbeitsangebotTitel}}</a>
                 </td>
@@ -27,18 +34,37 @@
                   {{arbeitseinsatz.anzahlPersonen}}
                 </td>
                 <td data-title="'bisher eingeschrieben'|translate" sortable="'anzahlPersonen'">
-                  {{arbeitseinsatz.arbeitsangebot.anzahlEingeschriebene}}
+                  {{arbeitseinsatz.anzahlEingeschriebene}}
                 </td>
                 <td data-title="'Bemerkungen'|translate">
                   {{arbeitseinsatz.bemerkungen}}
                 </td>
                 <td>
                   <div class="btn-group">
-                    <a role="button" class="btn btn-sm btn-warning" ng-click="quit(arbeitseinsatz)"><span class="glyphicon glyphicon-minus"></span></a>
-                    <a role="button" class="btn btn-sm btn-info" ng-click="edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a>
+                    <script type="text/ng-template" id="workAssignmentInfoTooltipTemplate.html">
+                      <span translate> 
+                        Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt
+                      </span>
+                    </script>
+                    <div ng-if="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)">
+                      <a ng-disabled="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" role="button" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)"><span class="glyphicon glyphicon-minus"></span></a>
+                      <a ng-disabled="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" role="button" class="btn btn-sm btn-info" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a> 
+                    </div>
+                    <div ng-if="!(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)">
+                      <a role="button" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)" ><span class="glyphicon glyphicon-minus"></span></a>
+                      <a role="button" class="btn btn-sm btn-info" ng-click="edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a> 
+                    </div>
                   </div>
                 </td>
               </tr>
+              <tr ng-show="arbeitseinsatz.coworkers && contactsVisible[arbeitseinsatz.arbeitsangebotId]" class="detail-rows" ng-repeat="coworker in arbeitseinsatz.coworkers | orderBy:'sort'">
+                <td ></td>
+                <td>
+                  <span ng-show="arbeitseinsatz.coworkers && contactsVisible[arbeitseinsatz.arbeitsangebotId]" class="glyphicon glyphicon-chevron-right" />
+                </td>
+                <td colspan="3"><div><span translate-context="notPerson" translatenslate>Name</span> : <span>{{coworker[0]}}</div> <div><span translate>E-mail</span> : <span>{{coworker[1]}}</span></div></td>
+              </tr>
+              <tr ng-repeat-end />
             </table>
           </div>
         </div>

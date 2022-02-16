@@ -8,6 +8,7 @@ angular
     '$scope',
     'NgTableParams',
     'ArbeitsangeboteListModel',
+    'ArbeitseinsaetzeListModel',
     '$uibModal',
     '$log',
     'alertService',
@@ -21,6 +22,7 @@ angular
       $scope,
       NgTableParams,
       ArbeitsangeboteListModel,
+      ArbeitseinsaetzeListModel,
       $uibModal,
       $log,
       alertService,
@@ -38,12 +40,16 @@ angular
       $scope.model = {};
       $scope.maxEntries = 10;
 
-      ArbeitsangeboteListModel.query(function(data) {
-        $scope.entries = data;
-        if ($scope.arbeitsangebotTableParams) {
-          $scope.arbeitsangebotTableParams.reload();
-        }
-      });
+      $scope.loadArbeitsangebotTableParams= function(){
+        ArbeitsangeboteListModel.query(function(data) {
+          $scope.entries = data;
+          if ($scope.arbeitsangebotTableParams) {
+            $scope.arbeitsangebotTableParams.reload();
+          }
+        });
+      };
+
+      $scope.loadArbeitsangebotTableParams();
 
       if (!$scope.arbeitsangebotTableParams) {
         $scope.arbeitsangebotTableParams = new NgTableParams(
@@ -69,6 +75,15 @@ angular
           }
         );
       }
+
+      $scope.availableVacancies = function(arbeitsangebot) {
+        if ((arbeitsangebot.anzahlPersonen-arbeitsangebot.anzahlEingeschriebene) <= 0) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+
 
       $scope.statusClass = function(arbeitsangebot) {
         if (angular.isDefined(arbeitsangebot)) {
@@ -173,6 +188,7 @@ angular
           function(data) {
             arbeitseinsatz.bemerkungen = data.bemerkungen;
             arbeitseinsatz.anzahlPersonen = data.anzahlPersonen;
+            arbeitseinsatz.contactPermission = data.contactPermission;
             $http
               .post(
                 appConfig.get().API_URL + 'kundenportal/arbeitseinsaetze/' + arbeitseinsatz.id,
@@ -207,7 +223,24 @@ angular
       };
 
       msgBus.onMsg('ArbeitseinsatzListLoaded', $scope, function(event, msg) {
-        $scope.arbeitseinsatzList = msg.list;
+         ArbeitseinsaetzeListModel.query(function(data) {
+          $scope.arbeitseinsatzList = _(data).groupBy('arbeitsangebotId')
+            .map(function(items, arbeitsangebotId) {
+              return {
+                arbeitsangebotId: parseInt(arbeitsangebotId),
+                id: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).id,
+                contactPermission: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).contactPermission,
+                kundeId: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).kundeId,
+                zeitBis: items[0].zeitBis,
+                zeitVon: items[0].zeitVon,
+                arbeitsangebotTitel: items[0].arbeitsangebotTitel,
+                anzahlPersonen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlPersonen, 
+                anzahlEingeschriebene : _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlEingeschriebene,
+                bemerkungen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).bemerkungen,
+              };
+            }).value();
+         });
+        $scope.loadArbeitsangebotTableParams();
       });
 
       $scope.showMore = function() {

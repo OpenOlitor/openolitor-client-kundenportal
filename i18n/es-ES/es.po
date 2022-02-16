@@ -11,12 +11,15 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2020-10-19 14:44\n"
+"PO-Revision-Date: 2022-02-10 09:24\n"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
 msgstr "Nº&nbsp;Pers."
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+msgid "#Pers."
+msgstr "Nº Pers."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
@@ -30,12 +33,12 @@ msgstr "- Plataforma de desarrollo"
 msgid "- Testumgebung"
 msgstr "- Entorno de prueba"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:40
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
 msgstr "Cancelar"
 
-#: app/index.html:76
+#: app/index.html:86
 msgid "Abmelden"
 msgstr "Cerrar sesión"
 
@@ -43,13 +46,17 @@ msgstr "Cerrar sesión"
 msgid "Abo"
 msgstr "Subscripción"
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:35
 msgid "Abo-Beschrieb:"
 msgstr "Descripción de la suscripción:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:83
+#: app/scripts/rechnungen/list/rechnungenlist.html:82
 msgid "Abo:"
 msgstr "Subscripción:"
+
+#: app/index.html:61
+msgid "Abos"
+msgstr "Abonos"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
 msgid "Abwesenheit erfassen"
@@ -88,23 +95,27 @@ msgstr "Número de entregas"
 msgid "Anzahl Personen"
 msgstr "Número de personas"
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:127
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:152
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr "Colaboración borrada."
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:133
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:158
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr "La oferta de colaboración no ha sido borrada:"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:184
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:171
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:197
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:197
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr "Colaboración modificada."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:190
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:177
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:203
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:203
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr "La colaboración no ha sido modificada:"
+
+#: app/scripts/abos/list/aboslist.html:97
+msgid "Auch ausgelaufene Abos anzeigen"
+msgstr "Mostrar los abonos vencidos"
 
 #: app/scripts/login/login.controller.js:76
 msgid "Aufwiedersehen"
@@ -114,9 +125,9 @@ msgstr "Hasta la vista"
 msgid "Bei Arbeitsangebot teilnehmen"
 msgstr "Participar en esta oferta de colaboración"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:27
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:32
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:39
 msgid "Bemerkungen"
 msgstr "Comentarios"
 
@@ -125,15 +136,15 @@ msgid "Bestätigung"
 msgstr "Confirmación"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:116
-#: app/scripts/rechnungen/list/rechnungenlist.html:54
+#: app/scripts/rechnungen/list/rechnungenlist.html:53
 msgid "Betrag"
 msgstr "Monto"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Bezahlt"
 msgstr "Pagado"
 
-#: app/scripts/app.js:104
+#: app/scripts/app.js:109
 msgid "Britisches Pfund"
 msgstr "Libra esterlina"
 
@@ -145,19 +156,23 @@ msgstr "Manojo"
 msgid "Bund"
 msgstr "Manojo"
 
-#: app/scripts/app.js:106
+#: app/scripts/app.js:111
 msgid "CAD"
 msgstr "CAD"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:105
 msgid "CHF"
 msgstr "CHF"
 
-#: app/index.html:84
+#: app/scripts/root.js:47
+msgid "Changing the contact information permission failed:"
+msgstr ""
+
+#: app/index.html:94
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "El servidor no está disponible actualmente, por favor, intentelo un poco mas tarde."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:135
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr "La inscripción no ha sido posible:"
 
@@ -179,27 +194,28 @@ msgstr "La contraseña debe contener letras minusculas y mayusculas así como al
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "La contraseña ha sido inicializada. Ahora puedes conectarte con el nombre de usuario y la contraseña."
 
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
 msgstr "Fecha"
 
-#: app/scripts/dashboard/dashboard.html:9
+#: app/scripts/dashboard/dashboard.html:10
 msgid "Deine Abos"
 msgstr "Tus abonos"
 
-#: app/scripts/dashboard/dashboard.html:27
+#: app/scripts/dashboard/dashboard.html:32
 msgid "Deine Arbeitseinsätze"
-msgstr "Tus días y horas de trabajo"
+msgstr "Tus colaboraciones (días y horas)"
 
-#: app/scripts/dashboard/dashboard.html:17
+#: app/scripts/dashboard/dashboard.html:20
 msgid "Deine Rechnungen"
 msgstr "Tus facturas"
 
-#: app/scripts/abos/list/aboslist.html:10
+#: app/scripts/abos/list/aboslist.html:11
 msgid "Depot:"
 msgstr "Punto de recogida:"
 
-#: app/scripts/dashboard/dashboard.html:15
+#: app/scripts/dashboard/dashboard.html:18
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
 msgstr "El estado de una factura está actualizada periódicamente por la administración. Por lo tanto, una factura pagada puede aparecer como no pagada."
 
@@ -215,7 +231,7 @@ msgstr "La cesta actual"
 msgid "Der nächste Korb"
 msgstr "La siguiente cesta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:76
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Details werden geladen..."
 msgstr "Cargando los detalles..."
 
@@ -225,9 +241,17 @@ msgstr "Cargando los detalles..."
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "Los datos se reinicializan periódicamente."
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:75
+msgid "Die früheren Arbeitseinsätze anzeigen"
+msgstr "Mostrar asignaciones de trabajo anteriores"
+
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
-msgstr "Las cestas anteriores"
+msgstr "Cestas anteriores"
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:133
+msgid "Die früheren Rechnungen anzeigen"
+msgstr "Ver las facturas anteriores"
 
 #: app/scripts/not-found.html:9
 msgid "Diese Seite konnte nicht gefunden werden!"
@@ -247,15 +271,15 @@ msgstr "Dirección de correo electrónico"
 msgid "E-Mail:"
 msgstr "Correo electrónico:"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:69
+#: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
 msgstr "Nº ESR"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:68
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr "Copiar el número ESR al portapapeles (para utilizarlo en el sistema de pago)"
 
-#: app/scripts/app.js:102
+#: app/scripts/app.js:107
 msgid "EUR"
 msgstr "EUR"
 
@@ -288,11 +312,15 @@ msgstr "Entrada muy larga"
 msgid "Einheit"
 msgstr "Unidad"
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
+msgid "Email"
+msgstr ""
+
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
 msgstr "Dirección de correo electrónico"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:129
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr "Inscripción realizada"
 
@@ -300,15 +328,11 @@ msgstr "Inscripción realizada"
 msgid "Error 404"
 msgstr "Error 404"
 
-#: app/scripts/app.js:169
-msgid "Error:"
-msgstr "Error:"
-
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
 msgstr "Creado"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:24
+#: app/scripts/rechnungen/list/rechnungenlist.html:23
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr "Todavía no hay facturas."
 
@@ -324,7 +348,7 @@ msgstr "Todavía no hay cestas de este tipo que hayan sido programadas o entrega
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
 msgstr "Ninguna planificación de la distribución ha sido concluida."
 
-#: app/scripts/app.js:102
+#: app/scripts/app.js:107
 msgid "Euro"
 msgstr "Euro"
 
@@ -336,7 +360,7 @@ msgstr "Dirección de correo electrónico incorrecta"
 msgid "Fällig"
 msgstr "A pagar hasta"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:48
+#: app/scripts/rechnungen/list/rechnungenlist.html:47
 msgid "Fällig am"
 msgstr "Fecha límite"
 
@@ -356,9 +380,13 @@ msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
 msgstr "Para acceder al sistema de administración, introduzca las credenciales"
 
-#: app/scripts/app.js:104
+#: app/scripts/app.js:109
 msgid "GBP"
 msgstr "GBP"
+
+#: app/index.html:63
+msgid "Gebuchte Arbeitseinsätze"
+msgstr "Colaboraciones de trabajo reservadas (días y horas)"
 
 #: app/scripts/app.js:85
 msgid "Gramm"
@@ -366,13 +394,17 @@ msgstr "Gramos"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:8
 msgid "IBAN für Einzahlungen:"
-msgstr "Cuenta de pago:"
+msgstr "IBAN:"
 
 #: app/scripts/open/lastlieferplanungen.html:17
 msgid "Inhalt der Körbe"
 msgstr "Contenido de las cestas"
 
-#: app/scripts/app.js:106
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+msgid "Ja"
+msgstr ""
+
+#: app/scripts/app.js:111
 msgid "Kanadischer Dollar"
 msgstr "Dolar Canadiense"
 
@@ -388,23 +420,31 @@ msgstr "Ninguna oferta de colaboración."
 msgid "Kilogramm"
 msgstr "Kilogramos"
 
+#: app/index.html:65
+msgid "Kontakt standardmässig freigeben"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:16
+msgid "Kontaktfreigabe"
+msgstr ""
+
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
-msgstr "Cuenta de pago:"
+msgstr "Número de cuenta bancaria:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:70
 msgid "Korb vom"
 msgstr "Cesta de "
 
-#: app/scripts/abos/list/aboslist.html:66
+#: app/scripts/abos/list/aboslist.html:67
 msgid "Laufzeit:"
 msgstr "Duración del contrato:"
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:51
 msgid "Lieferrhythmus:"
 msgstr "Ciclo de entrega:"
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:43
 msgid "Liefertag:"
 msgstr "Día de entrega:"
 
@@ -420,14 +460,26 @@ msgstr "Litro"
 msgid "Login Administration"
 msgstr "Administración de inicio de sesión"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "MahnungVerschickt"
 msgstr "Aviso enviado"
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:50
+msgid "Mehr Angebot anzeigen"
+msgstr "Mostrar mas ofertas"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
 msgid "Menge"
 msgstr "Cantidad"
+
+#: app/index.html:64
+msgid "Mitarbeit planen"
+msgstr "Planificar la cooperación"
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+msgid "Nein"
+msgstr ""
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
@@ -463,7 +515,7 @@ msgstr "Restablecer contraseña y permitir el acceso"
 msgid "Passwort vergessen?"
 msgstr "¿Has olvidado tu contraseña?"
 
-#: app/index.html:75
+#: app/index.html:85
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Cambiar la contraseña"
@@ -516,7 +568,7 @@ msgstr "Porción"
 msgid "Preis"
 msgstr "Precio"
 
-#: app/scripts/abos/list/aboslist.html:58
+#: app/scripts/abos/list/aboslist.html:59
 msgid "Preis:"
 msgstr "Precio:"
 
@@ -530,19 +582,23 @@ msgstr "Producto"
 msgid "Produzent"
 msgstr "Productores"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:45
+#: app/index.html:62
+msgid "Rechnungen"
+msgstr "Facturas"
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:44
 msgid "Rechnungsdatum"
 msgstr "Fecha de facturas"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:59
+#: app/scripts/rechnungen/list/rechnungenlist.html:58
 msgid "Referenznummer"
 msgstr "Número de referencia"
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:58
+#: app/scripts/rechnungen/list/rechnungenlist.html:57
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr "Copiar el nº de referencia en el portapapeles"
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:105
 msgid "Schweizer Franken"
 msgstr "Franco suizo"
 
@@ -558,16 +614,24 @@ msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como ab
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr "Estás en el sistema de prueba de OpenOlitor. Te puedes conectar como abonado utilizado la información de identificación siguiente:"
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:45
+msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
+msgstr "No puede eliminar esta asociación porque está demasiado cerca de la fecha de ejecución"
+
+#: app/index.html:68
+msgid "Sprache"
+msgstr "Idioma"
+
 #: app/scripts/app.js:83
 msgid "St."
 msgstr "Unidad"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:122
-#: app/scripts/rechnungen/list/rechnungenlist.html:63
+#: app/scripts/rechnungen/list/rechnungenlist.html:62
 msgid "Status"
 msgstr "Estado"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:91
 msgid "Storniert"
 msgstr "Cancelado"
 
@@ -575,23 +639,26 @@ msgstr "Cancelado"
 msgid "Stück"
 msgstr "Unidad"
 
+#: app/scripts/root.js:41
+msgid "This person contact information will not be available for other users"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:21
 #: app/scripts/rechnungen/list/rechnungenlist.html:113
-#: app/scripts/rechnungen/list/rechnungenlist.html:51
+#: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Titel"
 msgstr "Título"
 
-#: app/scripts/abos/list/aboslist.html:18
+#: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
 msgstr "Recorrido:"
 
-#: app/scripts/app.js:103
+#: app/scripts/app.js:108
 msgid "US Dollar"
 msgstr "Dólar estadounidense"
 
-#: app/scripts/app.js:103
+#: app/scripts/app.js:108
 msgid "USD"
 msgstr "USD"
 
@@ -599,23 +666,23 @@ msgstr "USD"
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
 msgstr "¡estamos realizando tareas de mantenimiento! el portal del abonado está indisponible. Intentalo un poco más tarde!"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
 msgstr "Inscribirse de manera definitiva"
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "Verschickt"
 msgstr "Enviado"
 
-#: app/index.html:102
+#: app/index.html:112
 msgid "Version:"
 msgstr "Versión:"
 
-#: app/scripts/abos/list/aboslist.html:26
+#: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
 msgstr "Distribución:"
 
-#: app/scripts/abos/list/aboslist.html:69
+#: app/scripts/abos/list/aboslist.html:70
 msgid "Von"
 msgstr "De"
 
@@ -633,6 +700,10 @@ msgstr "Mostrar más entregas..."
 msgid "Weiterlesen ..."
 msgstr "Leer más ..."
 
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
+msgid "Wenn Sie diese Option ankreuzen, werden Ihr Name und Ihre E-Mail an andere Personen in derselben Schicht weitergegeben. Der Standardwert kann im Benutzermenü geändert werden (oben rechts auf dem Hauptbildschirm)"
+msgstr ""
+
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
 msgstr "Si has olvidado tu contraseña, aquí puedes enviarte un correo electrónico para reiniciarla."
@@ -641,20 +712,20 @@ msgstr "Si has olvidado tu contraseña, aquí puedes enviarte un correo electró
 msgid "Willkommen"
 msgstr "¡Bienvenid@!"
 
-#: app/index.html:96
+#: app/index.html:106
 msgid "Wir sind gleich bereit..."
 msgstr "Volvemos en un rato..."
 
-#: app/scripts/dashboard/dashboard.html:35
+#: app/scripts/dashboard/dashboard.html:44
 msgid "Wo ist Mitarbeit möglich?"
-msgstr "¿Dónde hay una posibilidad de colaboración?"
+msgstr "¿Cuándo hay una posibilidad de colaboración?"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:8
 msgid "Wollen Sie fortfahren?"
 msgstr "¿Desea continuar?"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:24
 msgid "Zeitpunkt"
 msgstr "Hora"
 
@@ -674,15 +745,19 @@ msgstr "Acceso denegado"
 msgid "Zusatzabo:"
 msgstr "Abono suplementario:"
 
+#: app/scripts/abos/list/aboslist.html:75
+msgid "Zusatzabos:"
+msgstr "Abonos suplementarios:"
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "todos"
 
-#: app/scripts/abos/list/aboslist.html:69
+#: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
 msgstr "de"
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:36
 msgid "bisher eingeschrieben"
 msgstr "Ya inscrito"
 
@@ -697,6 +772,10 @@ msgstr "kg"
 #: app/scripts/app.js:88
 msgid "l"
 msgstr "l"
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
+msgstr "max."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"

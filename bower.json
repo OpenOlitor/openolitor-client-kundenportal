@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.4.5",
+  "version": "2.4.10",
   "private": false,
   "dependencies": {
     "jquery": "3.2.1",
@@ -40,7 +40,6 @@
     "angular-messages": "~1.8.0",
     "angular-sortable-view": "~0.0.15",
     "angular-css-injector": "^1.4.0",
-    "airbrake-js": "npm:airbrake-js#0.5.9",
     "ngclipboard": "^1.1.1",
     "ng-iban": "^1.2.0",
     "angular-piwik": "^1.3.2"

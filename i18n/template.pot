@@ -4,9 +4,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:26
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+msgid "#Pers."
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
@@ -21,12 +24,12 @@ msgstr ""
 msgid "- Testumgebung"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:30
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:40
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
 msgstr ""
 
-#: app/index.html:76
+#: app/index.html:86
 msgid "Abmelden"
 msgstr ""
 
@@ -34,12 +37,16 @@ msgstr ""
 msgid "Abo"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:34
+#: app/scripts/abos/list/aboslist.html:35
 msgid "Abo-Beschrieb:"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:83
+#: app/scripts/rechnungen/list/rechnungenlist.html:82
 msgid "Abo:"
+msgstr ""
+
+#: app/index.html:61
+msgid "Abos"
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
@@ -71,7 +78,6 @@ msgstr ""
 msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
 msgstr ""
 
-
 #: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
 msgstr ""
@@ -80,22 +86,26 @@ msgstr ""
 msgid "Anzahl Personen"
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:127
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:152
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:133
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:158
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:184
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:171
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:197
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:197
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:190
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:177
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:203
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:203
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
+msgstr ""
+
+#: app/scripts/abos/list/aboslist.html:97
+msgid "Auch ausgelaufene Abos anzeigen"
 msgstr ""
 
 #: app/scripts/login/login.controller.js:76
@@ -106,9 +116,9 @@ msgstr ""
 msgid "Bei Arbeitsangebot teilnehmen"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:22
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:32
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:27
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:32
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:39
 msgid "Bemerkungen"
 msgstr ""
 
@@ -116,18 +126,16 @@ msgstr ""
 msgid "Bestätigung"
 msgstr ""
 
-
 #: app/scripts/rechnungen/list/rechnungenlist.html:116
-#: app/scripts/rechnungen/list/rechnungenlist.html:54
+#: app/scripts/rechnungen/list/rechnungenlist.html:53
 msgid "Betrag"
 msgstr ""
 
-
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
 msgid "Bezahlt"
 msgstr ""
 
-#: app/scripts/app.js:104
+#: app/scripts/app.js:109
 msgid "Britisches Pfund"
 msgstr ""
 
@@ -139,19 +147,23 @@ msgstr ""
 msgid "Bund"
 msgstr ""
 
-#: app/scripts/app.js:106
+#: app/scripts/app.js:111
 msgid "CAD"
 msgstr ""
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:105
 msgid "CHF"
 msgstr ""
 
-#: app/index.html:84
+#: app/scripts/root.js:47
+msgid "Changing the contact information permission failed:"
+msgstr ""
+
+#: app/index.html:94
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:123
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:135
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr ""
 
@@ -174,28 +186,27 @@ msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
-
 #: app/scripts/rechnungen/list/rechnungenlist.html:107
 msgid "Datum"
 msgstr ""
 
-#: app/scripts/dashboard/dashboard.html:9
+#: app/scripts/dashboard/dashboard.html:10
 msgid "Deine Abos"
 msgstr ""
 
-#: app/scripts/dashboard/dashboard.html:27
+#: app/scripts/dashboard/dashboard.html:32
 msgid "Deine Arbeitseinsätze"
 msgstr ""
 
-#: app/scripts/dashboard/dashboard.html:17
+#: app/scripts/dashboard/dashboard.html:20
 msgid "Deine Rechnungen"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:10
+#: app/scripts/abos/list/aboslist.html:11
 msgid "Depot:"
 msgstr ""
 
-#: app/scripts/dashboard/dashboard.html:15
+#: app/scripts/dashboard/dashboard.html:18
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
 msgstr ""
 
@@ -211,7 +222,7 @@ msgstr ""
 msgid "Der nächste Korb"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:76
+#: app/scripts/rechnungen/list/rechnungenlist.html:75
 msgid "Details werden geladen..."
 msgstr ""
 
@@ -221,8 +232,16 @@ msgstr ""
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr ""
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:75
+msgid "Die früheren Arbeitseinsätze anzeigen"
+msgstr ""
+
 #: app/scripts/abos/list/lieferungen/lieferungen.html:60
 msgid "Die früheren Körbe"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:133
+msgid "Die früheren Rechnungen anzeigen"
 msgstr ""
 
 #: app/scripts/not-found.html:9
@@ -243,15 +262,15 @@ msgstr ""
 msgid "E-Mail:"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:69
+#: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:68
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr ""
 
-#: app/scripts/app.js:102
+#: app/scripts/app.js:107
 msgid "EUR"
 msgstr ""
 
@@ -284,11 +303,15 @@ msgstr ""
 msgid "Einheit"
 msgstr ""
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
+msgid "Email"
+msgstr ""
+
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:117
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:129
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr ""
 
@@ -296,15 +319,11 @@ msgstr ""
 msgid "Error 404"
 msgstr ""
 
-#: app/scripts/app.js:169
-msgid "Error:"
-msgstr ""
-
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:81
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:24
+#: app/scripts/rechnungen/list/rechnungenlist.html:23
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr ""
 
@@ -320,7 +339,7 @@ msgstr ""
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
 msgstr ""
 
-#: app/scripts/app.js:102
+#: app/scripts/app.js:107
 msgid "Euro"
 msgstr ""
 
@@ -332,7 +351,7 @@ msgstr ""
 msgid "Fällig"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:48
+#: app/scripts/rechnungen/list/rechnungenlist.html:47
 msgid "Fällig am"
 msgstr ""
 
@@ -352,8 +371,12 @@ msgstr ""
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
 msgstr ""
 
-#: app/scripts/app.js:104
+#: app/scripts/app.js:109
 msgid "GBP"
+msgstr ""
+
+#: app/index.html:63
+msgid "Gebuchte Arbeitseinsätze"
 msgstr ""
 
 #: app/scripts/app.js:85
@@ -368,7 +391,11 @@ msgstr ""
 msgid "Inhalt der Körbe"
 msgstr ""
 
-#: app/scripts/app.js:106
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+msgid "Ja"
+msgstr ""
+
+#: app/scripts/app.js:111
 msgid "Kanadischer Dollar"
 msgstr ""
 
@@ -384,6 +411,14 @@ msgstr ""
 msgid "Kilogramm"
 msgstr ""
 
+#: app/index.html:65
+msgid "Kontakt standardmässig freigeben"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:16
+msgid "Kontaktfreigabe"
+msgstr ""
+
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
 msgstr ""
@@ -392,15 +427,15 @@ msgstr ""
 msgid "Korb vom"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:66
+#: app/scripts/abos/list/aboslist.html:67
 msgid "Laufzeit:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:50
+#: app/scripts/abos/list/aboslist.html:51
 msgid "Lieferrhythmus:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:42
+#: app/scripts/abos/list/aboslist.html:43
 msgid "Liefertag:"
 msgstr ""
 
@@ -416,13 +451,25 @@ msgstr ""
 msgid "Login Administration"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:87
 msgid "MahnungVerschickt"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:50
+msgid "Mehr Angebot anzeigen"
 msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:30
 #: app/scripts/abos/list/lieferungen/lieferungen.html:83
 msgid "Menge"
+msgstr ""
+
+#: app/index.html:64
+msgid "Mitarbeit planen"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+msgid "Nein"
 msgstr ""
 
 #: app/scripts/login/change_password.html:17
@@ -459,7 +506,7 @@ msgstr ""
 msgid "Passwort vergessen?"
 msgstr ""
 
-#: app/index.html:75
+#: app/index.html:85
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr ""
@@ -512,7 +559,7 @@ msgstr ""
 msgid "Preis"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:58
+#: app/scripts/abos/list/aboslist.html:59
 msgid "Preis:"
 msgstr ""
 
@@ -526,19 +573,23 @@ msgstr ""
 msgid "Produzent"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:45
+#: app/index.html:62
+msgid "Rechnungen"
+msgstr ""
+
+#: app/scripts/rechnungen/list/rechnungenlist.html:44
 msgid "Rechnungsdatum"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:59
+#: app/scripts/rechnungen/list/rechnungenlist.html:58
 msgid "Referenznummer"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:58
+#: app/scripts/rechnungen/list/rechnungenlist.html:57
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr ""
 
-#: app/scripts/app.js:100
+#: app/scripts/app.js:105
 msgid "Schweizer Franken"
 msgstr ""
 
@@ -554,18 +605,24 @@ msgstr ""
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
 msgstr ""
 
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:45
+msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
+msgstr ""
+
+#: app/index.html:68
+msgid "Sprache"
+msgstr ""
+
 #: app/scripts/app.js:83
 msgid "St."
 msgstr ""
 
-
 #: app/scripts/rechnungen/list/rechnungenlist.html:122
-#: app/scripts/rechnungen/list/rechnungenlist.html:63
+#: app/scripts/rechnungen/list/rechnungenlist.html:62
 msgid "Status"
 msgstr ""
 
-
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:89
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:91
 msgid "Storniert"
 msgstr ""
 
@@ -573,23 +630,26 @@ msgstr ""
 msgid "Stück"
 msgstr ""
 
+#: app/scripts/root.js:41
+msgid "This person contact information will not be available for other users"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:14
-#: app/scripts/components/oo-dialogokabort.directive.modal.html:2
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:21
 #: app/scripts/rechnungen/list/rechnungenlist.html:113
-#: app/scripts/rechnungen/list/rechnungenlist.html:51
+#: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Titel"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:18
+#: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
 msgstr ""
 
-#: app/scripts/app.js:103
+#: app/scripts/app.js:108
 msgid "US Dollar"
 msgstr ""
 
-#: app/scripts/app.js:103
+#: app/scripts/app.js:108
 msgid "USD"
 msgstr ""
 
@@ -597,23 +657,23 @@ msgstr ""
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:29
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
+#: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "Verschickt"
 msgstr ""
 
-#: app/index.html:102
+#: app/index.html:112
 msgid "Version:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:26
+#: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:69
+#: app/scripts/abos/list/aboslist.html:70
 msgid "Von"
 msgstr ""
 
@@ -631,6 +691,10 @@ msgstr ""
 msgid "Weiterlesen ..."
 msgstr ""
 
+#: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
+msgid "Wenn Sie diese Option ankreuzen, werden Ihr Name und Ihre E-Mail an andere Personen in derselben Schicht weitergegeben. Der Standardwert kann im Benutzermenü geändert werden (oben rechts auf dem Hauptbildschirm)"
+msgstr ""
+
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
 msgstr ""
@@ -639,11 +703,11 @@ msgstr ""
 msgid "Willkommen"
 msgstr ""
 
-#: app/index.html:96
+#: app/index.html:106
 msgid "Wir sind gleich bereit..."
 msgstr ""
 
-#: app/scripts/dashboard/dashboard.html:35
+#: app/scripts/dashboard/dashboard.html:44
 msgid "Wo ist Mitarbeit möglich?"
 msgstr ""
 
@@ -652,7 +716,7 @@ msgid "Wollen Sie fortfahren?"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:17
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:24
 msgid "Zeitpunkt"
 msgstr ""
 
@@ -672,15 +736,19 @@ msgstr ""
 msgid "Zusatzabo:"
 msgstr ""
 
+#: app/scripts/abos/list/aboslist.html:75
+msgid "Zusatzabos:"
+msgstr ""
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr ""
 
-#: app/scripts/abos/list/aboslist.html:69
+#: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
 msgstr ""
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:29
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:36
 msgid "bisher eingeschrieben"
 msgstr ""
 
@@ -694,6 +762,10 @@ msgstr ""
 
 #: app/scripts/app.js:88
 msgid "l"
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+msgid "max."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35

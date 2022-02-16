@@ -1,6 +1,6 @@
 {
   "name": "openolitor-kundenportal",
-  "version": "2.4.5",
+  "version": "2.4.10",
   "description": "OpenOlitor Client Webapplication",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "grunt-contrib-imagemin": "^3.1.0",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-symlink": "^1.0.0",
-    "grunt-contrib-uglify": "^3.4.0",
+    "grunt-contrib-uglify": "^5.0.1",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-filerev": "^2.3.1",
     "grunt-istanbul": "^0.8.0",
@@ -45,7 +45,7 @@
     "http-server": "^0.10.0",
     "jasmine-core": "^2.99.1",
     "jshint-stylish": "^2.2.1",
-    "karma": "^4.4.0",
+    "karma": "^6.3.14",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.2",
     "karma-jasmine": "^1.1.2",
@@ -54,7 +54,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "load-grunt-tasks": "^3.5.2",
     "phantomjs-prebuilt": "^2.1.16",
-    "shelljs": "^0.7.8",
+    "shelljs": "^0.8.5",
     "time-grunt": "^1.4.0"
   },
   "engines": {
