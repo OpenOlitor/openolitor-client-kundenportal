@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('openolitor-kundenportal')
-      .controller('LieferungenListController', ['$scope',  '$rootScope', 'NgTableParams', 'LieferungenListModel', '$filter', 'LIEFEREINHEIT', 'ZusatzabosModel', 'LieferungenByAbotypListModel', 'lodash',
-  function($scope,  $rootScope, NgTableParams, LieferungenListModel, $filter, LIEFEREINHEIT, ZusatzabosModel, LieferungenByAbotypListModel, lodash) {
+      .controller('LieferungenListController', ['$scope',  '$rootScope', 'NgTableParams', '$filter', 'LIEFEREINHEIT', 'ZusatzabosModel', 'LieferungenMainAndAdditionalListModel', 'lodash',
+  function($scope,  $rootScope, NgTableParams, $filter, LIEFEREINHEIT, ZusatzabosModel, LieferungenMainAndAdditionalListModel, lodash) {
         $scope.lieferungen = undefined;
         $scope.projekt = $rootScope.projekt;
         $scope.maxKoerbe = 6;
@@ -54,16 +54,10 @@ angular.module('openolitor-kundenportal')
         var unwatch = $scope.$watch('abo', function(abo) {
           if (abo) {
             ZusatzabosModel.query({aboId: abo.id}, function(zusatzabos) {
-              LieferungenListModel.query({abotypId: abo.abotypId, vertriebId: abo.vertriebId}, function(data) {
+              LieferungenMainAndAdditionalListModel.query({abotypId: abo.abotypId, vertriebId: abo.vertriebId, aboId: abo.id}, function(data) {
                 var filtered = $filter('dateRange')(data, $scope.abo.start, $scope.abo.ende, 'datum');
                 $scope.lieferungen = filtered;
-                angular.forEach(zusatzabos, function(zusatzabo){
-                  LieferungenByAbotypListModel.query({abotypId: zusatzabo.abotypId}, function(data) {
-                    var filtered = $filter('dateRange')(data, zusatzabo.start, zusatzabo.ende, 'datum');
-                    $scope.lieferungen = $scope.lieferungen.concat(filtered);
-                    createLieferungenTableParams();
-                  });
-                });
+                createLieferungenTableParams();
               });
             });
           }
