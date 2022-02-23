@@ -315,8 +315,13 @@ input.ng-invalid {
        padding-top: 14.5px;
        padding-right: 20px;
        color: red;
+       .tooltip-inner {
+        max-width: 100%; 
+        text-align: left;
+       }
     }
 }
+
 .notificationTooltip{
   background: none;
 	color: inherit;
@@ -533,12 +538,8 @@ footer, .footer {
   }
 }
 
-.tooltip-inner {
-    max-width: 100%; 
-    text-align: left;
-}
-
 .version-tooltip {
+
   font-size: 70%;
   width: 130px;
   right: 0px;
