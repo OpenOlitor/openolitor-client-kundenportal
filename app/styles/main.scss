@@ -310,6 +310,26 @@ input.ng-invalid {
 .navbar-right {
     float: right !important;
     margin-right: -15px;
+    .notification{
+       font-size: 24px;
+       padding-top: 14.5px;
+       padding-right: 20px;
+       color: red;
+       .tooltip-inner {
+        max-width: 100%; 
+        text-align: left;
+       }
+    }
+}
+
+.notificationTooltip{
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }
 
 .navbar-nav > li {

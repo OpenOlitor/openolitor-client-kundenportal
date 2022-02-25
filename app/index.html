@@ -54,6 +54,11 @@
         </a>
         <p class="navbar-text visible-lg-block visible-md-block"><span translate>OpenOlitor Mitgliederportal:</span> <span>{{projekt.bezeichnung}}</span></p>
         <ul class="nav navbar-nav navbar-right">
+          <li class="notification">
+            <span ng-show="loggedIn && (projekt.messageForMembers != undefined)">
+              <button class="notificationTooltip" tooltip-trigger="'outsideClick'" tooltip-placement="bottom" uib-tooltip-html="projekt.messageForMembers"><div class="glyphicon glyphicon-bell"></div></a>
+            </button>
+          </li>
           <li class="dropdown">
             <a href="" class="dropdown-toggle uppercase" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-bars menubutton"></i>
