@@ -3,8 +3,8 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .controller('AbosListController', ['$scope', 'AbosListModel', 'moment',
-    function($scope, AbosListModel, moment) {
+  .controller('AbosListController', ['$scope', 'AbosListModel', 'moment','ProjektService',
+    function($scope, AbosListModel, moment, ProjektService) {
 
       $scope.entries = [];
       $scope.entriesFiltered = [];
@@ -37,5 +37,9 @@ angular.module('openolitor-kundenportal')
         $scope.showAbgelaufen = true;
         $scope.filterEntries();
       };
+
+      ProjektService.resolveProjekt(false).then(function(projekt) {
+        $scope.projekt = projekt;
+      });
     }
   ]);
