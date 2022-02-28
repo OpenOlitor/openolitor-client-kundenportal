@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-02-10 09:24\n"
+"PO-Revision-Date: 2022-02-28 13:47\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -166,7 +166,7 @@ msgstr "CHF"
 
 #: app/scripts/root.js:47
 msgid "Changing the contact information permission failed:"
-msgstr ""
+msgstr "No tienes permiso de cambiar la información de contacto:"
 
 #: app/index.html:94
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -314,7 +314,7 @@ msgstr "Unidad"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
 msgid "Email"
-msgstr ""
+msgstr "Correo electrónico"
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
@@ -402,7 +402,7 @@ msgstr "Contenido de las cestas"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 msgid "Ja"
-msgstr ""
+msgstr "Sí"
 
 #: app/scripts/app.js:111
 msgid "Kanadischer Dollar"
@@ -422,11 +422,11 @@ msgstr "Kilogramos"
 
 #: app/index.html:65
 msgid "Kontakt standardmässig freigeben"
-msgstr ""
+msgstr "Compartir contacto por defecto"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:16
 msgid "Kontaktfreigabe"
-msgstr ""
+msgstr "Compartir información de contacto"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
@@ -479,7 +479,7 @@ msgstr "Planificar la cooperación"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 msgid "Nein"
-msgstr ""
+msgstr "No"
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
@@ -641,7 +641,7 @@ msgstr "Unidad"
 
 #: app/scripts/root.js:41
 msgid "This person contact information will not be available for other users"
-msgstr ""
+msgstr "La información de contacto de este usuario no estará disponible para otros usuarios"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:21
@@ -702,7 +702,7 @@ msgstr "Leer más ..."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 msgid "Wenn Sie diese Option ankreuzen, werden Ihr Name und Ihre E-Mail an andere Personen in derselben Schicht weitergegeben. Der Standardwert kann im Benutzermenü geändert werden (oben rechts auf dem Hauptbildschirm)"
-msgstr ""
+msgstr "Si marca esta opción, su nombre y correo electrónico se compartirán con l@s otr@s usuari@s del mismo turno. El valor predeterminado se puede cambiar en el menú de usuari@ (parte superior derecha de la pantalla principal) "
 
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
