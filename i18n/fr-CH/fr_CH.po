@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2022-02-10 09:24\n"
+"PO-Revision-Date: 2022-03-03 13:36\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -38,7 +38,7 @@ msgstr "-Environnement de test"
 msgid "Abbrechen"
 msgstr "Annuler"
 
-#: app/index.html:86
+#: app/index.html:91
 msgid "Abmelden"
 msgstr "Se déconnecter"
 
@@ -54,7 +54,7 @@ msgstr "Description de la suscription:"
 msgid "Abo:"
 msgstr "Abonnement:"
 
-#: app/index.html:61
+#: app/index.html:66
 msgid "Abos"
 msgstr "Abonnements"
 
@@ -95,21 +95,21 @@ msgstr "Nombre de livraisons"
 msgid "Anzahl Personen"
 msgstr "Nombre de personnes"
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:152
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:155
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr "Offre de travail supprimé avec succès."
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:158
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:161
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr "L’offre de main-d'œuvre n'a pas été supprimée:"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:197
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:197
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:201
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:200
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr "Intervention de travail modifié avec succès."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:203
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:203
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:207
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:206
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr "L'intervention de travail n'a pas été modifiée:"
 
@@ -166,13 +166,13 @@ msgstr "CHF"
 
 #: app/scripts/root.js:47
 msgid "Changing the contact information permission failed:"
-msgstr ""
+msgstr "Échec de la modification de l'autorisation pour partage des informations de contact :"
 
-#: app/index.html:94
+#: app/index.html:99
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "Le backend n'est pas disponible pour le moment, veuillez attendre quelques secondes, s'il vous plaît."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:135
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:139
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr "L'inscription n’a pas réussie :"
 
@@ -245,7 +245,7 @@ msgstr "De temps en temps, les données dans ce système sont réinitialisées a
 msgid "Die früheren Arbeitseinsätze anzeigen"
 msgstr "Afficher les interventions de travail précédentes"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:60
+#: app/scripts/abos/list/lieferungen/lieferungen.html:61
 msgid "Die früheren Körbe"
 msgstr "Les paniers précédents"
 
@@ -270,6 +270,10 @@ msgstr "Adresse courriel"
 #: app/scripts/login/login.html:38
 msgid "E-Mail:"
 msgstr "Courriel:"
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
+msgid "E-mail"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
@@ -307,20 +311,16 @@ msgstr "Entrée trop courte"
 msgid "Eingabe zu lang"
 msgstr "Entrée trop longue"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:33
-#: app/scripts/abos/list/lieferungen/lieferungen.html:86
+#: app/scripts/abos/list/lieferungen/lieferungen.html:34
+#: app/scripts/abos/list/lieferungen/lieferungen.html:88
 msgid "Einheit"
 msgstr "Unité"
-
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
-msgid "Email"
-msgstr ""
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
 msgstr "Adresse de courriel"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:129
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:133
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr "Inscription réussie"
 
@@ -384,7 +384,7 @@ msgstr "Une inscription est nécessaire pour accéder à OpenOlitor"
 msgid "GBP"
 msgstr "GBP"
 
-#: app/index.html:63
+#: app/index.html:68
 msgid "Gebuchte Arbeitseinsätze"
 msgstr "Interventions de travail réservées"
 
@@ -402,7 +402,7 @@ msgstr "Contenu des paniers"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 msgid "Ja"
-msgstr ""
+msgstr "Oui"
 
 #: app/scripts/app.js:111
 msgid "Kanadischer Dollar"
@@ -420,19 +420,19 @@ msgstr "Aucune offre d’emploi."
 msgid "Kilogramm"
 msgstr "kilogramme"
 
-#: app/index.html:65
+#: app/index.html:70
 msgid "Kontakt standardmässig freigeben"
-msgstr ""
+msgstr "Partager le contact par défaut"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:16
 msgid "Kontaktfreigabe"
-msgstr ""
+msgstr "Partager l'information de contact"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:14
 msgid "Konto für Einzahlungen:"
 msgstr "Compte de payement"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:70
+#: app/scripts/abos/list/lieferungen/lieferungen.html:71
 msgid "Korb vom"
 msgstr "Panier de"
 
@@ -468,18 +468,18 @@ msgstr "Rappel-envoyé"
 msgid "Mehr Angebot anzeigen"
 msgstr "Afficher plus d'offres"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:30
-#: app/scripts/abos/list/lieferungen/lieferungen.html:83
+#: app/scripts/abos/list/lieferungen/lieferungen.html:31
+#: app/scripts/abos/list/lieferungen/lieferungen.html:85
 msgid "Menge"
 msgstr "Quantité"
 
-#: app/index.html:64
+#: app/index.html:69
 msgid "Mitarbeit planen"
 msgstr "Planifier la coopération"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 msgid "Nein"
-msgstr ""
+msgstr "Non"
 
 #: app/scripts/login/change_password.html:17
 msgid "Neues Passwort"
@@ -515,7 +515,7 @@ msgstr "Saisir un mot de passe et activer l'accès à OpenOlitor"
 msgid "Passwort vergessen?"
 msgstr "Oubliez le mot de passe ?"
 
-#: app/index.html:85
+#: app/index.html:90
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Changer mot de passe"
@@ -563,8 +563,8 @@ msgstr "Por."
 msgid "Portion"
 msgstr "Portion"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:36
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:37
+#: app/scripts/abos/list/lieferungen/lieferungen.html:91
 msgid "Preis"
 msgstr "Prix"
 
@@ -573,16 +573,16 @@ msgid "Preis:"
 msgstr "Prix:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
-#: app/scripts/abos/list/lieferungen/lieferungen.html:80
+#: app/scripts/abos/list/lieferungen/lieferungen.html:81
 msgid "Produkt"
 msgstr "Produit"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:49
-#: app/scripts/abos/list/lieferungen/lieferungen.html:97
+#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:99
 msgid "Produzent"
 msgstr "Producteur, productrice"
 
-#: app/index.html:62
+#: app/index.html:67
 msgid "Rechnungen"
 msgstr "Factures"
 
@@ -618,7 +618,7 @@ msgstr "Vous êtes sur le système de test d'OpenOlitor. Vous pouvez vous connec
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
 msgstr "Vous ne pouvez pas supprimer cette association car elle est trop proche de la date d'exécution"
 
-#: app/index.html:68
+#: app/index.html:73
 msgid "Sprache"
 msgstr "Langue"
 
@@ -641,7 +641,7 @@ msgstr "Pièce"
 
 #: app/scripts/root.js:41
 msgid "This person contact information will not be available for other users"
-msgstr ""
+msgstr "Les coordonnées de cette personne ne seront pas disponibles pour les autres utilisateurs"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:21
@@ -674,7 +674,7 @@ msgstr "S'inscrire de manière définitive"
 msgid "Verschickt"
 msgstr "Envoyé"
 
-#: app/index.html:112
+#: app/index.html:117
 msgid "Version:"
 msgstr "Version:"
 
@@ -686,7 +686,7 @@ msgstr "Distribution:"
 msgid "Von"
 msgstr "Depuis le"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:115
+#: app/scripts/abos/list/lieferungen/lieferungen.html:117
 msgid "Weitere Körbe anzeigen..."
 msgstr "Afficher plus de paniers"
 
@@ -694,7 +694,7 @@ msgstr "Afficher plus de paniers"
 msgid "Weitere Lieferungen anzeigen..."
 msgstr "Afficher plus de livraisons"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:105
+#: app/scripts/abos/list/lieferungen/lieferungen.html:107
 #: app/scripts/abos/list/lieferungen/lieferungen.html:22
 #: app/scripts/open/lastlieferplanungen.html:26
 msgid "Weiterlesen ..."
@@ -702,7 +702,7 @@ msgstr "Lire plus ..."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:17
 msgid "Wenn Sie diese Option ankreuzen, werden Ihr Name und Ihre E-Mail an andere Personen in derselben Schicht weitergegeben. Der Standardwert kann im Benutzermenü geändert werden (oben rechts auf dem Hauptbildschirm)"
-msgstr ""
+msgstr "Si vous sélectionnez cette option, votre nom et votre adresse e-mail seront partagés avec les utilisateurs du même quart de travail. La valeur par défaut de cette option peut être modifiée dans les paramètres de l'utilisateur (en haut à droite de la page principale)"
 
 #: app/scripts/login/passwordreset.html:6
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
@@ -712,7 +712,7 @@ msgstr "Si vous avez oublié votre mot de passe, vous pouvez déclencher l'envoi
 msgid "Willkommen"
 msgstr "Bienvenue"
 
-#: app/index.html:106
+#: app/index.html:111
 msgid "Wir sind gleich bereit..."
 msgstr "Nous serons prêts bientôt ..."
 
