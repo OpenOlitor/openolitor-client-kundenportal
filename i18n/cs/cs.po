@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Czech\n"
 "Language: cs_CZ\n"
-"PO-Revision-Date: 2022-02-10 09:24\n"
+"PO-Revision-Date: 2022-03-03 13:36\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -38,7 +38,7 @@ msgstr "-Testovací prostředí"
 msgid "Abbrechen"
 msgstr "Zrušit"
 
-#: app/index.html:86
+#: app/index.html:91
 msgid "Abmelden"
 msgstr "Odhlásit"
 
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Abo:"
 msgstr "Odběr:"
 
-#: app/index.html:61
+#: app/index.html:66
 msgid "Abos"
 msgstr ""
 
@@ -95,21 +95,21 @@ msgstr "Počet dosavadních závozů"
 msgid "Anzahl Personen"
 msgstr "Počet osob"
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:152
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:155
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr "Pracovní nabídka úspěšně odstraněna."
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:158
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:161
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr "Pracovní nabídka nebyla ostraněna:"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:197
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:197
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:201
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:200
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr "Pracovní nabídka úspěšně změněna."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:203
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:203
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:207
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:206
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr "Pracovní nabídka nebyla změněna:"
 
@@ -168,11 +168,11 @@ msgstr "CHF"
 msgid "Changing the contact information permission failed:"
 msgstr ""
 
-#: app/index.html:94
+#: app/index.html:99
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "Administrace není momentálně dostupná. Prosíme, navštivte nás později."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:135
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:139
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr "Přihlášení nebylo úspěšné:"
 
@@ -245,7 +245,7 @@ msgstr "Data v tomto systému jsou sporadicky resetována na výchozí hodnoty."
 msgid "Die früheren Arbeitseinsätze anzeigen"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:60
+#: app/scripts/abos/list/lieferungen/lieferungen.html:61
 msgid "Die früheren Körbe"
 msgstr "Předcházející košíky"
 
@@ -270,6 +270,10 @@ msgstr "Emailová adresa"
 #: app/scripts/login/login.html:38
 msgid "E-Mail:"
 msgstr "E-mail:"
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
+msgid "E-mail"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
@@ -307,20 +311,16 @@ msgstr "Zadané informace příliš krátké"
 msgid "Eingabe zu lang"
 msgstr "Zadané informace příliš dlouhé"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:33
-#: app/scripts/abos/list/lieferungen/lieferungen.html:86
+#: app/scripts/abos/list/lieferungen/lieferungen.html:34
+#: app/scripts/abos/list/lieferungen/lieferungen.html:88
 msgid "Einheit"
 msgstr "Jednotka"
-
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
-msgid "Email"
-msgstr ""
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
 msgstr "Emailová adresa"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:129
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:133
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr "Úspěšně zapsán/a k dobrovolné práci"
 
@@ -384,7 +384,7 @@ msgstr "Pro přístup do administrace je vyžadováno přihlášení"
 msgid "GBP"
 msgstr "GBP"
 
-#: app/index.html:63
+#: app/index.html:68
 msgid "Gebuchte Arbeitseinsätze"
 msgstr ""
 
@@ -420,7 +420,7 @@ msgstr "Žádná nabídka pracovního místa."
 msgid "Kilogramm"
 msgstr "Kilogram"
 
-#: app/index.html:65
+#: app/index.html:70
 msgid "Kontakt standardmässig freigeben"
 msgstr ""
 
@@ -432,7 +432,7 @@ msgstr ""
 msgid "Konto für Einzahlungen:"
 msgstr "Platební účet:"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:70
+#: app/scripts/abos/list/lieferungen/lieferungen.html:71
 msgid "Korb vom"
 msgstr ""
 
@@ -468,12 +468,12 @@ msgstr ""
 msgid "Mehr Angebot anzeigen"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:30
-#: app/scripts/abos/list/lieferungen/lieferungen.html:83
+#: app/scripts/abos/list/lieferungen/lieferungen.html:31
+#: app/scripts/abos/list/lieferungen/lieferungen.html:85
 msgid "Menge"
 msgstr "Počet"
 
-#: app/index.html:64
+#: app/index.html:69
 msgid "Mitarbeit planen"
 msgstr ""
 
@@ -515,7 +515,7 @@ msgstr "Nastavit heslo a povoit přístup"
 msgid "Passwort vergessen?"
 msgstr "Zapomenuté heslo?"
 
-#: app/index.html:85
+#: app/index.html:90
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Změnit heslo"
@@ -563,8 +563,8 @@ msgstr "Část."
 msgid "Portion"
 msgstr "Část"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:36
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:37
+#: app/scripts/abos/list/lieferungen/lieferungen.html:91
 msgid "Preis"
 msgstr "Cena"
 
@@ -573,16 +573,16 @@ msgid "Preis:"
 msgstr "Cena:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
-#: app/scripts/abos/list/lieferungen/lieferungen.html:80
+#: app/scripts/abos/list/lieferungen/lieferungen.html:81
 msgid "Produkt"
 msgstr "Produkt"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:49
-#: app/scripts/abos/list/lieferungen/lieferungen.html:97
+#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:99
 msgid "Produzent"
 msgstr "Výrobce"
 
-#: app/index.html:62
+#: app/index.html:67
 msgid "Rechnungen"
 msgstr ""
 
@@ -618,7 +618,7 @@ msgstr "Nacházíte se v testovacím systému OpenOlitor. Do administrace se mů
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
 msgstr ""
 
-#: app/index.html:68
+#: app/index.html:73
 msgid "Sprache"
 msgstr ""
 
@@ -674,7 +674,7 @@ msgstr "Závazné přihlášení"
 msgid "Verschickt"
 msgstr ""
 
-#: app/index.html:112
+#: app/index.html:117
 msgid "Version:"
 msgstr "Verze:"
 
@@ -686,7 +686,7 @@ msgstr "Distribuce:"
 msgid "Von"
 msgstr "Od"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:115
+#: app/scripts/abos/list/lieferungen/lieferungen.html:117
 msgid "Weitere Körbe anzeigen..."
 msgstr "Zobrazit další košíky..."
 
@@ -694,7 +694,7 @@ msgstr "Zobrazit další košíky..."
 msgid "Weitere Lieferungen anzeigen..."
 msgstr "Zobrazit další závozy..."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:105
+#: app/scripts/abos/list/lieferungen/lieferungen.html:107
 #: app/scripts/abos/list/lieferungen/lieferungen.html:22
 #: app/scripts/open/lastlieferplanungen.html:26
 msgid "Weiterlesen ..."
@@ -712,7 +712,7 @@ msgstr "Pokud jste zapomněli své heslo, můžete si nechat poslat odkaz pro ob
 msgid "Willkommen"
 msgstr "Vítejte"
 
-#: app/index.html:106
+#: app/index.html:111
 msgid "Wir sind gleich bereit..."
 msgstr ""
 
