@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 12\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2022-02-10 09:24\n"
+"PO-Revision-Date: 2022-03-03 13:36\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -38,7 +38,7 @@ msgstr "-Tesztkörnyezet"
 msgid "Abbrechen"
 msgstr "Mégsem"
 
-#: app/index.html:86
+#: app/index.html:91
 msgid "Abmelden"
 msgstr "Kijelentkezés"
 
@@ -54,7 +54,7 @@ msgstr ""
 msgid "Abo:"
 msgstr "Előfizetés:"
 
-#: app/index.html:61
+#: app/index.html:66
 msgid "Abos"
 msgstr ""
 
@@ -95,21 +95,21 @@ msgstr "Kiszállítások száma"
 msgid "Anzahl Personen"
 msgstr "Személyek száma"
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:152
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:155
 msgid "Arbeitsangebot erfolgreich gelöscht."
 msgstr "Önkéntes munka sikeresen törölve."
 
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:158
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:161
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr "Önkéntes munkát nem sikerült törölni:"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:197
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:197
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:201
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:200
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr "Önkéntes munkát sikeresen megváltoztatta."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:203
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:203
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:207
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:206
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr "Önkéntes munka nem változott:"
 
@@ -168,11 +168,11 @@ msgstr "CHF"
 msgid "Changing the contact information permission failed:"
 msgstr ""
 
-#: app/index.html:94
+#: app/index.html:99
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "A mentés jelenleg nem elérhető. Kérjük látogasson meg minket később."
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:135
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:139
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr "A bejelentkezés sikertelen:"
 
@@ -245,7 +245,7 @@ msgstr "A rendszer adatai időként visszaállnak az alapértelmezett értékekr
 msgid "Die früheren Arbeitseinsätze anzeigen"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:60
+#: app/scripts/abos/list/lieferungen/lieferungen.html:61
 msgid "Die früheren Körbe"
 msgstr "Korábbi tagságok"
 
@@ -270,6 +270,10 @@ msgstr "E-mail cím"
 #: app/scripts/login/login.html:38
 msgid "E-Mail:"
 msgstr "E-mail:"
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
+msgid "E-mail"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
@@ -307,20 +311,16 @@ msgstr "Érték túl rövid"
 msgid "Eingabe zu lang"
 msgstr "Érték túl hosszú"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:33
-#: app/scripts/abos/list/lieferungen/lieferungen.html:86
+#: app/scripts/abos/list/lieferungen/lieferungen.html:34
+#: app/scripts/abos/list/lieferungen/lieferungen.html:88
 msgid "Einheit"
 msgstr "Egység"
-
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
-msgid "Email"
-msgstr ""
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
 msgstr "E-mail cím"
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:129
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:133
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr "Sikeresen jelentkezett önkéntes munkára."
 
@@ -384,7 +384,7 @@ msgstr "Az admin felület használatához bejelentkezés szükséges."
 msgid "GBP"
 msgstr "GBP"
 
-#: app/index.html:63
+#: app/index.html:68
 msgid "Gebuchte Arbeitseinsätze"
 msgstr ""
 
@@ -420,7 +420,7 @@ msgstr "Nincs önkéntes munka ajánlat."
 msgid "Kilogramm"
 msgstr "Kilogramm"
 
-#: app/index.html:65
+#: app/index.html:70
 msgid "Kontakt standardmässig freigeben"
 msgstr ""
 
@@ -432,7 +432,7 @@ msgstr ""
 msgid "Konto für Einzahlungen:"
 msgstr "Fizetési fiók"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:70
+#: app/scripts/abos/list/lieferungen/lieferungen.html:71
 msgid "Korb vom"
 msgstr ""
 
@@ -468,12 +468,12 @@ msgstr ""
 msgid "Mehr Angebot anzeigen"
 msgstr ""
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:30
-#: app/scripts/abos/list/lieferungen/lieferungen.html:83
+#: app/scripts/abos/list/lieferungen/lieferungen.html:31
+#: app/scripts/abos/list/lieferungen/lieferungen.html:85
 msgid "Menge"
 msgstr "Mennyiség"
 
-#: app/index.html:64
+#: app/index.html:69
 msgid "Mitarbeit planen"
 msgstr ""
 
@@ -515,7 +515,7 @@ msgstr "Adjon meg egy jelszót, és aktíválja az OpenOlitor elérését"
 msgid "Passwort vergessen?"
 msgstr "Elfelejtette a jelszavát?"
 
-#: app/index.html:85
+#: app/index.html:90
 #: app/scripts/login/change_password.html:41
 msgid "Passwort wechseln"
 msgstr "Jelszó módosítása"
@@ -563,8 +563,8 @@ msgstr "Rész."
 msgid "Portion"
 msgstr "Rész"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:36
-#: app/scripts/abos/list/lieferungen/lieferungen.html:89
+#: app/scripts/abos/list/lieferungen/lieferungen.html:37
+#: app/scripts/abos/list/lieferungen/lieferungen.html:91
 msgid "Preis"
 msgstr "Ár"
 
@@ -573,16 +573,16 @@ msgid "Preis:"
 msgstr "Ár:"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:27
-#: app/scripts/abos/list/lieferungen/lieferungen.html:80
+#: app/scripts/abos/list/lieferungen/lieferungen.html:81
 msgid "Produkt"
 msgstr "Termék"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:49
-#: app/scripts/abos/list/lieferungen/lieferungen.html:97
+#: app/scripts/abos/list/lieferungen/lieferungen.html:50
+#: app/scripts/abos/list/lieferungen/lieferungen.html:99
 msgid "Produzent"
 msgstr "Termelő"
 
-#: app/index.html:62
+#: app/index.html:67
 msgid "Rechnungen"
 msgstr ""
 
@@ -618,7 +618,7 @@ msgstr "Ön jelenleg a OpenOlitor tesztkörnyezetben van. A használatához az a
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
 msgstr ""
 
-#: app/index.html:68
+#: app/index.html:73
 msgid "Sprache"
 msgstr ""
 
@@ -674,7 +674,7 @@ msgstr "Véglegesítse a regisztrációját!"
 msgid "Verschickt"
 msgstr ""
 
-#: app/index.html:112
+#: app/index.html:117
 msgid "Version:"
 msgstr "Verzió:"
 
@@ -686,7 +686,7 @@ msgstr "Értékesítés:"
 msgid "Von"
 msgstr "-tól"
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:115
+#: app/scripts/abos/list/lieferungen/lieferungen.html:117
 msgid "Weitere Körbe anzeigen..."
 msgstr "Más kosarak mutatása..."
 
@@ -694,7 +694,7 @@ msgstr "Más kosarak mutatása..."
 msgid "Weitere Lieferungen anzeigen..."
 msgstr "Más kosarak mutatása..."
 
-#: app/scripts/abos/list/lieferungen/lieferungen.html:105
+#: app/scripts/abos/list/lieferungen/lieferungen.html:107
 #: app/scripts/abos/list/lieferungen/lieferungen.html:22
 #: app/scripts/open/lastlieferplanungen.html:26
 msgid "Weiterlesen ..."
@@ -712,7 +712,7 @@ msgstr "Ha elfelejtette jelszavát, igényeljen helyreállításhoz szükséges 
 msgid "Willkommen"
 msgstr "Üdvözöljük"
 
-#: app/index.html:106
+#: app/index.html:111
 msgid "Wir sind gleich bereit..."
 msgstr ""
 
