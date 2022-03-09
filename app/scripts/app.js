@@ -112,6 +112,10 @@ angular
     CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext(
       'CAD'))
   })
+  .constant('SECOND_FACTOR_TYPES', {
+    OTP: addExtendedEnumValue('otp', gettext('One-Time-Password (OTP)'), gettext('OTP')),
+    EMAIL: addExtendedEnumValue('email', gettext('E-Mail'), gettext('E-Mail'))
+  })
   .service('appConfig', function() {
     var loaded = false;
     var configData = {
@@ -298,6 +302,18 @@ angular
         templateUrl: 'scripts/login/change_password.html',
         controller: 'LoginController',
         name: 'Passwortwechsel',
+        access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
+      })
+      .when('/login_settings', {
+        templateUrl: 'scripts/login/login_settings.html',
+        controller: 'LoginController',
+        name: 'Anmelde-Einstellungen',
+        access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
+      })
+      .when('/reset_otp', {
+        templateUrl: 'scripts/login/reset_otp.html',
+        controller: 'LoginController',
+        name: 'Anmelde-Einstellungen',
         access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
       })
       .when('/logout', {
