@@ -36,14 +36,14 @@
             </td>
             <td data-title="'Preis'|translate" ng-if="projekt.preiseSichtbar" class="lieferung-preis">
               <span ng-show="korbprodukt.menge">
-                {{calculatePreis(korbprodukt)| ooCHF}}
+                {{calculatePreis(korbprodukt)| ooCurrency:projekt.waehrung:true}}
               </span>
               <span ng-hide="korbprodukt.menge" class="base-preis lieferung-preiseh">
                 <span ng-show="korbprodukt.menge">
-                  {{calculatePreis(korbprodukt)| ooCHF}}
+                  {{calculatePreis(korbprodukt)| ooCurrency:projekt.waehrung:true}}
                 </span>
                 <span ng-hide="korbprodukt.menge" class="base-preis lieferung-preiseh" >
-                  {{korbprodukt.preisEinheit | ooCHF}}
+                  {{korbprodukt.preisEinheit | ooCurrency:projekt.waehrung:true}}
                 </span>
               </span>
             </td>
