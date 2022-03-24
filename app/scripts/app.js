@@ -103,14 +103,11 @@ angular
     });
   })
   .constant('WAEHRUNG', {
-    CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
-      'CHF')),
-    EUR: addExtendedEnumValue('EUR', gettext('Euro'), gettext('EUR')),
-    USD: addExtendedEnumValue('USD', gettext('US Dollar'), gettext('USD')),
-    GBP: addExtendedEnumValue('GBP', gettext('Britisches Pfund'), gettext(
-      'GBP')),
-    CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext(
-      'CAD'))
+    CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext('CHF'), 'CHF'),
+    EUR: addExtendedEnumValue('EUR', gettext('Euro'), gettext('EUR'), '€'),
+    USD: addExtendedEnumValue('USD', gettext('US Dollar'), gettext('USD'), '$'),
+    GBP: addExtendedEnumValue('GBP', gettext('Britisches Pfund'), gettext('GBP'), '£'),
+    CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext('CAD'), '$')
   })
   .constant('SECOND_FACTOR_TYPES', {
     OTP: addExtendedEnumValue('otp', gettext('One-Time-Password (OTP)'), gettext('OTP')),
