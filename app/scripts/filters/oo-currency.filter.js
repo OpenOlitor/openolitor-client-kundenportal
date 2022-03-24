@@ -1,15 +1,19 @@
 'use strict';
 
-angular.module('openolitor-kundenportal').filter('ooCurrency', ['$filter', 'gettextCatalog','WAEHRUNG','EnumUtil', function($filter, gettextCatalog, WAEHRUNG, EnumUtil) {
+angular.module('openolitor-kundenportal').filter('ooCurrency', ['$filter', 'gettextCatalog','WAEHRUNG','EnumUtil','lodash', function($filter, gettextCatalog, WAEHRUNG, EnumUtil, lodash) {
   return function(value, currency, showTag) {
     var waehrungen = EnumUtil.asArray(WAEHRUNG);
     var result = '';
     var symbol = undefined;
     result += $filter('number')(value, 2);
     if(showTag) {
-      var enumCurrency = waehrungen.find(i => i.id === currency);
+      var enumCurrency = lodash.find(waehrungen, function (i){
+        if (i.id === currency){
+          return i;
+        }
+      });
       if (enumCurrency === undefined){
-        waehrungen.find(i => i.id === "CHF");
+        enumCurrency = waehrungen[0];
       }
       // currency symbol pre number
       if ((gettextCatalog.getCurrentLanguage() === 'en_US') ||
