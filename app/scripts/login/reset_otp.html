@@ -5,9 +5,13 @@
       <h3 translate>One-Time-Passwort zurücksetzen</h3>
       <p>
       <div class="container" ng-show="status !== 'otp_reset'">
-        <div class="alert alert-info" role="alert"><span translate>Bitte geben Sie das Einmalpasswort basierend ihrem
-            <b>aktuellen Secret</b> aus Ihrer
-            Zwei-Faktor-Authentifizierungs-App ein.</span></div>
+        <div class="alert alert-info" role="alert">
+          <span translate>Bitte geben Sie das Einmalpasswort basierend ihrem</span>
+          <b>
+            <span translate> aktuellen Secret</span>
+          </b> 
+          <span translate> aus Ihrer Zwei-Faktor-Authentifizierungs-App ein.</span>
+        </div>
         <div class="alert alert-danger" role="alert" ng-if="resetOtpData.message">{{resetOtpData.message}}
         </div>
         <form class="form-signin" name="resetOtpData">
@@ -39,9 +43,12 @@
             <qrcode data="{{ otpSecret }}" size="200" version="10"></qrcode>
           </div>
         </div>
-        <div class="alert alert-info" role="alert"><span translate>Bitte geben Sie das Einmalpasswort basierend auf dem
-            <b>neuen Secret</b> aus Ihrer
-            Zwei-Faktor-Authentifizierungs-App ein.</span></div>
+        <div class="alert alert-info" role="alert">
+          <span translate>Bitte geben Sie das Einmalpasswort basierend auf dem</span>
+            <b>
+              <span translate> neuen Secret</span>
+            </b> 
+            <span translate> aus Ihrer Zwei-Faktor-Authentifizierungs-App ein.</span></div>
         <div class="alert alert-danger" role="alert" ng-if="resetOtpConfirmData.message">{{resetOtpConfirmData.message}}
         </div>
         <form class="form-signin" name="resetOtpConfirmData">
