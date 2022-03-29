@@ -30,7 +30,7 @@
                     {{arbeitseinsatz.zeitVon | date:'dd.MM.yyyy @ HH:mm'}} - {{arbeitseinsatz.zeitBis | date:'dd.MM.yyyy @ HH:mm'}}
                   </span>
                 </td>
-                <td data-title="'#'|translate + '&nbsp;' + 'Pers.'|translate" sortable="'anzahlPersonen'">
+                <td data-title="'#&nbsp;Pers.'|translate" sortable="'anzahlPersonen'">
                   {{arbeitseinsatz.anzahlPersonen}}
                 </td>
                 <td data-title="'bisher eingeschrieben'|translate" sortable="'anzahlPersonen'">
@@ -62,7 +62,7 @@
                 <td>
                   <span ng-show="arbeitseinsatz.coworkers && contactsVisible[arbeitseinsatz.arbeitsangebotId]" class="glyphicon glyphicon-chevron-right" />
                 </td>
-                <td colspan="3"><div><span translate-context="notPerson" translatenslate>Name</span> : <span>{{coworker[0]}}</div> <div><span translate>E-Mail</span> : <span>{{coworker[1]}}</span></div></td>
+                <td colspan="3"><div><span translate-context="notPerson" translatenslate>Name</span> : <span>{{coworker[0]}}</div> <div><span translate>E-mail</span> : <span>{{coworker[1]}}</span></div></td>
               </tr>
               <tr ng-repeat-end />
             </table>
