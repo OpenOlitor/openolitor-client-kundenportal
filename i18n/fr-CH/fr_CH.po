@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 68\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2022-03-29 08:08\n"
+"PO-Revision-Date: 2022-03-29 09:41\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -337,7 +337,7 @@ msgstr "Copier le numéro de référence au presse-papier (pour une utilisation 
 
 #: app/scripts/app.js:108
 msgid "EUR"
-msgstr ""
+msgstr "EUR"
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -430,7 +430,7 @@ msgstr "Aucune planification de livraison n'a été clôturée"
 
 #: app/scripts/app.js:108
 msgid "Euro"
-msgstr ""
+msgstr "Euro"
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -463,7 +463,7 @@ msgstr "Une inscription est nécessaire pour accéder à OpenOlitor"
 
 #: app/scripts/app.js:110
 msgid "GBP"
-msgstr ""
+msgstr "GBP"
 
 #: app/index.html:68
 msgid "Gebuchte Arbeitseinsätze"
@@ -586,7 +586,7 @@ msgstr ""
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: app/scripts/app.js:116
 msgid "One-Time-Password (OTP)"
@@ -668,11 +668,11 @@ msgstr "Qualité du mot de passe"
 
 #: app/scripts/app.js:90
 msgid "Por."
-msgstr ""
+msgstr "Por."
 
 #: app/scripts/app.js:90
 msgid "Portion"
-msgstr ""
+msgstr "Portion"
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:37
 #: app/scripts/abos/list/lieferungen/lieferungen.html:91
@@ -761,7 +761,7 @@ msgstr "Titre"
 
 #: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
-msgstr ""
+msgstr "Tour:"
 
 #: app/scripts/app.js:109
 msgid "US Dollar"
@@ -769,7 +769,7 @@ msgstr "Dollar des Etats-Unis"
 
 #: app/scripts/app.js:109
 msgid "USD"
-msgstr ""
+msgstr "USD"
 
 #: app/scripts/login/login.html:51
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich\n"
@@ -892,19 +892,19 @@ msgstr "déjà inscrits"
 
 #: app/scripts/app.js:86
 msgid "gr"
-msgstr ""
+msgstr "gr"
 
 #: app/scripts/app.js:88
 msgid "kg"
-msgstr ""
+msgstr "kg"
 
 #: app/scripts/app.js:89
 msgid "l"
-msgstr ""
+msgstr "l"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
-msgstr ""
+msgstr "max."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
