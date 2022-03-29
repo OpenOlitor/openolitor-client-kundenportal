@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
-msgid "#"
+msgid "#&nbsp;Pers."
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
@@ -287,7 +287,6 @@ msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
 msgstr ""
 
 #: app/scripts/app.js:114
-#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
 msgid "E-Mail"
 msgstr ""
 
@@ -298,6 +297,10 @@ msgstr ""
 #: app/scripts/login/login.html:15
 #: app/scripts/login/login.html:27
 msgid "E-Mail:"
+msgstr ""
+
+#: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
+msgid "E-mail"
 msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:68
@@ -378,10 +381,13 @@ msgstr ""
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr ""
 
-#: app/scripts/login/change_password.html:49
 #: app/scripts/login/login.html:111
 #: app/scripts/login/login_settings_second_factor.html:18
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
+msgstr ""
+
+#: app/scripts/login/change_password.html:49
+msgid "Es wurde ein Zugangscode an ihre Email-Adresse <b>{{person.email}}</b> zugestellt."
 msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
@@ -892,7 +898,6 @@ msgstr ""
 msgid "vom"
 msgstr ""
 
-#: app/scripts/login/change_password.html:49
 #: app/scripts/login/login.html:113
 #: app/scripts/login/login_settings_second_factor.html:18
 msgid "zugestellt."
