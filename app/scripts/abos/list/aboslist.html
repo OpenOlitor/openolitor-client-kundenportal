@@ -59,7 +59,7 @@
               <span translate>Preis:</span>
             </div>
             <div class="col-md-4 col-sm-5 col-xs-5">
-                {{(abo.price)?abo.price:abo.abotyp.preis | ooCurrency:projekt.waehrung:true}}
+                {{(abo.price)?abo.price:abo.abotyp.preis | ooCurrency:true}}
             </div>
           </div>
           <div class="row laufzeit">
