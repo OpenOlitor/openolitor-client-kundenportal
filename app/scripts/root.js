@@ -11,6 +11,11 @@ angular.module('openolitor-kundenportal')
       gettextCatalog, amMoment, $location, msgBus, checkSize, $anchorScroll, $window,
       $timeout, BUILD_NR, ooAuthService, appConfig,
       $cookies, dialogService, $http) {
+
+      $rootScope.projekt = {
+        waehrung: 'CHF'
+      };
+
       angular.element($window).bind('resize', function() {
         checkSize();
       });
