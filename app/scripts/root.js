@@ -22,6 +22,7 @@ angular.module('openolitor-kundenportal')
 
       $scope.welcomeDisplayed = false;
       $scope.loaded = false;
+      $scope.showConnectionErrorMessage = false;
 
       $scope.currentPathContains = function(pathJunk) {
         return $location.url().indexOf(pathJunk) !== -1;
@@ -125,7 +126,7 @@ angular.module('openolitor-kundenportal')
         $scope.messagingSocketClosedReason = msg.reason;
         $timeout(function() {
           $scope.showConnectionErrorMessage = true;
-        }, 30000);
+        }, 10000);
         $scope.$apply();
       });
 
