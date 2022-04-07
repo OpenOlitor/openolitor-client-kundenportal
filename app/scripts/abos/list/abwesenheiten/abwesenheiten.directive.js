@@ -18,7 +18,9 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
         msgBus,
         lodash,
         GeschaeftsjahrUtil,
-        moment
+        moment,
+        alertService,
+        gettext
       ) {
         $scope.projekt = $rootScope.projekt;
 
@@ -47,14 +49,23 @@ angular.module('openolitor-kundenportal').directive('ooAboAbwesenheiten', [
           abw.$delete();
         };
 
-        $scope.addAbwesenheit = function(lieferung) {
+        $scope.addAbwesenheit = function(abo, lieferung) {
           var newModel = new AbwesenheitenListModel({
             datum: lieferung.datum,
             lieferungId: lieferung.id,
             aboId: $scope.abo.id,
             kundeId: $scope.abo.kundeId
           });
-          newModel.$save();
+          newModel.$save(function() {
+            abo.lieferdaten.filter(function(lieferdat) {
+              return lieferdat.datum !=  lieferung.datum;
+            })
+          }, function(error) {
+            alertService.addAlert(
+              'error',
+              gettext('Die Abwesenheit konnte nicht eingetragen werden.')
+            );
+          });
           $scope.template.creating = $scope.template.creating + 1;
         };
 

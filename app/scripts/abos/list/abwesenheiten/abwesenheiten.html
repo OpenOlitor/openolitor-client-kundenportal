@@ -82,6 +82,7 @@
   </div>
   <div class="row">
     <div class="col-md-4 col-sm-6 form-group">
+      <div oo-error-overlay></div>
       <div class="dropdown" ng-if="isAboRunning(abo)">
         <div
           uib-dropdown
@@ -102,7 +103,7 @@
               role="menuitem"
               ng-repeat="lieferdat in abo.lieferdaten | notIn:'id':abwesenheitsDaten() | dateRange:abo.start:abo.ende:'datum'"
             >
-              <a href="" ng-click="addAbwesenheit(lieferdat)"
+              <a href="" ng-click="addAbwesenheit(abo, lieferdat)"
                 >{{lieferdat.datum | date: 'EEE, dd.MM.yyyy'}}</a
               >
             </li>
