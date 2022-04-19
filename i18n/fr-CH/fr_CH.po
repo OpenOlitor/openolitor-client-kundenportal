@@ -11,11 +11,11 @@ msgstr ""
 "X-Crowdin-File-ID: 68\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2022-03-29 11:38\n"
+"PO-Revision-Date: 2022-04-19 19:07\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
-msgstr ""
+msgstr "#&nbsp;Pers."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 msgid "#Pers."
@@ -23,7 +23,7 @@ msgstr "Nº Pers."
 
 #: app/scripts/login/reset_otp.html:37
 msgid "&nbsp;oder&nbsp;"
-msgstr ""
+msgstr "&nbsp;ou&nbsp;"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
@@ -80,7 +80,7 @@ msgstr "Tous"
 
 #: app/scripts/login/login_settings.html:5
 msgid "Anmelde-Einstellungen"
-msgstr ""
+msgstr "Paramètres de connexion"
 
 #: app/scripts/login/login.html:103
 #: app/scripts/login/login.html:123
@@ -153,23 +153,23 @@ msgstr "Payé"
 #: app/scripts/login/login.html:95
 #: app/scripts/login/login_settings_second_factor.html:10
 msgid "Bitte geben Sie das Einmalpasswort aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
-msgstr ""
+msgstr "Veuillez saisir le mot de passe à usage unique de votre d'authentification à deux facteurs."
 
 #: app/scripts/login/reset_otp.html:47
 msgid "Bitte geben Sie das Einmalpasswort basierend auf dem"
-msgstr ""
+msgstr "Veuillez entrer le mot de passe à usage unique basé sur celui-ci"
 
 #: app/scripts/login/reset_otp.html:9
 msgid "Bitte geben Sie das Einmalpasswort basierend ihrem"
-msgstr ""
+msgstr "Veuillez entrer le mot de passe à usage unique basé sur le vôtre"
 
 #: app/scripts/login/login.html:81
 msgid "Bitte scannen Sie den QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
-msgstr ""
+msgstr "Veuillez scanner le code QR avec une application d'authentification à deux facteurs telle que:"
 
 #: app/scripts/login/reset_otp.html:32
 msgid "Bitte scannen Sie den neuen QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
-msgstr ""
+msgstr "Veuillez scanner le nouveau code QR avec une application d'authentification à deux facteurs telle que :"
 
 #: app/scripts/app.js:109
 msgid "Britisches Pfund"
@@ -213,7 +213,7 @@ msgstr "L'inscription n’a pas réussie :"
 
 #: app/scripts/login/login.html:42
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr ""
+msgstr "Le portail des membres est actuellement indisponible. Nous effectuons des travaux d’entretien. Sous peu le portail sera de nouveau disponible."
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
@@ -297,7 +297,7 @@ msgstr "Aucune inscription n'a eu lieu."
 
 #: app/scripts/app.js:114
 msgid "E-Mail"
-msgstr ""
+msgstr "Courriel"
 
 #: app/scripts/login/login.html:57
 msgid "E-Mail Adresse"
@@ -310,7 +310,7 @@ msgstr "Courriel:"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
 msgid "E-mail"
-msgstr ""
+msgstr "Courriel"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
@@ -355,20 +355,20 @@ msgstr "Unité"
 
 #: app/index.html:88
 msgid "Einstellungen"
-msgstr ""
+msgstr "Paramètres"
 
 #: app/scripts/login/login_settings.html:23
 #: app/scripts/login/login_settings_second_factor.html:27
 msgid "Einstellungen Speichern"
-msgstr ""
+msgstr "Enregistrer les paramètres"
 
 #: app/scripts/login/login.controller.js:406
 msgid "Einstellungen erfolgreich gespeichert"
-msgstr ""
+msgstr "Paramètres enregistrés avec succès"
 
 #: app/scripts/login/login.controller.js:411
 msgid "Einstellungen konnten nicht gespeichert werden"
-msgstr ""
+msgstr "Les paramètres n'ont pas pu être enregistrés"
 
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
@@ -393,11 +393,11 @@ msgstr "Aucune facture n'a été créé jusqu'ici."
 #: app/scripts/login/login.html:111
 #: app/scripts/login/login_settings_second_factor.html:18
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
-msgstr ""
+msgstr "Un code d’accès a été envoyé à votre adresse courriel"
 
 #: app/scripts/login/change_password.html:49
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse <b>{{person.email}}</b> zugestellt."
-msgstr ""
+msgstr "Un code d'accès a été envoyé à votre courriel <b>{{person.email}}</b>."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
@@ -429,7 +429,7 @@ msgstr "Pour tester le frontend d’administration, cliquez ici !"
 
 #: app/scripts/login/login.html:30
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
-msgstr ""
+msgstr "Pour accéder à l’espace d’administration de OpenOlitor, veuillez svp cliquer sur le lien en bas à droite."
 
 #: app/scripts/login/login.html:22
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
@@ -548,19 +548,19 @@ msgstr "Nouveau mot de passe"
 
 #: app/scripts/login/reset_otp.html:23
 msgid "Neues Secret anfordern"
-msgstr ""
+msgstr "Réinitialiser le secret"
 
 #: app/scripts/app.js:113
 msgid "OTP"
-msgstr ""
+msgstr "OTP"
 
 #: app/scripts/login/login.controller.js:322
 msgid "OTP Passwort Erfolgreich zurückgesetzt"
-msgstr ""
+msgstr "Mot de passe OTP réinitialisé avec succès"
 
 #: app/scripts/login/login_settings.html:62
 msgid "OTP Secret zurücksetzen"
-msgstr ""
+msgstr "Réinitialiser le secret OTP"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
@@ -568,15 +568,15 @@ msgstr "Ok"
 
 #: app/scripts/app.js:113
 msgid "One-Time-Password (OTP)"
-msgstr ""
+msgstr "Mot de passe à usage unique (OTP)"
 
 #: app/scripts/login/login_settings.html:57
 msgid "One-Time-Passwort (OTP)"
-msgstr ""
+msgstr "Mot de passe à usage unique (OTP)"
 
 #: app/scripts/login/reset_otp.html:5
 msgid "One-Time-Passwort zurücksetzen"
-msgstr ""
+msgstr "Réinitialiser le mot de passe à usage unique"
 
 #: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
@@ -693,11 +693,11 @@ msgstr "Francs suisses"
 
 #: app/scripts/login/login.html:24
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
-msgstr ""
+msgstr "Vous êtes sur le système de test d'OpenOlitor. Vous pouvez vous connecter en utilisant les informations d’identification suivantes (en tant que membre):"
 
 #: app/scripts/login/login.html:12
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr ""
+msgstr "Vous êtes sur le système de test d'OpenOlitor. Vous pouvez vous connecter en utilisant les informations d’identification suivantes (en tant qu'administratrice):"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:45
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
@@ -749,7 +749,7 @@ msgstr "USD"
 
 #: app/scripts/login/login.html:47
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr ""
+msgstr "Travaux de maintenance ! Le portail client est actuellement indisponible. Veuillez l'activer prochainement!"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
@@ -761,7 +761,7 @@ msgstr "Envoyé"
 
 #: app/index.html:116
 msgid "Version:"
-msgstr ""
+msgstr "Version:"
 
 #: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
@@ -830,7 +830,7 @@ msgstr "Accès refusé"
 
 #: app/scripts/login/reset_otp.html:60
 msgid "Zurücksetzen"
-msgstr ""
+msgstr "Réinitialiser"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
@@ -842,20 +842,20 @@ msgstr "Abonnements supplémentaires:"
 
 #: app/scripts/login/login_settings_second_factor.html:5
 msgid "Zwei-Faktor-Authentierung erforderlich"
-msgstr ""
+msgstr "Authentification à deux facteurs requise"
 
 #: app/scripts/login/login_settings.html:44
 msgid "Zwei-Faktor-Authentierungstyp"
-msgstr ""
+msgstr "Type d'authentification à deux facteurs"
 
 #: app/scripts/login/login_settings.html:21
 #: app/scripts/login/login_settings.html:32
 msgid "Zwei-Faktor-Authentisierung"
-msgstr ""
+msgstr "Authentification à deux facteurs"
 
 #: app/scripts/login/reset_otp.html:11
 msgid "aktuellen Secret"
-msgstr ""
+msgstr "secret actuel"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
@@ -864,7 +864,7 @@ msgstr "tous"
 #: app/scripts/login/reset_otp.html:13
 #: app/scripts/login/reset_otp.html:51
 msgid "aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
-msgstr ""
+msgstr "depuis votre application d'authentification à deux facteurs."
 
 #: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
@@ -892,11 +892,11 @@ msgstr "max."
 
 #: app/scripts/login/reset_otp.html:49
 msgid "neuen Secret"
-msgstr ""
+msgstr "nouveau secret"
 
 #: app/scripts/login/login.html:86
 msgid "oder"
-msgstr ""
+msgstr "ou"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
