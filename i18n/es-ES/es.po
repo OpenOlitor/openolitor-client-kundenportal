@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 68\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-03-29 11:38\n"
+"PO-Revision-Date: 2022-04-19 18:09\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -153,15 +153,15 @@ msgstr "Pagado"
 #: app/scripts/login/login.html:95
 #: app/scripts/login/login_settings_second_factor.html:10
 msgid "Bitte geben Sie das Einmalpasswort aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
-msgstr ""
+msgstr "Ingrese la contraseña de un solo uso de su aplicación de autenticación de dos factores."
 
 #: app/scripts/login/reset_otp.html:47
 msgid "Bitte geben Sie das Einmalpasswort basierend auf dem"
-msgstr ""
+msgstr "Ingrese la contraseña de un solo uso basada en eso"
 
 #: app/scripts/login/reset_otp.html:9
 msgid "Bitte geben Sie das Einmalpasswort basierend ihrem"
-msgstr ""
+msgstr "Ingrese la contraseña de un solo uso basada en la suya"
 
 #: app/scripts/login/login.html:81
 msgid "Bitte scannen Sie den QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
@@ -213,7 +213,7 @@ msgstr "La inscripción no ha sido posible:"
 
 #: app/scripts/login/login.html:42
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr ""
+msgstr "El portal de abonad@ no está disponible actualmente. Estamos realizando trabajos de mantenimiento. Volveremos a estar en línea en breve."
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
@@ -393,11 +393,11 @@ msgstr "Todavía no hay facturas."
 #: app/scripts/login/login.html:111
 #: app/scripts/login/login_settings_second_factor.html:18
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
-msgstr ""
+msgstr "Se ha enviado un código de acceso a su dirección de correo electrónico"
 
 #: app/scripts/login/change_password.html:49
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse <b>{{person.email}}</b> zugestellt."
-msgstr ""
+msgstr "Se ha enviado un código de acceso a su dirección de correo electrónico: <b>{{person.email}}</b>."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
@@ -429,7 +429,7 @@ msgstr "Para probar el portal de admistración, ir aquí"
 
 #: app/scripts/login/login.html:30
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
-msgstr ""
+msgstr "Para acceder al entorno de administración de OpenOlitor, utilice el enlace a la derecha."
 
 #: app/scripts/login/login.html:22
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
@@ -580,7 +580,7 @@ msgstr "Restablecer la contraseña de un solo uso"
 
 #: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
-msgstr "Portal de abonado a OpenOlitor:"
+msgstr "Portal de abonad@ a OpenOlitor:"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
 msgid "Ort"
@@ -693,11 +693,11 @@ msgstr "Franco suizo"
 
 #: app/scripts/login/login.html:24
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
-msgstr ""
+msgstr "Estás en el sistema de prueba OpenOlitor. Puedes registrarte como consumidor@ utilizando las siguientes credenciales:"
 
 #: app/scripts/login/login.html:12
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr ""
+msgstr "Estás en el sistema de prueba OpenOlitor. Puedes iniciar sesión en el entorno de administración con las siguientes credenciales:"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:45
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
@@ -749,7 +749,7 @@ msgstr "USD"
 
 #: app/scripts/login/login.html:47
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr ""
+msgstr "Mantenimiento! El portal de abonad@ no está disponible actualmente. ¡Se reactivará lo antes posible!"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
@@ -855,7 +855,7 @@ msgstr "Autenticación de dos factores"
 
 #: app/scripts/login/reset_otp.html:11
 msgid "aktuellen Secret"
-msgstr ""
+msgstr "secreto actual"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
@@ -864,7 +864,7 @@ msgstr "todos"
 #: app/scripts/login/reset_otp.html:13
 #: app/scripts/login/reset_otp.html:51
 msgid "aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
-msgstr ""
+msgstr "desde su aplicación de autenticación de dos factores."
 
 #: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
@@ -892,11 +892,11 @@ msgstr "max."
 
 #: app/scripts/login/reset_otp.html:49
 msgid "neuen Secret"
-msgstr ""
+msgstr "nuevo secreto"
 
 #: app/scripts/login/login.html:86
 msgid "oder"
-msgstr ""
+msgstr "o"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
