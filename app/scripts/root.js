@@ -11,12 +11,18 @@ angular.module('openolitor-kundenportal')
       gettextCatalog, amMoment, $location, msgBus, checkSize, $anchorScroll, $window,
       $timeout, BUILD_NR, ooAuthService, appConfig,
       $cookies, dialogService, $http) {
+
+      $rootScope.projekt = {
+        waehrung: 'CHF'
+      };
+
       angular.element($window).bind('resize', function() {
         checkSize();
       });
 
       $scope.welcomeDisplayed = false;
       $scope.loaded = false;
+      $scope.showConnectionErrorMessage = false;
 
       $scope.currentPathContains = function(pathJunk) {
         return $location.url().indexOf(pathJunk) !== -1;
@@ -120,7 +126,7 @@ angular.module('openolitor-kundenportal')
         $scope.messagingSocketClosedReason = msg.reason;
         $timeout(function() {
           $scope.showConnectionErrorMessage = true;
-        }, 30000);
+        }, 10000);
         $scope.$apply();
       });
 

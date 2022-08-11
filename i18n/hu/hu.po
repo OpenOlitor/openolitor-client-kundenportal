@@ -7,11 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: hu\n"
-"X-Crowdin-File: /prod/template.pot\n"
-"X-Crowdin-File-ID: 12\n"
+"X-Crowdin-File: /dev.Seitan/template.pot\n"
+"X-Crowdin-File-ID: 68\n"
 "Language-Team: Hungarian\n"
 "Language: hu_HU\n"
-"PO-Revision-Date: 2022-03-03 13:36\n"
+"PO-Revision-Date: 2022-03-29 11:38\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -21,9 +21,13 @@ msgstr "#&nbsp;fő."
 msgid "#Pers."
 msgstr ""
 
+#: app/scripts/login/reset_otp.html:37
+msgid "&nbsp;oder&nbsp;"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -38,7 +42,7 @@ msgstr "-Tesztkörnyezet"
 msgid "Abbrechen"
 msgstr "Mégsem"
 
-#: app/index.html:91
+#: app/index.html:90
 msgid "Abmelden"
 msgstr "Kijelentkezés"
 
@@ -74,18 +78,19 @@ msgstr "Az Ön aktuális jelszava"
 msgid "Alle"
 msgstr "Mind"
 
-#: app/scripts/login/login.html:74
-#: app/scripts/login/login.html:91
+#: app/scripts/login/login_settings.html:5
+msgid "Anmelde-Einstellungen"
+msgstr ""
+
+#: app/scripts/login/login.html:103
+#: app/scripts/login/login.html:123
+#: app/scripts/login/login.html:65
 msgid "Anmelden"
 msgstr "Bejelentkezés"
 
 #: app/scripts/login/login.html:5
 msgid "Anmeldung"
 msgstr "Regisztráció"
-
-#: app/scripts/login/login.controller.js:137
-msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr "A jelszó beállítására vonatkozó utasításokat elküldtük az e-mail címére."
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
@@ -117,7 +122,7 @@ msgstr "Önkéntes munka nem változott:"
 msgid "Auch ausgelaufene Abos anzeigen"
 msgstr ""
 
-#: app/scripts/login/login.controller.js:76
+#: app/scripts/login/login.controller.js:77
 msgid "Aufwiedersehen"
 msgstr "Viszlát"
 
@@ -144,31 +149,61 @@ msgstr "Összeg"
 msgid "Bezahlt"
 msgstr ""
 
+#: app/scripts/login/change_password.html:41
+#: app/scripts/login/login.html:95
+#: app/scripts/login/login_settings_second_factor.html:10
+msgid "Bitte geben Sie das Einmalpasswort aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
+msgstr ""
+
+#: app/scripts/login/reset_otp.html:47
+msgid "Bitte geben Sie das Einmalpasswort basierend auf dem"
+msgstr ""
+
+#: app/scripts/login/reset_otp.html:9
+msgid "Bitte geben Sie das Einmalpasswort basierend ihrem"
+msgstr ""
+
+#: app/scripts/login/login.html:81
+msgid "Bitte scannen Sie den QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
+msgstr ""
+
+#: app/scripts/login/reset_otp.html:32
+msgid "Bitte scannen Sie den neuen QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
+msgstr ""
+
 #: app/scripts/app.js:109
 msgid "Britisches Pfund"
 msgstr "Angol font"
 
-#: app/scripts/app.js:84
+#: app/scripts/app.js:85
 msgid "Bu."
 msgstr "csokor"
 
-#: app/scripts/app.js:84
+#: app/scripts/app.js:85
 msgid "Bund"
 msgstr "Csokor"
 
-#: app/scripts/app.js:111
+#: app/scripts/app.js:110
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
-#: app/scripts/app.js:105
+#: app/scripts/app.js:106
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/scripts/root.js:47
 msgid "Changing the contact information permission failed:"
 msgstr ""
 
-#: app/index.html:99
+#: app/scripts/login/change_password.html:43
+#: app/scripts/login/login.html:100
+#: app/scripts/login/login_settings_second_factor.html:12
+#: app/scripts/login/reset_otp.html:19
+#: app/scripts/login/reset_otp.html:56
+msgid "Code"
+msgstr ""
+
+#: app/index.html:98
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "A mentés jelenleg nem elérhető. Kérjük látogasson meg minket később."
 
@@ -176,9 +211,9 @@ msgstr "A mentés jelenleg nem elérhető. Kérjük látogasson meg minket kés�
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr "A bejelentkezés sikertelen:"
 
-#: app/scripts/login/login.html:53
+#: app/scripts/login/login.html:42
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
-msgstr "Karbantartás miatt a tagi oldal jelenleg nem elérhető. Hamarosan újra elérhető lesz a szolgáltatás, köszönjük türelmét."
+msgstr ""
 
 #: app/scripts/login/change_password.html:21
 #: app/scripts/login/zugangaktivieren.html:15
@@ -190,7 +225,7 @@ msgstr "A jelszó minimum 6 karaktert tartalmazzon."
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
 msgstr "A jelszó tartalmazzon legalább egy-egy kis- és nagybetűt, valamint számot és különleges karaktert (szimbólumot)."
 
-#: app/scripts/login/login.controller.js:124
+#: app/scripts/login/login.controller.js:135
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "Sikeresen létrehozott egy jelszót. Most más be tud jelentkezni."
 
@@ -236,8 +271,7 @@ msgid "Details werden geladen..."
 msgstr "Részletek betöltése..."
 
 #: app/scripts/login/login.html:18
-#: app/scripts/login/login.html:29
-#: app/scripts/login/login.html:42
+#: app/scripts/login/login.html:31
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "A rendszer adatai időként visszaállnak az alapértelmezett értékekre."
 
@@ -261,13 +295,16 @@ msgstr "A keresett oldal nem található."
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
 msgstr "Ön nem jelentkezett önkéntes munkára."
 
-#: app/scripts/login/login.html:68
+#: app/scripts/app.js:114
+msgid "E-Mail"
+msgstr ""
+
+#: app/scripts/login/login.html:57
 msgid "E-Mail Adresse"
 msgstr "E-mail cím"
 
 #: app/scripts/login/login.html:15
-#: app/scripts/login/login.html:26
-#: app/scripts/login/login.html:38
+#: app/scripts/login/login.html:27
 msgid "E-Mail:"
 msgstr "E-mail:"
 
@@ -285,7 +322,7 @@ msgstr "ESR szám másolása a vágólapra (hogy használhassa a pénzügyi modu
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -316,6 +353,23 @@ msgstr "Érték túl hosszú"
 msgid "Einheit"
 msgstr "Egység"
 
+#: app/index.html:88
+msgid "Einstellungen"
+msgstr ""
+
+#: app/scripts/login/login_settings.html:23
+#: app/scripts/login/login_settings_second_factor.html:27
+msgid "Einstellungen Speichern"
+msgstr ""
+
+#: app/scripts/login/login.controller.js:406
+msgid "Einstellungen erfolgreich gespeichert"
+msgstr ""
+
+#: app/scripts/login/login.controller.js:411
+msgid "Einstellungen konnten nicht gespeichert werden"
+msgstr ""
+
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
 msgstr "E-mail cím"
@@ -336,9 +390,14 @@ msgstr ""
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr "Nincs több számla."
 
-#: app/scripts/login/login.html:84
+#: app/scripts/login/login.html:111
+#: app/scripts/login/login_settings_second_factor.html:18
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
-msgstr "Megerősítő kódot elküldtük az e-mail címedre."
+msgstr ""
+
+#: app/scripts/login/change_password.html:49
+msgid "Es wurde ein Zugangscode an ihre Email-Adresse <b>{{person.email}}</b> zugestellt."
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
@@ -350,7 +409,7 @@ msgstr "Még nincs megvalósított szállítási terv."
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -364,15 +423,15 @@ msgstr "Esedékes"
 msgid "Fällig am"
 msgstr "Határidő"
 
-#: app/scripts/login/login.html:80
+#: app/scripts/login/login.html:72
 msgid "Für das Testen der Administrationsumgebung, bitte hier klicken!"
 msgstr "Az admin felület teszteléséhez kattintson ide!"
 
-#: app/scripts/login/login.html:41
+#: app/scripts/login/login.html:30
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
-msgstr "Az OpenOlitor admin felületének eléréséhez használja a lenti linket, jobb oldalt."
+msgstr ""
 
-#: app/scripts/login/login.html:33
+#: app/scripts/login/login.html:22
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
 msgstr "Az OpenOlitor használatához bejelentkezés szükséges."
 
@@ -382,13 +441,13 @@ msgstr "Az admin felület használatához bejelentkezés szükséges."
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/index.html:68
 msgid "Gebuchte Arbeitseinsätze"
 msgstr ""
 
-#: app/scripts/app.js:85
+#: app/scripts/app.js:86
 msgid "Gramm"
 msgstr "gramm"
 
@@ -401,10 +460,11 @@ msgid "Inhalt der Körbe"
 msgstr "Kosár tartalma"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+#: app/scripts/login/login_settings.html:37
 msgid "Ja"
 msgstr ""
 
-#: app/scripts/app.js:111
+#: app/scripts/app.js:110
 msgid "Kanadischer Dollar"
 msgstr "Kanadai dollár"
 
@@ -416,9 +476,9 @@ msgstr "Kategóriák"
 msgid "Keine Arbeitsangebote."
 msgstr "Nincs önkéntes munka ajánlat."
 
-#: app/scripts/app.js:86
+#: app/scripts/app.js:87
 msgid "Kilogramm"
-msgstr "Kilogramm"
+msgstr ""
 
 #: app/index.html:70
 msgid "Kontakt standardmässig freigeben"
@@ -452,11 +512,11 @@ msgstr "Szállítás napja:"
 msgid "Lieferung"
 msgstr "Szállítás"
 
-#: app/scripts/app.js:88
+#: app/scripts/app.js:89
 msgid "Liter"
-msgstr "Liter"
+msgstr ""
 
-#: app/scripts/login/login.html:80
+#: app/scripts/login/login.html:72
 msgid "Login Administration"
 msgstr "Adminisztráció"
 
@@ -478,6 +538,7 @@ msgid "Mitarbeit planen"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+#: app/scripts/login/login_settings.html:37
 msgid "Nein"
 msgstr ""
 
@@ -485,9 +546,37 @@ msgstr ""
 msgid "Neues Passwort"
 msgstr "Új jelszó"
 
+#: app/scripts/login/reset_otp.html:23
+msgid "Neues Secret anfordern"
+msgstr ""
+
+#: app/scripts/app.js:113
+msgid "OTP"
+msgstr ""
+
+#: app/scripts/login/login.controller.js:322
+msgid "OTP Passwort Erfolgreich zurückgesetzt"
+msgstr ""
+
+#: app/scripts/login/login_settings.html:62
+msgid "OTP Secret zurücksetzen"
+msgstr ""
+
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
 msgstr "OK"
+
+#: app/scripts/app.js:113
+msgid "One-Time-Password (OTP)"
+msgstr ""
+
+#: app/scripts/login/login_settings.html:57
+msgid "One-Time-Passwort (OTP)"
+msgstr ""
+
+#: app/scripts/login/reset_otp.html:5
+msgid "One-Time-Passwort zurücksetzen"
+msgstr ""
 
 #: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
@@ -497,7 +586,8 @@ msgstr "OpenOlitor tag portál:"
 msgid "Ort"
 msgstr "Hely"
 
-#: app/scripts/login/login.html:71
+#: app/scripts/login/login.html:61
+#: app/scripts/login/login_settings.html:11
 #: app/scripts/login/zugangaktivieren.html:11
 msgid "Passwort"
 msgstr "Jelszó"
@@ -510,13 +600,13 @@ msgstr "Jelszó beállítása"
 msgid "Passwort setzen und Zugang aktivieren"
 msgstr "Adjon meg egy jelszót, és aktíválja az OpenOlitor elérését"
 
-#: app/scripts/login/login.html:77
+#: app/scripts/login/login.html:69
 #: app/scripts/login/passwordreset.html:5
 msgid "Passwort vergessen?"
 msgstr "Elfelejtette a jelszavát?"
 
-#: app/index.html:90
-#: app/scripts/login/change_password.html:41
+#: app/scripts/login/change_password.html:58
+#: app/scripts/login/login_settings.html:16
 msgid "Passwort wechseln"
 msgstr "Jelszó módosítása"
 
@@ -525,11 +615,11 @@ msgstr "Jelszó módosítása"
 msgid "Passwort wiederholen"
 msgstr "Jelszó megerősítése"
 
-#: app/scripts/login/login.controller.js:108
+#: app/scripts/login/login.controller.js:125
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
 msgstr "Jelszó sikeresen módosításra került, automatikusan átirányítjuk a felületre."
 
-#: app/scripts/login/login.controller.js:115
+#: app/scripts/login/login.controller.js:129
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
 msgstr "Sikeresen megváltoztatta jelszavát, és automatikusan kijelentkezett. Kérjük, lépjem be újra az új jelszavával."
 
@@ -538,8 +628,7 @@ msgid "Passwort zurücksetzen"
 msgstr "Jelszó visszaállítása"
 
 #: app/scripts/login/login.html:16
-#: app/scripts/login/login.html:27
-#: app/scripts/login/login.html:39
+#: app/scripts/login/login.html:28
 msgid "Passwort:"
 msgstr "Jelszó:"
 
@@ -555,11 +644,11 @@ msgstr "A jelszó nem megfelelő"
 msgid "Passwortstärke"
 msgstr "Jelszó erőssége"
 
-#: app/scripts/app.js:89
+#: app/scripts/app.js:90
 msgid "Por."
 msgstr "Rész."
 
-#: app/scripts/app.js:89
+#: app/scripts/app.js:90
 msgid "Portion"
 msgstr "Rész"
 
@@ -598,21 +687,17 @@ msgstr "Hivatkozási szám"
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr "Hivatkozási szám másolása a vágólapra"
 
-#: app/scripts/app.js:105
+#: app/scripts/app.js:106
 msgid "Schweizer Franken"
 msgstr "Svájci frank"
 
-#: app/scripts/login/login.html:23
-msgid "Sie befinden sich auf dem Lasius Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "Ön jelenleg a Lasius tesztkörnyezetben van. A használatához az alábbi hitelesítő adatokkal tud bejelentkezni adminisztrátorként:"
-
-#: app/scripts/login/login.html:35
+#: app/scripts/login/login.html:24
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
-msgstr "Ön jelenleg a OpenOlitor tesztkörnyezetben van. A használatához az alábbi hitelesítő adatokkal tud regisztrálni fogyasztóként:"
+msgstr ""
 
 #: app/scripts/login/login.html:12
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "Ön jelenleg a OpenOlitor tesztkörnyezetben van. A használatához az alábbi hitelesítő adatokkal tud bejelentkezni adminisztrátorként:"
+msgstr ""
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:45
 msgid "Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt"
@@ -622,7 +707,7 @@ msgstr ""
 msgid "Sprache"
 msgstr ""
 
-#: app/scripts/app.js:83
+#: app/scripts/app.js:84
 msgid "St."
 msgstr "Db."
 
@@ -635,7 +720,7 @@ msgstr "Állapot"
 msgid "Storniert"
 msgstr ""
 
-#: app/scripts/app.js:83
+#: app/scripts/app.js:84
 msgid "Stück"
 msgstr "Darab"
 
@@ -660,11 +745,11 @@ msgstr "USA dollár"
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
-#: app/scripts/login/login.html:58
+#: app/scripts/login/login.html:47
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr "Karbantartási modul! A tagi oldal jelenleg nem érhető el. Minél előbb aktiválja!"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
@@ -674,7 +759,7 @@ msgstr "Véglegesítse a regisztrációját!"
 msgid "Verschickt"
 msgstr ""
 
-#: app/index.html:117
+#: app/index.html:116
 msgid "Version:"
 msgstr "Verzió:"
 
@@ -708,11 +793,11 @@ msgstr ""
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
 msgstr "Ha elfelejtette jelszavát, igényeljen helyreállításhoz szükséges linket. "
 
-#: app/scripts/login/login.controller.js:61
+#: app/scripts/login/login.controller.js:63
 msgid "Willkommen"
 msgstr "Üdvözöljük"
 
-#: app/index.html:111
+#: app/index.html:110
 msgid "Wir sind gleich bereit..."
 msgstr ""
 
@@ -729,17 +814,23 @@ msgstr "Szeretné folytatni?"
 msgid "Zeitpunkt"
 msgstr "Óra"
 
-#: app/scripts/login/login.html:88
+#: app/scripts/login/change_password.html:52
+#: app/scripts/login/login.html:119
+#: app/scripts/login/login_settings_second_factor.html:21
 msgid "Zugangscode"
 msgstr "Megerősítő kód"
 
-#: app/scripts/login/login.html:94
+#: app/scripts/login/login.html:127
 msgid "Zugangscode erneut versenden"
 msgstr "Megerősítő kód küldése"
 
 #: app/scripts/login/forbidden.html:5
 msgid "Zugriff verweigert"
 msgstr "Hozzáférés megtagadva."
+
+#: app/scripts/login/reset_otp.html:60
+msgid "Zurücksetzen"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
@@ -749,9 +840,31 @@ msgstr ""
 msgid "Zusatzabos:"
 msgstr ""
 
+#: app/scripts/login/login_settings_second_factor.html:5
+msgid "Zwei-Faktor-Authentierung erforderlich"
+msgstr ""
+
+#: app/scripts/login/login_settings.html:44
+msgid "Zwei-Faktor-Authentierungstyp"
+msgstr ""
+
+#: app/scripts/login/login_settings.html:21
+#: app/scripts/login/login_settings.html:32
+msgid "Zwei-Faktor-Authentisierung"
+msgstr ""
+
+#: app/scripts/login/reset_otp.html:11
+msgid "aktuellen Secret"
+msgstr ""
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "mind"
+
+#: app/scripts/login/reset_otp.html:13
+#: app/scripts/login/reset_otp.html:51
+msgid "aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
@@ -761,20 +874,28 @@ msgstr "-ig"
 msgid "bisher eingeschrieben"
 msgstr "Már korábban regisztrált."
 
-#: app/scripts/app.js:85
+#: app/scripts/app.js:86
 msgid "gr"
-msgstr "gr"
-
-#: app/scripts/app.js:87
-msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:88
+msgid "kg"
+msgstr ""
+
+#: app/scripts/app.js:89
 msgid "l"
-msgstr "l"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
+msgstr ""
+
+#: app/scripts/login/reset_otp.html:49
+msgid "neuen Secret"
+msgstr ""
+
+#: app/scripts/login/login.html:86
+msgid "oder"
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
@@ -786,7 +907,8 @@ msgstr "függőben lévő"
 msgid "vom"
 msgstr "-"
 
-#: app/scripts/login/login.html:84
+#: app/scripts/login/login.html:113
+#: app/scripts/login/login_settings_second_factor.html:18
 msgid "zugestellt."
 msgstr "szállított."
 

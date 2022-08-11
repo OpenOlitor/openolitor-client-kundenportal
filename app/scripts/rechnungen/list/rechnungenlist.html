@@ -51,12 +51,11 @@
                   {{rechnung.titel}}
                 </td>
                 <td data-title="'Betrag'|translate">
-                  {{projekt.waehrung}} {{rechnung.betrag | ooCHF}}
+                  {{rechnung.betrag | ooCurrency:true}}
                 </td>
                 <!-- Do not break/format the following script line, the tooltip won't work with newlines-->
                 <script type="text/ng-template" id="refNrToolTip"><span translate>Referenznummer in Zwischenablage kopieren</span></script>
-                <td data-title="'Referenznummer'|translate" data-class="hidden-sm hidden-xs">
-                  {{rechnung.referenzNummer}}&nbsp;
+                <td data-title="'Referenznummer'|translate" data-class="hidden-sm hidden-xs"> {{rechnung.referenzNummer}}&nbsp;
                   <button uib-tooltip-template="'refNrToolTip'"class="btn btn-xs glyphicon glyphicon-copy" ngclipboard data-clipboard-text="{{rechnung.referenzNummer}}"></button>
                 </td>
                 <td data-title="'Status'|translate" ng-attr-title="getRechnungStatus(rechnung)" >
@@ -76,7 +75,7 @@
                   <span ng-show="rechnung.detailsVisible && rechnung.rechnungsPositionen" class="glyphicon glyphicon-chevron-right" />
                 </td>
                 <td colspan="3"><span ng-show="rechnungsPosition.sort"># {{rechnungsPosition.sort}} </span>{{rechnungsPosition.beschrieb}}</td>
-                <td >{{projekt.waehrung}} {{rechnungsPosition.betrag | ooCHF}}</td>
+                <td >{{rechnungsPosition.betrag | ooCurrency:true}}</td>
                 <td colspan="3">
                   <span ng-show="rechnungsPosition.typ == 'Abo'">
                     <span translate>Abo:</span> <a href="" ng-click="gotoAbo(rechnungsPosition.abo.id)">{{rechnungsPosition.abo.id}}</a> -
@@ -114,7 +113,7 @@
                   {{rechnung.titel}}
                 </td>
                 <td data-title="'Betrag'|translate">
-                  {{projekt.waehrung}} {{rechnung.betrag | ooCHF}}
+                  {{rechnung.betrag | ooCurrency:true}}
                 </td>
                 <td data-title="'Abo'|translate">
                   <a href="" ng-click="gotoAbo(rechnung.aboId)">{{rechnung.aboId}}</a>

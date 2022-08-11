@@ -6,9 +6,12 @@ module.exports = function(grunt) {
 
   // Load grunt tasks automatically
   require('load-grunt-tasks')(grunt);
+  require('grunt-connect-proxy')(grunt);
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+
+  var serveStatic = require('serve-static');
 
   //TODO Mandantenfähigkeit fehlt (siehe var config = ...)
   var env = 'dev';
@@ -104,6 +107,20 @@ module.exports = function(grunt) {
 
     // The actual grunt server settings
     connect: {
+      proxies: [
+        {
+          context: '/api-',
+          host: 'localhost',
+          port: 9003,
+          https: false,
+          xforward: false,
+          ws: true,
+          rewrite: {
+            '^/api-(.*)$': '/$1',
+            '^/api-(.*/ws)$': '/$1'
+          }
+        }
+      ],
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
@@ -113,7 +130,22 @@ module.exports = function(grunt) {
       livereload: {
         options: {
           open: true,
-          base: ['.tmp', '<%= openolitor.app %>']
+          base: ['.tmp', '<%= openolitor.app %>'],
+          middleware: function (connect, options) {
+              if (!Array.isArray(options.base)) {
+                  options.base = [options.base];
+              }
+
+              // Setup the proxy
+              var middlewares = [require('grunt-connect-proxy/lib/utils').proxyRequest];
+
+              // Serve static files.
+              options.base.forEach(function(base) {
+                  middlewares.push(serveStatic(base));
+              });
+
+              return middlewares;
+          }
         }
       },
       test: {
@@ -483,6 +515,7 @@ module.exports = function(grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'configureProxies:server',
       'connect:livereload',
       'replace:dev',
       'watch'

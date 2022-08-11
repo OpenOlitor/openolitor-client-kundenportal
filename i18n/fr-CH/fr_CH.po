@@ -7,11 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: fr-CH\n"
-"X-Crowdin-File: /prod/template.pot\n"
-"X-Crowdin-File-ID: 12\n"
+"X-Crowdin-File: /dev.Seitan/template.pot\n"
+"X-Crowdin-File-ID: 68\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2022-03-03 13:36\n"
+"PO-Revision-Date: 2022-04-19 19:07\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -20,6 +20,10 @@ msgstr "#&nbsp;Pers."
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
 msgid "#Pers."
 msgstr "Nº Pers."
+
+#: app/scripts/login/reset_otp.html:37
+msgid "&nbsp;oder&nbsp;"
+msgstr "&nbsp;ou&nbsp;"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
@@ -38,7 +42,7 @@ msgstr "-Environnement de test"
 msgid "Abbrechen"
 msgstr "Annuler"
 
-#: app/index.html:91
+#: app/index.html:90
 msgid "Abmelden"
 msgstr "Se déconnecter"
 
@@ -74,18 +78,19 @@ msgstr "Mot de passe actuel"
 msgid "Alle"
 msgstr "Tous"
 
-#: app/scripts/login/login.html:74
-#: app/scripts/login/login.html:91
+#: app/scripts/login/login_settings.html:5
+msgid "Anmelde-Einstellungen"
+msgstr "Paramètres de connexion"
+
+#: app/scripts/login/login.html:103
+#: app/scripts/login/login.html:123
+#: app/scripts/login/login.html:65
 msgid "Anmelden"
 msgstr "Se connecter"
 
 #: app/scripts/login/login.html:5
 msgid "Anmeldung"
 msgstr "Accès membre"
-
-#: app/scripts/login/login.controller.js:137
-msgid "Anweisungen um Ihr Passwort neu zu setzten wurden Ihnen an Ihre Email-Adresse gesendet."
-msgstr "Vous avez reçu un courriel contenant des information au sujet de la modification de votre mot de passe."
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:88
 msgid "Anzahl Lieferungen"
@@ -117,7 +122,7 @@ msgstr "L'intervention de travail n'a pas été modifiée:"
 msgid "Auch ausgelaufene Abos anzeigen"
 msgstr "Afficher les abonnements expirés"
 
-#: app/scripts/login/login.controller.js:76
+#: app/scripts/login/login.controller.js:77
 msgid "Aufwiedersehen"
 msgstr "Au revoir"
 
@@ -144,23 +149,45 @@ msgstr "Montant"
 msgid "Bezahlt"
 msgstr "Payé"
 
+#: app/scripts/login/change_password.html:41
+#: app/scripts/login/login.html:95
+#: app/scripts/login/login_settings_second_factor.html:10
+msgid "Bitte geben Sie das Einmalpasswort aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
+msgstr "Veuillez saisir le mot de passe à usage unique de votre d'authentification à deux facteurs."
+
+#: app/scripts/login/reset_otp.html:47
+msgid "Bitte geben Sie das Einmalpasswort basierend auf dem"
+msgstr "Veuillez entrer le mot de passe à usage unique basé sur celui-ci"
+
+#: app/scripts/login/reset_otp.html:9
+msgid "Bitte geben Sie das Einmalpasswort basierend ihrem"
+msgstr "Veuillez entrer le mot de passe à usage unique basé sur le vôtre"
+
+#: app/scripts/login/login.html:81
+msgid "Bitte scannen Sie den QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
+msgstr "Veuillez scanner le code QR avec une application d'authentification à deux facteurs telle que:"
+
+#: app/scripts/login/reset_otp.html:32
+msgid "Bitte scannen Sie den neuen QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
+msgstr "Veuillez scanner le nouveau code QR avec une application d'authentification à deux facteurs telle que :"
+
 #: app/scripts/app.js:109
 msgid "Britisches Pfund"
 msgstr "Livre sterling"
 
-#: app/scripts/app.js:84
+#: app/scripts/app.js:85
 msgid "Bu."
 msgstr "botte"
 
-#: app/scripts/app.js:84
+#: app/scripts/app.js:85
 msgid "Bund"
 msgstr "botte"
 
-#: app/scripts/app.js:111
+#: app/scripts/app.js:110
 msgid "CAD"
 msgstr "CAD"
 
-#: app/scripts/app.js:105
+#: app/scripts/app.js:106
 msgid "CHF"
 msgstr "CHF"
 
@@ -168,7 +195,15 @@ msgstr "CHF"
 msgid "Changing the contact information permission failed:"
 msgstr "Échec de la modification de l'autorisation pour partage des informations de contact :"
 
-#: app/index.html:99
+#: app/scripts/login/change_password.html:43
+#: app/scripts/login/login.html:100
+#: app/scripts/login/login_settings_second_factor.html:12
+#: app/scripts/login/reset_otp.html:19
+#: app/scripts/login/reset_otp.html:56
+msgid "Code"
+msgstr "Code"
+
+#: app/index.html:98
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr "Le backend n'est pas disponible pour le moment, veuillez attendre quelques secondes, s'il vous plaît."
 
@@ -176,7 +211,7 @@ msgstr "Le backend n'est pas disponible pour le moment, veuillez attendre quelqu
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr "L'inscription n’a pas réussie :"
 
-#: app/scripts/login/login.html:53
+#: app/scripts/login/login.html:42
 msgid "Das Kundenportal ist gegenwärtig nicht verfügbar. Wir führen Unterhaltsarbeiten durch. In Kürze sind wir wieder online und wie gewohnt für Sie da."
 msgstr "Le portail des membres est actuellement indisponible. Nous effectuons des travaux d’entretien. Sous peu le portail sera de nouveau disponible."
 
@@ -190,7 +225,7 @@ msgstr "Le mot de passe doit contenir au moins 6 caractères"
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
 msgstr "Le mot de passe doit contenir au moins un dessus - et minuscules, ainsi une valeur numérique, ou symbole"
 
-#: app/scripts/login/login.controller.js:124
+#: app/scripts/login/login.controller.js:135
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr "Le mot de passe a été défini avec succès. Vous pouvez vous connecter maintenant."
 
@@ -236,8 +271,7 @@ msgid "Details werden geladen..."
 msgstr "Détails sont téléchargés..."
 
 #: app/scripts/login/login.html:18
-#: app/scripts/login/login.html:29
-#: app/scripts/login/login.html:42
+#: app/scripts/login/login.html:31
 msgid "Die Daten in diesem System werden sporadisch auf die Standardwerte zurückgesetzt."
 msgstr "De temps en temps, les données dans ce système sont réinitialisées aux valeurs de défaut."
 
@@ -261,19 +295,22 @@ msgstr "La page demandée n’a pas été trouvée"
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
 msgstr "Aucune inscription n'a eu lieu."
 
-#: app/scripts/login/login.html:68
+#: app/scripts/app.js:114
+msgid "E-Mail"
+msgstr "Courriel"
+
+#: app/scripts/login/login.html:57
 msgid "E-Mail Adresse"
 msgstr "Adresse courriel"
 
 #: app/scripts/login/login.html:15
-#: app/scripts/login/login.html:26
-#: app/scripts/login/login.html:38
+#: app/scripts/login/login.html:27
 msgid "E-Mail:"
 msgstr "Courriel:"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:65
 msgid "E-mail"
-msgstr ""
+msgstr "Courriel"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:68
 msgid "ESR-Nr."
@@ -316,6 +353,23 @@ msgstr "Entrée trop longue"
 msgid "Einheit"
 msgstr "Unité"
 
+#: app/index.html:88
+msgid "Einstellungen"
+msgstr "Paramètres"
+
+#: app/scripts/login/login_settings.html:23
+#: app/scripts/login/login_settings_second_factor.html:27
+msgid "Einstellungen Speichern"
+msgstr "Enregistrer les paramètres"
+
+#: app/scripts/login/login.controller.js:406
+msgid "Einstellungen erfolgreich gespeichert"
+msgstr "Paramètres enregistrés avec succès"
+
+#: app/scripts/login/login.controller.js:411
+msgid "Einstellungen konnten nicht gespeichert werden"
+msgstr "Les paramètres n'ont pas pu être enregistrés"
+
 #: app/scripts/login/passwordreset.html:14
 msgid "Email Adresse"
 msgstr "Adresse de courriel"
@@ -336,9 +390,14 @@ msgstr "Créé"
 msgid "Es liegen noch keine Rechnungen vor."
 msgstr "Aucune facture n'a été créé jusqu'ici."
 
-#: app/scripts/login/login.html:84
+#: app/scripts/login/login.html:111
+#: app/scripts/login/login_settings_second_factor.html:18
 msgid "Es wurde ein Zugangscode an ihre Email-Adresse"
 msgstr "Un code d’accès a été envoyé à votre adresse courriel"
+
+#: app/scripts/login/change_password.html:49
+msgid "Es wurde ein Zugangscode an ihre Email-Adresse <b>{{person.email}}</b> zugestellt."
+msgstr "Un code d'accès a été envoyé à votre courriel <b>{{person.email}}</b>."
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:14
 msgid "Es wurden noch keine Körbe dieses Typs geplant oder geliefert."
@@ -364,15 +423,15 @@ msgstr "A payer jusqu'au"
 msgid "Fällig am"
 msgstr "Date d’échéance"
 
-#: app/scripts/login/login.html:80
+#: app/scripts/login/login.html:72
 msgid "Für das Testen der Administrationsumgebung, bitte hier klicken!"
 msgstr "Pour tester le frontend d’administration, cliquez ici !"
 
-#: app/scripts/login/login.html:41
+#: app/scripts/login/login.html:30
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
 msgstr "Pour accéder à l’espace d’administration de OpenOlitor, veuillez svp cliquer sur le lien en bas à droite."
 
-#: app/scripts/login/login.html:33
+#: app/scripts/login/login.html:22
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
 msgstr "Une inscription est nécessaire pour accéder à OpenOlitor"
 
@@ -388,7 +447,7 @@ msgstr "GBP"
 msgid "Gebuchte Arbeitseinsätze"
 msgstr "Interventions de travail réservées"
 
-#: app/scripts/app.js:85
+#: app/scripts/app.js:86
 msgid "Gramm"
 msgstr "gramme"
 
@@ -401,10 +460,11 @@ msgid "Inhalt der Körbe"
 msgstr "Contenu des paniers"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+#: app/scripts/login/login_settings.html:37
 msgid "Ja"
 msgstr "Oui"
 
-#: app/scripts/app.js:111
+#: app/scripts/app.js:110
 msgid "Kanadischer Dollar"
 msgstr "Dollar canadien"
 
@@ -416,7 +476,7 @@ msgstr "Catégories"
 msgid "Keine Arbeitsangebote."
 msgstr "Aucune offre d’emploi."
 
-#: app/scripts/app.js:86
+#: app/scripts/app.js:87
 msgid "Kilogramm"
 msgstr "kilogramme"
 
@@ -452,11 +512,11 @@ msgstr "Jour de livraison:"
 msgid "Lieferung"
 msgstr "Livraison"
 
-#: app/scripts/app.js:88
+#: app/scripts/app.js:89
 msgid "Liter"
 msgstr "Litre"
 
-#: app/scripts/login/login.html:80
+#: app/scripts/login/login.html:72
 msgid "Login Administration"
 msgstr "Login frontend d'administration"
 
@@ -478,6 +538,7 @@ msgid "Mitarbeit planen"
 msgstr "Planifier la coopération"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
+#: app/scripts/login/login_settings.html:37
 msgid "Nein"
 msgstr "Non"
 
@@ -485,9 +546,37 @@ msgstr "Non"
 msgid "Neues Passwort"
 msgstr "Nouveau mot de passe"
 
+#: app/scripts/login/reset_otp.html:23
+msgid "Neues Secret anfordern"
+msgstr "Réinitialiser le secret"
+
+#: app/scripts/app.js:113
+msgid "OTP"
+msgstr "OTP"
+
+#: app/scripts/login/login.controller.js:322
+msgid "OTP Passwort Erfolgreich zurückgesetzt"
+msgstr "Mot de passe OTP réinitialisé avec succès"
+
+#: app/scripts/login/login_settings.html:62
+msgid "OTP Secret zurücksetzen"
+msgstr "Réinitialiser le secret OTP"
+
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
 msgstr "Ok"
+
+#: app/scripts/app.js:113
+msgid "One-Time-Password (OTP)"
+msgstr "Mot de passe à usage unique (OTP)"
+
+#: app/scripts/login/login_settings.html:57
+msgid "One-Time-Passwort (OTP)"
+msgstr "Mot de passe à usage unique (OTP)"
+
+#: app/scripts/login/reset_otp.html:5
+msgid "One-Time-Passwort zurücksetzen"
+msgstr "Réinitialiser le mot de passe à usage unique"
 
 #: app/index.html:55
 msgid "OpenOlitor Mitgliederportal:"
@@ -497,7 +586,8 @@ msgstr "Portail des membres:"
 msgid "Ort"
 msgstr "Lieu"
 
-#: app/scripts/login/login.html:71
+#: app/scripts/login/login.html:61
+#: app/scripts/login/login_settings.html:11
 #: app/scripts/login/zugangaktivieren.html:11
 msgid "Passwort"
 msgstr "Mot de passe"
@@ -510,13 +600,13 @@ msgstr "Saisir un mot de passe"
 msgid "Passwort setzen und Zugang aktivieren"
 msgstr "Saisir un mot de passe et activer l'accès à OpenOlitor"
 
-#: app/scripts/login/login.html:77
+#: app/scripts/login/login.html:69
 #: app/scripts/login/passwordreset.html:5
 msgid "Passwort vergessen?"
 msgstr "Oubliez le mot de passe ?"
 
-#: app/index.html:90
-#: app/scripts/login/change_password.html:41
+#: app/scripts/login/change_password.html:58
+#: app/scripts/login/login_settings.html:16
 msgid "Passwort wechseln"
 msgstr "Changer mot de passe"
 
@@ -525,11 +615,11 @@ msgstr "Changer mot de passe"
 msgid "Passwort wiederholen"
 msgstr "Confirmer le mot de passe"
 
-#: app/scripts/login/login.controller.js:108
+#: app/scripts/login/login.controller.js:125
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
 msgstr "Le mot de passe a été changé avec succès, vous serez automatiquement connecté."
 
-#: app/scripts/login/login.controller.js:115
+#: app/scripts/login/login.controller.js:129
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
 msgstr "Le mot de passe a été changé avec succès. Veuillez vous connecter avec votre nouveau mot de passe."
 
@@ -538,8 +628,7 @@ msgid "Passwort zurücksetzen"
 msgstr "Réinitialiser le mot de passe"
 
 #: app/scripts/login/login.html:16
-#: app/scripts/login/login.html:27
-#: app/scripts/login/login.html:39
+#: app/scripts/login/login.html:28
 msgid "Passwort:"
 msgstr "Mot de passe:"
 
@@ -555,11 +644,11 @@ msgstr "Les deux entrées du mot de passe ne sont pas identiques"
 msgid "Passwortstärke"
 msgstr "Qualité du mot de passe"
 
-#: app/scripts/app.js:89
+#: app/scripts/app.js:90
 msgid "Por."
 msgstr "Por."
 
-#: app/scripts/app.js:89
+#: app/scripts/app.js:90
 msgid "Portion"
 msgstr "Portion"
 
@@ -598,15 +687,11 @@ msgstr "Numéro de référence"
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr "Copier le numéro de référence dans le presse-papier"
 
-#: app/scripts/app.js:105
+#: app/scripts/app.js:106
 msgid "Schweizer Franken"
 msgstr "Francs suisses"
 
-#: app/scripts/login/login.html:23
-msgid "Sie befinden sich auf dem Lasius Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen an der Administrationsumgebung anmelden:"
-msgstr "Vous êtes sur le système de test de Lasius. Vous pouvez vous connecter en utilisant les informations d’identification suivantes (en tant qu'administratrice):"
-
-#: app/scripts/login/login.html:35
+#: app/scripts/login/login.html:24
 msgid "Sie befinden sich auf dem OpenOlitor Testsystem. Sie können sich mit den untenstehenden Anmeldeinformationen als Konsument anmelden:"
 msgstr "Vous êtes sur le système de test d'OpenOlitor. Vous pouvez vous connecter en utilisant les informations d’identification suivantes (en tant que membre):"
 
@@ -622,7 +707,7 @@ msgstr "Vous ne pouvez pas supprimer cette association car elle est trop proche 
 msgid "Sprache"
 msgstr "Langue"
 
-#: app/scripts/app.js:83
+#: app/scripts/app.js:84
 msgid "St."
 msgstr "Pièce"
 
@@ -635,7 +720,7 @@ msgstr "Etat"
 msgid "Storniert"
 msgstr "Annulé"
 
-#: app/scripts/app.js:83
+#: app/scripts/app.js:84
 msgid "Stück"
 msgstr "Pièce"
 
@@ -662,9 +747,9 @@ msgstr "Dollar des Etats-Unis"
 msgid "USD"
 msgstr "USD"
 
-#: app/scripts/login/login.html:58
+#: app/scripts/login/login.html:47
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
-msgstr "Travaux de maintenance ! Le portail client est actuellement indisponible. Veuillez l'activer prochainement."
+msgstr "Travaux de maintenance ! Le portail client est actuellement indisponible. Veuillez l'activer prochainement!"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
@@ -674,7 +759,7 @@ msgstr "S'inscrire de manière définitive"
 msgid "Verschickt"
 msgstr "Envoyé"
 
-#: app/index.html:117
+#: app/index.html:116
 msgid "Version:"
 msgstr "Version:"
 
@@ -708,11 +793,11 @@ msgstr "Si vous sélectionnez cette option, votre nom et votre adresse e-mail se
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
 msgstr "Si vous avez oublié votre mot de passe, vous pouvez déclencher l'envoi d'un lien pour la réinitialisation."
 
-#: app/scripts/login/login.controller.js:61
+#: app/scripts/login/login.controller.js:63
 msgid "Willkommen"
 msgstr "Bienvenue"
 
-#: app/index.html:111
+#: app/index.html:110
 msgid "Wir sind gleich bereit..."
 msgstr "Nous serons prêts bientôt ..."
 
@@ -729,17 +814,23 @@ msgstr "Voulez-vous continuer ?"
 msgid "Zeitpunkt"
 msgstr "Heure"
 
-#: app/scripts/login/login.html:88
+#: app/scripts/login/change_password.html:52
+#: app/scripts/login/login.html:119
+#: app/scripts/login/login_settings_second_factor.html:21
 msgid "Zugangscode"
 msgstr "Code d’accès"
 
-#: app/scripts/login/login.html:94
+#: app/scripts/login/login.html:127
 msgid "Zugangscode erneut versenden"
 msgstr "Envoyer le code d'accès encore une fois"
 
 #: app/scripts/login/forbidden.html:5
 msgid "Zugriff verweigert"
 msgstr "Accès refusé"
+
+#: app/scripts/login/reset_otp.html:60
+msgid "Zurücksetzen"
+msgstr "Réinitialiser"
 
 #: app/scripts/rechnungen/list/rechnungenlist.html:85
 msgid "Zusatzabo:"
@@ -749,9 +840,31 @@ msgstr "Abonnement supplémentaire:"
 msgid "Zusatzabos:"
 msgstr "Abonnements supplémentaires:"
 
+#: app/scripts/login/login_settings_second_factor.html:5
+msgid "Zwei-Faktor-Authentierung erforderlich"
+msgstr "Authentification à deux facteurs requise"
+
+#: app/scripts/login/login_settings.html:44
+msgid "Zwei-Faktor-Authentierungstyp"
+msgstr "Type d'authentification à deux facteurs"
+
+#: app/scripts/login/login_settings.html:21
+#: app/scripts/login/login_settings.html:32
+msgid "Zwei-Faktor-Authentisierung"
+msgstr "Authentification à deux facteurs"
+
+#: app/scripts/login/reset_otp.html:11
+msgid "aktuellen Secret"
+msgstr "secret actuel"
+
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:36
 msgid "alle"
 msgstr "tous"
+
+#: app/scripts/login/reset_otp.html:13
+#: app/scripts/login/reset_otp.html:51
+msgid "aus Ihrer Zwei-Faktor-Authentifizierungs-App ein."
+msgstr "depuis votre application d'authentification à deux facteurs."
 
 #: app/scripts/abos/list/aboslist.html:70
 msgid "bis"
@@ -761,21 +874,29 @@ msgstr "de"
 msgid "bisher eingeschrieben"
 msgstr "déjà inscrits"
 
-#: app/scripts/app.js:85
+#: app/scripts/app.js:86
 msgid "gr"
 msgstr "gr"
 
-#: app/scripts/app.js:87
+#: app/scripts/app.js:88
 msgid "kg"
 msgstr "kg"
 
-#: app/scripts/app.js:88
+#: app/scripts/app.js:89
 msgid "l"
 msgstr "l"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
 msgstr "max."
+
+#: app/scripts/login/reset_otp.html:49
+msgid "neuen Secret"
+msgstr "nouveau secret"
+
+#: app/scripts/login/login.html:86
+msgid "oder"
+msgstr "ou"
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:35
 msgid "pendente"
@@ -786,7 +907,8 @@ msgstr "en suspens"
 msgid "vom"
 msgstr "du"
 
-#: app/scripts/login/login.html:84
+#: app/scripts/login/login.html:113
+#: app/scripts/login/login_settings_second_factor.html:18
 msgid "zugestellt."
 msgstr "livré."
 

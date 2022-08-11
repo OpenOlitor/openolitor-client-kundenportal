@@ -76,7 +76,8 @@ angular
     'angular-sortable-view',
     'ngclipboard',
     'mm.iban',
-    'piwik'
+    'piwik',
+    'monospaced.qrcode'
   ])
   .constant('BUILD_NR', '@@BUILD_NR')
   .constant('LIEFEREINHEIT', {
@@ -102,14 +103,15 @@ angular
     });
   })
   .constant('WAEHRUNG', {
-    CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext(
-      'CHF')),
-    EUR: addExtendedEnumValue('EUR', gettext('Euro'), gettext('EUR')),
-    USD: addExtendedEnumValue('USD', gettext('US Dollar'), gettext('USD')),
-    GBP: addExtendedEnumValue('GBP', gettext('Britisches Pfund'), gettext(
-      'GBP')),
-    CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext(
-      'CAD'))
+    CHF: addExtendedEnumValue('CHF', gettext('Schweizer Franken'), gettext('CHF'), 'CHF'),
+    EUR: addExtendedEnumValue('EUR', gettext('Euro'), gettext('EUR'), '€'),
+    USD: addExtendedEnumValue('USD', gettext('US Dollar'), gettext('USD'), '$'),
+    GBP: addExtendedEnumValue('GBP', gettext('Britisches Pfund'), gettext('GBP'), '£'),
+    CAD: addExtendedEnumValue('CAD', gettext('Kanadischer Dollar'), gettext('CAD'), '$')
+  })
+  .constant('SECOND_FACTOR_TYPES', {
+    OTP: addExtendedEnumValue('otp', gettext('One-Time-Password (OTP)'), gettext('OTP')),
+    EMAIL: addExtendedEnumValue('email', gettext('E-Mail'), gettext('E-Mail'))
   })
   .service('appConfig', function() {
     var loaded = false;
@@ -297,6 +299,18 @@ angular
         templateUrl: 'scripts/login/change_password.html',
         controller: 'LoginController',
         name: 'Passwortwechsel',
+        access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
+      })
+      .when('/login_settings', {
+        templateUrl: 'scripts/login/login_settings.html',
+        controller: 'LoginController',
+        name: 'Anmelde-Einstellungen',
+        access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
+      })
+      .when('/reset_otp', {
+        templateUrl: 'scripts/login/reset_otp.html',
+        controller: 'LoginController',
+        name: 'Anmelde-Einstellungen',
         access: [USER_ROLES.Administrator, USER_ROLES.Kunde]
       })
       .when('/logout', {

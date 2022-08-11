@@ -54,10 +54,10 @@
                       </td>
                       <td ng-if="projekt.preiseSichtbar">
                         <span ng-show="korbprodukt.menge">
-                          {{calculatePreis(korbprodukt)| ooCHF}}&nbsp;{{projekt.waehrung}}
+                          {{calculatePreis(korbprodukt)| ooCurrency:true}}
                         </span>
                         <span ng-hide="korbprodukt.menge" class="base-preis">
-                          {{korbprodukt.preisEinheit | ooCHF}}&nbsp;{{projekt.waehrung}}
+                          {{korbprodukt.preisEinheit | ooCurrency:true}}
                         </span>
                       </td>
                       <td >
