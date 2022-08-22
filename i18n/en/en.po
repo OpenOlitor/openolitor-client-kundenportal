@@ -7,11 +7,11 @@ msgstr ""
 "X-Crowdin-Project: openolitor-subscriber-client\n"
 "X-Crowdin-Project-ID: 393657\n"
 "X-Crowdin-Language: en\n"
-"X-Crowdin-File: /dev.Seitan/template.pot\n"
-"X-Crowdin-File-ID: 68\n"
+"X-Crowdin-File: /prod/template.pot\n"
+"X-Crowdin-File-ID: 80\n"
 "Language-Team: English\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2022-04-19 18:09\n"
+"PO-Revision-Date: 2022-08-22 15:41\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -27,7 +27,7 @@ msgstr "&nbsp;or&nbsp;"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: app/scripts/login/login.html:7
 msgid "- Entwicklungsumgebung"
@@ -185,15 +185,15 @@ msgstr "Bunch"
 
 #: app/scripts/app.js:110
 msgid "CAD"
-msgstr "CAD"
+msgstr ""
 
 #: app/scripts/app.js:106
 msgid "CHF"
-msgstr "CHF"
+msgstr ""
 
 #: app/scripts/root.js:47
 msgid "Changing the contact information permission failed:"
-msgstr "Changing the contact information permission failed:"
+msgstr ""
 
 #: app/scripts/login/change_password.html:43
 #: app/scripts/login/login.html:100
@@ -201,7 +201,7 @@ msgstr "Changing the contact information permission failed:"
 #: app/scripts/login/reset_otp.html:19
 #: app/scripts/login/reset_otp.html:56
 msgid "Code"
-msgstr "Code"
+msgstr ""
 
 #: app/index.html:98
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
@@ -322,7 +322,7 @@ msgstr "Copy ESR-number to clipboard (for use in payment systems)"
 
 #: app/scripts/app.js:107
 msgid "EUR"
-msgstr "EUR"
+msgstr ""
 
 #: app/scripts/login/change_password.html:5
 msgid "Eigenes Passwort wechseln"
@@ -380,7 +380,7 @@ msgstr "Successfully subscribed to work assignment"
 
 #: app/scripts/not-found.html:6
 msgid "Error 404"
-msgstr "Error 404"
+msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:83
 msgid "Erstellt"
@@ -409,7 +409,7 @@ msgstr "Still no delivery planning have been completed."
 
 #: app/scripts/app.js:107
 msgid "Euro"
-msgstr "Euro"
+msgstr ""
 
 #: app/messages.html:5
 msgid "Fehlerhafte Email Adresse"
@@ -441,7 +441,7 @@ msgstr "Registration is required for access to OpenOlitor"
 
 #: app/scripts/app.js:109
 msgid "GBP"
-msgstr "GBP"
+msgstr ""
 
 #: app/index.html:68
 msgid "Gebuchte Arbeitseinsätze"
@@ -514,7 +514,7 @@ msgstr "Delivery"
 
 #: app/scripts/app.js:89
 msgid "Liter"
-msgstr "Liter"
+msgstr ""
 
 #: app/scripts/login/login.html:72
 msgid "Login Administration"
@@ -552,7 +552,7 @@ msgstr "Request a New Secret"
 
 #: app/scripts/app.js:113
 msgid "OTP"
-msgstr "OTP"
+msgstr ""
 
 #: app/scripts/login/login.controller.js:322
 msgid "OTP Passwort Erfolgreich zurückgesetzt"
@@ -564,11 +564,11 @@ msgstr "Reset the OTP secret"
 
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:13
 msgid "Ok"
-msgstr "Ok"
+msgstr ""
 
 #: app/scripts/app.js:113
 msgid "One-Time-Password (OTP)"
-msgstr "One-Time-Password (OTP)"
+msgstr ""
 
 #: app/scripts/login/login_settings.html:57
 msgid "One-Time-Passwort (OTP)"
@@ -646,11 +646,11 @@ msgstr "Password quality"
 
 #: app/scripts/app.js:90
 msgid "Por."
-msgstr "Por."
+msgstr ""
 
 #: app/scripts/app.js:90
 msgid "Portion"
-msgstr "Portion"
+msgstr ""
 
 #: app/scripts/abos/list/lieferungen/lieferungen.html:37
 #: app/scripts/abos/list/lieferungen/lieferungen.html:91
@@ -726,7 +726,7 @@ msgstr "Piece"
 
 #: app/scripts/root.js:41
 msgid "This person contact information will not be available for other users"
-msgstr "This person contact information will not be available for other users"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:21
@@ -737,7 +737,7 @@ msgstr "Title"
 
 #: app/scripts/abos/list/aboslist.html:19
 msgid "Tour:"
-msgstr "Tour:"
+msgstr ""
 
 #: app/scripts/app.js:108
 msgid "US Dollar"
@@ -745,7 +745,7 @@ msgstr "US dollar"
 
 #: app/scripts/app.js:108
 msgid "USD"
-msgstr "USD"
+msgstr ""
 
 #: app/scripts/login/login.html:47
 msgid "Unterhalts-Moduls! Das Kundenportal ist gegenwärtig nicht verfügbar. Bitte sobald wie möglich wieder aktivieren!"
@@ -761,7 +761,7 @@ msgstr "Sent"
 
 #: app/index.html:116
 msgid "Version:"
-msgstr "Version:"
+msgstr ""
 
 #: app/scripts/abos/list/aboslist.html:27
 msgid "Vertrieb:"
@@ -876,19 +876,19 @@ msgstr "Subscribed work assignments"
 
 #: app/scripts/app.js:86
 msgid "gr"
-msgstr "gr"
+msgstr ""
 
 #: app/scripts/app.js:88
 msgid "kg"
-msgstr "kg"
+msgstr ""
 
 #: app/scripts/app.js:89
 msgid "l"
-msgstr "l"
+msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
 msgid "max."
-msgstr "max."
+msgstr ""
 
 #: app/scripts/login/reset_otp.html:49
 msgid "neuen Secret"
