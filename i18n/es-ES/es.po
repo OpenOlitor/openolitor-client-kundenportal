@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 80\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-08-22 15:53\n"
+"PO-Revision-Date: 2022-08-23 11:19\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -76,7 +76,7 @@ msgstr "Contraseña actual"
 
 #: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
 msgid "Alle"
-msgstr "Todos"
+msgstr "Tod@s"
 
 #: app/scripts/login/login_settings.html:5
 msgid "Anmelde-Einstellungen"
@@ -227,7 +227,7 @@ msgstr "La contraseña debe contener letras minusculas y mayusculas así como al
 
 #: app/scripts/login/login.controller.js:135
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
-msgstr "La contraseña ha sido inicializada. Ahora puedes conectarte con el nombre de usuario y la contraseña."
+msgstr "La contraseña ha sido inicializada. Ahora puedes conectarte con el nombre de usuari@ y la contraseña."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
 #: app/scripts/rechnungen/list/rechnungenlist.html:107
@@ -726,7 +726,7 @@ msgstr "Unidad"
 
 #: app/scripts/root.js:41
 msgid "This person contact information will not be available for other users"
-msgstr "La información de contacto de este usuario no estará disponible para otros usuarios"
+msgstr "La información de contacto de est@ usuari@ no estará disponible para otr@s usuari@s"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:21
