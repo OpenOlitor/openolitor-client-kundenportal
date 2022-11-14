@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 80\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2022-08-23 11:19\n"
+"PO-Revision-Date: 2022-11-14 15:25\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -252,7 +252,7 @@ msgstr "Punto de recogida:"
 
 #: app/scripts/dashboard/dashboard.html:18
 msgid "Der Rechnungsstatus wird periodisch durch die Administration aktualisiert. Eine bereits bezahlte Rechnung kann also noch als unbezahlt angezeigt werden."
-msgstr "El estado de una factura está actualizada periódicamente por la administración. Por lo tanto, una factura pagada puede aparecer como no pagada."
+msgstr "El estado de una factura está actualizado periódicamente por la administración. Por lo tanto, una factura pagada puede aparecer como no pagada."
 
 #: app/scripts/login/forbidden.html:6
 msgid "Der Zugriff auf diese Ressource wurde verweigert."
@@ -429,7 +429,7 @@ msgstr "Para probar el portal de admistración, ir aquí"
 
 #: app/scripts/login/login.html:30
 msgid "Für den Zugang auf die Administrationsumgebung von OpenOlitor, bitte den Link unten rechts verwenden."
-msgstr "Para acceder al entorno de administración de OpenOlitor, utilice el enlace a la derecha."
+msgstr "Para acceder al entorno de administración de OpenOlitor, utiliza el enlace a la derecha."
 
 #: app/scripts/login/login.html:22
 msgid "Für den Zugriff auf OpenOlitor ist eine Anmeldung erforderlich"
