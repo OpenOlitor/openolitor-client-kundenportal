@@ -3,6 +3,9 @@ name: Build Webapp
 on:
   push:
 
+env:
+  npm_config_legacy_peer_deps: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -28,8 +31,6 @@ jobs:
           ${{ runner.os }}-
     - name: fetch npm v7
       run: npm install -g npm@latest-7
-      with:
-        npm_config_legacy_peer_deps: true
     - name: Fetch bower
       run: npm install -g bower grunt-cli
     - name: npm ci
