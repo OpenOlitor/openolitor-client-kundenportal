@@ -16,9 +16,8 @@ jobs:
         node-version: 16.x
     - name: Fix up git URLs
       run: echo -e '[url "https://github.com/"]\n  insteadOf = "git://github.com/"' >> ~/.gitconfig
-    # https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
     - name: Cache node modules
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       env:
         cache-name: cache-node-modules
       with:
@@ -30,7 +29,9 @@ jobs:
           ${{ runner.os }}-build-
           ${{ runner.os }}-
     - name: fetch npm v7
-      run: npm install -g npm@latest-7 && export npm_config_legacy_peer_deps=true
+      run: npm install -g npm@latest-7
+      with:
+        npm_config_legacy_peer_deps: true
     - name: Fetch bower
       run: npm install -g bower grunt-cli
     - name: npm ci
