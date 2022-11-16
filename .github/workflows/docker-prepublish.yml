@@ -4,9 +4,6 @@ on:
   release:
     types: [prereleased]
 
-env:
-  npm_config_legacy_peer_deps: true
-
 jobs:
   build:
     name: Build Webapp using npm/bower
