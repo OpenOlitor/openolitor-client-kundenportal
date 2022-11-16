@@ -13,7 +13,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: 14.x
+        node-version: 16.x
     # https://help.github.com/en/actions/configuring-and-managing-workflows/caching-dependencies-to-speed-up-workflows
     - name: Cache node modules
       uses: actions/cache@v2
@@ -27,6 +27,8 @@ jobs:
           ${{ runner.os }}-build-${{ env.cache-name }}-
           ${{ runner.os }}-build-
           ${{ runner.os }}-
+    - name: fetch npm v7
+      run: npm install -g npm@latest-7
     - name: Fetch bower
       run: npm install -g bower grunt-cli
     - name: npm ci

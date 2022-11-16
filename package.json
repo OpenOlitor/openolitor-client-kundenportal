@@ -8,9 +8,9 @@
   },
   "license": "GPL-3.0",
   "dependencies": {
-    "airbrake-js": "0.5.9",
     "bower": "1.8.14",
     "bower-npm-resolver": "^0.11.0",
+    "browserslist": "^4.21.4",
     "pako": "^1.0.10"
   },
   "devDependencies": {
