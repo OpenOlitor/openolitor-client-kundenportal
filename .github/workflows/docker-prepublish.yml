@@ -1,14 +1,12 @@
 name: Build and Publish Docker Image (Pre-Release)
 
 on:
-  workflow_run:
-    workflows: ["Build Webapp"]
-    types:
-      - completed
   release:
     types: [prereleased]
 
 jobs:
+  call-workflow-build:
+    uses: OpenOlitor/openolitor-client-kundenportal/.github/workflows/grunt-build.yml@main
   docker:
     name: Build Docker Image ($Version only)
     runs-on: ubuntu-latest

@@ -1,7 +1,7 @@
 name: Build Webapp
 
 on:
-  push:
+  workflow_call:
 
 env:
   npm_config_legacy_peer_deps: true
