@@ -1,7 +1,7 @@
 {
   "name": "openolitor-kundenportal",
   "version": "2.5.7",
-  "description": "OpenOlitor Client Webapplication",
+  "description": "OpenOlitor Client Webapplication - Kundenportal",
   "repository": {
     "type": "git",
     "url": "git://github.com/OpenOlitor/openolitor-client-kundenportal.git"
@@ -21,7 +21,7 @@
     "grunt-concurrent": "^3.0.0",
     "grunt-connect-proxy": "^0.2.0",
     "grunt-contrib-clean": "^1.1.0",
-    "grunt-contrib-compress": "^1.5.0",
+    "grunt-contrib-compress": "^2.0.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-copy": "^1.0.0",

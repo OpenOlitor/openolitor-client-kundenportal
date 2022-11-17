@@ -6,7 +6,7 @@ angular.module('openolitor-kundenportal').filter('ooCurrency', ['$rootScope','$f
     var waehrungen = EnumUtil.asArray(WAEHRUNG);
     var projektCurrency = $rootScope.projekt.waehrung;
     var result = '';
-    var symbol = undefined;
+
     result += $filter('number')(value, 2);
     if(showTag) {
       var enumCurrency = lodash.find(waehrungen, function (i){

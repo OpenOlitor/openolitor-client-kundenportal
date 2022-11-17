@@ -15,7 +15,7 @@ angular.module('openolitor-kundenportal')
       $scope.user = undefined;
       $scope.modalDialogShown = false;
       $scope.resetPasswordData = {};
-      $scope.secondFactorData = {};       
+      $scope.secondFactorData = {};
       $scope.initPassword = {
         neu: undefined,
         neuConfirmed: undefined,
@@ -28,16 +28,18 @@ angular.module('openolitor-kundenportal')
       };
       $scope.status = 'login';
       $scope.env = appConfig.get().ENV;
-      $scope.secondFactorCountdown = 600;      
+      $scope.secondFactorCountdown = 600;
 
       var getSecondFactorCountdownDate = function(scope) {
         return moment().add(scope.secondFactorCountdown, 'seconds');
-      }
+      };
+
       var startSecondFactorCountdownTimer = function(scope) {
         if (scope.cancelSecondFactorTimer) {
           $interval.cancel(scope.cancelSecondFactorTimer);
         }
-        scope.secondFactorCountdown = 600;  
+
+        scope.secondFactorCountdown = 600;
         scope.cancelSecondFactorTimer = $interval(function() {
           scope.secondFactorCountdown--;
           if(scope.secondFactorCountdown === 0) {
@@ -45,7 +47,8 @@ angular.module('openolitor-kundenportal')
             scope.resetForm();
           }
         }, 1000, 0);
-      }
+      };
+
       $scope.secondFactorCountdownDate = function() {
         return getSecondFactorCountdownDate($scope);
       };
@@ -87,13 +90,13 @@ angular.module('openolitor-kundenportal')
         if ($scope.user !== user && $scope.loggedIn) {
           $scope.user = user;
           ProjektService.resolveProjekt().then(function(projekt) {
-            $scope.projekt = projekt;            
+            $scope.projekt = projekt;
             $scope.secondFactorSettings.canChangeSecondFactor = !projekt.twoFactorAuthentication[user.rolle];
             $scope.secondFactorSettings.secondFactorEnabled = user.secondFactorType !== undefined || projekt.twoFactorAuthentication[user.rolle];
             $scope.secondFactorSettings.secondFactorType = user.secondFactorType || projekt.defaultSecondFactorType;
-            $scope.secondFactorType = ooAuthService.getSecondFactorType(); 
+            $scope.secondFactorType = ooAuthService.getSecondFactorType();
           });
-        } 
+        }
       });
 
 
@@ -153,7 +156,7 @@ angular.module('openolitor-kundenportal')
       var sanitizeSecretBase32 = function(secretBase32) {
         // replace base32 padding signs to make it work for all clients
         return secretBase32.replace('=', '');
-      }
+      };
 
       var getOtpUrl = function(username, secretBase32) {
         return (
@@ -177,7 +180,7 @@ angular.module('openolitor-kundenportal')
               //check result
               if (result.data.status === 'SecondFactorRequired') {
                 //redirect to second factor authentication
-                $scope.status = result.data.secondFactorType == 'email'?'emailTwoFactor':'otpTwoFactor';
+                $scope.status = result.data.secondFactorType === 'email'?'emailTwoFactor':'otpTwoFactor';
                 $scope.person = result.data.person;
                 $scope.secondFactorType = result.data.secondFactorType;
                 if (result.data.otpSecret) {
@@ -195,7 +198,7 @@ angular.module('openolitor-kundenportal')
             });
         }
       };
-  
+
       $scope.secondFactorLogin = function() {
         if ($scope.secondFactorForm.$valid) {
           $http.post(appConfig.get().API_URL + 'auth/secondFactor', $scope.secondFactorData)
@@ -239,7 +242,7 @@ angular.module('openolitor-kundenportal')
 
                     if (result.data.status === 'SecondFactorRequired') {
                       //redirect to second factor authentication
-                      $scope.status = result.data.secondFactorType == 'email'?'emailTwoFactor':'otpTwoFactor';
+                      $scope.status = result.data.secondFactorType === 'email'?'emailTwoFactor':'otpTwoFactor';
                       $scope.person = result.data.person;
                       $scope.changePwd.secondFactorAuth = {
                         token: result.data.token
@@ -251,7 +254,7 @@ angular.module('openolitor-kundenportal')
                       $scope.changePwd.message = undefined;
                       $scope.changePwd.secondFactorAuth = undefined;
                       $uibModalInstance.close();
-                    }    
+                    }
                   }, function(error) {
                     $scope.changePwd.message = gettext(error.data);
                     $scope.changePwd.secondFactorAuth = undefined;
@@ -260,8 +263,8 @@ angular.module('openolitor-kundenportal')
             };
           }
         });
-        
-        modalInstance.closed.then(function(){          
+
+        modalInstance.closed.then(function(){
           $rootScope.alerts = [];
           $scope.modalDialogShown = false;
         });
@@ -281,7 +284,7 @@ angular.module('openolitor-kundenportal')
           controller:function($uibModalInstance ,$scope){
 
             $scope.resetOtpData = {};
-            $scope.resetOtpConfirmData = {};     
+            $scope.resetOtpConfirmData = {};
 
             $scope.resetOtp = function() {
               if ($scope.resetOtpData.$valid) {
@@ -290,19 +293,19 @@ angular.module('openolitor-kundenportal')
                     .then(function(
                       result) {
                   $scope.status = 'otp_reset';
-                  $scope.otpSecret = getOtpUrl(result.data.person.email, result.data.otpSecret);          
+                  $scope.otpSecret = getOtpUrl(result.data.person.email, result.data.otpSecret);
                   $scope.resetOtpConfirmData.token = result.data.token;
                 });
               }
-            }
-      
+            };
+
             $scope.submitSecondFactorReset = function() {
               if ($scope.resetOtpConfirmData.$valid) {
                 $http.post(appConfig.get().API_URL + 'auth/otp/changeSecret', $scope.resetOtpConfirmData)
                   .then(function() {
-                    $scope.resetOtpConfirmData.message = undefined;              
+                    $scope.resetOtpConfirmData.message = undefined;
                     $scope.status = undefined;
-                    $uibModalInstance.close();      
+                    $uibModalInstance.close();
                   }, function(error) {
                     $scope.resetOtpConfirmData.message = gettext(error.data);
                   });
@@ -310,7 +313,7 @@ angular.module('openolitor-kundenportal')
             };
           }
         });
-        
+
         modalInstance.closed.then(function(){
           $rootScope.alerts = [];
           $scope.modalDialogShown = false;
@@ -319,7 +322,7 @@ angular.module('openolitor-kundenportal')
         modalInstance.result.then(function() {
           $rootScope.alerts = [];
           $scope.modalDialogShown = false;
-          alertService.addAlert('info', gettext('OTP Passwort Erfolgreich zurückgesetzt'));          
+          alertService.addAlert('info', gettext('OTP Passwort Erfolgreich zurückgesetzt'));
         });
       };
 
@@ -353,7 +356,7 @@ angular.module('openolitor-kundenportal')
         $scope.loginData = {};
         $scope.status = 'login';
       };
-    
+
       $scope.saveSecondFactorSettings = function() {
         if ($scope.secondFactorSettingsForm.$valid) {
           if ($scope.secondFactorSettings && $scope.secondFactorSettings.secondFactorAuth && !$scope.secondFactorSettings.secondFactorAuth.code){
@@ -372,8 +375,8 @@ angular.module('openolitor-kundenportal')
                   animation: true,
                   templateUrl: 'scripts/login/login_settings_second_factor.html',
                   controller:function($uibModalInstance ,$scope){
-                     $scope.status = result.data.secondFactorType == 'email'?'emailTwoFactor':'otpTwoFactor';
-              
+                    $scope.status = result.data.secondFactorType === 'email'?'emailTwoFactor':'otpTwoFactor';
+
                     $scope.secondFactorData = {
                       code:undefined
                     };
@@ -384,38 +387,38 @@ angular.module('openolitor-kundenportal')
 
                     $scope.submit = function() {
                       if ($scope.secondFactorDataForm.$valid) {
-                        $uibModalInstance.close($scope.secondFactorData)
+                        $uibModalInstance.close($scope.secondFactorData);
                       }
-                    } 
-                    
+                    };
+
                     startSecondFactorCountdownTimer($scope);
                   }
                 });
-                
+
                 modalInstance.closed.then(function(){
                   $rootScope.alerts = [];
                   $scope.modalDialogShown = false;
                 });
-        
+
                 modalInstance.result.then(function(result) {
                   $scope.secondFactorSettings.secondFactorAuth.code = result.code;
-                  $scope.saveSecondFactorSettings();          
+                  $scope.saveSecondFactorSettings();
                 });
               }
               else if (result.data.status === 'Ok') {
-                alertService.addAlert('info', gettext('Einstellungen erfolgreich gespeichert')); 
-                $scope.secondFactorType = $scope.secondFactorSettings.secondFactorType;  
-                $scope.secondFactorSettings.secondFactorAuth = undefined;       
+                alertService.addAlert('info', gettext('Einstellungen erfolgreich gespeichert'));
+                $scope.secondFactorType = $scope.secondFactorSettings.secondFactorType;
+                $scope.secondFactorSettings.secondFactorAuth = undefined;
               }
             }, function(error) {
-              alertService.addAlert('error', gettext('Einstellungen konnten nicht gespeichert werden'), error.data);          
+              alertService.addAlert('error', gettext('Einstellungen konnten nicht gespeichert werden'), error.data);
               $scope.secondFactorSettings.secondFactorAuth = undefined;
             });
         }
       };
 
       $scope.$on('destroy', function() {
-        unwatchLoggedIn();        
-      });    
+        unwatchLoggedIn();
+      });
     }
   ]);

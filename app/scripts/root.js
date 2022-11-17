@@ -6,11 +6,11 @@ angular.module('openolitor-kundenportal')
   .controller('OpenOlitorRootController', ['$scope', '$rootScope',
     'ServerService', 'ProjektService', 'gettextCatalog', 'amMoment',
     '$location', 'msgBus', 'checkSize', '$anchorScroll', '$window', '$timeout', 'BUILD_NR',
-    'ooAuthService', 'appConfig', '$cookies', 'dialogService', '$http',
+    'ooAuthService', 'appConfig', '$cookies', 'dialogService', '$http', 'alertService', 'gettext',
     function($scope, $rootScope, ServerService, ProjektService,
       gettextCatalog, amMoment, $location, msgBus, checkSize, $anchorScroll, $window,
       $timeout, BUILD_NR, ooAuthService, appConfig,
-      $cookies, dialogService, $http) {
+      $cookies, dialogService, $http, alertService, gettext) {
 
       $rootScope.projekt = {
         waehrung: 'CHF'
@@ -57,8 +57,7 @@ angular.module('openolitor-kundenportal')
                   );
                 }
               );
-      }
-
+      };
 
       var unwatchLoggedIn = $scope.$watch(function() {
         return ooAuthService.getUser();
@@ -183,15 +182,14 @@ angular.module('openolitor-kundenportal')
         } else {
           return 'en';
         }
-      }
+      };
 
       $scope.initCheckLang = function() {
         if (angular.isUndefined($scope.storedActiveLang())) {
           var lang = $window.navigator.language || $window.navigator.userLanguage;
-          debugger;
           if($scope.projekt && $scope.projekt.sprache) {
             //select the project-language as default
-            var projLang = $scope.projekt.sprache.replace('_', '-');;
+            var projLang = $scope.projekt.sprache.replace('_', '-');
             if(['de-CH', 'de-DE', 'de-DO', 'fr-BE', 'fr-CH', 'en', 'es', 'cs', 'hu'].includes(projLang)) {
               lang = projLang;
             }

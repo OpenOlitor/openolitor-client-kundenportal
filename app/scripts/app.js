@@ -98,8 +98,8 @@ angular
     $rootScope.location = $location;
     $anchorScroll.yOffset = 50;
 
-    $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
-      if($location.hash()) $anchorScroll();
+    $rootScope.$on('$routeChangeSuccess', function() {
+      if($location.hash()) { $anchorScroll(); }
     });
   })
   .constant('WAEHRUNG', {
