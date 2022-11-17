@@ -23,6 +23,8 @@ jobs:
       run: npm install -g npm@latest-7
     - name: Fetch bower
       run: npm install -g bower grunt-cli
+    - name: versions used
+      run: echo -n 'node: ' && node --version && echo -n 'npm: ' && npm --version && echo -n 'bower: ' && bower --version
     - name: npm ci
       run: npm ci --prefer-offline
     - name: bower install
@@ -30,7 +32,7 @@ jobs:
     - name: Run Build
       run: buildDate=`date +%Y%m%d` && grunt build --buildnr=$buildDate
     - name: Upload build artifact
-      uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v3
       with:
         name: client-kundenportal-dist
         path: dist
