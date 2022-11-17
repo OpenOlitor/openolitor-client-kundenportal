@@ -28,7 +28,7 @@ jobs:
     - name: npm ci
       run: npm ci --prefer-offline
     - name: bower install
-      run: bower install --allow-root
+      run: ls -lh app/ && ls -lh app/bower_components && ls -lh node_modules && bower install --allow-root
     - name: Run Build
       run: buildDate=`date +%Y%m%d` && grunt build --buildnr=$buildDate
     - name: Upload build artifact
