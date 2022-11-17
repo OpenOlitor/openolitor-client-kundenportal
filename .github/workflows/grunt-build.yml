@@ -24,7 +24,7 @@ jobs:
     - name: Fetch bower
       run: npm install -g bower grunt-cli
     - name: versions used
-      run: echo -n 'node: ' && node --version && echo -n 'npm: ' && npm --version && echo -n 'bower: ' && bower --version
+      run: echo -n 'node:' && node --version && echo -n 'npm:' && npm --version && echo -n 'bower:' && bower --version
     - name: npm ci
       run: npm ci --prefer-offline
     - name: bower install
