@@ -9,6 +9,7 @@ jobs:
     uses: OpenOlitor/openolitor-client-kundenportal/.github/workflows/grunt-build.yml@fix/deps_node16
   docker:
     name: Build Docker Image ($Version and latest)
+    needs: call-workflow-build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
