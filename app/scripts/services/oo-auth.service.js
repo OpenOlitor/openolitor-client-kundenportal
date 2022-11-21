@@ -4,7 +4,7 @@
  * If the current route does not resolve, go back to the start page.
  */
 var checkAuth = function($q, ooAuthService, $rootScope, $location, $log) {
-  $rootScope.$on('$routeChangeStart', function(event, next, current) {
+  $rootScope.$on('$routeChangeStart', function(event, next) {
     return ooAuthService.authorize(next.access).then(function(authorized) {
       $log.debug('check authorization:' + next.access + ' -> ' + authorized);
       if (!authorized) {
@@ -32,7 +32,7 @@ angular
     'appConfig',
     'USER_ROLES',
     function($http, $location, $q, $cookies, $log, appConfig, USER_ROLES) {
-      var user,secondFactorType, 
+      var user,secondFactorType,
         token = $cookies.get('XSRF-TOKEN');
 
       var currentUser = function() {
@@ -138,8 +138,7 @@ angular
   .factory('requestSecurityInjector', [
     '$cookies',
     'moment',
-    '$log',
-    function($cookies, moment, $log) {
+    function($cookies, moment) {
       return {
         request: function(config) {
           var token = $cookies.get('XSRF-TOKEN');

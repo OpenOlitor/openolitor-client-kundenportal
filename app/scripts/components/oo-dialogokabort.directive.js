@@ -5,7 +5,6 @@ angular.module('openolitor-kundenportal').controller(
 ['$scope', '$uibModalInstance', 'message', 'title', 'dismissOnly', 'dismissButtonTitle',
 function ($scope, $uibModalInstance, message, title, dismissOnly, dismissButtonTitle) {
 
-  debugger;
   $scope.title = title;
   $scope.message = message;
   $scope.dismissOnly = dismissOnly;
