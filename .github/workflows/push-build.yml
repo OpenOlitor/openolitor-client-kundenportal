@@ -5,4 +5,4 @@ on:
 
 jobs:
   call-workflow-build:
-    uses: OpenOlitor/openolitor-client-kundenportal/.github/workflows/grunt-build.yml@fix/deps_node16
+    uses: OpenOlitor/openolitor-client-kundenportal/.github/workflows/grunt-build.yml@fix/prod
