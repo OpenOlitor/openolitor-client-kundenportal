@@ -10,7 +10,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Depot:</span>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
                {{abo.depotName}}
             </div>
           </div>
@@ -18,7 +18,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Tour:</span>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
                {{abo.tourName}}
             </div>
           </div>
@@ -26,7 +26,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Vertrieb:</span>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
                {{abo.vertrieb.beschrieb| translate}}
             </div>
           </div>
@@ -34,7 +34,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Abo-Beschrieb:</span>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
                {{abo.abotyp.beschreibung| translate}}
             </div>
           </div>
@@ -42,7 +42,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Liefertag:</span>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
                {{abo.vertrieb.liefertag | translate}}
             </div>
           </div>
@@ -50,7 +50,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Lieferrhythmus:</span>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
                {{abo.abotyp.lieferrhythmus | translate}}
             </div>
           </div>
@@ -58,7 +58,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Preis:</span>
             </div>
-            <div class="col-md-4 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
                 {{(abo.price)?abo.price:abo.abotyp.preis | ooCurrency:true}}
             </div>
           </div>
@@ -66,7 +66,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Laufzeit:</span>
             </div>
-            <div class="col-md-6 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
               <span translate>Von </span> {{abo.start | date:'dd.MM.yyyy'}} <span translate ng-if="abo.ende">bis </span> {{abo.ende | date:'dd.MM.yyyy'}}
             </div>
           </div>
@@ -74,7 +74,7 @@
             <div class="col-md-4 col-sm-5 col-xs-5" >
               <span translate>Zusatzabos:</span>
             </div>
-            <div class="col-md-6 col-sm-5 col-xs-5">
+            <div class="col-md-8 col-sm-7 col-xs-7">
               <span ng-repeat="zaName in abo.zusatzAbotypNames track by $index" class="badge">{{zaName}}</span>
             </div>
           </div>
