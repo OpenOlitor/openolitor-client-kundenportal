@@ -61,6 +61,11 @@ angular
             }
           },
           {
+            exportODSFilter: function() {
+              return {
+                g: $scope.geschaeftsjahr
+              };
+            },
             getData: function(params) {
               if (!$scope.entries) {
                 return;
@@ -74,6 +79,29 @@ angular
             }
           }
         );
+      }
+
+      $scope.search = {
+        query: '',
+        queryQuery: '',
+        filterQuery: ''
+      };
+
+      //var existingGJ = $location.search().g;
+      var existingGJ =  true;
+      if (existingGJ) {
+        $scope.geschaeftsjahr = existingGJ;
+      }
+
+      $scope.selectGeschaeftsjahr = function(gj) {
+        if(angular.isDefined(gj)) {
+          $scope.geschaeftsjahr = gj;
+        } else {
+          $scope.geschaeftsjahr = undefined;
+        }
+        $scope.initGJ = true;
+        search();
+        return false;
       }
 
       $scope.availableVacancies = function(arbeitsangebot) {
@@ -234,7 +262,7 @@ angular
                 zeitBis: items[0].zeitBis,
                 zeitVon: items[0].zeitVon,
                 arbeitsangebotTitel: items[0].arbeitsangebotTitel,
-                anzahlPersonen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlPersonen, 
+                anzahlPersonen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlPersonen,
                 anzahlEingeschriebene : _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlEingeschriebene,
                 bemerkungen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).bemerkungen,
               };
