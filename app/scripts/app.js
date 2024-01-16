@@ -89,6 +89,13 @@ angular
     LITER: addExtendedEnumValue('Liter', gettext('Liter'), gettext('l')),
     PORTION: addExtendedEnumValue('Portion', gettext('Portion'), gettext('Por.'))
   })
+  .constant('ZEITRAUM', {
+    AB_HEUTE: addExtendedEnumValue('D', gettext('Ab Heute'), gettext('Ab Heute')),
+    NUR_HEUTE: addExtendedEnumValue('d',gettext('Nur Heute'),gettext('Nur Heute')),
+    DIESE_WOCHE: addExtendedEnumValue('w',gettext('Diese Woche'),gettext('Diese Woche')),
+    DIESEN_MONAT: addExtendedEnumValue('M',gettext('Diesen Monat'),gettext('Diesen Monat')),
+    VERGANGENE: addExtendedEnumValue('V',gettext('Vergangene'),gettext('Vergangene'))
+  })
   .constant('USER_ROLES', {
     Guest: 'Guest',
     Administrator: 'Administrator',
@@ -138,6 +145,40 @@ angular
       }
     };
   }])
+  .factory('localeSensitiveComparator', function() {
+    var isString = function(value) {
+      return typeof value.value === 'string';
+    };
+
+    var isNumber = function(value) {
+      return typeof value.value === 'number';
+    };
+
+    var isBoolean = function(value) {
+      return typeof value.value === 'boolean';
+    };
+
+    return function(v1, v2) {
+      if (isString(v1) && isString(v2)) {
+        return v1.value.localeCompare(v2.value);
+      }
+
+      if ((isNumber(v1) && isNumber(v2)) || (isBoolean(v1) && isBoolean(v2))) {
+        return v1.value - v2.value;
+      }
+
+      if (angular.isUndefined(v1.value) && !angular.isUndefined(v2.value)) {
+        return -1;
+      }
+
+      if (angular.isUndefined(v2.value) && !angular.isUndefined(v1.value)) {
+        return 1;
+      }
+
+      // If we don't get strings, numbers or booleans, just compare by index
+      return v1.index < v2.index ? -1 : 1;
+    };
+  })
   .factory('convertDateStringsToDatesFct', function() {
     return function(input) {
       return convertDateStringsToDates(input);

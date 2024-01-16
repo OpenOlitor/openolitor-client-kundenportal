@@ -18,7 +18,12 @@ angular
     'appConfig',
     'ooAuthService',
     '$location',
+    'EnumUtil',
+    'ZEITRAUM',
     'msgBus',
+    'gettextCatalog',
+    'localeSensitiveComparator',
+    'lodash',
     function(
       $scope,
       NgTableParams,
@@ -33,7 +38,12 @@ angular
       appConfig,
       ooAuthService,
       $location,
-      msgBus
+      EnumUtil,
+      ZEITRAUM,
+      msgBus,
+      gettextCatalog, 
+      localeSensitiveComparator,
+      lodash
     ) {
       $scope.arbeitsangebotTableParams = undefined;
 
@@ -49,7 +59,8 @@ angular
             counts: [],
             sorting: {
               zeitVon: 'asc'
-            }
+            },
+            filter:{zeitVonF:'D'}
           },
           {
             filterDelay: 0,
@@ -66,19 +77,66 @@ angular
               if (!$scope.entries) {
                 return;
               }
-              var orderedData = params.sorting ? $filter('orderBy')(
-                $scope.entries,
-                params.orderBy(),
-                false
-              )
-              : $scope.entries;
+              var f = params.filter();
+              var data = $scope.entries;
+              if(f.zeitVonF && f.zeitVonF !== null) {
+                var from, to;
+                if(f.zeitVonF === 'D') {
+                  from = moment().startOf('day').toDate();
+                  to = new Date(8640000000000000);
+                } else if(f.zeitVonF === 'd') {
+                  from = moment().startOf('day').toDate();
+                  to = moment().endOf('day').toDate();
+                } else if(f.zeitVonF === 'w') {
+                  from = moment().startOf('week').toDate();
+                  to = moment().endOf('week').toDate();
+                } else if(f.zeitVonF === 'M') {
+                  from = moment().startOf('month').toDate();
+                  to = moment().endOf('month').toDate();
+                } else if(f.zeitVonF === 'V') {
+                  from =new Date(-8640000000000000);
+                  to = moment().startOf('day').toDate();
+                } else {
+                  from =new Date(-8640000000000000);
+                  to = new Date(8640000000000000);
+                }
+                data = $filter('dateRange') (
+                    data,
+                    from,
+                    to,
+                    'zeitVon'
+                  );
+              }
+              // use build-in angular filter
+              var filteredData = $filter('filter')(
+                data,
+                $scope.search.query
+              );
+              f = params.filter(true);
+              delete f.zeitVonF;
+              var orderedData = $filter('filter')(
+                filteredData,
+                f
+              );
+              orderedData = params.sorting ? $filter('orderBy')(
+                    orderedData,
+                    params.orderBy(),
+                    false,
+                    localeSensitiveComparator
+                  )
+                : orderedData;
 
               params.total(orderedData.length);
-              return orderedData;
+              return orderedData.slice(0,$scope.maxEntries);
             }
           }
         );
       }
+
+      $scope.search = {
+        query: '',
+        filterQuery: ''
+      };
 
       $scope.loadArbeitsangebotTableParams= function(){
         $scope.entries = ArbeitsangeboteModel.query({
@@ -91,11 +149,36 @@ angular
 
       $scope.loadArbeitsangebotTableParams();
 
+      $scope.$watch(
+        'search.query',
+        function() {
+          $scope.search.filterQuery = FilterQueryUtil.transform(
+            $scope.search.query
+          );
+          $scope.loadArbeitsangebotTableParams();
+        },
+        true
+      );
+
+      $scope.zeitraumLAsArray = EnumUtil.asArray(ZEITRAUM);
+      $scope.zeitraumL = [];
+      angular.forEach(lodash.sortBy($scope.zeitraumLAsArray, function(zr){
+          return gettextCatalog.getString(zr.label).toLowerCase();
+      }), function(value, key) {
+        $scope.zeitraumL.push({
+          'id': value.id,
+          'title': gettextCatalog.getString(value.label)
+        });
+      });
 
       var existingGJ = $location.search().g;
       if (existingGJ) {
         $scope.geschaeftsjahr = existingGJ;
       }
+
+      $scope.hasData = function() {
+        return $scope.entries !== undefined;
+      };
 
       $scope.selectGeschaeftsjahr = function(gj) {
         if(angular.isDefined(gj)) {
@@ -104,6 +187,7 @@ angular
           $scope.geschaeftsjahr = undefined;
         }
         $scope.initGJ = true;
+        $scope.maxEntries = 10;
         $scope.loadArbeitsangebotTableParams();
         return false;
       }
@@ -276,7 +360,7 @@ angular
       });
 
       $scope.showMore = function() {
-        $scope.maxEntries = Number.MAX_SAFE_INTEGER;
+        $scope.maxEntries = $scope.maxEntries + 10;
         if($scope.arbeitsangebotTableParams) {
           $scope.arbeitsangebotTableParams.reload();
         }
