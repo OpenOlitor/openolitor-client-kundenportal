@@ -7,7 +7,7 @@ angular
   .controller('ArbeitsangeboteListController', [
     '$scope',
     'NgTableParams',
-    'ArbeitsangeboteListModel',
+    'ArbeitsangeboteModel',
     'ArbeitseinsaetzeListModel',
     '$uibModal',
     '$log',
@@ -17,11 +17,12 @@ angular
     '$filter',
     'appConfig',
     'ooAuthService',
+    '$location',
     'msgBus',
     function(
       $scope,
       NgTableParams,
-      ArbeitsangeboteListModel,
+      ArbeitsangeboteModel,
       ArbeitseinsaetzeListModel,
       $uibModal,
       $log,
@@ -31,6 +32,7 @@ angular
       $filter,
       appConfig,
       ooAuthService,
+      $location,
       msgBus
     ) {
       $scope.arbeitsangebotTableParams = undefined;
@@ -39,17 +41,6 @@ angular
       $scope.loading = false;
       $scope.model = {};
       $scope.maxEntries = 10;
-
-      $scope.loadArbeitsangebotTableParams= function(){
-        ArbeitsangeboteListModel.query(function(data) {
-          $scope.entries = data;
-          if ($scope.arbeitsangebotTableParams) {
-            $scope.arbeitsangebotTableParams.reload();
-          }
-        });
-      };
-
-      $scope.loadArbeitsangebotTableParams();
 
       if (!$scope.arbeitsangebotTableParams) {
         $scope.arbeitsangebotTableParams = new NgTableParams(
@@ -61,6 +52,11 @@ angular
             }
           },
           {
+            filterDelay: 0,
+            groupOptions: {
+              isExpanded: true
+            },
+            exportODSModel: ArbeitsangeboteModel,
             exportODSFilter: function() {
               return {
                 g: $scope.geschaeftsjahr
@@ -70,9 +66,12 @@ angular
               if (!$scope.entries) {
                 return;
               }
-              var orderedData = params.sorting
-                ? $filter('orderBy')($scope.entries, params.orderBy())
-                : $scope.entries;
+              var orderedData = params.sorting ? $filter('orderBy')(
+                $scope.entries,
+                params.orderBy(),
+                false
+              )
+              : $scope.entries;
 
               params.total(orderedData.length);
               return orderedData;
@@ -81,14 +80,19 @@ angular
         );
       }
 
-      $scope.search = {
-        query: '',
-        queryQuery: '',
-        filterQuery: ''
+      $scope.loadArbeitsangebotTableParams= function(){
+        $scope.entries = ArbeitsangeboteModel.query({
+            g: /^\d+$/.test($scope.geschaeftsjahr)?$scope.geschaeftsjahr:''
+        }, function() {
+          $scope.arbeitsangebotTableParams.reload();
+            $scope.loading = false;
+        });
       };
 
-      //var existingGJ = $location.search().g;
-      var existingGJ =  true;
+      $scope.loadArbeitsangebotTableParams();
+
+
+      var existingGJ = $location.search().g;
       if (existingGJ) {
         $scope.geschaeftsjahr = existingGJ;
       }
@@ -100,7 +104,7 @@ angular
           $scope.geschaeftsjahr = undefined;
         }
         $scope.initGJ = true;
-        search();
+        $scope.loadArbeitsangebotTableParams();
         return false;
       }
 
