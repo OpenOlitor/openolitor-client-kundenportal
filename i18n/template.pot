@@ -8,7 +8,7 @@ msgstr ""
 msgid "#&nbsp;Pers."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:30
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:37
 msgid "#Pers."
 msgstr ""
 
@@ -16,7 +16,7 @@ msgstr ""
 msgid "&nbsp;oder&nbsp;"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:38
 msgid "+"
 msgstr ""
 
@@ -28,6 +28,10 @@ msgstr ""
 msgid "- Testumgebung"
 msgstr ""
 
+#: app/scripts/app.js:93
+msgid "Ab Heute"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:40
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
 msgid "Abbrechen"
@@ -37,7 +41,7 @@ msgstr ""
 msgid "Abmelden"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:119
+#: app/scripts/rechnungen/list/rechnungenlist.html:118
 msgid "Abo"
 msgstr ""
 
@@ -45,7 +49,7 @@ msgstr ""
 msgid "Abo-Beschrieb:"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:82
+#: app/scripts/rechnungen/list/rechnungenlist.html:81
 msgid "Abo:"
 msgstr ""
 
@@ -53,7 +57,7 @@ msgstr ""
 msgid "Abos"
 msgstr ""
 
-#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:98
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:99
 msgid "Abwesenheit erfassen"
 msgstr ""
 
@@ -67,6 +71,10 @@ msgstr ""
 
 #: app/scripts/ngtable/oo-ngtable-paginationTemplate.html:10
 msgid "Alle"
+msgstr ""
+
+#: app/scripts/util/ng-table/ng-table-boolean-filter.html:14
+msgid "Alle Anzeigen"
 msgstr ""
 
 #: app/scripts/login/login_settings.html:5
@@ -83,7 +91,7 @@ msgstr ""
 msgid "Anmeldung"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:88
+#: app/scripts/rechnungen/list/rechnungenlist.html:87
 msgid "Anzahl Lieferungen"
 msgstr ""
 
@@ -99,12 +107,12 @@ msgstr ""
 msgid "Arbeitsangebot löschen nicht erfolgreich:"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:201
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:317
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:200
 msgid "Arbeitseinsatz erfolgreich verändert."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:207
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:323
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.controller.js:206
 msgid "Arbeitseinsatz ändern nicht erfolgreich:"
 msgstr ""
@@ -113,7 +121,7 @@ msgstr ""
 msgid "Auch ausgelaufene Abos anzeigen"
 msgstr ""
 
-#: app/scripts/login/login.controller.js:77
+#: app/scripts/login/login.controller.js:80
 msgid "Aufwiedersehen"
 msgstr ""
 
@@ -131,7 +139,7 @@ msgstr ""
 msgid "Bestätigung"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:116
+#: app/scripts/rechnungen/list/rechnungenlist.html:115
 #: app/scripts/rechnungen/list/rechnungenlist.html:53
 msgid "Betrag"
 msgstr ""
@@ -162,7 +170,7 @@ msgstr ""
 msgid "Bitte scannen Sie den neuen QR-Code mit einer Zwei-Faktor-Authentifizierungs-App wie z.B.:"
 msgstr ""
 
-#: app/scripts/app.js:109
+#: app/scripts/app.js:116
 msgid "Britisches Pfund"
 msgstr ""
 
@@ -174,15 +182,15 @@ msgstr ""
 msgid "Bund"
 msgstr ""
 
-#: app/scripts/app.js:110
+#: app/scripts/app.js:117
 msgid "CAD"
 msgstr ""
 
-#: app/scripts/app.js:106
+#: app/scripts/app.js:113
 msgid "CHF"
 msgstr ""
 
-#: app/scripts/root.js:47
+#: app/scripts/root.js:53
 msgid "Changing the contact information permission failed:"
 msgstr ""
 
@@ -198,7 +206,7 @@ msgstr ""
 msgid "Das Backend steht im Moment nicht zur Verfügung. Bitte besuchen Sie uns später wieder."
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:139
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:255
 msgid "Das Einschreiben war nicht erfolgreich:"
 msgstr ""
 
@@ -216,12 +224,12 @@ msgstr ""
 msgid "Das Passwort muss mindestens einen Gross- und Kleinbuchstaben, sowie einen numerischen Wert oder ein Symbol enthalten"
 msgstr ""
 
-#: app/scripts/login/login.controller.js:135
+#: app/scripts/login/login.controller.js:138
 msgid "Das Passwort wurde erfolgreich gesetzt. Sie können sich nun anmelden."
 msgstr ""
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.html:51
-#: app/scripts/rechnungen/list/rechnungenlist.html:107
+#: app/scripts/rechnungen/list/rechnungenlist.html:106
 msgid "Datum"
 msgstr ""
 
@@ -257,8 +265,12 @@ msgstr ""
 msgid "Der nächste Korb"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:75
+#: app/scripts/rechnungen/list/rechnungenlist.html:74
 msgid "Details werden geladen..."
+msgstr ""
+
+#: app/scripts/abos/list/abwesenheiten/abwesenheiten.directive.js:66
+msgid "Die Abwesenheit konnte nicht eingetragen werden."
 msgstr ""
 
 #: app/scripts/login/login.html:18
@@ -274,7 +286,7 @@ msgstr ""
 msgid "Die früheren Körbe"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:133
+#: app/scripts/rechnungen/list/rechnungenlist.html:132
 msgid "Die früheren Rechnungen anzeigen"
 msgstr ""
 
@@ -282,11 +294,19 @@ msgstr ""
 msgid "Diese Seite konnte nicht gefunden werden!"
 msgstr ""
 
+#: app/scripts/app.js:95
+msgid "Diese Woche"
+msgstr ""
+
+#: app/scripts/app.js:96
+msgid "Diesen Monat"
+msgstr ""
+
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
 msgstr ""
 
-#: app/scripts/app.js:114
+#: app/scripts/app.js:121
 msgid "E-Mail"
 msgstr ""
 
@@ -303,15 +323,15 @@ msgstr ""
 msgid "E-mail"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:68
+#: app/scripts/rechnungen/list/rechnungenlist.html:67
 msgid "ESR-Nr."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:67
+#: app/scripts/rechnungen/list/rechnungenlist.html:66
 msgid "ESR-Nummer in Zwischenablage kopieren (zur Verwendung in Zahlungssystemen)"
 msgstr ""
 
-#: app/scripts/app.js:107
+#: app/scripts/app.js:114
 msgid "EUR"
 msgstr ""
 
@@ -353,11 +373,11 @@ msgstr ""
 msgid "Einstellungen Speichern"
 msgstr ""
 
-#: app/scripts/login/login.controller.js:406
+#: app/scripts/login/login.controller.js:409
 msgid "Einstellungen erfolgreich gespeichert"
 msgstr ""
 
-#: app/scripts/login/login.controller.js:411
+#: app/scripts/login/login.controller.js:414
 msgid "Einstellungen konnten nicht gespeichert werden"
 msgstr ""
 
@@ -365,7 +385,7 @@ msgstr ""
 msgid "Email Adresse"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:133
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.controller.js:249
 msgid "Erfolgreich in Arbeitsangebot eingeschrieben"
 msgstr ""
 
@@ -398,7 +418,7 @@ msgstr ""
 msgid "Es wurden noch keine Lieferplanungen abgeschlossen."
 msgstr ""
 
-#: app/scripts/app.js:107
+#: app/scripts/app.js:114
 msgid "Euro"
 msgstr ""
 
@@ -406,7 +426,7 @@ msgstr ""
 msgid "Fehlerhafte Email Adresse"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:110
+#: app/scripts/rechnungen/list/rechnungenlist.html:109
 msgid "Fällig"
 msgstr ""
 
@@ -430,12 +450,20 @@ msgstr ""
 msgid "Für den Zugriff auf die Administrationsumgebung ist eine Anmeldung erforderlich"
 msgstr ""
 
-#: app/scripts/app.js:109
+#: app/scripts/app.js:116
 msgid "GBP"
 msgstr ""
 
 #: app/index.html:68
 msgid "Gebuchte Arbeitseinsätze"
+msgstr ""
+
+#: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:2
+msgid "Geschäftsjahr"
+msgstr ""
+
+#: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:3
+msgid "Geschäftsjahre"
 msgstr ""
 
 #: app/scripts/app.js:86
@@ -450,21 +478,29 @@ msgstr ""
 msgid "Inhalt der Körbe"
 msgstr ""
 
+#: app/scripts/util/ng-table/ng-table-boolean-filter.html:7
+msgid "J"
+msgstr ""
+
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 #: app/scripts/login/login_settings.html:37
 msgid "Ja"
 msgstr ""
 
-#: app/scripts/app.js:110
+#: app/scripts/app.js:117
 msgid "Kanadischer Dollar"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:33
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:40
 msgid "Kategorien"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:7
 msgid "Keine Arbeitsangebote."
+msgstr ""
+
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:56
+msgid "Keine arbeitsangeboten mit angewandten Filtern"
 msgstr ""
 
 #: app/scripts/app.js:87
@@ -515,7 +551,7 @@ msgstr ""
 msgid "MahnungVerschickt"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:50
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:62
 msgid "Mehr Angebot anzeigen"
 msgstr ""
 
@@ -526,6 +562,10 @@ msgstr ""
 
 #: app/index.html:69
 msgid "Mitarbeit planen"
+msgstr ""
+
+#: app/scripts/util/ng-table/ng-table-boolean-filter.html:8
+msgid "N"
 msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
@@ -541,11 +581,15 @@ msgstr ""
 msgid "Neues Secret anfordern"
 msgstr ""
 
-#: app/scripts/app.js:113
+#: app/scripts/app.js:94
+msgid "Nur Heute"
+msgstr ""
+
+#: app/scripts/app.js:120
 msgid "OTP"
 msgstr ""
 
-#: app/scripts/login/login.controller.js:322
+#: app/scripts/login/login.controller.js:325
 msgid "OTP Passwort Erfolgreich zurückgesetzt"
 msgstr ""
 
@@ -557,7 +601,7 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: app/scripts/app.js:113
+#: app/scripts/app.js:120
 msgid "One-Time-Password (OTP)"
 msgstr ""
 
@@ -573,7 +617,7 @@ msgstr ""
 msgid "OpenOlitor Mitgliederportal:"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:27
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:34
 msgid "Ort"
 msgstr ""
 
@@ -606,11 +650,11 @@ msgstr ""
 msgid "Passwort wiederholen"
 msgstr ""
 
-#: app/scripts/login/login.controller.js:125
+#: app/scripts/login/login.controller.js:128
 msgid "Passwort wurde erfolgreich geändert, Sie werden automatisch ausgelogged."
 msgstr ""
 
-#: app/scripts/login/login.controller.js:129
+#: app/scripts/login/login.controller.js:132
 msgid "Passwort wurde erfolgreich geändert, Sie wurden automatisch ausgelogged. Bitte loggen Sie sich mit dem neuen Passwort erneut an."
 msgstr ""
 
@@ -678,7 +722,7 @@ msgstr ""
 msgid "Referenznummer in Zwischenablage kopieren"
 msgstr ""
 
-#: app/scripts/app.js:106
+#: app/scripts/app.js:113
 msgid "Schweizer Franken"
 msgstr ""
 
@@ -702,8 +746,8 @@ msgstr ""
 msgid "St."
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:122
-#: app/scripts/rechnungen/list/rechnungenlist.html:62
+#: app/scripts/rechnungen/list/rechnungenlist.html:121
+#: app/scripts/rechnungen/list/rechnungenlist.html:61
 msgid "Status"
 msgstr ""
 
@@ -715,13 +759,13 @@ msgstr ""
 msgid "Stück"
 msgstr ""
 
-#: app/scripts/root.js:41
+#: app/scripts/root.js:47
 msgid "This person contact information will not be available for other users"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:14
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:21
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:21
-#: app/scripts/rechnungen/list/rechnungenlist.html:113
+#: app/scripts/rechnungen/list/rechnungenlist.html:112
 #: app/scripts/rechnungen/list/rechnungenlist.html:50
 msgid "Titel"
 msgstr ""
@@ -730,11 +774,11 @@ msgstr ""
 msgid "Tour:"
 msgstr ""
 
-#: app/scripts/app.js:108
+#: app/scripts/app.js:115
 msgid "US Dollar"
 msgstr ""
 
-#: app/scripts/app.js:108
+#: app/scripts/app.js:115
 msgid "USD"
 msgstr ""
 
@@ -744,6 +788,10 @@ msgstr ""
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:39
 msgid "Verbindlich Einschreiben"
+msgstr ""
+
+#: app/scripts/app.js:97
+msgid "Vergangene"
 msgstr ""
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
@@ -784,7 +832,7 @@ msgstr ""
 msgid "Wenn Sie ihr Passwort vergessen haben, können Sie sich einen Reset-Link senden lassen."
 msgstr ""
 
-#: app/scripts/login/login.controller.js:63
+#: app/scripts/login/login.controller.js:66
 msgid "Willkommen"
 msgstr ""
 
@@ -800,7 +848,7 @@ msgstr ""
 msgid "Wollen Sie fortfahren?"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:18
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:25
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:24
 msgid "Zeitpunkt"
 msgstr ""
@@ -823,7 +871,7 @@ msgstr ""
 msgid "Zurücksetzen"
 msgstr ""
 
-#: app/scripts/rechnungen/list/rechnungenlist.html:85
+#: app/scripts/rechnungen/list/rechnungenlist.html:84
 msgid "Zusatzabo:"
 msgstr ""
 
@@ -877,7 +925,7 @@ msgstr ""
 msgid "l"
 msgstr ""
 
-#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:31
+#: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:38
 msgid "max."
 msgstr ""
 

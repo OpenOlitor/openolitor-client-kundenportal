@@ -9,13 +9,20 @@
         </div>
         <div class="row">
           <div class="col-md-12">
-            <table ng-show="entries" ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+            <oo-overviewfilter-geschaeftsjahre
+                selected-funct="selectGeschaeftsjahr"
+                select="geschaeftsjahr"
+                select-current="true">
+            </oo-overviewfilter-geschaeftsjahre>
+          </div>
+          <div class="col-md-12">
+            <table ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="{{showFilter && hasData()}}" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
               <tr ng-repeat="arbeitsangebot in $data">
                 <td data-title="'Titel'|translate" sortable="'titel'">
                   <a id="arbeitsangebot{{arbeitsangebot.id}}">{{arbeitsangebot.titel}}</a>
                   <span ng-if="arbeitsangebot.bezeichnung">&nbsp;<i class="fa fa-info-circle ng-scope" uib-tooltip-html="arbeitsangebot.bezeichnung"></i></span>
                 </td>
-                <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'">
+                <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'" filter="{zeitVonF: 'select'}" filter-data="zeitraumL">
                   <span ng-if="sameDay(arbeitsangebot.zeitBis, arbeitsangebot.zeitVon)">
                     {{arbeitsangebot.zeitVon | date:'dd.MM.yyyy'}}
                     {{arbeitsangebot.zeitVon | date:'@ HH:mm'}} - {{arbeitsangebot.zeitBis | date:'HH:mm'}}
@@ -27,7 +34,7 @@
                 <td data-title="'Ort'|translate">
                   {{arbeitsangebot.ort}}
                 </td>
-                <td data-title="'#Pers.'|translate" sortable="'anzahlPersonen'">
+                <td data-title="'#Pers.'|translate">
                   {{arbeitsangebot.anzahlEingeschriebene}} / <span ng-if="!arbeitsangebot.mehrPersonenOk" translate>max.</span> {{arbeitsangebot.anzahlPersonen}}<span ng-if="arbeitsangebot.mehrPersonenOk" translate>+</span>
                 </td>
                 <td data-title="'Kategorien'|translate">
@@ -44,7 +51,12 @@
           </div>
         </div>
       </div>
-      <div class="panel-heading clearfix" ng-show="entries && entries.length > 4 && maxEntries < entries.length" id="arbeitsAngebotArchivTitle" >
+      <div class="panel-heading clearfix" ng-show="arbeitsangebotTableParams.data && arbeitsangebotTableParams.data.length == 0">
+          <h3 class="panel-title">
+            <span class="navbar-brand" translate>Keine arbeitsangeboten mit angewandten Filtern</span>
+          </h3>
+      </div>
+      <div class="panel-heading clearfix" ng-show="arbeitsangebotTableParams.data && arbeitsangebotTableParams.data.length > 0 && entries && maxEntries < entries.length" id="arbeitsAngebotArchivTitle" >
         <span role="button" ng-click="showMore()" >
           <h3 class="panel-title">
             <span class="navbar-brand" translate>Mehr Angebot anzeigen</span>
