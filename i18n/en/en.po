@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 80\n"
 "Language-Team: English\n"
 "Language: en_US\n"
-"PO-Revision-Date: 2024-01-17 14:40\n"
+"PO-Revision-Date: 2024-01-17 15:21\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -39,7 +39,7 @@ msgstr "-Test environment"
 
 #: app/scripts/app.js:93
 msgid "Ab Heute"
-msgstr ""
+msgstr "From today"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:40
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
@@ -84,7 +84,7 @@ msgstr "All"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:14
 msgid "Alle Anzeigen"
-msgstr ""
+msgstr "View All"
 
 #: app/scripts/login/login_settings.html:5
 msgid "Anmelde-Einstellungen"
@@ -280,7 +280,7 @@ msgstr "Loading details..."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.directive.js:66
 msgid "Die Abwesenheit konnte nicht eingetragen werden."
-msgstr ""
+msgstr "The absence could not be entered."
 
 #: app/scripts/login/login.html:18
 #: app/scripts/login/login.html:31
@@ -305,11 +305,11 @@ msgstr "The page cannot be found"
 
 #: app/scripts/app.js:95
 msgid "Diese Woche"
-msgstr ""
+msgstr "This week"
 
 #: app/scripts/app.js:96
 msgid "Diesen Monat"
-msgstr ""
+msgstr "This month"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
@@ -469,11 +469,11 @@ msgstr "Work assignments"
 
 #: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:2
 msgid "Geschäftsjahr"
-msgstr ""
+msgstr "Fiscal year"
 
 #: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:3
 msgid "Geschäftsjahre"
-msgstr ""
+msgstr "Fiscal years"
 
 #: app/scripts/app.js:86
 msgid "Gramm"
@@ -489,7 +489,7 @@ msgstr "Content of the basket"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:7
 msgid "J"
-msgstr ""
+msgstr "Y"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 #: app/scripts/login/login_settings.html:37
@@ -510,7 +510,7 @@ msgstr "No work opportunities."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:56
 msgid "Keine arbeitsangeboten mit angewandten Filtern"
-msgstr ""
+msgstr "No collaboration opportunity available with applied filters"
 
 #: app/scripts/app.js:87
 msgid "Kilogramm"
@@ -575,7 +575,7 @@ msgstr "Plan cooperation"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:8
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 #: app/scripts/login/login_settings.html:37
@@ -592,7 +592,7 @@ msgstr "Request a New Secret"
 
 #: app/scripts/app.js:94
 msgid "Nur Heute"
-msgstr ""
+msgstr "Only today"
 
 #: app/scripts/app.js:120
 msgid "OTP"
@@ -801,7 +801,7 @@ msgstr "Binding subscription"
 
 #: app/scripts/app.js:97
 msgid "Vergangene"
-msgstr ""
+msgstr "Past"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "Verschickt"
