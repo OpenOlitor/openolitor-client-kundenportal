@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 80\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2024-01-17 14:40\n"
+"PO-Revision-Date: 2024-01-17 15:21\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -39,7 +39,7 @@ msgstr "- Entorno de prueba"
 
 #: app/scripts/app.js:93
 msgid "Ab Heute"
-msgstr ""
+msgstr "A partir de hoy"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:40
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
@@ -84,7 +84,7 @@ msgstr "Tod@s"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:14
 msgid "Alle Anzeigen"
-msgstr ""
+msgstr "Mostrar todo"
 
 #: app/scripts/login/login_settings.html:5
 msgid "Anmelde-Einstellungen"
@@ -280,7 +280,7 @@ msgstr "Cargando los detalles..."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.directive.js:66
 msgid "Die Abwesenheit konnte nicht eingetragen werden."
-msgstr ""
+msgstr "No hemos podido guardar la ausencia."
 
 #: app/scripts/login/login.html:18
 #: app/scripts/login/login.html:31
@@ -305,11 +305,11 @@ msgstr "¡La página solicitada no ha sido encontrada!"
 
 #: app/scripts/app.js:95
 msgid "Diese Woche"
-msgstr ""
+msgstr "Esta semana"
 
 #: app/scripts/app.js:96
 msgid "Diesen Monat"
-msgstr ""
+msgstr "Este mes"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
@@ -469,11 +469,11 @@ msgstr "Colaboraciones de trabajo reservadas (días y horas)"
 
 #: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:2
 msgid "Geschäftsjahr"
-msgstr ""
+msgstr "Año fiscal"
 
 #: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:3
 msgid "Geschäftsjahre"
-msgstr ""
+msgstr "Años fiscales"
 
 #: app/scripts/app.js:86
 msgid "Gramm"
@@ -489,7 +489,7 @@ msgstr "Contenido de las cestas"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:7
 msgid "J"
-msgstr ""
+msgstr "S"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 #: app/scripts/login/login_settings.html:37
@@ -510,7 +510,7 @@ msgstr "Ninguna oferta de colaboración."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:56
 msgid "Keine arbeitsangeboten mit angewandten Filtern"
-msgstr ""
+msgstr "No hay colaboraciones disponibles con los filtros seleccionados"
 
 #: app/scripts/app.js:87
 msgid "Kilogramm"
@@ -575,7 +575,7 @@ msgstr "Planificar la cooperación"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:8
 msgid "N"
-msgstr ""
+msgstr "N"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 #: app/scripts/login/login_settings.html:37
@@ -592,7 +592,7 @@ msgstr "Pedir nueva contraseña"
 
 #: app/scripts/app.js:94
 msgid "Nur Heute"
-msgstr ""
+msgstr "Solo hoy"
 
 #: app/scripts/app.js:120
 msgid "OTP"
@@ -801,7 +801,7 @@ msgstr "Inscribirse de manera definitiva"
 
 #: app/scripts/app.js:97
 msgid "Vergangene"
-msgstr ""
+msgstr "En el pasado"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "Verschickt"

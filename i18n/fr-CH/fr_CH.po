@@ -11,7 +11,7 @@ msgstr ""
 "X-Crowdin-File-ID: 80\n"
 "Language-Team: French, Switzerland\n"
 "Language: fr_CH\n"
-"PO-Revision-Date: 2024-01-17 14:40\n"
+"PO-Revision-Date: 2024-01-17 15:21\n"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:33
 msgid "#&nbsp;Pers."
@@ -39,7 +39,7 @@ msgstr "-Environnement de test"
 
 #: app/scripts/app.js:93
 msgid "Ab Heute"
-msgstr ""
+msgstr "À partir d'aujourd'hui"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:40
 #: app/scripts/components/oo-dialogokabort.directive.modal.html:15
@@ -84,7 +84,7 @@ msgstr "Tous"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:14
 msgid "Alle Anzeigen"
-msgstr ""
+msgstr "Tout afficher"
 
 #: app/scripts/login/login_settings.html:5
 msgid "Anmelde-Einstellungen"
@@ -280,7 +280,7 @@ msgstr "Détails sont téléchargés..."
 
 #: app/scripts/abos/list/abwesenheiten/abwesenheiten.directive.js:66
 msgid "Die Abwesenheit konnte nicht eingetragen werden."
-msgstr ""
+msgstr "L'absence n'a pas pu être enregistrée."
 
 #: app/scripts/login/login.html:18
 #: app/scripts/login/login.html:31
@@ -305,11 +305,11 @@ msgstr "La page demandée n’a pas été trouvée"
 
 #: app/scripts/app.js:95
 msgid "Diese Woche"
-msgstr ""
+msgstr "Cette semaine"
 
 #: app/scripts/app.js:96
 msgid "Diesen Monat"
-msgstr ""
+msgstr "Ce mois"
 
 #: app/scripts/arbeitseinsaetze/list/arbeitseinsaetzelist.html:7
 msgid "Du hast dich in keine Arbeitseinsaetze eingeschrieben."
@@ -469,11 +469,11 @@ msgstr "Interventions de travail réservées"
 
 #: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:2
 msgid "Geschäftsjahr"
-msgstr ""
+msgstr "Exercice fiscal"
 
 #: app/scripts/util/overviewfiltergeschaeftsjahre/overviewfiltergeschaeftsjahre.controller.html:3
 msgid "Geschäftsjahre"
-msgstr ""
+msgstr "Exercices fiscales"
 
 #: app/scripts/app.js:86
 msgid "Gramm"
@@ -489,7 +489,7 @@ msgstr "Contenu des paniers"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:7
 msgid "J"
-msgstr ""
+msgstr "Oui"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 #: app/scripts/login/login_settings.html:37
@@ -510,7 +510,7 @@ msgstr "Aucune offre d’emploi."
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebotelist.html:56
 msgid "Keine arbeitsangeboten mit angewandten Filtern"
-msgstr ""
+msgstr "Aucune opportunité de collaboration n'est disponible avec les filtres appliqués"
 
 #: app/scripts/app.js:87
 msgid "Kilogramm"
@@ -575,7 +575,7 @@ msgstr "Planifier la coopération"
 
 #: app/scripts/util/ng-table/ng-table-boolean-filter.html:8
 msgid "N"
-msgstr ""
+msgstr "Non"
 
 #: app/scripts/arbeitsangebote/list/arbeitsangebot-participate.html:20
 #: app/scripts/login/login_settings.html:37
@@ -592,7 +592,7 @@ msgstr "Réinitialiser le secret"
 
 #: app/scripts/app.js:94
 msgid "Nur Heute"
-msgstr ""
+msgstr "Aujourd'hui seulement"
 
 #: app/scripts/app.js:120
 msgid "OTP"
@@ -801,7 +801,7 @@ msgstr "S'inscrire de manière définitive"
 
 #: app/scripts/app.js:97
 msgid "Vergangene"
-msgstr ""
+msgstr "Passé"
 
 #: app/scripts/rechnungen/list/rechnungenlist.controller.js:85
 msgid "Verschickt"
