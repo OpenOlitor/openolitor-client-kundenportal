@@ -16,7 +16,7 @@
             </oo-overviewfilter-geschaeftsjahre>
           </div>
           <div class="col-md-12">
-            <table ng-show="entries" ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="{{showFilter && hasData()}}" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
+            <table ng-table="arbeitsangebotTableParams" class="table table-striped" show-filter="{{showFilter && hasData()}}" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
               <tr ng-repeat="arbeitsangebot in $data">
                 <td data-title="'Titel'|translate" sortable="'titel'">
                   <a id="arbeitsangebot{{arbeitsangebot.id}}">{{arbeitsangebot.titel}}</a>
@@ -51,7 +51,12 @@
           </div>
         </div>
       </div>
-      <div class="panel-heading clearfix" ng-show="entries && entries.length > 4 && maxEntries < entries.length" id="arbeitsAngebotArchivTitle" >
+      <div class="panel-heading clearfix" ng-show="arbeitsangebotTableParams.data && arbeitsangebotTableParams.data.length == 0">
+          <h3 class="panel-title">
+            <span class="navbar-brand" translate>Keine arbeitsangeboten mit angewandten Filtern</span>
+          </h3>
+      </div>
+      <div class="panel-heading clearfix" ng-show="arbeitsangebotTableParams.data && arbeitsangebotTableParams.data.length > 0 && entries && maxEntries < entries.length" id="arbeitsAngebotArchivTitle" >
         <span role="button" ng-click="showMore()" >
           <h3 class="panel-title">
             <span class="navbar-brand" translate>Mehr Angebot anzeigen</span>
