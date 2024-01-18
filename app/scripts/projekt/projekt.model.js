@@ -29,7 +29,7 @@ angular.module('openolitor-kundenportal')
     id: '@id'
     }, {'query': {method:'GET', isArray: false},
     'geschaeftsjahre': {
-        url: appConfig.get().API_URL + 'projekt/:id/geschaeftsjahre',
+        url: appConfig.get().API_URL + 'kundenportal/projekt/:id/geschaeftsjahre',
         method:'GET',
         isArray: true
       }
