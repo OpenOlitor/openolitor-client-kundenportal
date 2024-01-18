@@ -118,6 +118,7 @@ angular
                 filteredData,
                 f
               );
+              if (orderedData){
               orderedData = params.sorting ? $filter('orderBy')(
                     orderedData,
                     params.orderBy(),
@@ -128,6 +129,9 @@ angular
 
               params.total(orderedData.length);
               return orderedData.slice(0,$scope.maxEntries);
+              } else {
+                return [];
+              }
             }
           }
         );
@@ -135,7 +139,6 @@ angular
 
       $scope.search = {
         query: '',
-        filterQuery: ''
       };
 
       $scope.loadArbeitsangebotTableParams= function(){
@@ -152,9 +155,6 @@ angular
       $scope.$watch(
         'search.query',
         function() {
-          $scope.search.filterQuery = FilterQueryUtil.transform(
-            $scope.search.query
-          );
           $scope.loadArbeitsangebotTableParams();
         },
         true
