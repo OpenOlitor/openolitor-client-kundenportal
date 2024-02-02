@@ -1,7 +1,22 @@
 'use strict';
 
-angular.module('openolitor-kundenportal').filter('ooCurrency', ['$rootScope','$filter', 'gettextCatalog','WAEHRUNG','EnumUtil','lodash',
-  function($rootScope, $filter, gettextCatalog, WAEHRUNG, EnumUtil, lodash) {
+angular
+  .module('openolitor-kundenportal')
+  .filter('ooCurrency', [
+    '$rootScope',
+    '$filter',
+    'gettextCatalog',
+    'WAEHRUNG',
+    'EnumUtil',
+    'lodash',
+    function(
+      $rootScope, 
+      $filter, 
+      gettextCatalog, 
+      WAEHRUNG, 
+      EnumUtil, 
+      lodash
+    ) {
   return function(value, showTag, currency) {
     var waehrungen = EnumUtil.asArray(WAEHRUNG);
     var projektCurrency = $rootScope.projekt.waehrung;
