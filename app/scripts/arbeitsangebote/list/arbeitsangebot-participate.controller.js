@@ -3,11 +3,24 @@
 /**
  */
 angular.module('openolitor-kundenportal')
-  .controller('ArbeitsangebotParticipateController', ['$scope', '$uibModalInstance',
-    '$log', 'arbeitsangebot', 'arbeitseinsatz', 'ArbeitsangeboteListModel','lodash',
+  .controller('ArbeitsangebotParticipateController', [
+    '$scope',
+    '$uibModalInstance',
+    '$log', 
+    'arbeitsangebot', 
+    'arbeitseinsatz', 
+    'ArbeitsangeboteModel',
+    'lodash',
     'ooAuthService',
 
-    function($scope, $uibModalInstance, $log, arbeitsangebot, arbeitseinsatz, ArbeitsangeboteListModel,lodash,ooAuthService) {
+    function($scope, 
+      $uibModalInstance, 
+      $log, 
+      arbeitsangebot, 
+      arbeitseinsatz, 
+      ArbeitsangeboteModel,
+      lodash,
+      ooAuthService) {
       $scope.arbeitsangebot = arbeitsangebot;
       $scope.maxVacancies = Number.MAX_ASFE_INTEGER;
 
@@ -22,7 +35,7 @@ angular.module('openolitor-kundenportal')
           $scope.maxVacancies = arbeitsangebot.anzahlPersonen - arbeitsangebot.anzahlEingeschriebene;
         }
       } else if(arbeitseinsatz) {
-        ArbeitsangeboteListModel.query(function(data) {
+        ArbeitsangeboteModel.query(function(data) {
           arbeitsangebot = lodash.filter(data, function(aa){
             return  (aa.id === arbeitseinsatz.arbeitsangebotId);
           });
