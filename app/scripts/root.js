@@ -145,6 +145,7 @@ angular.module('openolitor-kundenportal')
           });
           $scope.storeActiveLang(lang);
           $scope.$emit('languageChanged');
+          moment.locale(lang);
         }
       };
 
