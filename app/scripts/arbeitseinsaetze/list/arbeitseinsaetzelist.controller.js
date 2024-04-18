@@ -42,13 +42,14 @@ angular
       $scope.arbeitseinsatzTableParams = undefined;
       $scope.contactsVisible = [];
       $scope.entries = [];
-      $scope.loading = false;
       $scope.model = {};
       $scope.maxEntries = 10;
       var today = new Date();
 
       $scope.initArbeitseinsaetzeTableParams = function(){
-        ArbeitseinsaetzeListModel.query(function(data) {
+        ArbeitseinsaetzeListModel.query({
+          g: /^\d+$/.test($scope.geschaeftsjahr)?$scope.geschaeftsjahr:''
+        },(function(data) {
           $scope.limitDateForDeletion = today.setDate(today.getDate()+1);
           $scope.entries = _(data).groupBy('arbeitsangebotId')
             .map(function(items, arbeitsangebotId) {
@@ -79,7 +80,24 @@ angular
             list: $scope.entries
           };
           msgBus.emitMsg(msg);
-        });
+        }));
+      }
+
+      var existingGJ = $location.search().g;
+      if (existingGJ) {
+        $scope.geschaeftsjahr = existingGJ;
+      }
+
+      $scope.selectGeschaeftsjahr = function(gj) {
+        if(angular.isDefined(gj)) {
+          $scope.geschaeftsjahr = gj;
+        } else {
+          $scope.geschaeftsjahr = undefined;
+        }
+        $scope.initGJ = true;
+        $scope.maxEntries = 10;
+        $scope.initArbeitseinsaetzeTableParams();
+        return false;
       }
 
       $scope.initArbeitseinsaetzeTableParams();
@@ -91,8 +109,17 @@ angular
             sorting: {
               zeitVon: 'asc'
             }
-          },
-          {
+          },{
+            filterDelay: 0,
+            groupOptions: {
+              isExpanded: true
+            },
+            exportODSModel: ArbeitseinsaetzeListModel,
+            exportODSFilter: function() {
+              return {
+                g: $scope.geschaeftsjahr
+              };
+            },
             getData: function(params) {
               if (!$scope.entries) {
                 return;

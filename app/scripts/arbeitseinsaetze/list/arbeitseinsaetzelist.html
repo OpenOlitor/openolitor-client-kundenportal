@@ -9,6 +9,11 @@
         </div>
         <div class="row">
           <div class="col-md-12">
+            <oo-overviewfilter-geschaeftsjahre
+                selected-funct="selectGeschaeftsjahr"
+                select="geschaeftsjahr"
+                select-current="true">
+            </oo-overviewfilter-geschaeftsjahre>
             <table ng-show="entries" ng-table="arbeitseinsatzTableParams" class="table table-striped" show-filter="false" template-pagination="scripts/ngtable/oo-ngtable-noPaginationTemplate.html">
               <tr ng-repeat-start="arbeitseinsatz in $data">
                 <td>
