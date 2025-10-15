@@ -62,7 +62,6 @@ angular
                 zeitBis: items[0].zeitBis,
                 zeitVon: items[0].zeitVon,
                 arbeitsangebotTitel: items[0].arbeitsangebotTitel,
-                arbeitsangebotStatus : items[0].arbeitsangebotStatus,
                 anzahlPersonen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).anzahlPersonen,
                 anzahlEingeschriebene: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).arbeitsangebot.anzahlEingeschriebene,
                 bemerkungen: _.find(items, o => { return o.personId === ooAuthService.getUser().id;}).bemerkungen,
