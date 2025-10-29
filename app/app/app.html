@@ -1,0 +1,78 @@
+<div class="app-container">
+  <!-- Alerts -->
+  <div class="alerts-container" *ngIf="alerts.length > 0">
+    <div *ngFor="let alert of alerts" 
+         class="alert alert-{{alert.type}}" 
+         role="alert">
+      {{ alert.message }}
+      <button type="button" class="close" (click)="removeAlert(alert.id)">
+        <span>&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top" *ngIf="loaded">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="/">
+          <img src="images/logo_openolitor.png" alt="OpenOlitor" height="32">
+        </a>
+        <span class="navbar-text" *ngIf="projekt">
+          <span>{{ 'OpenOlitor Mitgliederportal' | translate }}:</span> 
+          <span>{{ projekt.bezeichnung }}</span>
+        </span>
+      </div>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <!-- Language Selector -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-language"></i> {{ getCurrentLanguage() }}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a (click)="changeLanguage('de_CH')">Deutsch (CH)</a></li>
+            <li><a (click)="changeLanguage('de_DE')">Deutsch (DE)</a></li>
+            <li><a (click)="changeLanguage('en_US')">English</a></li>
+            <li><a (click)="changeLanguage('fr_CH')">Français (Suisse)</a></li>
+            <li><a (click)="changeLanguage('es_ES')">Castellano</a></li>
+          </ul>
+        </li>
+        
+        <!-- User Menu -->
+        <li class="dropdown" *ngIf="isLoggedIn() && user">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            {{ user.vorname }} {{ user.name }}
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a routerLink="/login_settings">{{ 'Einstellungen' | translate }}</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a (click)="logout()">{{ 'Abmelden' | translate }}</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="master-content" [class.loaded]="loaded">
+    <div class="container">
+      <router-outlet *ngIf="loaded"></router-outlet>
+      
+      <div class="loading-message" *ngIf="!loaded">
+        <h3>{{ 'Wir sind gleich bereit...' | translate }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer *ngIf="loaded">
+    <a href="https://openolitor.org" target="_blank">openolitor.org</a>
+    <span class="version-info">
+      <span class="glyphicon glyphicon-info-sign"></span>
+      <span class="version-text">v{{ version }} | {{ env }}</span>
+    </span>
+  </footer>
+</div>
