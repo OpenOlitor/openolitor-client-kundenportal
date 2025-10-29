@@ -30,7 +30,7 @@ module.exports = function(grunt) {
     // Project settings
     openolitor: {
       // configurable paths
-      app: require('./bower.json').appPath || 'app',
+      app: require('./package.json').name ? 'app' : 'app',
       dist: 'dist'
     },
 
@@ -69,14 +69,9 @@ module.exports = function(grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
       js: {
         files: [
-          '<%= openolitor.app %>/scripts/**/*.js',
-          '<%= openolitor.app %>/bower_components/openolitor-core/scripts/**/*.js'
+          '<%= openolitor.app %>/scripts/**/*.js'
         ],
         tasks: ['newer:jshint:all', 'replace:dev'],
         options: {
@@ -213,28 +208,12 @@ module.exports = function(grunt) {
       }
     },
 
-    // Automatically inject Bower components into the app
-    wiredep: {
-      options: {
-        //        cwd: '<%= openolitor.app %>'
-      },
-      app: {
-        src: ['<%= openolitor.app %>/index.html'],
-        exclude: ['bower_components/bootstrap-sass-official/*'],
-        ignorePath: '<%= openolitor.app %>/'
-      },
-      sass: {
-        src: ['<%= openolitor.app %>/styles/**/*.{scss,sass}'],
-        ignorePath: '<%= openolitor.app %>/bower_components/'
-      }
-    },
-
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
         implementation: sass,
         sourceMap: true,
-        includePaths: ['app/bower_components']
+        includePaths: ['node_modules']
       },
       dist: {
         files: [{
@@ -395,10 +374,10 @@ module.exports = function(grunt) {
             src: ['generated/*']
           },
           {
-            //for bootstrap fonts, maybe we could use the scss/less where the correct font url path will be inserted
+            //for bootstrap fonts
             expand: true,
             dot: true,
-            cwd: '<%= openolitor.app %>/bower_components/bootstrap/dist',
+            cwd: 'node_modules/bootstrap/dist',
             src: ['fonts/*.*'],
             dest: '<%= openolitor.dist %>'
           },
@@ -406,7 +385,7 @@ module.exports = function(grunt) {
             //for font-awesome
             expand: true,
             dot: true,
-            cwd: '<%= openolitor.app %>/bower_components/font-awsome',
+            cwd: 'node_modules/font-awesome',
             src: ['fonts/*.*'],
             dest: '<%= openolitor.dist %>'
           }
@@ -516,7 +495,6 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
-      'wiredep',
       'concurrent:server',
       'autoprefixer',
       'configureProxies:server',
@@ -549,7 +527,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',

@@ -17,18 +17,19 @@
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(app) styles/vendor.css -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/font-awsome/css/font-awesome.css" />
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css" />
   <link rel="stylesheet" href="styles/bootstrap_cosmo.css">
   <!-- bower:css -->
-  <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
-  <link rel="stylesheet" href="bower_components/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
-  <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css" />
-  <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/angular-color-picker/dist/angularjs-color-picker.css" />
-  <link rel="stylesheet" href="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.css" />
+  <link rel="stylesheet" href="../node_modules/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+  <link rel="stylesheet" href="../node_modules/bootstrap3-dialog/dist/css/bootstrap-dialog.min.css" />
+  <link rel="stylesheet" href="../node_modules/ng-table/dist/ng-table.css" />
+  <link rel="stylesheet" href="../node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+  <link rel="stylesheet" href="../node_modules/angularjs-color-picker/dist/angularjs-color-picker.css" />
+  <!-- angular-hamburger-toggle: Not available on npm, commented out -->
+  <!-- <link rel="stylesheet" href="../node_modules/angular-hamburger-toggle/dist/angular-hamburger-toggle.css" /> -->
   <!-- endbower -->
-  <link rel="stylesheet" href="bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
+  <link rel="stylesheet" href="../node_modules/jasny-bootstrap/dist/css/jasny-bootstrap.css" />
   <!-- endbuild -->
 
   <link href='fonts/droid-sans.css' rel='stylesheet' type='text/css'>
@@ -129,62 +130,66 @@
 
   <!-- build:js(.) scripts/oldieshim.js -->
   <!--[if lt IE 9]>
-    <script src="vendor/es5-shim/es5-shim.js"></script>
-    <script src="vendor/json3/lib/json3.min.js"></script>
+    <script src="../node_modules/es5-shim/es5-shim.js"></script>
+    <script src="../node_modules/json3/lib/json3.min.js"></script>
     <![endif]-->
   <!-- endbuild -->
 
   <!-- build:js(app) scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-base64/angular-base64.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-  <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
-  <script src="bower_components/angular-bootstrap-switch/dist/angular-bootstrap-switch.js"></script>
-  <script src="bower_components/angular-cookie/angular-cookie.js"></script>
-  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-  <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
-  <script src="bower_components/angular-loader/angular-loader.js"></script>
-  <script src="bower_components/angular-resource/angular-resource.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-  <script src="bower_components/angular-touch/angular-touch.js"></script>
-  <script src="bower_components/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
-  <script src="bower_components/es5-shim/es5-shim.js"></script>
-  <script src="bower_components/json3/lib/json3.js"></script>
-  <script src="bower_components/ng-table/dist/ng-table.js"></script>
-  <script src="bower_components/ng-table-export/ng-table-export.js"></script>
-  <script src="bower_components/angular-toArrayFilter/toArrayFilter.js"></script>
-  <script src="bower_components/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
-  <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
-  <script src="bower_components/tinycolor/tinycolor.js"></script>
-  <script src="bower_components/angular-color-picker/dist/angularjs-color-picker.js"></script>
-  <script src="bower_components/angular-hamburger-toggle/dist/angular-hamburger-toggle.js"></script>
-  <script src="bower_components/moment/min/moment-with-locales.min.js"></script>
-  <script src="bower_components/angular-moment/angular-moment.js"></script>
-  <script src="bower_components/blob-polyfill/Blob.js"></script>
-  <script src="bower_components/file-saver/dist/FileSaver.min.js"></script>
-  <script src="bower_components/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
-  <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
-  <script src="bower_components/ng-lodash/build/ng-lodash.js"></script>
-  <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
-  <script src="bower_components/lodash/lodash.js"></script>
-  <script src="bower_components/ng-password-strength/dist/scripts/ng-password-strength.js"></script>
-  <script src="bower_components/angular-messages/angular-messages.js"></script>
-  <script src="bower_components/angular-sortable-view/src/angular-sortable-view.js"></script>
-  <script src="bower_components/angular-css-injector/angular-css-injector.js"></script>
-  <script src="bower_components/clipboard/dist/clipboard.js"></script>
-  <script src="bower_components/ngclipboard/dist/ngclipboard.js"></script>
-  <script src="bower_components/ng-iban/dist/ng-iban.js"></script>
-  <script src="bower_components/angular-piwik/angular-piwik.js"></script>
-  <script src="bower_components/qrcode-generator/js/qrcode.js"></script>
-  <script src="bower_components/qrcode-generator/js/qrcode_UTF8.js"></script>
-  <script src="bower_components/angular-qrcode/angular-qrcode.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-animate/angular-animate.js"></script>
+  <script src="../node_modules/angular-base64/angular-base64.js"></script>
+  <script src="../node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="../node_modules/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+  <script src="../node_modules/angular-bootstrap-switch/dist/angular-bootstrap-switch.js"></script>
+  <script src="../node_modules/angular-cookie/angular-cookie.js"></script>
+  <script src="../node_modules/angular-cookies/angular-cookies.js"></script>
+  <script src="../node_modules/angular-gettext/dist/angular-gettext.js"></script>
+  <script src="../node_modules/angular-loader/angular-loader.js"></script>
+  <script src="../node_modules/angular-resource/angular-resource.js"></script>
+  <script src="../node_modules/angular-route/angular-route.js"></script>
+  <script src="../node_modules/angular-sanitize/angular-sanitize.js"></script>
+  <script src="../node_modules/angular-touch/angular-touch.js"></script>
+  <script src="../node_modules/bootstrap3-dialog/dist/js/bootstrap-dialog.min.js"></script>
+  <script src="../node_modules/es5-shim/es5-shim.js"></script>
+  <script src="../node_modules/json3/lib/json3.js"></script>
+  <script src="../node_modules/ng-table/dist/ng-table.js"></script>
+  <!-- ng-table-export: Not available on npm, commented out. Install manually if needed: npm install github:esvit/ng-table-export -->
+  <!-- <script src="../node_modules/ng-table-export/ng-table-export.js"></script> -->
+  <script src="../node_modules/angular-toarrayfilter/toArrayFilter.js"></script>
+  <script src="../node_modules/jasny-bootstrap/dist/js/jasny-bootstrap.js"></script>
+  <script src="../node_modules/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
+  <script src="../node_modules/tinycolor2/tinycolor.js"></script>
+  <script src="../node_modules/angularjs-color-picker/dist/angularjs-color-picker.js"></script>
+  <!-- angular-hamburger-toggle: Not available on npm, commented out. Install manually if needed: npm install github:subzerobo/angular-hamburger-toggle -->
+  <!-- <script src="../node_modules/angular-hamburger-toggle/dist/angular-hamburger-toggle.js"></script> -->
+  <script src="../node_modules/moment/min/moment-with-locales.min.js"></script>
+  <script src="../node_modules/angular-moment/angular-moment.js"></script>
+  <script src="../node_modules/blob-polyfill/Blob.js"></script>
+  <script src="../node_modules/file-saver/dist/FileSaver.min.js"></script>
+  <script src="../node_modules/angular-file-saver/dist/angular-file-saver.bundle.js"></script>
+  <script src="../node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+  <script src="../node_modules/ng-lodash/build/ng-lodash.js"></script>
+  <script src="../node_modules/angular-filter/dist/angular-filter.js"></script>
+  <script src="../node_modules/lodash/lodash.js"></script>
+  <script src="../node_modules/ng-password-strength/dist/scripts/ng-password-strength.js"></script>
+  <script src="../node_modules/angular-messages/angular-messages.js"></script>
+  <script src="../node_modules/angular-sortable-view/src/angular-sortable-view.js"></script>
+  <!-- angular-css-injector: Not available on npm, commented out. Install manually if needed: npm install github:Alignan/angular-css-injector -->
+  <!-- <script src="../node_modules/angular-css-injector/angular-css-injector.js"></script> -->
+  <script src="../node_modules/clipboard/dist/clipboard.js"></script>
+  <script src="../node_modules/ngclipboard/dist/ngclipboard.js"></script>
+  <script src="../node_modules/ng-iban/dist/ng-iban.js"></script>
+  <!-- angular-piwik: Not available on npm, commented out. Install manually if needed: npm install github:Mike96Angelo/angular-piwik -->
+  <!-- <script src="../node_modules/angular-piwik/angular-piwik.js"></script> -->
+  <script src="../node_modules/qrcode-generator/qrcode.js"></script>
+  <script src="../node_modules/qrcode-generator/qrcode_UTF8.js"></script>
+  <script src="../node_modules/angular-qrcode/angular-qrcode.js"></script>
   <!-- endbower -->
-  <script src="bower_components/angular-i18n/angular-locale_de-ch.js"></script>
+  <script src="../node_modules/angular-i18n/angular-locale_de-ch.js"></script>
   <!-- endbuild -->
 
 
