@@ -1,0 +1,39 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>{{ 'Anmelden' | translate }}</h2>
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="email">{{ 'E-Mail' | translate }}</label>
+        <input 
+          type="email" 
+          id="email" 
+          name="email" 
+          class="form-control" 
+          [(ngModel)]="email" 
+          required
+          [disabled]="isLoading">
+      </div>
+      <div class="form-group">
+        <label for="password">{{ 'Passwort' | translate }}</label>
+        <input 
+          type="password" 
+          id="password" 
+          name="password" 
+          class="form-control" 
+          [(ngModel)]="password" 
+          required
+          [disabled]="isLoading">
+      </div>
+      <button 
+        type="submit" 
+        class="btn btn-primary btn-block" 
+        [disabled]="isLoading || !loginForm.valid">
+        <span *ngIf="!isLoading">{{ 'Anmelden' | translate }}</span>
+        <span *ngIf="isLoading">{{ 'Wird geladen...' | translate }}</span>
+      </button>
+    </form>
+    <div class="login-footer">
+      <a href="#/passwordreset">{{ 'Passwort vergessen?' | translate }}</a>
+    </div>
+  </div>
+</div>

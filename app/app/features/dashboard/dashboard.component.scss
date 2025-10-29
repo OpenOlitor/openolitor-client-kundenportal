@@ -1,0 +1,27 @@
+.dashboard-container {
+  padding: 20px;
+}
+
+.dashboard-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f5f5f5;
+}
+
+.panel-body {
+  padding: 15px;
+}
