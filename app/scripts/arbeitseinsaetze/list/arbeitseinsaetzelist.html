@@ -24,7 +24,12 @@
                 </td>
                 <td>
                 <td data-title="'Titel'|translate">
-                  <a ng-click="highlightAngebot(arbeitseinsatz.arbeitsangebotId)">{{arbeitseinsatz.arbeitsangebotTitel}}</a>
+                  <div ng-if="(arbeitseinsatz.arbeitsangebotStatus !== 'Abgesagt')">
+                    <a ng-click="highlightAngebot(arbeitseinsatz.arbeitsangebotId)">{{arbeitseinsatz.arbeitsangebotTitel}}</a>
+                  </div>
+                  <div ng-if="(arbeitseinsatz.arbeitsangebotStatus === 'Abgesagt')">
+                    {{arbeitseinsatz.arbeitsangebotTitel}}
+                  </div>
                 </td>
                 <td data-title="'Zeitpunkt'|translate" sortable="'zeitVon'">
                   <span ng-if="sameDay(arbeitseinsatz.zeitBis, arbeitseinsatz.zeitVon)">
@@ -42,7 +47,14 @@
                   {{arbeitseinsatz.anzahlEingeschriebene}}
                 </td>
                 <td data-title="'Bemerkungen'|translate">
-                  {{arbeitseinsatz.bemerkungen}}
+                    <div ng-if="arbeitseinsatz.arbeitsangebotStatus === 'Abgesagt'">
+                      <span class="cancelled-bemerkung glyphicon glyphicon-remove"></span>
+                      <span translate class="cancelled-bemerkung"> Abgesagt </span>
+                      <span ng-bind-html="arbeitseinsatz.bemerkungen"></span>
+                    </div>
+                    <div ng-if="arbeitseinsatz.arbeitsangebotStatus !== 'Abgesagt'">
+                      <span ng-bind-html="arbeitseinsatz.bemerkungen"></span>
+                    </div>
                 </td>
                 <td>
                   <div class="btn-group">
@@ -51,13 +63,15 @@
                         Sie können diese Zuordnung nicht entfernen, da sie zu nahe am Ausführungsdatum liegt
                       </span>
                     </script>
-                    <div ng-if="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)">
-                      <a ng-disabled="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" role="button" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)"><span class="glyphicon glyphicon-minus"></span></a>
-                      <a ng-disabled="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" role="button" class="btn btn-sm btn-info" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a> 
-                    </div>
-                    <div ng-if="!(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)">
-                      <a role="button" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)" ><span class="glyphicon glyphicon-minus"></span></a>
-                      <a role="button" class="btn btn-sm btn-info" ng-click="edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a> 
+                    <div ng-if="(arbeitseinsatz.arbeitsangebotStatus !== 'Abgesagt')">
+                      <div ng-if="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)">
+                        <a ng-disabled="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" role="button" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)"><span class="glyphicon glyphicon-minus"></span></a>
+                        <a ng-disabled="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)" uib-tooltip-template="'workAssignmentInfoTooltipTemplate.html'" role="button" class="btn btn-sm btn-info" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a> 
+                      </div>
+                      <div ng-if="!(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion)">
+                        <a role="button" class="btn btn-sm btn-warning ng-scope" ng-click="(arbeitseinsatz.zeitBis.getTime()<limitDateForDeletion) || quit(arbeitseinsatz)" ><span class="glyphicon glyphicon-minus"></span></a>
+                        <a role="button" class="btn btn-sm btn-info" ng-click="edit(arbeitseinsatz)"><span class="glyphicon glyphicon-edit"></span></a> 
+                      </div>
                     </div>
                   </div>
                 </td>
