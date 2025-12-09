@@ -47,8 +47,14 @@
                   {{arbeitseinsatz.anzahlEingeschriebene}}
                 </td>
                 <td data-title="'Bemerkungen'|translate">
-                  <div ng-if="arbeitseinsatz.arbeitsangebotStatus === 'Abgesagt'" class="cancelled-bemerkung" ng-bind-html="arbeitseinsatz.bemerkungen"></div>
-                  <div ng-if="arbeitseinsatz.arbeitsangebotStatus !== 'Abgesagt'" ng-bind-html="arbeitseinsatz.bemerkungen"></div>
+                    <div ng-if="arbeitseinsatz.arbeitsangebotStatus === 'Abgesagt'">
+                      <span class="cancelled-bemerkung glyphicon glyphicon-remove"></span>
+                      <span translate class="cancelled-bemerkung"> Abgesagt </span>
+                      <span ng-bind-html="arbeitseinsatz.bemerkungen"></span>
+                    </div>
+                    <div ng-if="arbeitseinsatz.arbeitsangebotStatus !== 'Abgesagt'">
+                      <span ng-bind-html="arbeitseinsatz.bemerkungen"></span>
+                    </div>
                 </td>
                 <td>
                   <div class="btn-group">
