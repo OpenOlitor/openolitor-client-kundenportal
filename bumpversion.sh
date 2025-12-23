@@ -62,12 +62,12 @@ VERSION=${VERSION:-$NEXT_VERSION}
 COMMIT=${COMMIT:-false}
 
 PACKAGE_JSON=$(cat package.json | perl -pe 's/'$VERSION_REGEX'/'$VERSION'/g')
-BOWER_JSON=$(cat bower.json | perl -pe 's/'$VERSION_REGEX'/'$VERSION'/g')
+# BOWER_JSON removed - no longer using Bower
 CONFIG_JSON=$(cat app/environments/config.json | perl -pe 's/'$VERSION_REGEX'/'$VERSION'/g')
 
 echo "$PACKAGE_JSON" > package.json
 
-echo "$BOWER_JSON" > bower.json
+# bower.json removed - migration to npm complete
 
 echo "$CONFIG_JSON" > app/environments/config.json
 
